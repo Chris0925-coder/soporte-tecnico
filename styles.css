@@ -1,30 +1,32 @@
-
-
 html {
-/*	width: 100%;*/
-/*	min-height: 100vh;*/
-/*	position: relative;*/
-/*	margin: 0;*/
-/*	justify-items: center;*/
+	width: 100%;
+	min-height: 100vh;
+/*	overflow-y: hidden;*/
 }
+
 
 body {
 	background: #FFEFBA;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #FFFFFF, #FFEFBA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	font-family: sans-serif;
-/*	min-height: 100vh;*/
+/*	margin: 0;*/
+	padding: 0;
+/*	height: 100vh;*/
+	min-height: 100vh;
 	/*padding: 90px 20px 0;*/
-	/*margin: 0;
-	margin-bottom: 40px;
-	/*width: 100%;*/
-	/*position: relative;*/
+	margin: 0;
+/*	margin-bottom: 40px;*/
+	width: 100%;
+
+/*	position: relative;*/
 
 }
 
 h1,h2,h3,h4,h5,h6 {
 	margin: 0;
 	padding: 10px;
+	text-align: center;
 }
 
 /*.principal {
@@ -71,9 +73,9 @@ h1,h2,h3,h4,h5,h6 {
 	justify-items: center;
 }
 
-.cuerpo span {
+.cuerpo {
 	display: inline-block;
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
 	flex-direction: column;
 	width: 100%;
 	height: auto;
@@ -109,7 +111,7 @@ h1,h2,h3,h4,h5,h6 {
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 10px;
-    object-fit: cover;
+    object-fit: fill;
     width: 300px;
     height: 175px;
     border-radius: 20px;
@@ -136,7 +138,7 @@ h1,h2,h3,h4,h5,h6 {
 
 .nav-link:hover,
 .nav-link_active {
-	background: rgba(0, 0, 0, 0.1);
+	background: rgba(0, 0, 0, 0.6);
 	padding: 10px;
 	transition: 0.5s;
 }
@@ -206,57 +208,61 @@ h1,h2,h3,h4,h5,h6 {
 
 
 /*body*/
-.ladoA span {
+/*.ladoA span {
 	width: 100%;
 	height: auto;
 	margin: 0 auto;
-}
+}*/
 
 
 .sidebar1  {
-	background: center;
+/*	background: center;*/
 	background-image: url(img/b1.png);
+/*	image-resolution: from-image;*/
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: contain;
 	background-position: center;
-	display: flex;
+	display: grid;
 	flex-direction: column;
-
 	position: relative;
-	column-count: 2;
-	width: auto;
-	margin: 0 auto;
-	height: 800px;
+	column-count: 3;
+	width: 100%;
+	margin: 0;
+	min-height: 600px;
 	justify-content: center;
 	justify-items: center;
 	box-sizing: border-box;
+	object-fit: fill;
 /*	padding: 10px;*/
 }
+
+
 .contenido { 
 	background: #000;
 	background-size: cover;
 	box-sizing: border-box;
 	display: grid;
-	column-count: 4;
-	margin: 0;
-	margin-top: 10px;
-	margin-bottom: 10px;
+	column-count: 3;
+	margin: 0 auto;
+/*	margin-top: 10px;*/
+/*	margin-bottom: 10px;*/
 	z-index: -1;
 	align-items: stretch;	
 	justify-content:space-around;
 	align-content: stretch;
 	justify-items: center;
-	width: 100%;
-	height: 750px;
-
+	justify-content: center;
+	width: auto;
+	max-height: 750px;
+	color: ghostwhite;
 }
 
-.otros {
+.otros ul p {
     background: #a3b3a3;
 /*    background-size: contain;
     background-position: center;*/
     
-    margin: 5px;
+    margin: 5px auto;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -264,33 +270,39 @@ h1,h2,h3,h4,h5,h6 {
     justify-content: space-around;
     justify-items: space-around;
     /*vertical-align: middle;*/
-    color: #434c43;
+    color: black;
     width: 90%;
-    padding: 0;
-    box-sizing: content-box;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .sidebar2 {
 	background-image: url('img/b2.png');
-	background-size: cover;
+	background-size: contain;
 	background-repeat: no-repeat;
+	background-position: center;
 	margin: 0;
 	display: grid; 
 	column-count: 3;
 	box-sizing: border-box;
-	height: 800px
+	width: 100%;
+	min-height: 600px;
+
+	object-fit: fill;
 }
 
 .container {
 	position: relative;
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(430px, 3fr));
-	gap: 5px;
+	grid-template-columns: repeat(auto-fit, minmax(330px, 3fr));
+	gap: 2px;
 	margin: 0;
 	column-count: 12;
 	column-gap: 0;
+	flex-direction: row;
+	flex-wrap: nowrap;
 	/*justify-content: space-between;*/
-	/*align-items: center;*/
+	align-items: center;
 }
 
 
@@ -503,7 +515,7 @@ h1,h2,h3,h4,h5,h6 {
 
 
 /*media*/
-@media (max-width: 768px) {
+@media (max-width: 1028px) {
 	body {
 		background-color: darkgrey;
 	}
@@ -606,7 +618,7 @@ h1,h2,h3,h4,h5,h6 {
 		width: 100%;
 		height: auto;
 		box-sizing: border-box;
-		overflow: auto;
+		overflow: hidden;
 	}
 
 	.sidebar1 {
