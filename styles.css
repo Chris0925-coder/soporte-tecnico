@@ -1,5 +1,5 @@
 html {
-	width: 100%;
+	width: auto;
 	min-height: 100vh;
 /*	overflow-y: hidden;*/
 }
@@ -17,7 +17,7 @@ body {
 	/*padding: 90px 20px 0;*/
 	margin: 0;
 /*	margin-bottom: 40px;*/
-	width: 100%;
+/*	width: 100%;*/
 
 /*	position: relative;*/
 
@@ -515,9 +515,9 @@ h1,h2,h3,h4,h5,h6 {
 
 
 /*media*/
-@media (max-width: 1028px) {
+@media (max-width: 768px) {
 	body {
-		background-color: darkgrey;
+		background-color: black;
 	}
 
 	.logo {
@@ -537,7 +537,6 @@ h1,h2,h3,h4,h5,h6 {
 
 	.navbar {
 		top: 0;
-/*		z-index: 1;*/
 		background-color: rgba(0, 0, 0, 0.3);
 		width: 100%;
 		margin: 0 auto;
@@ -556,8 +555,6 @@ h1,h2,h3,h4,h5,h6 {
 		padding: 20px 0;
 		width: 100%;
 		height: calc(70% - 160px);
-		overflow-y: auto;
-/*		color: black;*/
 		left: 0;
 		transition: left 0.3s;
 	}
@@ -569,16 +566,12 @@ h1,h2,h3,h4,h5,h6 {
 		background-color: black;
 		color: white;
 		text-transform: uppercase;
-/*		font-display: block;*/
-/*		transform-origin: right;*/
-		/*position: fixed;*/
 	}
 
 	.nav-item {
 		background-color: rgba(0, 0, 0, 0.9);
 		padding: 10px;
 		line-height: 70px;
-/*		color: black;*/
 	}
 
 	.nav-link:hover,
@@ -607,22 +600,32 @@ h1,h2,h3,h4,h5,h6 {
 
 	.navbar-nav_visible {
 		left: 100%;
-/*		color: black;*/
 	}
 
-	.cuerpo {
-/*		display: flex;*/
-/*		flex-direction: row;*/
+	.cuerpo span {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
 		position: relative;
-		margin: 0 auto;
+		margin: 0;
+		width: 100%;
+		height: fit-content;
+		box-sizing: border-box;
+/*		align-items: stretch;*/
+/*		overflow: hidden;*/
+	}
+
+	/*.container .row {
+		display: inline-block;
 		width: 100%;
 		height: auto;
-		box-sizing: border-box;
-		overflow: hidden;
-	}
-
-	.sidebar1 {
-/*		width: 100%;*/
-	}
+	} 
+*/
+	/*.sidebar1 {
+		align-content: center;
+		justify-content: center;
+		justify-items: center;
+		width: 900px;
+	}*/
 
 }
