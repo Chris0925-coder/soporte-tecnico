@@ -1,12 +1,17 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
 
 body {
 	background: #FFEFBA;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #FFFFFF, #FFEFBA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	font-family: sans-serif;
-	margin: 0;
-	padding: 0;
-	width: auto;
+/*	margin: 0;*/
+/*	padding: 0;*/
+/*	width: auto;*/
 	height: 100vh;
 /*	min-height: 100vh;*/
 	/*padding: 90px 20px 0;*/
@@ -216,30 +221,30 @@ h1,h2,h3,h4,h5,h6 {
 }*/
 
 
-.cuerpo .sidebar1  {
+.sidebar1  {
 /*	background: center;*/
-	background-image: url(img/b1.png);
+	background-image: url('img/b1.png');
 /*	image-resolution: from-image;*/
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	display: flex;
-	flex-direction: row;
-	position: relative;
+/*	display: flex;*/
+/*	flex-direction: row;*/
+/*	position: relative;*/
 /*	column-count: 3;*/
 	width: 400px;
 	margin: 0 auto;
 	min-height: 600px;
-	justify-content: center;
-	justify-items: center;
-	box-sizing: border-box;
-	object-fit: fill;
+/*	justify-content: center;*/
+/*	justify-items: center;*/
+/*	box-sizing: border-box;*/
+	object-fit: cover;
 /*	padding: 10px;*/
 }
 
 
 .cuerpo .contenido { 
-	background: #000;
+	background: dimgray;
 	background-size: cover;
 	box-sizing: border-box;
 	display: grid;
@@ -248,10 +253,10 @@ h1,h2,h3,h4,h5,h6 {
 /*	margin-top: 10px;*/
 /*	margin-bottom: 10px;*/
 /*	z-index: -1;*/
-	align-items: stretch;	
-	justify-content:space-around;
-	align-content: stretch;
-	justify-items: center;
+/*	align-items: stretch;	*/
+/*	justify-content:space-around;*/
+/*	align-content: stretch;*/
+/*	justify-items: center;*/
 	justify-content: center;
 	width: auto;
 	height: 550px;
@@ -315,6 +320,10 @@ h1,h2,h3,h4,h5,h6 {
 	margin: 0 auto;
 }
 
+.iconB i {
+	color: gold;
+	font-size: 1.9em;
+}
 
 
 
@@ -365,7 +374,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .carousel .carousel-item img {
-    object-fit: cover;
+    object-fit: fill;
     object-position: top;
     position: absolute;
     top: 0;
@@ -376,6 +385,7 @@ h1,h2,h3,h4,h5,h6 {
     box-sizing: content-box;
     width: 100%;
     height: 100%;
+    background-color: white;
 }
 
 .carousel div a p {
@@ -560,12 +570,18 @@ h1,h2,h3,h4,h5,h6 {
 	margin: 0 auto;
 }
 
+.base a {
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: serif;
+}
 
 
 
 
 /*media*/
-@media screen and (min-width: 300px) and (max-width: 1028px) {
+@media screen and (min-width: 200px) and (max-width: 1028px) {
 	
 	html {
 		width: 100%;
