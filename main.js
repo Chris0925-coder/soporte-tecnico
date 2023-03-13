@@ -31,27 +31,8 @@ const carusel = [
     'img/ps4Pro2.jpg'
 ];
 
-// function thumnail() {
+function thumnail() {
 
-//     for (i = 0; i < carusel.length; i++) {
-//     caruselItem.style.backgroundImage = carusel[i];
-//     };
-
-//     slideThumnail++;
-
-//     if(slideThumnail > carusel.length) {slideThumnail = 1};
-//     caruselItem.style.backgroundImage = carusel[slideThumnail-1];
-
-//     setTimeout(thumnail,6000);
-// };
-// thumnail();
-
-
-console.log(carusel[0]);
-
-
-caruselItem.addEventListener('touchstart', () => {
-    // thumnail();
     for (i = 0; i < carusel.length; i++) {
     caruselItem.style.backgroundImage = `url(${carusel[i]})`;
     };
@@ -61,7 +42,22 @@ caruselItem.addEventListener('touchstart', () => {
     if(slideThumnail > carusel.length) {slideThumnail = 1};
     caruselItem.style.backgroundImage = `url(${carusel[slideThumnail-1]})`;
 
-    setTimeout(carusel, 8000);
+    setTimeout(thumnail, 8000);
     // caruselItem.classList.toggle(`url(${carusel[0]})`);
     // caruselItem.style.backgroundImage = carusel;
+};
+thumnail();
+
+
+console.log(carusel[0]);
+
+
+caruselItem.addEventListener('touchstart', () => {
+    // thumnail();
+    clearTimeout(thumnail);
+    for (i = 0; i < carusel.length; i++) {
+    caruselItem.style.backgroundImage = `url(${carusel[i]})`;
+    };
+
+    
 });
