@@ -50,7 +50,7 @@ const carusel = [
 console.log(carusel[0]);
 
 
-galeria.addEventListener('touchmove', () => {
+caruselItem.addEventListener('touchstart', () => {
     // thumnail();
     for (i = 0; i < carusel.length; i++) {
     caruselItem.style.backgroundImage = `url(${carusel[i]})`;
@@ -61,7 +61,7 @@ galeria.addEventListener('touchmove', () => {
     if(slideThumnail > carusel.length) {slideThumnail = 1};
     caruselItem.style.backgroundImage = `url(${carusel[slideThumnail-1]})`;
 
-    // setTimeout(carusel,8000);
+    setTimeout(carusel, 8000);
     // caruselItem.classList.toggle(`url(${carusel[0]})`);
     // caruselItem.style.backgroundImage = carusel;
 });
