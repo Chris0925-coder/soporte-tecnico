@@ -61,3 +61,32 @@ caruselItem.addEventListener('touchstart', () => {
 
     
 });
+
+
+const galeria2 = document.querySelector('.galeria2');
+const carousel = [
+    'img/lap01.jpeg',
+    'img/lap02.jpeg',
+    'img/lap03.jpeg',
+    'img/lap04.jpeg',
+    'img/xbox04.jpeg',
+    'img/xbox05.jpeg'
+];
+
+var slideIndex = 0;
+
+galeria2.addEventListener('click', () => {
+    // let i = 0;
+    // galeria2
+    // galeria2.style.backgroundImage = `url(${carusel2[i]})`;
+    for (i = 0; i < carousel.length; i++) {
+        galeria2.style.backgroundImage = `url(${carousel[i]})`;
+        // galeria2.style.display = "none";
+    };
+    
+    slideIndex++;
+ 
+    if(slideIndex > carousel.length) {slideIndex = 1};
+    galeria2.style.backgroundImage = `url(${carousel[slideIndex-1]})`;
+    // galeria2[slideIndex-1].style.display = "flex";   
+});
