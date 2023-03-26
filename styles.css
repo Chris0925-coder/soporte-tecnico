@@ -390,7 +390,11 @@ h1,h2,h3,h4,h5,h6 {
     align-items: center;
     vertical-align: middle;
     background-size: contain;
-    object-fit: contain;
+    background-position: center;
+    object-fit: fill;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    justify-content: center;
 }
 
 .carousel-item img {
@@ -443,11 +447,15 @@ h1,h2,h3,h4,h5,h6 {
 	width: 100%;
 	height: 366px;
 	margin: 0 auto;
-	border: 1px solid black;
+/*	border: 1px solid black;*/
 	background-size: contain;
 	object-fit: cover;
 }
 
+.galeria2:hover {
+/*	opacity: 0.6;*/
+	border: 5px solid goldenrod ;
+}
 
 .photos {
 	display: flex;
@@ -456,6 +464,7 @@ h1,h2,h3,h4,h5,h6 {
 	max-width:100%;
 	height: fit-content;
 	margin: 0 auto;
+/*	gap: 10px;*/
 /*	justify-content: center;*/
 /*	align-content: space-between;*/
 }
@@ -463,18 +472,22 @@ h1,h2,h3,h4,h5,h6 {
 .photo {
 	display: flex;
 	position: relative;
+	background-color: rgba(0, 0, 0, 0.9);
 /*	align-content: center;*/
 /*	justify-content: center;*/
-	margin: 0 auto;
+	margin: 5px auto;
+	border-radius: 5px;
+/*	gap:5px;*/
 }
 
 .photo img {
 /*	display: flex;*/
 /*	flex-direction: row;*/
 	position: relative;
-	margin: 4px;
+	margin: 10px;
+/*	padding: 30px;*/
 	object-fit: cover;
-	width: 100px;
+	width: 200px;
 	height: 100px;
 }
 
