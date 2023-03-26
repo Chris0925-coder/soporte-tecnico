@@ -73,7 +73,7 @@ const carousel = [
     'img/xbox05.jpeg'
 ];
 
-var slideIndex = 0;
+let slideIndex = 0;
 
 galeria2.addEventListener('click', () => {
     // let i = 0;
