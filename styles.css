@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
 
-
-
 * {
 	margin: 0;
 	padding: 0;
@@ -12,20 +10,8 @@ body {
 	background: #FFEFBA;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #FFFFFF, #FFEFBA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	
-/*	margin: 0;*/
-/*	padding: 0;*/
-/*	width: auto;*/
 	height: 100vh;
-/*	min-height: 100vh;*/
-	/*padding: 90px 20px 0;*/
-/*	margin: 0;*/
 	overflow-x: hidden;
-/*	margin-bottom: 40px;*/
-/*	width: 100%;*/
-
-/*	position: relative;*/
-
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -244,19 +230,19 @@ h1,h2,h3,h4,h5,h6 {
 	background-image: url('img/b1.png');
 /*	image-resolution: from-image;*/
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: contain;
 	background-position: center;
 /*	display: flex;*/
 /*	flex-direction: row;*/
 /*	position: relative;*/
 /*	column-count: 3;*/
 	width: 400px;
-	margin: 0 auto;
+	margin: 0;
 	min-height: 600px;
 /*	justify-content: center;*/
 /*	justify-items: center;*/
 /*	box-sizing: border-box;*/
-	object-fit: cover;
+	object-fit: fill;
 /*	padding: 10px;*/
 }
 
@@ -301,13 +287,15 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .cuerpo .sidebar2 {
+	display: flex; 
+/*	column-count: 3;*/
+	position: relative;
 	background-image: url('img/b2.png');
-	background-size: cover;
+	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
 	margin: 0 auto;
-	display: flex; 
-/*	column-count: 3;*/
+	
 	box-sizing: border-box;
 	width: 400px;
 	min-height: 600px;
@@ -316,17 +304,18 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .cuerpo {
-	position: relative;
+/*	position: relative;*/
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(330px, 3fr));
 /*	gap: 12px;*/
-	margin: 0 auto;
+	margin: 0;
 	column-count: 12;
-	column-gap: 2px;
+/*	column-gap: 2px;*/
 /*	flex-direction: row;*/
 /*	flex-wrap: nowrap;*/
 	/*justify-content: space-between;*/
 	align-items: center;
+/*	border: 1px solid goldenrod;*/
 }
 
 .contenido .fotos {
@@ -335,12 +324,16 @@ h1,h2,h3,h4,h5,h6 {
 	align-items: center;
 	align-content: space-between;
 	justify-content: space-between;
+	justify-items: center;
 	margin: 0 auto;
+/*	border: 2px solid red;*/
+	width: auto;
+	height: auto;
 }
 
 .iconB i {
-	color: gold;
-	font-size: 1.9em;
+	color: goldenrod;
+	font-size: 1.4em;
 }
 
 
@@ -381,10 +374,10 @@ h1,h2,h3,h4,h5,h6 {
     justify-content: center;
     align-items: center;
     user-select: none;
-    background: #ccc; 
+    background-color: #ccc; 
     position: relative;
-    max-width: 100%;
-    height: 400px;
+    width: 100%;
+    height: auto;
     text-align: center;
     text-justify: center;
     align-items: center;
@@ -398,20 +391,21 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .carousel-item img {
-    
+	display: flex;
     object-position: top;
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
+ /*   top: 0;
+    left: 0;*/
     /*border-radius: 15px;*/
     text-decoration: none;
     margin: 0;
-    box-sizing: content-box;
+    box-sizing: border-box;
     width: 100%;
-    height: 100%;
+    height: 160px;
     background-color: white;
     background-size: cover;
-/*    object-fit: contain;*/
+/*    border: 3px solid green;*/
+    object-fit: cover;
 }
 
 .carousel div a p {
@@ -441,15 +435,18 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .galeria2 {
-	display: inline-block;
-	position: relative;
+/*	display: inline-block;*/
+/*	position: relative;*/
 	background-image: url("img/lap01.jpeg");
+	background-repeat: no-repeat;
+	background-position: center;
 	width: 100%;
 	height: 366px;
 	margin: 0 auto;
 /*	border: 1px solid black;*/
-	background-size: contain;
-	object-fit: cover;
+	background-size: cover;
+	object-fit: expand;
+
 }
 
 .galeria2:hover {
@@ -469,10 +466,14 @@ h1,h2,h3,h4,h5,h6 {
 /*	align-content: space-between;*/
 }
 
+.photosHidden {
+	visibility: hidden;
+}
+
 .photo {
 	display: flex;
 	position: relative;
-	background-color: rgba(0, 0, 0, 0.9);
+	background-color: rgba(250, 250, 250, 0.3);
 /*	align-content: center;*/
 /*	justify-content: center;*/
 	margin: 5px auto;
@@ -484,11 +485,14 @@ h1,h2,h3,h4,h5,h6 {
 /*	display: flex;*/
 /*	flex-direction: row;*/
 	position: relative;
+	background-repeat: no-repeat;
 	margin: 5px;
+	background-size: cover;
 /*	padding: 30px;*/
-	object-fit: cover;
-	max-width: auto;
-	height: 100px;
+	object-fit: fill;
+	max-width: 100px;
+	height: 150px;
+
 }
 
 
@@ -647,7 +651,7 @@ h1,h2,h3,h4,h5,h6 {
 	grid-template-columns: auto auto auto;
 	column-count: 12;
 	height: auto;
-	margin: 0 auto;
+	margin: 0;
 
 }
 
@@ -796,7 +800,7 @@ h1,h2,h3,h4,h5,h6 {
 		width: auto;
 		height: auto;
 		margin: 0 auto;
-		box-sizing: content-box;
+		box-sizing: border-box;
 		overflow-x: hidden;
 	}
 
@@ -806,7 +810,7 @@ h1,h2,h3,h4,h5,h6 {
 		width: auto;
 		height: auto;
 		margin: 0 auto;
-		box-sizing: content-box;
+		box-sizing: border-box;
 		overflow-x: hidden;
 	}
 

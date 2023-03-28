@@ -49,7 +49,7 @@ function thumnail() {
 thumnail();
 
 
-console.log(carusel[0]);
+// console.log(carusel[0]);
 
 
 caruselItem.addEventListener('touchstart', () => {
@@ -64,6 +64,7 @@ caruselItem.addEventListener('touchstart', () => {
 
 
 const galeria2 = document.querySelector('.galeria2');
+const photos = document.getElementsByClassName('photo');
 const carousel = [
     'img/lap01.jpeg',
     'img/lap02.jpeg',
@@ -73,20 +74,28 @@ const carousel = [
     'img/xbox05.jpeg'
 ];
 
+console.log(photos);
+
 let slideIndex = 0;
 
 galeria2.addEventListener('click', () => {
     // let i = 0;
+    
     // galeria2
     // galeria2.style.backgroundImage = `url(${carusel2[i]})`;
     for (i = 0; i < carousel.length; i++) {
+        photos[i].style.display = "none";
         galeria2.style.backgroundImage = `url(${carousel[i]})`;
-        // galeria2.style.display = "none";
     };
+
+    
     
     slideIndex++;
  
     if(slideIndex > carousel.length) {slideIndex = 1};
     galeria2.style.backgroundImage = `url(${carousel[slideIndex-1]})`;
-    // galeria2[slideIndex-1].style.display = "flex";   
+    // photos[slideIndex-1].style.display = "none";
+    // galeria2[slideIndex-1].style.display = "flex";
+
+
 });
