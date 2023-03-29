@@ -19,14 +19,14 @@ navToggle.addEventListener("click", () => {
     navLink.classList.toggle("navbar-nav_visible")
 });
 
-let caruselItem = document.querySelector('.carousel-item');
+let caruselItem = document.querySelector('.carousel-item2');
 let galeria = document.querySelector('.galeria');
 
 
 
 const carusel = [
     'img/control.jpg',
-    'img/control2.jpg',
+    'img/control23.jpg',
     'img/ps4Pro.jpg',
     'img/ps4Pro2.jpg'
 ];
@@ -74,7 +74,7 @@ const carousel = [
     'img/xbox05.jpeg'
 ];
 
-console.log(photos);
+// console.log(photos);
 
 let slideIndex = 0;
 
