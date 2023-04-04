@@ -843,8 +843,11 @@ h1,h2,h3,h4,h5,h6 {
 	position: relative;
 	flex-direction: row;
 	flex-wrap: wrap;
-	margin: 0 auto;
-	justify-content: center;
+	margin: 0;
+	justify-content: space-between;
+	align-content: space-between;
+	width: 100%;
+	height: auto;
 }
 
 .descarga {
@@ -856,7 +859,7 @@ h1,h2,h3,h4,h5,h6 {
 	justify-items: center;
 	align-content: center;*/
 	text-align: center;
-	margin: 10px;
+	margin: 10px auto;
 }
 
 .contenedor {
