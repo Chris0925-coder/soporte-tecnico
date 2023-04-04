@@ -844,16 +844,18 @@ h1,h2,h3,h4,h5,h6 {
 	flex-direction: row;
 	flex-wrap: wrap;
 	margin: 0 auto;
+	justify-content: center;
 }
 
 .descarga {
 	display: flex;
 	position: relative;
+	flex-wrap: wrap;
 	flex-direction: column;
 	/*justify-content: center;
 	justify-items: center;
-	align-content: center;
-*/	text-align: center;
+	align-content: center;*/
+	text-align: center;
 	margin: 10px;
 }
 
