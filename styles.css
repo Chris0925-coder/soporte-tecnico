@@ -833,3 +833,32 @@ h1,h2,h3,h4,h5,h6 {
 
 
 }
+
+
+
+/*DESCARGAS*/
+
+.descargas {
+	display: flex;
+	position: relative;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin: 0 auto;
+}
+
+.descarga {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	/*justify-content: center;
+	justify-items: center;
+	align-content: center;
+*/	text-align: center;
+	margin: 10px;
+}
+
+.contenedor {
+	display: grid;
+	position: relative;
+	margin: 0 auto;
+}
