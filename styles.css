@@ -39,11 +39,11 @@ h1,h2,h3,h4,h5,h6 {
 /*	background-position:center;  */
 	background-repeat: no-repeat;
     object-fit: cover;
-	display: inline-block;
+	display: flex;
 	position: relative;
 	flex-direction: row;
 	flex-wrap: wrap;
-	width: 100%;
+/*	width: 100%;*/
 	/*justify-content: center;
 	align-content: center;	*/
 	
@@ -52,12 +52,13 @@ h1,h2,h3,h4,h5,h6 {
 /*	justify-items: space-between;*/
 	padding: 2px;
 	margin: 2px;
-	gap: 5;
+/*	gap: 5;*/
 	width: 100%;
 	height: 300px;
-	box-sizing: content-box;
-	justify-content: center;
+/*	box-sizing: content-box;*/
+/*	justify-content: center;*/
 	justify-items: center;
+	border: 1px solid green;
 }
 
 .heading .navbar {
@@ -97,7 +98,7 @@ h1,h2,h3,h4,h5,h6 {
 */
 .logo {
     display: flex;
-    position: relative;
+    position: absolute;
     background-image: url('img/logochris1.png');
     background-position: center;
     background-size: cover;
@@ -106,29 +107,32 @@ h1,h2,h3,h4,h5,h6 {
     object-fit: fill;
     width: 300px;
     height: 175px;
-    border-radius: 20px;
-    justify-self: center;
+    border-radius: 30px 60px;
+/*    justify-self: center;*/
     align-self: center;
     margin: 2px;
-    float: right;
+/*    float: right;*/
+    right: 0;
 }
 
 .navbar {
-	background-color: rgba(0, 0, 0, 0.2);
+	background-color: rgba(0, 0, 0, 0.1);
 	color: ghostwhite;
 	position: relative;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	margin: 0 auto;
+/*	margin: 0;*/
 	height: fit-content;
 	padding: 15px;
 	border-radius: 5px 0 0 35px;
 /*	max-width: 992px;*/
 /*	height: auto;*/
-	width: 100%;
-	align-content: space-between;
-	justify-content: space-between;
+	width: auto;
+	height: auto;
+/*	align-content: space-between;*/
+/*	justify-content: space-between;*/
+/*	border: 1px red solid;*/
 }
 
 
@@ -212,6 +216,10 @@ h1,h2,h3,h4,h5,h6 {
 	width: 100%;
 	height: auto;
 	margin: 0 auto;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2)0%, rgba(0, 0, 0, 0.9)100%);
+/*	box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3);*/
+/*	background: linear-gradient(to bottom, rgba(60,0,30,0.9) 50%,rgba(0, 0, 0, 0.1)100%);*/
+/*	z-index: 2;*/
 }
 
 .galeria .carousel-item2 {
@@ -219,12 +227,12 @@ h1,h2,h3,h4,h5,h6 {
 	position: relative;
 	background-image: url('img/ps4Pro.jpg');
 	background-position: center;
-	background-size: cover;
+	background-size: contain;
 	background-repeat: no-repeat;
-	object-fit: contain;
+	object-fit: fill;
 	width: 100%;
 	height: 300px;
-	margin: 0 auto;
+	margin: 0;
 }
 
 
@@ -261,7 +269,7 @@ h1,h2,h3,h4,h5,h6 {
 	position: relative;
 	width: 100%;
 	height: auto;
-
+	background-color: rgba(0, 0, 0, 0.9);
 }
 
 
@@ -454,6 +462,10 @@ h1,h2,h3,h4,h5,h6 {
 	color: darkgrey;
 }
 
+.gal2 {
+	background: linear-gradient(to top, rgba(0, 0, 0, 0.2)0%, rgba(0, 0, 0, 0.9)100%);
+}
+
 .galeria2 {
 /*	display: inline-block;*/
 /*	position: relative;*/
@@ -464,14 +476,13 @@ h1,h2,h3,h4,h5,h6 {
 	height: 366px;
 	margin: 0 auto;
 /*	border: 1px solid black;*/
-	background-size: cover;
+	background-size: contain;
 	object-fit: expand;
-
 }
 
 .galeria2:hover {
 /*	opacity: 0.6;*/
-	border: 5px solid goldenrod ;
+	border: 5px solid white ;
 }
 
 .photos {
