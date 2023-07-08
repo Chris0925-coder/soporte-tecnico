@@ -538,6 +538,7 @@ h1,h2,h3,h4,h5,h6 {
     text-transform: uppercase;
     color: #303030;;
     margin: 10px;
+    font-size: 0.8rem;
 }
 
 .contact1 a {
@@ -568,7 +569,7 @@ h1,h2,h3,h4,h5,h6 {
     flex-wrap: wrap;
     text-align: right;
     background: #bbbb;;
-    border-radius: 15px;
+/*    border-radius: 15px;*/
     width: auto;
     justify-content: space-between;
     margin: 0;
