@@ -10,7 +10,7 @@ body {
 	background: #FFEFBA;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #FFFFFF, #FFEFBA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	height: 100vh;
+/*	height: 100vh;*/
 	overflow-x: hidden;
 	font-family: 'Arial', sans-serif;
 }
@@ -31,6 +31,10 @@ h1,h2,h3,h4,h5,h6 {
 	background: #00796B;
 }
 */
+
+.short {
+	border-radius: 30px 60px;
+}
 
 .heading {
 /*	color: #c4b42c;*/
