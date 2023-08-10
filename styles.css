@@ -101,13 +101,13 @@ h1,h2,h3,h4,h5,h6 {
 }
 */
 .logo {
-    display: flex;
+/*    display: flex;*/
     position: absolute;
     background-image: url('img/logochris1.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    border-radius: 10px;
+/*    border-radius: 10px;*/
     object-fit: fill;
     width: 300px;
     height: 175px;
@@ -116,7 +116,7 @@ h1,h2,h3,h4,h5,h6 {
     align-self: center;
     margin: 2px;
 /*    float: right;*/
-    right: 0;
+    right: 5%;
     animation: mover-izq-der 3s 1;
 	animation-fill-mode: forwards;
 }
@@ -782,7 +782,7 @@ h1,h2,h3,h4,h5,h6 {
 
 	.logo {
 		display: flex;
-		position: sticky;	
+		position: absolute;	
 		float: right;
 		width: 140px;
 		height: 60px;
@@ -793,6 +793,7 @@ h1,h2,h3,h4,h5,h6 {
 		height: 160px;
 		margin: 0 auto;
 		justify-content: space-between;
+		overflow-x: hidden;
 	/*		justify-items: center;*/
 	} 
 
