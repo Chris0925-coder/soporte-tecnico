@@ -761,6 +761,16 @@ h1,h2,h3,h4,h5,h6 {
 /*	font-family: serif;*/
 }
 
+.form-control::placeholder {
+	display: flex;
+	position: absolute;
+	color: rgba(0, 0, 0, 0.2);
+	right: 5%;
+	bottom: 2%;
+/*	border: 1px solid darkgrey;*/
+	object-position: center;
+	text-align: right;
+}
 
 
 
