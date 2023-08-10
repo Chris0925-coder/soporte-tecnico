@@ -117,6 +117,17 @@ h1,h2,h3,h4,h5,h6 {
     margin: 2px;
 /*    float: right;*/
     right: 0;
+    animation: mover-izq-der 3s 1;
+	animation-fill-mode: forwards;
+}
+
+@keyframes mover-izq-der {
+	from {
+		transform: translateX(100%);
+	}
+	to {
+		transform: translateX(10px);
+	}
 }
 
 .navbar {
@@ -453,19 +464,25 @@ h1,h2,h3,h4,h5,h6 {
 
 
 
-.otros ul {
+.otros article {
     /*display: flex;*/
     /*flex-direction: row;
     flex-wrap: wrap;*/ 
-    color: rgb(0, 0, 0);
-    text-justify: auto;
+    color: #ffff;
+    text-justify: ;
     padding: 0;
     margin: 0;
+    text-align: justify-all;
+    text-justify: newspaper;
+/*    text-indent: 10px;*/
+	margin: 0 5%;
+	cursor: default;
+
 }
 
-.otros p:hover {
+.otros article:hover {
 	background-color: ghostwhite;
-	color: darkgrey;
+	color: #303030;
 }
 
 .gal2 {
@@ -539,7 +556,7 @@ h1,h2,h3,h4,h5,h6 {
     list-style: none;
     list-style-type: none;
     text-decoration: blink;
-    text-transform: uppercase;
+/*    text-transform: uppercase;*/
     color: #303030;;
     margin: 10px;
     font-size: 0.6rem;
@@ -562,7 +579,7 @@ h1,h2,h3,h4,h5,h6 {
     color: #303030;
 }
 
-.contact1 a:hover {
+.contact1 span:hover {
 /*	box-sizing: content-box;*/
 	border-radius: 8px;
 	padding: 3px;
@@ -573,6 +590,7 @@ h1,h2,h3,h4,h5,h6 {
 /*	width: auto;
 	height: auto;*/
 	box-shadow: 2px 2px 5px darkgray;
+	transition: background-color .7s;
 
 }
 
@@ -613,6 +631,7 @@ h1,h2,h3,h4,h5,h6 {
 	box-shadow: 2px 0px 3px black;
 	padding: 2px;
 	border-radius: 30%;
+	transition: 0.5s;
 /*    color: #00008b;*/
 }
 
@@ -737,7 +756,7 @@ h1,h2,h3,h4,h5,h6 {
 .base a {
 	color: white;
 	text-decoration: none;
-	text-transform: uppercase;
+/*	text-transform: uppercase;*/
 	font-weight: 700;
 /*	font-family: serif;*/
 }
@@ -938,8 +957,9 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 a button:hover {
-	background-color: ghostwhite;
-	scale: 1.2;
+/*	color: white;*/
+	background-color: darkgoldenrod;
+	scale: 1.1;
 	transition: 0.3s;
 /*	pointer-events: auto;*/
 	cursor: pointer;
