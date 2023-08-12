@@ -134,3 +134,7 @@ galeria2.addEventListener('click', () => {
 
 
 });
+
+
+// const carousel = new bootstrap.Carousel('#myCarousel');
+
