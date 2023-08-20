@@ -762,10 +762,65 @@ h1,h2,h3,h4,h5,h6 {
 	position: relative;
 	flex-direction: column;
 	justify-content: space-between;
-	width: 25%;
+	width: 30%;
 	height: auto;
 }
 
+.notice {
+	display: block;
+	position: relative;
+	background-color: rgba(250, 250, 250, 1.0);
+	width: 100%;
+	height: 250px;
+	overflow: auto;
+	text-align: justify;
+	padding: 5% 10%;
+	border-radius: 2%;
+
+}
+
+.botones {
+	display: flex;
+	position: relative;
+	width: 100%;
+	justify-content: space-between;
+/*	top: 0;*/
+}
+
+.not-a {
+	display: flex;
+	position: sticky;
+	width: 50%;
+	height: auto;
+	border-bottom: 2px solid black;
+	opacity: 0.3;
+/*	top: 0;*/
+}
+
+.not-b {
+	display: flex;
+	position: sticky;
+	width: 50%;
+	height: auto;
+	border-bottom: 2px solid black;
+	opacity: 0.3;
+/*	top: 0;*/
+}
+
+.not-1 {
+	font-size: .6rem;
+}
+
+.cap {
+	font-size: 1.1rem;
+	font-weight: 900;
+}
+
+.not-img img {
+	cursor: pointer;
+	width: 120px;
+	height: 120px;
+}
 .logo-cont {
 	display: flex;
 	position: relative;
@@ -1241,3 +1296,29 @@ a button:hover {
 		border-radius: 5%;
 		margin: 10px;
 	}
+
+	.canals {
+		display: flex;
+		width: 100%;
+		height: auto;
+		margin: 0 auto;
+		padding: 15%;
+	}
+
+	.canals ul {
+		text-align: justify;
+		margin: 0 auto;
+		color: black;
+		text-decoration: none;
+		list-style: none;
+		padding-left: 0;
+	}
+
+	.canals ul li {
+		margin-bottom: 5%;
+	}
+
+	.canals ul li > a {
+		color: #303030;
+		text-decoration: none;
+	} 

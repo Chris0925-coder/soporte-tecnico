@@ -11,130 +11,162 @@
 //     });
 // });
 
-let slideThumnail = 0;
-let slideThumnail2 = 0;
+// let slideThumnail = 0;
+// let slideThumnail2 = 0;
 
-const navToggle = document.querySelector(".navbar-toggler")
-const navLink = document.querySelector(".navbar-nav")
+// const navToggle = document.querySelector(".navbar-toggler")
+// const navLink = document.querySelector(".navbar-nav")
 
-navToggle.addEventListener("click", () => {
-    navLink.classList.toggle("navbar-nav_visible")
-});
+// navToggle.addEventListener("click", () => {
+//     navLink.classList.toggle("navbar-nav_visible")
+// });
 
-let caruselItem = document.querySelector('.carousel-item2');
-let galeria = document.querySelector('.galeria');
+// let caruselItem = document.querySelector('.carousel-item2');
+// let galeria = document.querySelector('.galeria');
 
 
 
-const carusel = [
-    'img/newd.jpeg',
-    'img/OIP.jfif',
-    'img/ps4Pro.jpg',
-    'img/ps4Pro2.jpg'
-];
+// const carusel = [
+//     'img/newd.jpeg',
+//     'img/OIP.jfif',
+//     'img/ps4Pro.jpg',
+//     'img/ps4Pro2.jpg'
+// ];
 
-function thumnail() {
+// function thumnail() {
     
-    for (i = 0; i < carusel.length; i++) {
-        caruselItem.style.backgroundImage = `url(${carusel[i]})`;
+//     for (i = 0; i < carusel.length; i++) {
+//         caruselItem.style.backgroundImage = `url(${carusel[i]})`;
         
-    };
+//     };
 
-    slideThumnail++;
-    slideThumnail2++;
+//     slideThumnail++;
+//     slideThumnail2++;
 
-    if(slideThumnail > carusel.length) {slideThumnail = 1};
-    if(slideThumnail > carusel.length) {
-        slideThumnail2 = 1;
+//     if(slideThumnail > carusel.length) {slideThumnail = 1};
+//     if(slideThumnail > carusel.length) {
+//         slideThumnail2 = 1;
          
         
-    };
-    caruselItem.style.backgroundImage = `url(${carusel[slideThumnail-1]})`;
-   // console.log(carusel[slideThumnail-1]);
-    if (carusel[slideThumnail-1] == "img/OIP.jfif") {
-            let info = "<p class='jsSlider'>Node.js, JavaScript, SQLite. Base de datos a un click.</p>";
-            let p = document.createElement("figcaption");
-            p = info;
-            // caruselItem = p;
+//     };
+//     caruselItem.style.backgroundImage = `url(${carusel[slideThumnail-1]})`;
+//   if (carusel[slideThumnail-1] == "img/OIP.jfif") {
+//             let info = "<p class='jsSlider'>Node.js, JavaScript, SQLite. Base de datos a un click.</p>";
+//             let p = document.createElement("figcaption");
+//             p = info;
+       
+//             caruselItem.innerHTML=p;
+
+//         } else if (carusel[slideThumnail-1] == "img/newd.jpeg") {
+//             let p = document.createElement("figcaption");
+//             let info1 = "<p class='jsSlider'>Reparación, mantenimiento, limpieza...</p>";
             
-            caruselItem.innerHTML=p;
-
-        } else if (carusel[slideThumnail-1] == "img/newd.jpeg") {
-            let p = document.createElement("figcaption");
-            let info1 = "<p class='jsSlider'>Reparación, mantenimiento, limpieza...</p>";
+//             p = info1;
+//              caruselItem.innerHTML=p;
+//         } else if (carusel[slideThumnail-1] == "img/ps4Pro.jpg") {
+//             let p = document.createElement("figcaption");
+//             let info2 = "<p class='jsSlider'>Renueva pasta térmica, PS4Pro.</p>";
             
-            p = info1;
-             caruselItem.innerHTML=p;
-        } else if (carusel[slideThumnail-1] == "img/ps4Pro.jpg") {
-            let p = document.createElement("figcaption");
-            let info2 = "<p class='jsSlider'>Renueva pasta térmica, PS4Pro.</p>";
-            
-            p = info2;
-             caruselItem.innerHTML=p;
-        }
-        else {
-            caruselItem.innerHTML="<p class='jsSlider'>Limpieza, consola de Video Juegos.</p>";
-        }
-    setTimeout(thumnail, 8000);
+//             p = info2;
+//              caruselItem.innerHTML=p;
+//         }
+//         else {
+//             caruselItem.innerHTML="<p class='jsSlider'>Limpieza, consola de Video Juegos.</p>";
+//         }
+//     setTimeout(thumnail, 8000);
 
 
-    // caruselItem.classList.toggle(`url(${carusel[0]})`);
-    // caruselItem.style.backgroundImage = carusel;
-};
-thumnail();
+// };
+// thumnail();
 
 
-// console.log(carusel[0]);
 
 
-caruselItem.addEventListener('touchstart', () => {
-    // thumnail();
-    clearTimeout(thumnail);
-    for (i = 0; i < carusel.length; i++) {
-    caruselItem.style.backgroundImage = `url(${carusel[i]})`;
-    };
+// caruselItem.addEventListener('touchstart', () => {
+//     clearTimeout(thumnail);
+//     for (i = 0; i < carusel.length; i++) {
+//     caruselItem.style.backgroundImage = `url(${carusel[i]})`;
+//     };
 
     
-});
+// });
 
 
-const galeria2 = document.querySelector('.galeria2');
-const photos = document.getElementsByClassName('photo');
-const carousel = [
-    'img/newg.jpeg',
-    'img/lap02.jpeg',
-    'img/lap03.jpeg',
-    'img/lap04.jpeg',
-    'img/xbox04.jpeg',
-    'img/xbox05.jpeg'
-];
+// const galeria2 = document.querySelector('.galeria2');
+// const photos = document.getElementsByClassName('photo');
+// const carousel = [
+//     'img/newg.jpeg',
+//     'img/lap02.jpeg',
+//     'img/lap03.jpeg',
+//     'img/lap04.jpeg',
+//     'img/xbox04.jpeg',
+//     'img/xbox05.jpeg'
+// ];
 
-// console.log(photos);
+// let slideIndex = 0;
 
-let slideIndex = 0;
+// galeria2.addEventListener('click', () => {
+//   for (i = 0; i < carousel.length; i++) {
+//         photos[i].style.display = "none";
+//         galeria2.style.backgroundImage = `url(${carousel[i]})`;
+//     };
 
-galeria2.addEventListener('click', () => {
-    // let i = 0;
-    
-    // galeria2
-    // galeria2.style.backgroundImage = `url(${carusel2[i]})`;
-    for (i = 0; i < carousel.length; i++) {
-        photos[i].style.display = "none";
-        galeria2.style.backgroundImage = `url(${carousel[i]})`;
-    };
-
-    
-    
-    slideIndex++;
+//     slideIndex++;
  
-    if(slideIndex > carousel.length) {slideIndex = 1};
-    galeria2.style.backgroundImage = `url(${carousel[slideIndex-1]})`;
-    // photos[slideIndex-1].style.display = "none";
-    // galeria2[slideIndex-1].style.display = "flex";
+//     if(slideIndex > carousel.length) {slideIndex = 1};
+//     galeria2.style.backgroundImage = `url(${carousel[slideIndex-1]})`;
+// });
 
 
-});
 
+
+let n = 0;
+
+const noti = document.querySelectorAll(".not-1");
+const botona = document.querySelector(".not-a");
+const botonb = document.querySelector(".not-b");
+console.log(noti);
+noti[1].style.display = "none";
 
 // const carousel = new bootstrap.Carousel('#myCarousel');
 
+function notice() {
+    for (i=0;i<noti.length;i++) {
+        noti[i].style.display = "none";
+        
+    }
+
+    n++;
+    if(n>noti.length){n=1};
+    noti[n-1].style.display = "block";
+    if(noti[n-1]==noti[0]) {
+        botona.style.opacity = "1";
+        botonb.style.opacity = "0.3";
+        }else {
+            botonb.style.opacity = "1";
+            botona.style.opacity = "0.3";
+        }
+    
+};
+
+let time = setInterval(notice,10000);
+
+botona.addEventListener('click',() => {
+    botona.style.opacity = "1";
+    botonb.style.opacity = "0.3";
+    if(true) {
+    noti[0].style.display = "block";
+    noti[1].style.display = "none";
+    clearInterval(time);
+    } 
+});
+
+botonb.addEventListener('click',() => {
+    botona.style.opacity = "0.3";
+    botonb.style.opacity = "1";
+    if(true) {
+    noti[0].style.display = "none";
+    noti[1].style.display = "block";
+    clearInterval(time);
+    } 
+});
