@@ -1318,6 +1318,14 @@ a button:hover {
 		margin-bottom: 5%;
 	}
 
+	.canals ul li:hover {
+/*		border-bottom: 1px solid darkgoldenrod;*/
+		box-shadow:1px 1px 10px #30303040;
+		padding: 2%;
+		border-radius: 2%;
+		transition: .5s;
+	}
+
 	.canals ul li > a {
 		color: #303030;
 		text-decoration: none;
