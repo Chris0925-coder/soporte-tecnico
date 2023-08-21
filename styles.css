@@ -769,13 +769,13 @@ h1,h2,h3,h4,h5,h6 {
 .notice {
 	display: block;
 	position: relative;
-	background-color: rgba(250, 250, 250, 1.0);
+	background-color: rgba(250, 250, 250, 0.8);
 	width: 100%;
 	height: 250px;
 	overflow: auto;
 	text-align: justify;
 	padding: 5% 10%;
-	border-radius: 2%;
+/*	border-radius: 0.1%;*/
 
 }
 
@@ -855,22 +855,31 @@ h1,h2,h3,h4,h5,h6 {
 /*	border: 1px solid red;*/
 }
 .otros-1 {
-	background-color: rgba(200, 200, 200, 0.2);
+	background-color: rgba(250, 250, 250, .8);
 	border-radius: 1%;
-	padding: 10px;
+	padding: 20px;
+/*	padding-left: 0;*/
 
 }
-.otros article {
+
+.otros-1 ul {
+	padding-left: 0;
+}
+
+.otros p {
+	text-align: justify;
 	font-size: .7rem;
 	margin: 2px;
+	width: 60%;
+	margin: 0 auto;
 }
 
-.otros article:hover {
-	padding: 4px;
+.otros p:hover {
+	padding: 5px;
 	color: white;
 	background-color: rgba(0, 0, 0, 0.2);
 	transition: .3s;
-	width: fit-content;
+/*	width: fit-content;*/
 }
 
 .banner-demo {
@@ -939,6 +948,102 @@ h1,h2,h3,h4,h5,h6 {
 /*DEMO PAGE*/
 
 
+/*DESCARGAS*/
+
+.descargas {
+	display: flex;
+	position: relative;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin: 0;
+	justify-content: space-between;
+	align-content: space-between;
+	width: 100%;
+	height: auto;
+}
+
+.descarga {
+	display: flex;
+	position: relative;
+	flex-wrap: wrap;
+	flex-direction: column;
+	/*justify-content: center;
+	justify-items: center;
+	align-content: center;*/
+	text-align: center;
+	margin: 10px auto;
+}
+
+.contenedor {
+	display: grid;
+	position: relative;
+	margin: 0 auto;
+}
+
+a button:hover {
+/*	color: white;*/
+	background-color: darkgoldenrod;
+	scale: 1.1;
+	transition: 0.3s;
+/*	pointer-events: auto;*/
+	cursor: pointer;
+	padding: 3px;
+}
+
+/*button {
+	background-color: rgba(250, 250, 250, 1.0);
+	color: ghostwhite;
+}*/
+
+
+	#previous,
+	#next {
+		width: fit-content;
+		height: fit-content;
+		background-color: rgba(250, 250, 250, .2);
+		top: 50%;
+		border-radius: 5%;
+		margin: 10px;
+	}
+
+	.canals {
+		display: flex;
+		width: 100%;
+		height: auto;
+		margin: 0 auto;
+		padding: 15%;
+	}
+
+	.canals h5 {
+		text-transform: uppercase;
+	}
+
+	.canals ul {
+		text-align: justify;
+		margin: 0 auto;
+		color: black;
+		text-decoration: none;
+		list-style: none;
+		padding-left: 0;
+		width: 50%;
+	}
+
+	.canals ul li {
+		margin-bottom: 5%;
+	}
+
+	.canals ul li:hover {
+/*		border-bottom: 1px solid darkgoldenrod;*/
+		box-shadow:1px 1px 10px #30303040;
+		padding: 2%;
+		border-radius: 2%;
+		transition: .5s;
+	}
+
+	.canals ul li > a {
+		color: #303030;
+		text-decoration: none;
+	} 
 
 /*media*/
 @media screen and (max-width: 768px) {
@@ -1033,7 +1138,7 @@ h1,h2,h3,h4,h5,h6 {
 /*		z-index: 3000;*/
 	}
 
-	.otros article:hover {
+	.otros p:hover {
 		display: flex;
 		position: relative;
 
@@ -1170,61 +1275,21 @@ h1,h2,h3,h4,h5,h6 {
 		height: auto;
 	}
 
+	.canals ul {
+		width: 100%;
+	}
+
 
 }
 
 
-
-/*DESCARGAS*/
-
-.descargas {
-	display: flex;
-	position: relative;
-	flex-direction: row;
-	flex-wrap: wrap;
-	margin: 0;
-	justify-content: space-between;
-	align-content: space-between;
-	width: 100%;
-	height: auto;
-}
-
-.descarga {
-	display: flex;
-	position: relative;
-	flex-wrap: wrap;
-	flex-direction: column;
-	/*justify-content: center;
-	justify-items: center;
-	align-content: center;*/
-	text-align: center;
-	margin: 10px auto;
-}
-
-.contenedor {
-	display: grid;
-	position: relative;
-	margin: 0 auto;
-}
-
-a button:hover {
-/*	color: white;*/
-	background-color: darkgoldenrod;
-	scale: 1.1;
-	transition: 0.3s;
-/*	pointer-events: auto;*/
-	cursor: pointer;
-	padding: 3px;
-}
-
-/*button {
-	background-color: rgba(250, 250, 250, 1.0);
-	color: ghostwhite;
-}*/
 
 .gitlogo {
 	display: none;
 }
+
+
+
 
 .gitlogo3 {
 		display: flex;
@@ -1286,47 +1351,3 @@ a button:hover {
 		flex-direction: column-reverse;
 /*		border: 1px solid red;*/
 	}
-
-	#previous,
-	#next {
-		width: fit-content;
-		height: fit-content;
-		background-color: rgba(250, 250, 250, .2);
-		top: 50%;
-		border-radius: 5%;
-		margin: 10px;
-	}
-
-	.canals {
-		display: flex;
-		width: 100%;
-		height: auto;
-		margin: 0 auto;
-		padding: 15%;
-	}
-
-	.canals ul {
-		text-align: justify;
-		margin: 0 auto;
-		color: black;
-		text-decoration: none;
-		list-style: none;
-		padding-left: 0;
-	}
-
-	.canals ul li {
-		margin-bottom: 5%;
-	}
-
-	.canals ul li:hover {
-/*		border-bottom: 1px solid darkgoldenrod;*/
-		box-shadow:1px 1px 10px #30303040;
-		padding: 2%;
-		border-radius: 2%;
-		transition: .5s;
-	}
-
-	.canals ul li > a {
-		color: #303030;
-		text-decoration: none;
-	} 
