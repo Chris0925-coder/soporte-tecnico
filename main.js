@@ -125,8 +125,10 @@ let n = 0;
 const noti = document.querySelectorAll(".not-1");
 const botona = document.querySelector(".not-a");
 const botonb = document.querySelector(".not-b");
+const botonc = document.querySelector(".not-c");
 console.log(noti);
 noti[1].style.display = "none";
+noti[2].style.display = "none";
 
 // const carousel = new bootstrap.Carousel('#myCarousel');
 
@@ -142,9 +144,15 @@ function notice() {
     if(noti[n-1]==noti[0]) {
         botona.style.opacity = "1";
         botonb.style.opacity = "0.3";
-        }else {
+        botonc.style.opacity = "0.3";
+        }else if (noti[n-1]==noti[1]) {
             botonb.style.opacity = "1";
             botona.style.opacity = "0.3";
+            botonc.style.opacity = "0.3";
+        } else {
+            botonc.style.opacity = "1";
+            botona.style.opacity = "0.3";
+            botonb.style.opacity = "0.3";
         }
     
 };
@@ -154,19 +162,35 @@ let time = setInterval(notice,10000);
 botona.addEventListener('click',() => {
     botona.style.opacity = "1";
     botonb.style.opacity = "0.3";
+    botonc.style.opacity = "0.3";
     if(true) {
     noti[0].style.display = "block";
     noti[1].style.display = "none";
+    noti[2].style.display = "none";
     clearInterval(time);
     } 
 });
 
 botonb.addEventListener('click',() => {
     botona.style.opacity = "0.3";
+    botonc.style.opacity = "0.3";
     botonb.style.opacity = "1";
     if(true) {
     noti[0].style.display = "none";
     noti[1].style.display = "block";
+    noti[2].style.display = "none";
+    clearInterval(time);
+    } 
+});
+
+botonc.addEventListener('click',() => {
+    botonc.style.opacity = "1";
+    botona.style.opacity = "0.3";
+    botonb.style.opacity = "0.3";
+    if(true) {
+    noti[0].style.display = "none";
+    noti[1].style.display = "none";
+    noti[2].style.display = "block";
     clearInterval(time);
     } 
 });

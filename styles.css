@@ -790,7 +790,7 @@ h1,h2,h3,h4,h5,h6 {
 .not-a {
 	display: flex;
 	position: sticky;
-	width: 50%;
+	width: 30%;
 	height: auto;
 	border-bottom: 2px solid black;
 	opacity: 0.3;
@@ -800,7 +800,17 @@ h1,h2,h3,h4,h5,h6 {
 .not-b {
 	display: flex;
 	position: sticky;
-	width: 50%;
+	width: 30%;
+	height: auto;
+	border-bottom: 2px solid black;
+	opacity: 0.3;
+/*	top: 0;*/
+}
+
+.not-c {
+	display: flex;
+	position: sticky;
+	width: 30%;
 	height: auto;
 	border-bottom: 2px solid black;
 	opacity: 0.3;
