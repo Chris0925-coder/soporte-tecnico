@@ -1024,6 +1024,7 @@ a button:hover {
 
 	.canals {
 		display: flex;
+		flex-direction: column;
 		width: 100%;
 		height: auto;
 		margin: 0 auto;
@@ -1032,6 +1033,8 @@ a button:hover {
 
 	.canals h5 {
 		text-transform: uppercase;
+		margin-bottom: 20px;
+		border-bottom: 2px solid #303030;
 	}
 
 	.canals ul {
