@@ -1,0 +1,10 @@
+User-agent: Googlebot
+allow: /
+
+User-agent: *
+Disallow: /cgi-bin/
+Disallow: /public/
+Disallow: /tmp/
+Disallow: /scripts/
+
+Sitemap: https://www.desarrollohelpdesk.site/sitemap.xml
