@@ -3,7 +3,6 @@ allow: /
 
 User-agent: *
 Disallow: /cgi-bin/
-Disallow: /public/
 Disallow: /tmp/
 Disallow: /scripts/
 
