@@ -1,6 +1,9 @@
 User-agent: Googlebot
 allow: /
 
+User-agent: bingbot
+Allow: /
+
 User-agent: *
 Disallow: /cgi-bin/
 Disallow: /tmp/
