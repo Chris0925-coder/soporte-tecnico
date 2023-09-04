@@ -715,6 +715,9 @@ h1,h2,h3,h4,h5,h6 {
 
 .carousel {
 	width: 65%;
+
+	margin: auto;
+	align-items: center;
 }
 
 .carousel-inner {
@@ -742,6 +745,8 @@ h1,h2,h3,h4,h5,h6 {
 	object-position: center;
 	object-fit: fill;
 	margin: 0 auto;
+	justify-items: center;
+	align-items: center;
 	width: 400px;
 	height: 400px;
 }
