@@ -1198,8 +1198,8 @@ a button:hover {
 	object-fit: cover;
 	width: 150px;
 	height: 200px;
-	border-radius: 3%;
-
+	border-radius: 5%;
+	opacity: 0.7;
 }
 
 .prim-caption {
