@@ -1,4 +1,7 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
 /*@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');*/
+
 
 * {
 	margin: 0;
@@ -440,7 +443,7 @@ h1,h2,h3,h4,h5,h6 {
 .contact {
     display: flex;
     position: relative;
-    flex-direction: row;
+    flex-direction: column;
 /*    flex-wrap: nowrap;*/
     text-align: right;
     background: #bbbb;;
@@ -488,7 +491,7 @@ h1,h2,h3,h4,h5,h6 {
     
     display: flex;
     position: relative;
-    flex-direction: row;
+    flex-direction: column;
 /*    justify-content: flex-start;*/
 /*    justify-self: left;*/
 /*    left: 0;*/
@@ -1035,6 +1038,7 @@ a button:hover {
 		height: auto;
 		margin: 0 auto;
 		padding: 15%;
+		padding-bottom: 0;
 	}
 
 	.canals h5 {
@@ -1070,7 +1074,223 @@ a button:hover {
 		text-decoration: none;
 	} 
 
-/*media*/
+
+
+
+.gitlogo {
+	display: none;
+}
+
+
+.container-pro {
+	background-color: #1c1d2d;
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
+
+.pro-row {
+	display: flex;
+	position: relative;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+.pro {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	color: #ffff;
+/*	justify-content: space-between;*/
+	padding: 20px;
+	text-align: center;
+/*	border: 1px solid white;*/
+}
+
+.pro h4 {
+	font-size: 1.1rem;
+	font-weight: 700;
+
+}
+
+.pro-link {
+	color: #ffffff60;
+	text-decoration: none;
+}
+
+.pro-list {
+	color: #ffffff60;
+	margin-top: 10px;
+	font-size: 0.7rem;
+	list-style: none;
+/*	text-indent: 10px;*/
+	cursor: default;
+	padding-left: 0;
+}
+
+.pro-item:hover, 
+.pro-link:hover {
+	color: #ffffff20;
+}
+
+.pro-item {
+/*	text-decoration: none;*/
+	margin: 10px 0 0 0;
+}
+
+.pro-item:after {
+	color: yellow;
+}
+
+
+
+
+
+.main-h1 {
+	color: #303030;
+	text-align: center;
+	width: 100%;
+	margin: 5px;
+}
+
+.primary {
+	display: flex;
+	position: relative;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: auto;
+	height: auto;
+	margin: 0 auto;
+}
+
+.primary-img {
+	display: flex;
+	position: relative;
+	flex-direction: row;
+	max-width: 60%;
+	height: 400px;
+	margin: 0;
+	justify-content: center;
+	opacity: 0.9;
+	animation: move-izq-der 5s 1;
+	animation-fill-mode: forwards;
+	filter: drop-shadow(2px 2px 7px #303030);
+/*	background-color: black;*/
+/*	border: 1px solid black;*/
+}
+
+@keyframes move-izq-der {
+	from {
+		transform: translateX(-400px);
+	}
+	to {
+		transform: translateX(10px);
+	}
+}
+.primary-img {
+/*	border: 1px solid black;*/
+	align-items: center;
+}
+
+.primary-img img {
+	background-size: auto;
+	object-fit: cover;
+	width: 150px;
+	height: 200px;
+	border-radius: 3%;
+
+}
+
+.prim-caption {
+	display: block;
+	position: relative;
+	max-width: 400px;
+	padding: 4%;
+/*	text-align: left;*/
+/*	border: 1px solid black;*/
+/*	margin: 0 10px;*/
+}
+
+.primary-h2 {
+	color: #303030;
+	text-align: center;
+	width: 100%;
+/*	padding: 10px;*/
+	font-size: 0.9rem;
+	border-bottom: 2px solid #303030;
+	margin-bottom: 15px;
+}
+
+.primary-p {
+	font-size: 0.7rem;
+	text-align: justify;
+/*	padding: 20px;*/
+}
+
+.social2 {
+/*	display: flex;*/
+/*	position: relative;*/
+	flex-direction: row;
+	margin-top: 40px;
+	width: 100%;
+	height: auto;
+/*	margin: 40px 0 auto auto;*/
+	justify-content: stretch;
+
+/*	border: 1px solid black;*/
+}
+
+.social-items2 {
+	display: flex;
+	position: relative;
+	flex-direction: row;
+	justify-content: space-evenly;
+	padding-left: 0;
+}
+
+.social-item2 {
+	display: flex;
+	flex-direction: row;
+/*	justify-content: flex-end;*/
+	list-style: none;
+	width: auto;
+	height: auto;
+/*	gap: 15%;*/
+}
+
+.social-link {
+	color: #303030;
+	text-decoration: none;
+	padding-left: 0;
+}
+
+.bi-facebook {
+	color: #3b5998;
+}
+
+.bi-twitter {
+	color: #1DA1F2;
+/*	color: #25D366;*/
+}
+
+.bi-youtube {
+	color: #c4302b;
+}
+
+.bi-instagram {
+	background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  -webkit-background-clip: text;
+          /* Also define standard property for compatibility */
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+ }
+
+
+
+
+ /*media*/
 @media screen and (max-width: 768px) {
 	
 	.cuerpo {
@@ -1305,16 +1525,12 @@ a button:hover {
 	}
 
 
+	.pro-row {
+		flex-direction: column;
+	}
+
+
 }
-
-
-
-.gitlogo {
-	display: none;
-}
-
-
-
 
 .gitlogo3 {
 		display: flex;
