@@ -56,9 +56,9 @@ h1,h2,h3,h4,h5,h6 {
 .cajacookies a{color:#fff;}
 .cajacookies a:hover{color:#ccc;}
 .cajacookies p, 
-.cajacookies div{display:inline-block; font-size: 0.6rem}
+.cajacookies div{display:inline-block; font-size: 0.6rem;}
 .cajacookies p{width:85%;}
-.cajacookies div{width:20%;padding:5px;border:1px solid #000;background-color:#ccc;text-align:center;position:absolute;top:10px;}
+.cajacookies div{color: #303030;width:auto;padding:10px;border:1px solid #000;background-color:#ccc;text-align:center;position:absolute;top:10px;}
 .cajacookies div:hover{background-color:#c2c2c2;cursor:pointer;}
 
 .botonRGPD:hover {
