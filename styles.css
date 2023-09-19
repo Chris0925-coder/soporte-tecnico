@@ -32,8 +32,8 @@ h1,h2,h3,h4,h5,h6 {
 	color:#fff;
 	position:fixed;
 	bottom:50px;
-	right:0px;
-	width:50%;
+	bottom:0px;
+	width:100%;
 	padding:10px 20px;
 	font-size:18px;
 	opacity:0.9;
@@ -53,13 +53,13 @@ h1,h2,h3,h4,h5,h6 {
 
 }
 
-.botonRGPD a{color:#fff;}
-.botonRGPD a:hover{color:#ccc;}
-.botonRGPD p, 
-.botonRGPD div{display:inline-block;}
-.botonRGPD p{width:85%;}
-.botonRGPD div{width:10%;padding:10px;border:1px solid #000;background-color:#ccc;text-align:center;position:absolute;top:10px;}
-.botonRGPD div:hover{background-color:#c2c2c2;cursor:pointer;}
+.cajacookies a{color:#fff;}
+.cajacookies a:hover{color:#ccc;}
+.cajacookies p, 
+.cajacookies div{display:inline-block; font-size: 0.6rem}
+.cajacookies p{width:85%;}
+.cajacookies div{width:10%;padding:10px;border:1px solid #000;background-color:#ccc;text-align:center;position:absolute;top:10px;}
+.cajacookies div:hover{background-color:#c2c2c2;cursor:pointer;}
 
 .botonRGPD:hover {
 	color: #30303090;
@@ -753,6 +753,17 @@ h1,h2,h3,h4,h5,h6 {
 /*	border: 1px solid red;*/
 }
 
+.main-2 h1 {
+	color: #ffffff90;
+	margin-bottom: 20px;
+
+}
+
+.main-2 {
+	display: block;
+	width: 100%;
+}
+
 .carousel {
 	width: 65%;
 
@@ -812,11 +823,7 @@ h1,h2,h3,h4,h5,h6 {
 /*	border: 1px solid white;*/
 }
 
-.others h2 {
-	color: #ffff;
-	margin-bottom: 10px;
 
-}
 
 .notice {
 	display: block;
@@ -1638,3 +1645,19 @@ a button:hover {
 		flex-direction: column-reverse;
 /*		border: 1px solid red;*/
 	}
+
+
+.poli {
+	display: flex;
+	flex-direction: row;
+	position: relative;
+	background-color: #222222;
+	justify-content: center;
+	gap: 10px;
+}
+
+.poli span {
+	color: #ffff;
+	text-decoration: none;
+	font-size: 0.5rem;
+}
