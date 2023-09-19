@@ -58,7 +58,7 @@ h1,h2,h3,h4,h5,h6 {
 .cajacookies p, 
 .cajacookies div{display:inline-block; font-size: 0.6rem}
 .cajacookies p{width:85%;}
-.cajacookies div{width:10%;padding:10px;border:1px solid #000;background-color:#ccc;text-align:center;position:absolute;top:10px;}
+.cajacookies div{width:20%;padding:5px;border:1px solid #000;background-color:#ccc;text-align:center;position:absolute;top:10px;}
 .cajacookies div:hover{background-color:#c2c2c2;cursor:pointer;}
 
 .botonRGPD:hover {
@@ -450,7 +450,7 @@ h1,h2,h3,h4,h5,h6 {
     list-style-type: none;
     text-decoration: blink;
 /*    text-transform: uppercase;*/
-    color: #303030;;
+    color: #ffff;
     margin: 10px;
     font-size: 0.7rem;
     font-weight: 700;
@@ -472,9 +472,13 @@ h1,h2,h3,h4,h5,h6 {
     text-decoration-line: none;
     text-decoration: none;
     text-decoration-style: none;
-    color: #303030;
+    color: #ffff;
 }
 
+.contact1 a:hover {
+	color: #bbbb;
+	transition: color .5s;
+}
 
 
 .contact {
@@ -515,7 +519,7 @@ h1,h2,h3,h4,h5,h6 {
 .contact li i:hover {
 /*	border:1px solid rgba(250, 250, 250, 0.3);*/
 /*	background-color: ghostwhite;*/
-	box-shadow: 2px 0px 5px white;
+/*	box-shadow: 2px 0px 5px white;*/
 	padding: 1px;
 	border-radius: 30%;
 	transition: 0.5s;
