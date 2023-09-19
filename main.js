@@ -23,7 +23,97 @@
 
 // let caruselItem = document.querySelector('.carousel-item2');
 // let galeria = document.querySelector('.galeria');
+// const cajacookies = document.querySelector('.cajacookies');
+// const cookieAccepted = document.cookies;
+// console.log(aceptaCookies);
+// localStorage.cookieAccepted === true;
+// localStorage.cookieAccepted === true;
 
+function setCookie(cname, cvalue, exdays) {
+        var d = new Date();
+
+        d.setTime(d.getTime() + (exdays*24*60*60*1000));
+        var expires = "expires="+ d.toUTCString();
+
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    };
+
+function removeCookie(cname){
+        setCookie(cname,"",-1);
+    }
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+};
+
+function detectCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0 && (name.length != c.length))  {
+            return true;
+        }
+    }
+    return false;
+};
+
+
+
+
+window.onload=init;
+function init(){
+    bloqueRGPD = document.querySelector('.cajacookies');
+    
+    if(detectCookie("rgpdOK")){
+        if (getCookie("rgpdOK")==1){eliminarBloqueRGPD();}
+    }else{
+        document.querySelector(".botonRGPD").addEventListener("click", () => {
+        eliminarBloqueRGPD();
+        setCookie("rgpdOK",1,365);
+        })        
+    }
+};
+
+function eliminarBloqueRGPD(){
+    bloqueRGPD.parentNode.removeChild(bloqueRGPD);
+};
+
+
+
+// function compruebaAceptaCookies() {
+//     if (localStorage.cookieAccepted === true) {
+//     } else {
+//         window.history.go(-1);
+//         window.close();
+//         window.open("https://www.google.com/", "_self");
+//     }
+// };
+
+// function aceptarCookies() {
+//     localStorage.cookieAccepted === true;
+
+// };
+
+// $(document).ready(function() {
+//     compruebaAceptaCookies();
+// });
 
 
 // const carusel = [
@@ -194,3 +284,19 @@ botonc.addEventListener('click',() => {
     clearInterval(time);
     } 
 });
+
+// counter = parseInt('0');
+
+
+// const app = Vue.createApp({
+//   data() {
+//     return {
+//       counter: localStorage.getItem('count') ? parseInt(localStorage.getItem('count')) : 0,
+//     };
+//   },
+//   watch: {
+//     counter(newQuestion, oldQuestion){
+//       localStorage.setItem('count', newQuestion)
+//     }
+//   },
+// }).mount('#app');
