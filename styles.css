@@ -812,7 +812,7 @@ h1,h2,h3,h4,h5,h6 {
 /*	height: fit-content;*/
 }
 
-.carousel-caption h5,
+.carousel-caption h2,
 .carousel-caption p {
 	color: white;
 }
@@ -1098,7 +1098,7 @@ a button:hover {
 		padding-bottom: 0;
 	}
 
-	.canals h5 {
+	.canals h6 {
 		text-transform: uppercase;
 		margin-bottom: 20px;
 		border-bottom: 2px solid #303030;
@@ -1164,8 +1164,8 @@ a button:hover {
 /*	border: 1px solid white;*/
 }
 
-.pro h4 {
-	font-size: 1.1rem;
+.pro h6 {
+/*	font-size: 1rem;*/
 	font-weight: 700;
 
 }
