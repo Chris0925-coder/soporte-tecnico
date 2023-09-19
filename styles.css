@@ -28,6 +28,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .cajacookies {
+	display: none;
 	background-color:#000;
 	color:#fff;
 	position:fixed;
@@ -43,7 +44,7 @@ h1,h2,h3,h4,h5,h6 {
 
 .botonRGPD {
 
-	display: block;
+	display: none;
 	position: relative;
 	/*place-content: right;
 	place-items: right;
