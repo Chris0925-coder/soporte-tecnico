@@ -80,7 +80,7 @@ function detectCookie(cname) {
 window.onload=init;
 function init(){
     bloqueRGPD = document.querySelector('.cajacookies');
-    if (localStorage.decodedCookie != 'true') {
+    if (localStorage.acceptedCookies != 'true') {
     bloqueRGPD.style.display = 'block';
     }
 
@@ -96,7 +96,7 @@ function init(){
 
 function eliminarBloqueRGPD(){
     bloqueRGPD.parentNode.removeChild(bloqueRGPD);
-    localStorage.decodedCookie = 'true';
+    localStorage.acceptedCookies = 'true';
 };
 
 
