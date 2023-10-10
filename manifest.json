@@ -42,7 +42,7 @@
   }
  ],
  "scope": "/",
- "id": "inversBryan",
+ "id": "index.html",
  "start_url": "/index.html",
  "display_override": ["fullscreen", "minimal-ui"],
  "display": "standalone",
