@@ -1,5 +1,8 @@
 {
+ "lang": "es",
+ "dir": "ltr",
  "name": "Desarrollo Web",
+ "short_name": "DesarrolloWeb",
  "icons": [
   {
    "src": "\/favicons/favicon.png",
@@ -37,5 +40,11 @@
    "type": "image\/png",
    "density": "4.0"
   }
- ]
+ ],
+ "scope": "/",
+ "id": "inversBryan",
+ "start_url": "/index.html",
+ "display_override": ["fullscreen", "minimal-ui"],
+ "display": "standalone",
+ "orientation": "portrait"
 }
