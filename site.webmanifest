@@ -1,14 +1,16 @@
 {
+    "lang": "es",
+    "dir": "ltr",
     "name": "ChristianDevWeb",
     "short_name": "ChrisDev",
     "icons": [
         {
-            "src": "https://www.desarrollohelpdesk.site/favicons/logo-fb.png",
+            "src": "\/favicons/logo-fb.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "https://www.desarrollohelpdesk.site/favicons/logochris1.png",
+            "src": "\/favicons/logochris1.png",
             "sizes": "384x384",
             "type": "image/png"
         }
