@@ -16,7 +16,7 @@
         }
     ],
     "scope": "/",
-    "id": "desarrolloWeb",
+    "id": "index.html",
     "start_url": "/index.html",
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
