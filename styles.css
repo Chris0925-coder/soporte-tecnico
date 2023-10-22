@@ -760,9 +760,10 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .main-2 h1 {
-	color: #f9f9f9;
+	color: #dddd;
 	margin-bottom: 5px;
-	font-size: 1.7rem;
+	font-size: 1.8rem;
+	font-weight: 900;
 
 }
 
