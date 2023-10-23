@@ -1845,6 +1845,12 @@ a button:hover {
 		transform: translateY(0);
 	}
 
+
+	.carousel-inner {
+/*		width: ;*/
+		padding: 0;
+	}
+
 	.carousel-item img {
 		width: 100%;
 		margin: 0;
