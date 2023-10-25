@@ -2,8 +2,51 @@
     "lang": "es",
     "dir": "ltr",
     "name": "ChristianDevWeb",
-    "short_name": "ChrisDev",
+    "short_name": "ChrisDevWeb",
     "icons": [
+        {
+       "src": "\/favicons/favicon-16px.png",
+       "sizes": "16x16",
+       "type": "image\/png",
+       "density": "0.75"
+      },
+      {
+       "src": "\/favicons/favicon-32px.png",
+       "sizes": "32x32",
+       "type": "image\/png",
+       "density": "0.75"
+      },
+      {
+       "src": "\/favicon.png",
+       "sizes": "36x36",
+       "type": "image\/png",
+       "density": "0.75"
+      },
+      {
+       "src": "\/favicons/favicon-48px.png",
+       "sizes": "48x48",
+       "type": "image\/png",
+       "density": "1.0"
+      },
+      {
+       "src": "\/favicon.png",
+       "sizes": "72x72",
+       "type": "image\/png",
+       "density": "1.5"
+      },
+      {
+       "src": "\/favicons/favicon-96px.png",
+       "sizes": "96x96",
+       "type": "image\/png",
+       "density": "2.0"
+      },
+      {
+       "src": "\/favicon.png",
+       "sizes": "144x144",
+       "type": "image\/png",
+       "density": "3.0"
+      },
+
         {
             "src": "\/favicons/logo-fb.png",
             "sizes": "192x192",
