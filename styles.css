@@ -1218,7 +1218,7 @@ a button:hover {
 	position: relative;
 	flex-direction: column;
 	color: #ffff;
-/*	justify-content: space-between;*/
+	justify-content: space-between;
 	padding: 20px;
 	text-align: center;
 /*	border: 1px solid white;*/
@@ -1243,6 +1243,9 @@ a button:hover {
 /*	text-indent: 10px;*/
 	cursor: default;
 	padding-left: 0;
+	text-align: center;
+/*	justify-content: center;*/
+/*	border: 1px solid green;*/
 }
 
 .pro-item:hover, 
@@ -1251,8 +1254,13 @@ a button:hover {
 }
 
 .pro-item {
+	margin-left: 0;
+	padding-left: 0;
 /*	text-decoration: none;*/
 	margin: 10px 0 0 0;
+/*	border: 1px solid red;*/
+	text-align: center;
+	justify-content: center;
 }
 
 .pro-item:after {
