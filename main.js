@@ -1,3 +1,4 @@
+// $('body').animate({'opacity': '1'}, 2000);
 // document.addEventListener('DOMContentLoaded', () => {
 //     const elementosCarousel = document.querySelectorAll('.carousel');
 //     MIDIAccess.Carousel.init(elementosCarousel, {
@@ -81,7 +82,7 @@ window.onload=init;
 function init(){
     bloqueRGPD = document.querySelector('.cajacookies');
     if (localStorage.acceptedCookies != 'true') {
-    bloqueRGPD.style.display = 'block';
+    bloqueRGPD.style.display = 'block';    
     }
 
     if(detectCookie("rgpdOK")){
