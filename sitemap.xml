@@ -6,7 +6,7 @@
     <changefreq>yearly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://www.desarrollohelpdesk.site/favicon.png</image:loc>
+      <image:loc>https://www.desarrollohelpdesk.site/favicon.ico</image:loc>
       <!--ERROR - Object reference not set to an instance of an object.-->
       <url>
         <loc>https://www.desarrollohelpdesk.site/descargas.html</loc>
@@ -14,7 +14,7 @@
         <changefreq>yearly</changefreq>
         <priority>0.60</priority>
         <image:image>
-          <image:loc>https://www.desarrollohelpdesk.site/favicon.png</image:loc>
+          <image:loc>https://www.desarrollohelpdesk.site/favicon.ico</image:loc>
           <!--ERROR - Object reference not set to an instance of an object.-->
           <url>
             <loc>https://www.desarrollohelpdesk.site/contacto.html</loc>
@@ -22,7 +22,7 @@
             <changefreq>yearly</changefreq>
             <priority>0.80</priority>
             <image:image>
-              <image:loc>https://www.desarrollohelpdesk.site/favicon.png</image:loc>
+              <image:loc>https://www.desarrollohelpdesk.site/favicon.ico</image:loc>
               <!--ERROR - Object reference not set to an instance of an object.-->
               <url>
                 <loc>https://www.desarrollohelpdesk.site/contacto.html</loc>
@@ -30,7 +30,7 @@
                 <changefreq>yearly</changefreq>
                 <priority>0.80</priority>
                 <image:image>
-                  <image:loc>https://www.desarrollohelpdesk.site/favicon.png</image:loc>
+                  <image:loc>https://www.desarrollohelpdesk.site/favicon.ico</image:loc>
                   <!--ERROR - Object reference not set to an instance of an object.-->
                   <url>
                     <loc>https://www.desarrollohelpdesk.site</loc>
@@ -38,7 +38,7 @@
                     <changefreq>yearly</changefreq>
                     <priority>1.0</priority>
                     <image:image>
-                      <image:loc>https://www.desarrollohelpdesk.site/favicon.png</image:loc>
+                      <image:loc>https://www.desarrollohelpdesk.site/favicon.ico</image:loc>
                       <!--ERROR - Object reference not set to an instance of an object.-->
                       <url>
                         <loc>https://www.desarrollohelpdesk.site/index.html</loc>
@@ -46,7 +46,7 @@
                         <changefreq>yearly</changefreq>
                         <priority>1.0</priority>
                         <image:image>
-                          <image:loc>https://www.desarrollohelpdesk.site/favicon.png</image:loc>
+                          <image:loc>https://www.desarrollohelpdesk.site/favicon.ico</image:loc>
                           <!--ERROR - Object reference not set to an instance of an object.-->
                         </image:image>
                         <!--Created using XmlSitemapGenerator.org - Free HTML, RSS and XML sitemap generator-->
