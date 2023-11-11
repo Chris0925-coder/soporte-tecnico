@@ -1578,8 +1578,10 @@ a button:hover {
 	background: linear-gradient(90deg,#303030,#0003);
 	padding-inline: 10px;
 	transform: translateY(-10px);
-/*	text-align: center;*/
+}
 
+.name p {
+	font-size: 1.0rem;
 }
 
 .name a, .role a {
