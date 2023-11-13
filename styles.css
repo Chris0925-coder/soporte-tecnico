@@ -1570,7 +1570,7 @@ a button:hover {
 
 
 .item-description:hover {
-	display: inline-block;
+	display: block;
 }
 
 .name {
@@ -1582,6 +1582,7 @@ a button:hover {
 
 .name p {
 	font-size: 1.0rem;
+	padding: .4em;
 }
 
 .name a, .role a {
@@ -1595,7 +1596,7 @@ a button:hover {
 }
 
 .role {
-	display: inline-block;
+	display: block;
 	font-size: 0.7rem;
 	background: linear-gradient(90deg,#303030,#0003);
 	padding: 5px;
@@ -1609,6 +1610,7 @@ a button:hover {
 	opacity: 0;
 	transition: opacity 0.25s, transform 0.3s;
 	transition-delay: .35s;
+/*	align:center;*/
 /*	background-color: none;*/
 }
 
@@ -1620,6 +1622,7 @@ a button:hover {
 
 .gallery-item:not(:hover) .name,
 .gallery-item:not(:hover) .role {
+
 	transition-delay: .2s;
 }
 /*section INFLUENCERS PANAMEÑOS*/
