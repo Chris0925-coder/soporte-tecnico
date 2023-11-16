@@ -1260,11 +1260,10 @@ a button:hover {
 	margin-top: 10px;
 	font-size: 0.7rem;
 	list-style: none;
-/*	text-indent: 10px;*/
 	cursor: default;
 	padding-left: 0;
 	text-align: center;
-/*	justify-content: center;*/
+	/*	justify-content: center;*/
 /*	border: 1px solid green;*/
 }
 
@@ -1274,10 +1273,7 @@ a button:hover {
 }
 
 .pro-item {
-	margin-left: 0;
-	padding-left: 0;
-/*	text-decoration: none;*/
-	margin: 10px 0 0 0;
+	margin: 10px auto auto auto;
 /*	border: 1px solid red;*/
 	text-align: center;
 	justify-content: center;
