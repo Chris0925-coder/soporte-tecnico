@@ -221,6 +221,7 @@ const noti = document.querySelectorAll(".not-1");
 const botona = document.querySelector(".not-a");
 const botonb = document.querySelector(".not-b");
 const botonc = document.querySelector(".not-c");
+const botond = document.querySelector(".not-d");
 console.log(noti);
 noti[1].style.display = "none";
 noti[2].style.display = "none";
@@ -240,14 +241,22 @@ function notice() {
         botona.style.opacity = "1";
         botonb.style.opacity = "0.3";
         botonc.style.opacity = "0.3";
+        botond.style.opacity = "0.3";
         }else if (noti[n-1]==noti[1]) {
             botonb.style.opacity = "1";
             botona.style.opacity = "0.3";
             botonc.style.opacity = "0.3";
-        } else {
+            botond.style.opacity = "0.3";
+        } else if (noti[n-1]==noti[2]) {
             botonc.style.opacity = "1";
             botona.style.opacity = "0.3";
+            botond.style.opacity = "0.3";
             botonb.style.opacity = "0.3";
+        } else {
+            botond.style.opacity = "1";
+            botona.style.opacity = "0.3";
+            botonb.style.opacity = "0.3";
+            botonc.style.opacity = "0.3";
         }
     
 };
@@ -258,10 +267,12 @@ botona.addEventListener('click',() => {
     botona.style.opacity = "1";
     botonb.style.opacity = "0.3";
     botonc.style.opacity = "0.3";
+    botond.style.opacity = "0.3";
     if(true) {
     noti[0].style.display = "block";
     noti[1].style.display = "none";
     noti[2].style.display = "none";
+    noti[3].style.display = "none";
     clearInterval(time);
     } 
 });
@@ -270,10 +281,12 @@ botonb.addEventListener('click',() => {
     botona.style.opacity = "0.3";
     botonc.style.opacity = "0.3";
     botonb.style.opacity = "1";
+    botond.style.opacity = "0.3";
     if(true) {
     noti[0].style.display = "none";
     noti[1].style.display = "block";
     noti[2].style.display = "none";
+    noti[3].style.display = "none";
     clearInterval(time);
     } 
 });
@@ -282,14 +295,30 @@ botonc.addEventListener('click',() => {
     botonc.style.opacity = "1";
     botona.style.opacity = "0.3";
     botonb.style.opacity = "0.3";
+    botond.style.opacity = "0.3";
     if(true) {
     noti[0].style.display = "none";
     noti[1].style.display = "none";
     noti[2].style.display = "block";
+    noti[3].style.display = "none";
     clearInterval(time);
     } 
 });
 
+
+botond.addEventListener('click',() => {
+    botonc.style.opacity = "0.3";
+    botona.style.opacity = "0.3";
+    botonb.style.opacity = "0.3";
+    botond.style.opacity = "1";
+    if(true) {
+    noti[0].style.display = "none";
+    noti[1].style.display = "none";
+    noti[2].style.display = "none";
+    noti[3].style.display = "block";
+    clearInterval(time);
+    } 
+});
 // counter = parseInt('0');
 
 
