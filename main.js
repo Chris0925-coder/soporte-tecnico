@@ -225,6 +225,7 @@ const botond = document.querySelector(".not-d");
 console.log(noti);
 noti[1].style.display = "none";
 noti[2].style.display = "none";
+noti[3].style.display = "none";
 
 // const carousel = new bootstrap.Carousel('#myCarousel');
 
