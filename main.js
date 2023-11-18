@@ -232,32 +232,44 @@ noti[3].style.display = "none";
 function notice() {
     for (i=0;i<noti.length;i++) {
         noti[i].style.display = "none";
-        
+        // noti[i].style.opacity = "0";
     }
 
     n++;
     if(n>noti.length){n=1};
     noti[n-1].style.display = "block";
+    // noti.style.opacity = "1";
+    // noti.style.transition = "all .6s ease-in-out";
     if(noti[n-1]==noti[0]) {
+        // botonx = botonc, botonb, botond;
         botona.style.opacity = "1";
         botonb.style.opacity = "0.3";
         botonc.style.opacity = "0.3";
         botond.style.opacity = "0.3";
         }else if (noti[n-1]==noti[1]) {
+            // botonz = botonc, botona, botond;
             botonb.style.opacity = "1";
             botona.style.opacity = "0.3";
             botonc.style.opacity = "0.3";
             botond.style.opacity = "0.3";
+
+            // noti[n-1].style.transition = "all .6s ease-in-out";
         } else if (noti[n-1]==noti[2]) {
+            // botonw = botona, botonb, botond;
             botonc.style.opacity = "1";
             botona.style.opacity = "0.3";
             botond.style.opacity = "0.3";
             botonb.style.opacity = "0.3";
+
+            // noti[n-1].style.transition = "all .6s ease-in-out";
         } else {
+            // botonv = botonc, botonb, botona;
             botond.style.opacity = "1";
             botona.style.opacity = "0.3";
             botonb.style.opacity = "0.3";
             botonc.style.opacity = "0.3";
+
+            // noti[n-1].style.transition = "all .6s ease-in-out";
         }
     
 };

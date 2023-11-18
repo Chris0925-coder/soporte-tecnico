@@ -937,14 +937,13 @@ h1,h2,h3,h4,h5,h6 {
 /*	top: 0;*/
 }
 
-.not-a {
+/*.not-a {
 	display: flex;
 	position: sticky;
 	width: 25%;
 	height: auto;
 	border-bottom: 2px solid black;
 	opacity: 0.3;
-/*	top: 0;*/
 }
 
 .not-b {
@@ -954,9 +953,9 @@ h1,h2,h3,h4,h5,h6 {
 	height: auto;
 	border-bottom: 2px solid black;
 	opacity: 0.3;
-/*	top: 0;*/
-}
+}*/
 
+.not-a, .not-b,
 .not-c, .not-d {
 	display: flex;
 	position: sticky;
@@ -964,13 +963,15 @@ h1,h2,h3,h4,h5,h6 {
 	height: auto;
 	border-bottom: 2px solid black;
 	opacity: 0.3;
-/*	top: 0;*/
+	transition: all .5s ease-in-out;
 }
 
 .not-1 {
 /*	font-family: "cursive;", sans-serif;*/
 	color: white;
 	font-size: .7rem;
+/*	opacity: 1;*/
+/*	transition: opacity .5s ease-in-out;*/
 /*	justify-content: center;*/
 }
 
