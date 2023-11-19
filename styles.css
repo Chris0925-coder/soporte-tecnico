@@ -59,15 +59,12 @@ h1,h2,h3,h4,h5,h6 {
 
 
 .botonRGPD {
-
 	display: none;
 	position: relative;
 	/*place-content: right;
 	place-items: right;
 	left: 0;*/
 	cursor: pointer;
-	
-
 }
 
 .cajacookies a{color:#fff;}
@@ -334,7 +331,7 @@ h1,h2,h3,h4,h5,h6 {
 .cuerpo {
 /*	position: relative;*/
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(330px, 3fr));
+	grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
 /*	gap: 12px;*/
 	margin: 0;
 	column-count: 12;
@@ -757,6 +754,8 @@ h1,h2,h3,h4,h5,h6 {
 	display: block;
 /*	background-color: darkblack;*/
 /*	width: 100%;*/
+	margin: 0;
+	padding: 0;
 /*	height: 100px;*/
 /*	border: 1px solid red;*/
 }
@@ -776,8 +775,8 @@ h1,h2,h3,h4,h5,h6 {
 	/*justify-content: center;
 	align-content: center;
 	object-position: center;*/
-/*	margin: 0;*/
-/*	padding: 20px 0;*/
+	margin: 0;
+	padding: 10px 0;
 /*	justify-content: space-between;*/
 /*	align-content: center;*/
 	align-items: center;
