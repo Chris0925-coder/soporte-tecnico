@@ -988,6 +988,10 @@ a button:hover {
 	padding-left: 0;
 }
 
+.bi {
+	color: #FFF;
+}
+
 .bi-facebook {
 	color: #3b5998;
 }
