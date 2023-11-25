@@ -75,18 +75,19 @@ btn.addEventListener("click", () => {
 //           'sitekey' : '6Le1UBwpAAAAAHzagcQvjzbPGK2g7TvoJiLyNSO5'
 //         });
 
-
+let marck = document.getElementsByClassName("recaptcha-checkbox-checkmark");
 // onloadCallback;
 
 function miFuncion() {
-    let grecaptcha = document.getElementsByClassName('g-recaptcha');
-    var response = grecaptcha.getResponse();
+    // let grecaptcha = document.getElementsByClassName('g-recaptcha');
+    // var response = grecaptcha.getResponse();
 
-    if(response.length == ""){
-      alert("Captcha no verificado")
+    if(marck){
+        alert("Captcha verificado");
+        btn.disabled = false;
+      
     } else {
-      alert("Captcha verificado");
-      btn.disabled = false;
+        alert("Captcha no verificado");
     }
   }
 
