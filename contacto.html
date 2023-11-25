@@ -42,6 +42,8 @@
 
     <script defer type="text/javascript" src="contacto.js"></script>
 
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6LfMzhspAAAAAPPDgx5sn3yYKbAMmmDYc2KNZcvY" async defer></script>
+
     <!-- <script src="https://www.google.com/recaptcha/enterprise.js?render=6LfMzhspAAAAAPPDgx5sn3yYKbAMmmDYc2KNZcvY" async defer></script> -->
     <!-- Your code -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
@@ -135,11 +137,17 @@
                                 <div class="g-recaptcha" data-sitekey="6LfMzhspAAAAAPPDgx5sn3yYKbAMmmDYc2KNZcvY">
                                     
                                 </div>
-                            </div>
+                            </div><br>
     						<div class="form-group">
-    							<button title="Enviar" type="submit" class="btn btn-primary btn-block">
+    							<!-- <button title="Enviar" type="submit" class="btn btn-primary btn-block">
     								Enviar
-    							</button>
+    							</button> -->
+                                <button type="submit" class="btn btn-primary btn-block g-recaptcha"
+                                    data-sitekey="6LfMzhspAAAAAPPDgx5sn3yYKbAMmmDYc2KNZcvY"
+                                    data-callback='onSubmit'
+                                    data-action='submit'>
+                                  Enviar
+                                </button>
     						</div>
                             <!-- 109148295518-hrspvo64e6cj1kuasjg1c4afp3mi00qg.apps.googleusercontent.com -->
                             <div class="form-group">
