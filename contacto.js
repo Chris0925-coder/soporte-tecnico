@@ -48,16 +48,16 @@ const enviarFormulario = (event) => {
 
 
 
-  function onClick(e) {
-    e.preventDefault();
-    grecaptcha.enterprise.ready(async () => {
-      const token = await grecaptcha.enterprise.execute('6LfMzhspAAAAAPPDgx5sn3yYKbAMmmDYc2KNZcvY', {action: 'LOGIN'});
-    });
-  }
+//   function onClick(e) {
+//     e.preventDefault();
+//     grecaptcha.enterprise.ready(async () => {
+//       const token = await grecaptcha.enterprise.execute('6LfMzhspAAAAAPPDgx5sn3yYKbAMmmDYc2KNZcvY', {action: 'LOGIN'});
+//     });
+//   }
 
-onClick(btn);
+// onClick(btn);
 
 
-var onloadCallback = function() {
-    alert("grecaptcha is ready!");
-  };
+// var onloadCallback = function() {
+//     alert("grecaptcha is ready!");
+//   };
