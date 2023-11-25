@@ -44,3 +44,20 @@ const enviarFormulario = (event) => {
 //     .then(result => console.log(result))
 //     .catch(error => console.log('error', error));
 // });
+
+
+
+
+//   function onClick(e) {
+//     e.preventDefault();
+//     grecaptcha.enterprise.ready(async () => {
+//       const token = await grecaptcha.enterprise.execute('6LfMzhspAAAAAPPDgx5sn3yYKbAMmmDYc2KNZcvY', {action: 'LOGIN'});
+//     });
+//   }
+
+// onClick(btn);
+
+
+// var onloadCallback = function() {
+//     alert("grecaptcha is ready!");
+//   };
