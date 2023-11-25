@@ -36,6 +36,9 @@ btn.addEventListener("click", () => {
         control = document.querySelector("[name=control]").value;
     if (email == "" || control == "") {
         alert("Rellene los espacios");
+        if (email === "@") {
+            alert("Coloque un email valido")
+        }
     }  else {
         alert("¡GRACIAS! su comentario será leído...")
     }
@@ -75,3 +78,16 @@ btn.addEventListener("click", () => {
 
 // onloadCallback;
 
+function miFuncion() {
+    var response = grecaptcha.getResponse();
+
+    if(response.length == 0){
+      alert("Captcha no verificado")
+    } else {
+      alert("Captcha verificado");
+    }
+  }
+
+function enabledSubmit(response) {
+ btn.disabled = false;
+}
