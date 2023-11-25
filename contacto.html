@@ -46,13 +46,21 @@
 
     <!-- <script src="https://www.google.com/recaptcha/enterprise.js?render=6LfMzhspAAAAAPPDgx5sn3yYKbAMmmDYc2KNZcvY" async defer></script> -->
     <!-- Your code -->
+
+
+
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+
 
     <!-- <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
     async defer>
     </script> -->
     <!-- <script src="https://www.google.com/recaptcha/enterprise.js?render=6LfMzhspAAAAAPPDgx5sn3yYKbAMmmDYc2KNZcvY" async defer></script> -->
   <!-- Your code -->
+
+    <!-- <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" -->
+        <!-- async defer></script> -->
 
 </head>
 <body>
@@ -122,7 +130,7 @@
     					<h5 style="color: darkgray;">CONTACTO</h5>
     				</div>
     				<div class="card-body">
-    					<form action="https://formsubmit.co/a35ced8a00684427b681258063fdcbaa" method="post" id="formula">
+    					<form action="https://formsubmit.co/a35ced8a00684427b681258063fdcbaa" onsubmit="return grecaptcha()" method="post" id="formula">
                             <!-- "https://formsubmit.co/7cba9444b094467d2e1ea85f9382d744" -->
     						<div class="form-group">
     							<input type="text" name="email" class="form-control" placeholder="Email">
@@ -136,11 +144,12 @@
 							<br>
 
                             <div class="form-group">
-                                <div class="g-recaptcha" data-sitekey="6Le1UBwpAAAAAHzagcQvjzbPGK2g7TvoJiLyNSO5"  id="demo-form">   
+                                <!-- <div id="html_element"></div> -->
+                                <div class="g-recaptcha" data-sitekey="6Le1UBwpAAAAAHzagcQvjzbPGK2g7TvoJiLyNSO5">   
                                 </div>
                             </div><br>
     						<div class="form-group">
-    							<button title="Enviar" type="submit" class="btn btn-primary btn-block">
+    							<button title="Enviar" type="submit" class="btn btn-primary btn-block" id="demo-form">
     								Enviar
     							</button>
                                 <!-- <button type="submit" class="btn btn-primary btn-block g-recaptcha"
