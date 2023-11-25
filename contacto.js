@@ -61,3 +61,8 @@ const enviarFormulario = (event) => {
 // var onloadCallback = function() {
 //     alert("grecaptcha is ready!");
 //   };
+
+
+function onSubmit(token) {
+    document.getElementById("demo-form").submit();
+  }
