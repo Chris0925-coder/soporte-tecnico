@@ -79,15 +79,19 @@ btn.addEventListener("click", () => {
 // onloadCallback;
 
 function miFuncion() {
+    let grecaptcha = document.getElementsByClassName('g-recaptcha');
     var response = grecaptcha.getResponse();
 
-    if(response.length == 0){
+    if(response.length == ""){
       alert("Captcha no verificado")
     } else {
       alert("Captcha verificado");
+      btn.disabled = false;
     }
   }
 
-function enabledSubmit(response) {
- btn.disabled = false;
-}
+// function enabledSubmit(response) {
+//  btn.disabled = false;
+// };
+
+// enabledSubmit(response);
