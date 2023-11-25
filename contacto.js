@@ -45,9 +45,6 @@ const enviarFormulario = (event) => {
 //     .catch(error => console.log('error', error));
 // });
 
-
-
-
 //   function onClick(e) {
 //     e.preventDefault();
 //     grecaptcha.enterprise.ready(async () => {
@@ -63,6 +60,7 @@ const enviarFormulario = (event) => {
 //   };
 
 
-function onSubmit(token) {
-    document.getElementById("demo-form").submit();
-  }
+// function onSubmit(token) {
+//     document.getElementById("demo-form").submit();
+//   }
+
