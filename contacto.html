@@ -130,8 +130,7 @@
     					<h5 style="color: darkgray;">CONTACTO</h5>
     				</div>
     				<div class="card-body">
-    					<form action="https://formsubmit.co/a35ced8a00684427b681258063fdcbaa" onsubmit="return miFuncion()" method="post" id="formula">
-                            <!-- "https://formsubmit.co/7cba9444b094467d2e1ea85f9382d744" -->
+    					<form action="https://formsubmit.co/a35ced8a00684427b681258063fdcbaa" onsubmit="return submitUserForm()" method="post" id="formula">                            <!-- "https://formsubmit.co/7cba9444b094467d2e1ea85f9382d744" -->
     						<div class="form-group">
     							<input type="text" name="email" class="form-control" placeholder="Email">
     						</div>
@@ -145,8 +144,10 @@
 
                             <div class="form-group">
                                 <!-- <div id="html_element"></div> -->
-                                <div class="g-recaptcha form-control" data-sitekey="6Le1UBwpAAAAAHzagcQvjzbPGK2g7TvoJiLyNSO5">   
+                                <div class="g-recaptcha form-control" data-sitekey="6Le1UBwpAAAAAHzagcQvjzbPGK2g7TvoJiLyNSO5" data-callback="verifyCaptcha">   
                                 </div>
+                                <div id="g-recaptcha-error"></div>
+
                             </div><br>
     						<div class="form-group">
     							<button title="Enviar" type="submit" class="btn btn-primary btn-block" id="demo-form">

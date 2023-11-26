@@ -5,12 +5,6 @@ navToggle.addEventListener("click", () => {
     navLink.classList.toggle("navbar-nav_visible")
 });
 
-
-
-
-
-
-
 const form = document.getElementById("formula");
 let email = document.querySelector("[name=email]").value;
 let control = document.querySelector("[name=control]").value;
@@ -20,31 +14,65 @@ const btn = document.querySelector(".btn");
 // console.log(control.length);
 // console.log(btn);
 
-
+// event.preventDefault();
+// mail = "cguardia@gmail.com";
+//     let x = mail.split("@");
+//     console.log(x[1]);
+//     let l = x[1];
+//     let v = [
+//         "@", 
+//         "gmail", 
+//         "outlook", 
+//         "yahoo", 
+//         "ymail"
+//         ]
+//     let y = x.includes("@");
+//     let m = m.includes(v);
 
 btn.addEventListener("click", () => {
     // event.preventDefault();
     email = document.querySelector("[name=email]").value;
     control = document.querySelector("[name=control]").value;
-    // mail = email.length;
-    console.log(email);
+    // mail = "cguardia@gmail.com";
+    let x = email.split("");
 
 
-    
-    if (!verificamail(email)) {
+    // console.log(x[1]);
+    // let w = x[1];
+    // let v = [
+    //     "@", 
+    //     "gmail", 
+    //     "outlook", 
+    //     "yahoo", 
+    //     "ymail"
+    //     ];
+    // console.log(v);
+    // d = f.forEach(v);
+    // console.log(d);
+        
+    let y = x.includes("@");
+    // function f() {
+        // w.includes(v);
+    //     let w = x[1];    
+    // };
+    // let m = w.includes(d);
+    // console.log(m);
+
+    if (!y) {
         alert("Ingrese una direccion valida");
         event.preventDefault();
     } else {
-        // continue;
-        alert("¡Gracias por su comentario!");
-        // continue;
-        return;
+        return alert("¡Gracias por su comentario!");
     }
-
-    function verificamail(a) {
-       return a.length - a.replaceAll("@", "").length == 1;
-        };
-    });
+});
+// let ma = "cguardia@gmail.com";
+// array = ma.split("");
+// l = array.map;
+// console.log(array);
+// let x = l == "@";
+// event.preventDefault();
+// console.log(ma);
+// console.log(x);
 // form.addEventListener("submit", () => {
 //     enviarFormulario();
 //     fetch("https://api.mailjet.com/v3.1/send", requestOptions)
@@ -75,3 +103,16 @@ btn.addEventListener("click", () => {
 // };
 
 // enabledSubmit(btn);
+
+function submitUserForm() {
+    let response = grecaptcha.getResponse();
+    if (response.length == 0) {
+        document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:darkred;">This field is required.</span>';
+        return false;
+    };
+    return true;
+};
+
+function verifyCaptcha() {
+    document.getElementById('g-recaptcha-error').innerHTML = '';
+};
