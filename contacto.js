@@ -43,8 +43,8 @@ btn.addEventListener("click", () => {
 
     function verificamail(a) {
        return a.length - a.replaceAll("@", "").length == 1;
-    };
-});
+        };
+    });
 // form.addEventListener("submit", () => {
 //     enviarFormulario();
 //     fetch("https://api.mailjet.com/v3.1/send", requestOptions)
