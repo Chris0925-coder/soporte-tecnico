@@ -61,6 +61,7 @@ btn.addEventListener("click", () => {
     response = grecaptcha.getResponse();
     if (!y || response.length == 0) {
         alert("Ingrese una direccion valida");
+        document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:darkred;">This field is required.</span>';
         event.preventDefault();
     } else {  
         return alert("¡Gracias por su comentario!");
