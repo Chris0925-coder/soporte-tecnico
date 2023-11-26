@@ -61,8 +61,20 @@ btn.addEventListener("click", () => {
     if (!y) {
         alert("Ingrese una direccion valida");
         event.preventDefault();
-    } else {
-        return alert("¡Gracias por su comentario!");
+    } else {  
+        function submitUserForm() {
+            let response = grecaptcha.getResponse();
+            if (response.length == 0) {
+                document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:red;">This field is required.</span>';
+                return false;
+            };
+            alert("¡Gracias por su comentario!");
+            return true;
+        };
+
+        function verifyCaptcha() {
+            document.getElementById('g-recaptcha-error').innerHTML = '';
+        };
     }
 });
 // let ma = "cguardia@gmail.com";
@@ -104,15 +116,15 @@ btn.addEventListener("click", () => {
 
 // enabledSubmit(btn);
 
-function submitUserForm() {
-    let response = grecaptcha.getResponse();
-    if (response.length == 0) {
-        document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:darkred;">This field is required.</span>';
-        return false;
-    };
-    return true;
-};
+// function submitUserForm() {
+//     let response = grecaptcha.getResponse();
+//     if (response.length == 0) {
+//         document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:darkred;">This field is required.</span>';
+//         return false;
+//     };
+//     return true;
+// };
 
-function verifyCaptcha() {
-    document.getElementById('g-recaptcha-error').innerHTML = '';
-};
+// function verifyCaptcha() {
+//     document.getElementById('g-recaptcha-error').innerHTML = '';
+// };
