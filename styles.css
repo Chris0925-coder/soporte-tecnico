@@ -479,6 +479,9 @@ h1,h2,h3,h4,h5,h6 {
 
 }
 
+.btn {
+	display: none;
+}
 /*footer {
 	background: rgba(0, 0, 0, 1.0);
 	position: absolute;
@@ -493,29 +496,55 @@ h1,h2,h3,h4,h5,h6 {
 /*contact page*/
 
 #contacto-body {
+	display: flex;
+	position: relative;
 	margin: 20px auto;
+	justify-content: center;
+	/*margin: 20px auto;
+	width: 100%;
+	height: auto;
+	border: 1px solid black;
+	justify-content: center;
+	place-content: middle;
+	align-content: center;*/
 }
 
 .card {
 /*	display: flex;*/
-	position: relative;
+/*	position: relative;*/
 	background-color: rgba(0, 0, 0, 0.3);
 /*	align-content: center;*/
-	justify-content: center;
-	/*justify-items: center;
-	align-items: center;*/
+	/*justify-content: center;
+	justify-items: center;
+	align-items: center;
 	object-position: center;
-	margin: 0 auto;
-	padding: 20px;
-/*	width: 100%;*/
-	height: fit-content;
+*//*	margin: 0 auto;*/
+/*	padding: 2em;*/
+	width: 100%;
+	height: auto;
+/*	border: 1px solid black;*/
 }
 
 .card-body {
+/*	display: flex;*/
+/*	position: relative;*/
+/*	justify-content: center;*/
+/*	padding: 3em;*/
+/*	border: 1px solid green;*/
+	width: 100%;
+	height: auto;
+}
+
+/*.g-recaptcha {*/
+/*	width: 100px;*/
+/*	height: auto;*/
+/*	border: 1px solid darkred;*/
+/*}*/
+
+.form-control {
 	display: flex;
 	position: relative;
 	justify-content: center;
-	margin: 0 auto;
 }
 
 .p-5 {
