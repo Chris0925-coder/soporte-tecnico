@@ -51,30 +51,19 @@ btn.addEventListener("click", () => {
     // console.log(d);
         
     let y = x.includes("@");
-    // function f() {
+    console.log(y);
+        // function f() {
         // w.includes(v);
     //     let w = x[1];    
     // };
     // let m = w.includes(d);
     // console.log(m);
-
-    if (!y) {
+    response = grecaptcha.getResponse();
+    if (!y || response.length == 0) {
         alert("Ingrese una direccion valida");
         event.preventDefault();
     } else {  
-        function submitUserForm() {
-            let response = grecaptcha.getResponse();
-            if (response.length == 0) {
-                document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:red;">This field is required.</span>';
-                return false;
-            };
-            alert("¡Gracias por su comentario!");
-            return true;
-        };
-
-        function verifyCaptcha() {
-            document.getElementById('g-recaptcha-error').innerHTML = '';
-        };
+        return alert("¡Gracias por su comentario!");
     }
 });
 // let ma = "cguardia@gmail.com";
@@ -116,15 +105,15 @@ btn.addEventListener("click", () => {
 
 // enabledSubmit(btn);
 
-// function submitUserForm() {
-//     let response = grecaptcha.getResponse();
-//     if (response.length == 0) {
-//         document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:darkred;">This field is required.</span>';
-//         return false;
-//     };
-//     return true;
-// };
+function submitUserForm() {
+    var response = grecaptcha.getResponse();
+    if (response.length == 0) {
+        document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:darkred;">This field is required.</span>';
+        return false;
+    };
+    return true;
+};
 
-// function verifyCaptcha() {
-//     document.getElementById('g-recaptcha-error').innerHTML = '';
-// };
+function verifyCaptcha() {
+    document.getElementById('g-recaptcha-error').innerHTML = '';
+};
