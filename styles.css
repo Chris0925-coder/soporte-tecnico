@@ -82,7 +82,10 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .demoPage-main {
-  	background: linear-gradient(to bottom, #303030 30% , #fff 60%);
+	background: radial-gradient(ellipse at top, #05021e, transparent),
+            radial-gradient(ellipse at bottom, #ffffff, transparent);
+/*	background:  repeating-radial-gradient( farthest-corner at 20% 20%, transparent 0, #9090901d 100px ), repeating-linear-gradient( #39393910, #444cf72c);*/
+/*  	background: linear-gradient(to bottom, #303030 0 , #fff 60%);*/
 	min-height: 100vh;
 	margin: 0;
 	padding: 10px 0;
