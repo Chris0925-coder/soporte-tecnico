@@ -222,7 +222,7 @@ const botona = document.querySelector(".not-a");
 const botonb = document.querySelector(".not-b");
 const botonc = document.querySelector(".not-c");
 const botond = document.querySelector(".not-d");
-console.log(noti);
+// console.log(noti);
 noti[1].style.display = "none";
 noti[2].style.display = "none";
 noti[3].style.display = "none";

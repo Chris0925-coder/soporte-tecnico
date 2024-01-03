@@ -82,11 +82,11 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .demoPage-main {
-	background: radial-gradient(ellipse at top, #05021e, transparent),
-            radial-gradient(ellipse at bottom, #ffffff, transparent);
+	background: radial-gradient(ellipse at bottom, #05021e, transparent),
+            radial-gradient(ellipse at top, #ffffff, transparent);
 /*	background:  repeating-radial-gradient( farthest-corner at 20% 20%, transparent 0, #9090901d 100px ), repeating-linear-gradient( #39393910, #444cf72c);*/
 /*  	background: linear-gradient(to bottom, #303030 0 , #fff 60%);*/
-	min-height: 100vh;
+/*	min-height: 100vh;*/
 	margin: 0;
 	padding: 10px 0;
 	align-items: center;
@@ -182,8 +182,6 @@ h1,h2,h3,h4,h5,h6 {
 	grid-area: 1 / 2 / span 2;
 	gap: 1em;
 }
-
-
 
 .notice {
 	display: block;
@@ -294,9 +292,6 @@ h1,h2,h3,h4,h5,h6 {
 	transition: .3s;
 }
 
-
-
-
 /*footer*/
 
 .contact {
@@ -338,7 +333,7 @@ h1,h2,h3,h4,h5,h6 {
 	flex-direction: column;
 	list-style: none;
 	list-style-type: none;
-	text-decoration: blink;
+	/* text-decoration: blink; */
 	/* text-transform: uppercase; */
 	color: #ffff;
 	margin-bottom: 0;
@@ -348,25 +343,21 @@ h1,h2,h3,h4,h5,h6 {
 	width: auto;
 	height: 100%;
 	gap: .6em;
-	/*    align-content: flex-end;*/
-	/*    align-items: flex-end;*/
-	/*    align-self: flex-end;*/
-	justify-content: flex-end;
+	padding-left: 0;
+	/*	justify-content: flex-end;*/
 	/*    bottom: 0;*/
 	/*    border: 1px solid white;*/
 }
 
-.contact1 h6 {
+/*.contact1 h6 {
 	color: white;
 	text-transform: uppercase;
 	text-align: right;
 	font-weight: 900;
-/*	border-bottom: 2px solid black;*/
 	padding: 0;
 	margin: 0;
-/*	font-size:.8rem;*/
 }
-
+*/
 .contact1 a {
     list-style: none;
     text-decoration-line: none;
@@ -377,7 +368,7 @@ h1,h2,h3,h4,h5,h6 {
 
 .contact1 a:hover {
 	color: #bbbb;
-	transition: color .5s;
+	transition: .5s;
 }
 
 
@@ -397,44 +388,34 @@ h1,h2,h3,h4,h5,h6 {
 	color: #1DA1F2;
 }
 
-
-.contact li i:hover {
-/*	border:1px solid rgba(250, 250, 250, 0.3);*/
-/*	background-color: ghostwhite;*/
-/*	box-shadow: 2px 0px 5px white;*/
+/*.socialnav i:hover {
 	padding: 1px;
 	border-radius: 30%;
-	transition: 0.5s;
-/*    color: #00008b;*/
-}
+	transition: 0.3s;
+}*/
 
 
 .socialnav {
-/*    margin: 2px;*/
-    
     display: flex;
     position: relative;
+    align-items: center;
+/*    object-position: center;*/
     flex-direction: column;
-/*    justify-content: flex-start;*/
-/*    justify-self: left;*/
-/*    left: 0;*/
-/*	align-content: flex-start;*/
     flex-wrap: wrap;
     padding-top: 10px;
-/*    margin: 0 auto;*/
-/*    align-items: flex-end;*/
-/*    position: relative;*/
-/*    border: 1px solid white;*/
+/*        border: 1px solid white;*/
+    justify-content: space-around;
 }
 
 .socialnav ul {
 	display: flex;
 	position: relative;
 	flex-direction: row;
-/*    justify-content: flex-start;*/
-/*    margin: 0 auto;*/
-	gap: 10px;
+	justify-content: space-evenly;
+	/* margin: 0 auto; */
+	gap: 0.7em;
 	margin-left: 0;
+	width: 100%;
 }
 
 .socialnav li:first-child {
@@ -445,7 +426,7 @@ h1,h2,h3,h4,h5,h6 {
 	list-style: none;
 }
 
-.socialnav li a{
+.socialnav li a {
 	display: inline;
     list-style: none;
     text-decoration-line: none;
@@ -469,17 +450,11 @@ h1,h2,h3,h4,h5,h6 {
 	align-content: space-between;
 	justify-content: space-between;
 	justify-items: space-between;
-	/*justify-self: end;
-	align-self: flex-end;
-	width: auto;
-	height: auto;*/
-/*	box-sizing: border-box;*/
 	margin: 0 auto;
 	padding: 5px;
 	width: 100%;
 	bottom: 0;
 	width: 100%;
-
 }
 
 /*.btn {
@@ -657,7 +632,7 @@ h1,h2,h3,h4,h5,h6 {
 	background-color: #1b1b1b;
 	width: 100%;
 	height: 100%;
-
+	justify-content: center;
 }
 
 .contact section {
@@ -669,17 +644,16 @@ h1,h2,h3,h4,h5,h6 {
 	height: 100%;
 }
 
-.contact1 li,
-.contact1 h6 {
+.contact1 ul li {
 	color: white;
 }
 
-.contact1 span:hover{
-	padding: 5px;
-	color: #303030;
-	box-shadow: 2px 2px 4px #fffff9;
-	transition: .3s;
-	background-color: white;
+.contact1 ul li:hover{
+	padding: 0.3em;
+	color: #1b1b1b;
+	box-shadow: 2px 2px 4px #ffffff1c;
+	transition: box-shadow .5s;
+/*	background-color: white;*/
 	font-weight:600;
 	border-radius: 2%;
 }
@@ -787,7 +761,8 @@ a button:hover {
 		height: auto;
 		margin: 0 auto;
 		padding: 2% 15%;
-/*		padding-bottom: 2%;*/
+		color: #fff;
+		/*		padding-bottom: 2%;*/
 	}
 
 	.canals h6 {
@@ -801,14 +776,16 @@ a button:hover {
 	.canals ul {
 		text-align: justify;
 		margin: 0 auto;
-		color: black;
+		/* color: black; */
 		text-decoration: none;
 		list-style: none;
 		padding-left: 0;
 		width: 50%;
+		/* color: #fff; */
 	}
 
 	.canals ul li {
+		/* color: #ffff; */
 		margin-bottom: 5%;
 	}
 
@@ -821,7 +798,7 @@ a button:hover {
 	}
 
 	.canals ul li > a {
-		color: #303030;
+		color: #fff;
 		text-decoration: none;
 	} 
 
@@ -894,14 +871,9 @@ a button:hover {
 /*	padding-left: 0;*/
 }
 
-
 /*.pro-item:after {
 	color: yellow;
 }*/
-
-
-
-
 
 .main-h1 {
 	color: #303030;
@@ -995,7 +967,6 @@ a button:hover {
 	height: auto;
 /*	margin: 40px 0 auto auto;*/
 	justify-content: stretch;
-
 /*	border: 1px solid black;*/
 }
 
@@ -1245,7 +1216,6 @@ a button:hover {
 
 .gallery-item:not(:hover) .name,
 .gallery-item:not(:hover) .role {
-
 	transition-delay: .2s;
 }
 /*section INFLUENCERS PANAMEÑOS*/
@@ -1474,6 +1444,7 @@ a button:hover {
 	.canals {
 		padding: 10px;
 	}
+
 	.logo2 {
 		display: flex;
 		position: relative;
@@ -1533,6 +1504,12 @@ a button:hover {
 
 }
 
+.ff {
+	display: flex;
+	flex-direction: column;
+	/* justify-content: space-between; */
+}
+
 .gitlogo3 {
 		display: flex;
 		position: relative;
@@ -1563,7 +1540,6 @@ a button:hover {
 		padding: 2px;
 		transition: .2s;
 		border-radius: 2%;
-
 	}
 
 	.gitlogo3 img {
@@ -1621,12 +1597,13 @@ a button:hover {
 	background: linear-gradient(190deg,#aaffff80,#fff3);
 	border-radius: 1%;
 }
+
 .laptops {
 	margin-top: 40px;
 }
+
 .gallery__wrapper {
 	display: flex;
-	
 	gap: 0.1em;
 }
 
@@ -1640,8 +1617,6 @@ a button:hover {
 /*	border: 1px solid white;*/
 	overflow: hidden;
 }
-
-
 
 .img__item img {
 	position: absolute;
@@ -1707,13 +1682,13 @@ a button:hover {
 .contact1 {
 	display: flex;
 	position: relative;
-	flex-direction: column;
-	width: auto;
+	flex-direction: row;
+	width: 100%;
 	height: auto;
 	padding: 1em;
-	/* gap: 2em; */
-/*	border: 1px solid wheat;*/
-/*	align-items: center;*/
+	gap: 2em;
+	/* border: 1px solid wheat; */
+	align-items: center;
 	/*align-items: self-end;
 	align-items: stretch;
 	align-items: flex-end;*/
@@ -1721,5 +1696,6 @@ a button:hover {
 	justify-items: center;
 	vertical-align: text-bottom;
 	text-align: revert;*/
-/*	justify-content: space-between;*/
+	justify-content: center;
+	text-align: center;
 }
