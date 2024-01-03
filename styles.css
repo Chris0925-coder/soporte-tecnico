@@ -657,9 +657,9 @@ a button:hover {
 	position: relative;
 	flex-direction: column;
 	color: #ffff;
-	justify-content: space-between;
+	/* justify-content: space-between; */
 	padding: 20px;
-	text-align: center;
+	/* text-align: center; */
 }
 
 .pro h6 {
@@ -669,6 +669,7 @@ a button:hover {
 .pro-link {
 	color: #ffffff60;
 	text-decoration: none;
+	padding-left: 0;
 }
 
 .pro-list {
@@ -678,7 +679,7 @@ a button:hover {
 	list-style: none;
 	cursor: default;
 	padding-left: 0;
-	text-align: center;
+	/* text-align: left; */
 }
 
 .pro-item:hover, 
@@ -689,7 +690,8 @@ a button:hover {
 .pro-item {
 	margin: 10px auto auto auto;
 	text-align: center;
-	justify-content: center;
+	/* padding-left: 0; */
+	/* justify-content: center; */
 }
 
 .main-h1 {
@@ -1185,7 +1187,8 @@ a button:hover {
 
 
 	.pro-row {
-		flex-direction: column;
+		display: flex;
+		flex-wrap: wrap;
 	}
 
 	.name,
