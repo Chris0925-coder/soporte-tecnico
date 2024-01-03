@@ -349,6 +349,6 @@ botond.addEventListener('click',() => {
 // }).mount('#app');
 
 
-let date = document.querySelector('.date');
+const date = document.querySelector('.date');
 
 date.append(new Date ().getFullYear ());
