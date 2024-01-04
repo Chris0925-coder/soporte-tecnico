@@ -83,12 +83,12 @@ h1,h2,h3,h4,h5,h6 {
 	margin-bottom: 5px;
 	font-size: 1.3rem;
 	font-weight: 900;
-	filter: drop-shadow(1px 1px 2px #cccc);
+/*	filter: drop-shadow(1px 1px 2px #cccc);*/
 }
 
 .main-2 {
 	display: block;
-	width: 100%;
+	width: 90%;
 	margin: auto;
 /*	border: 1px solid black;*/
 }
@@ -152,7 +152,7 @@ h1,h2,h3,h4,h5,h6 {
 	flex-direction: column;
 	justify-content: space-evenly;
 	/*	place-content: rigth;*/
-	width: 300px;
+	max-width: 300px;
 	height: auto;
 	grid-area: 1 / 2 / span 2;
 	gap: 1em;
