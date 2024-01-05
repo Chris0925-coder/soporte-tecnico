@@ -999,6 +999,17 @@ a button:hover {
 	overflow-x: hidden;
 }
 
+#frameP {
+	border: 1px solid black;
+	width: 100%;
+}
+
+.poldepriv {	
+	font-size: 0.6rem;
+	color: #303030;
+	text-decoration: none;
+}
+
 /*#instA {
 	display: block;
 	position: relative;
