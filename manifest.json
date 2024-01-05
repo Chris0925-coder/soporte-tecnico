@@ -54,7 +54,7 @@
   }
  ],
  "scope": "/",
- "id": "index.html",
+ "id": "ChrisWEBDEV",
  "start_url": "/index.html",
  "display_override": ["fullscreen", "minimal-ui"],
  "display": "standalone",
