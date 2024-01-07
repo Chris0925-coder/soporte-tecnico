@@ -76,9 +76,12 @@ function detectCookie(cname) {
 };
 
 
+$(document).ready(function() {
+    // compruebaAceptaCookies();
+    init();
+});
 
-
-window.onload=init;
+// window.onload=init();
 function init(){
     bloqueRGPD = document.querySelector('.cajacookies');
     if (localStorage.acceptedCookies != 'true') {
