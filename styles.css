@@ -401,7 +401,8 @@ h1,h2,h3,h4,h5,h6 {
 .socialnav ul li > a {
 	display: inline;
 	list-style: none;
-	/* text-decoration-line: none; */
+	text-decoration-line: none;
+	/* justify-content: center; */
 	color: white;
 	text-align: center;
 	text-decoration: none;
