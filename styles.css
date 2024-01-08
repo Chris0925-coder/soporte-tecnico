@@ -345,20 +345,20 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 
-.bi-instagram {
+/*.bi-instagram {
 	background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
   	-webkit-background-clip: text;
  	background-clip: text;
   	-webkit-text-fill-color: transparent;
 }
-
-.bi-facebook{
+*/
+/*.bi-facebook{
 	color: #3b5998;
-}
+}*/
 
-.bi-twitter{
+/*.bi-twitter{
 	color: #1DA1F2;
-}
+}*/
 
 .socialnav {
     display: flex;
@@ -366,40 +366,52 @@ h1,h2,h3,h4,h5,h6 {
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
-    padding-top: 10px;
-    justify-content: space-around;
+    padding: 10px 1em 10px 1em;
+    width: auto;
+    height: auto;
+    /* justify-content: space-around; */
 }
 
 .socialnav ul {
 	display: flex;
 	position: relative;
 	flex-direction: row;
-	justify-content: space-evenly;
-	gap: 0.7em;
-	margin-left: 0;
-	width: 100%;
+	/* justify-content: center; */
+	align-items: flex-end;
+	gap: 2em;
+	padding-left: 0;
+	width: auto;
+	/* top: 0; */
+	/* right: 0; */
 }
 
-.socialnav li:first-child {
+/*.socialnav li:first-child {
 	margin-left: -20px;
-}
+}*/
 
 .socialnav ul li {
 	list-style: none;
 }
 
-.socialnav li a {
+/*.socialnav ul li:hover {
+	background-color: #ffffff8c;
+	list-style: none;
+}
+*/
+.socialnav ul li > a {
 	display: inline;
-    list-style: none;
-    text-decoration-line: none;
-    text-decoration: none;
-    text-decoration-style: none;
+	list-style: none;
+	/* text-decoration-line: none; */
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	/*	text-decoration-style: none;*/
 }
 
-.socialnav i {
+/*.socialnav i {
  	display: flex;
  	position: relative;
-}
+}*/
 
 .contact2 {
 	position: relative;
@@ -566,7 +578,8 @@ h1,h2,h3,h4,h5,h6 {
 	position: relative;
 	margin: 10px;
 	text-align: center;
-
+	text-decoration: none; 
+ 	position: relative;
 }
 
 .descarga p {
@@ -584,11 +597,10 @@ h1,h2,h3,h4,h5,h6 {
 	height: 180px;
 }
 
- .descarga {
- 	text-decoration: none; 
- 	position: relative;
+/* .descarga {
+ 	
 }
-
+*/
 .descarga button {
 	font-size: 0.6rem;
 	font-weight: 700;
@@ -832,13 +844,16 @@ a button:hover {
 	color: #FFF;
 }
 
-.bi-facebook {
+/*.bi-facebook {
 	color: #3b5998;
 }
-
+*/
 .bi-twitter-x:hover {
 	color: #2b2b2b;
 	background-color: #ffffff8c;
+	padding: .2em;
+	border-radius: .3em;
+	transition: all .4s ease-in-out;
 }
 
 .bi-youtube {
@@ -847,11 +862,15 @@ a button:hover {
 
 .bi-instagram {
 	background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-  	-webkit-background-clip: text;
+	-webkit-background-clip: text;
 	background-clip: text;
-  	-webkit-text-fill-color: transparent;
-  
- }
+	-webkit-text-fill-color: transparent;
+	}
+
+.bi-instagram:hover { 
+ 	padding: .3em;
+ 	transition: all .4s ease-in-out;
+}
 
 .navbar-brand h1 {
 	font-size: 1.1rem;
@@ -1265,13 +1284,22 @@ a button:hover {
 	flex-direction: column;
 }
 
+.logo-cont3 {
+	display: flex;
+	position: relative;
+	justify-content: space-between;
+	width: auto;
+	height: auto;
+}
+
+
 .gitlogo3 {
 		display: flex;
 		position: relative;
 		padding: 5px;
 }
 
-.gitlogo3 a {
+.gitlogo3 {
 	display: flex;
 	position: relative;
 	flex-direction: column;
@@ -1279,18 +1307,21 @@ a button:hover {
 	color: white;
 	margin: 0 auto;
 	height: fit-content;
-	font-size: .6rem;
+/*	justify-content: center;*/
+	text-align: center;
+	font-size: .7rem;
 	color: #909090;
 }
 
-.gitlogo3 a:hover {
+.gitlogo3:hover {
 	color: black;
 	background-color: rgba(250, 250, 250, 0.8);
 	width: fit-content;
 	height: fit-content;
-	padding: 2px;
+	padding: .7em;
 	transition: .2s;
-	border-radius: 2%;
+	border-radius: .6em;
+	filter: drop-shadow(5px 9px 7px #ffffff6c);
 }
 
 .gitlogo3 img {
@@ -1300,19 +1331,12 @@ a button:hover {
 	height: 50px;
 }
 
-.logo-cont3 {
-	display: flex;
-	position: relative;
-	justify-content: space-between;
-	width: auto;
-	height: auto;
-}
 
-.logo-cont3 article {
+/*.logo-cont3 {
 	display: flex;
 	position: relative;
 	flex-direction: column-reverse;
-}
+}*/
 
 .poli {
 	display: flex;
