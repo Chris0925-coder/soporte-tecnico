@@ -1106,7 +1106,7 @@ a button:hover {
 }
 
 .infoweb__container h2 {
-	font-size: clamp(16px, 5vw, 30px);
+	font-size: clamp(19px, 5vw, 38px);
 	color: #fff;
 	padding: 0 2em;
 /*	gap: 2em;*/
