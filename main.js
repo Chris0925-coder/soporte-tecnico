@@ -215,9 +215,6 @@ function eliminarBloqueRGPD(){
 //     galeria2.style.backgroundImage = `url(${carousel[slideIndex-1]})`;
 // });
 
-
-
-
 let n = 0;
 
 const noti = document.querySelectorAll(".not-1");
@@ -232,6 +229,20 @@ noti[3].style.display = "none";
 
 // const carousel = new bootstrap.Carousel('#myCarousel');
 
+function sildeButtoms(a, b, c, d) {
+        a.style.opacity = "1";
+        b.style.opacity = ".3";
+        c.style.opacity = ".3";
+        d.style.opacity = ".3";
+}
+
+function sildeDisplay(a, b, c, d) {
+        a.style.display = "block";
+        b.style.display = "none";
+        c.style.display = "none";
+        d.style.display = "none";
+}
+
 function notice() {
     for (i=0;i<noti.length;i++) {
         noti[i].style.display = "none";
@@ -244,33 +255,37 @@ function notice() {
     // noti.style.opacity = "1";
     // noti.style.transition = "all .6s ease-in-out";
     if(noti[n-1]==noti[0]) {
+        sildeButtoms(botona, botonb, botonc, botond)
         // botonx = botonc, botonb, botond;
-        botona.style.opacity = "1";
-        botonb.style.opacity = "0.3";
-        botonc.style.opacity = "0.3";
-        botond.style.opacity = "0.3";
-        }else if (noti[n-1]==noti[1]) {
+        // botona.style.opacity = "1";
+        // botonb.style.opacity = "0.3";
+        // botonc.style.opacity = "0.3";
+        // botond.style.opacity = "0.3";
+        } else if (noti[n-1]==noti[1]) {
+            sildeButtoms(botonb, botona, botonc, botond)
             // botonz = botonc, botona, botond;
-            botonb.style.opacity = "1";
-            botona.style.opacity = "0.3";
-            botonc.style.opacity = "0.3";
-            botond.style.opacity = "0.3";
+            // botonb.style.opacity = "1";
+            // botona.style.opacity = "0.3";
+            // botonc.style.opacity = "0.3";
+            // botond.style.opacity = "0.3";
 
             // noti[n-1].style.transition = "all .6s ease-in-out";
         } else if (noti[n-1]==noti[2]) {
+            sildeButtoms(botonc, botonb, botona, botond)
             // botonw = botona, botonb, botond;
-            botonc.style.opacity = "1";
-            botona.style.opacity = "0.3";
-            botond.style.opacity = "0.3";
-            botonb.style.opacity = "0.3";
+            // botonc.style.opacity = "1";
+            // botona.style.opacity = "0.3";
+            // botond.style.opacity = "0.3";
+            // botonb.style.opacity = "0.3";
 
             // noti[n-1].style.transition = "all .6s ease-in-out";
         } else {
+            sildeButtoms(botond, botonb, botonc, botona)
             // botonv = botonc, botonb, botona;
-            botond.style.opacity = "1";
-            botona.style.opacity = "0.3";
-            botonb.style.opacity = "0.3";
-            botonc.style.opacity = "0.3";
+            // botond.style.opacity = "1";
+            // botona.style.opacity = "0.3";
+            // botonb.style.opacity = "0.3";
+            // botonc.style.opacity = "0.3";
 
             // noti[n-1].style.transition = "all .6s ease-in-out";
         }
@@ -280,59 +295,67 @@ function notice() {
 let time = setInterval(notice,10000);
 
 botona.addEventListener('click',() => {
-    botona.style.opacity = "1";
-    botonb.style.opacity = "0.3";
-    botonc.style.opacity = "0.3";
-    botond.style.opacity = "0.3";
+    sildeButtoms(botona, botonb, botonc, botond);
+    // botona.style.opacity = "1";
+    // botonb.style.opacity = "0.3";
+    // botonc.style.opacity = "0.3";
+    // botond.style.opacity = "0.3";
     if(true) {
-    noti[0].style.display = "block";
-    noti[1].style.display = "none";
-    noti[2].style.display = "none";
-    noti[3].style.display = "none";
-    clearInterval(time);
+        sildeDisplay(noti[0], noti[1], noti[2], noti[3]);
+        // noti[0].style.display = "block";
+        // noti[1].style.display = "none";
+        // noti[2].style.display = "none";
+        // noti[3].style.display = "none";
+        clearInterval(time);
     } 
 });
 
 botonb.addEventListener('click',() => {
-    botona.style.opacity = "0.3";
-    botonc.style.opacity = "0.3";
-    botonb.style.opacity = "1";
-    botond.style.opacity = "0.3";
+    sildeButtoms(botonb, botona, botonc, botond);
+    // botona.style.opacity = "0.3";
+    // botonc.style.opacity = "0.3";
+    // botonb.style.opacity = "1";
+    // botond.style.opacity = "0.3";
     if(true) {
-    noti[0].style.display = "none";
-    noti[1].style.display = "block";
-    noti[2].style.display = "none";
-    noti[3].style.display = "none";
-    clearInterval(time);
+        sildeDisplay(noti[1], noti[0], noti[2], noti[3]);
+        // noti[0].style.display = "none";
+        // noti[1].style.display = "block";
+        // noti[2].style.display = "none";
+        // noti[3].style.display = "none";
+        clearInterval(time);
     } 
 });
 
 botonc.addEventListener('click',() => {
-    botonc.style.opacity = "1";
-    botona.style.opacity = "0.3";
-    botonb.style.opacity = "0.3";
-    botond.style.opacity = "0.3";
+    sildeButtoms(botonc, botona, botonb, botond)
+    // botonc.style.opacity = "1";
+    // botona.style.opacity = "0.3";
+    // botonb.style.opacity = "0.3";
+    // botond.style.opacity = "0.3";
     if(true) {
-    noti[0].style.display = "none";
-    noti[1].style.display = "none";
-    noti[2].style.display = "block";
-    noti[3].style.display = "none";
-    clearInterval(time);
+        sildeDisplay(noti[2], noti[1], noti[0], noti[3]);
+        // noti[0].style.display = "none";
+        // noti[1].style.display = "none";
+        // noti[2].style.display = "block";
+        // noti[3].style.display = "none";
+        clearInterval(time);
     } 
 });
 
 
 botond.addEventListener('click',() => {
-    botonc.style.opacity = "0.3";
-    botona.style.opacity = "0.3";
-    botonb.style.opacity = "0.3";
-    botond.style.opacity = "1";
+    sildeButtoms(botond, botona, botonc, botonb)
+    // botonc.style.opacity = "0.3";
+    // botona.style.opacity = "0.3";
+    // botonb.style.opacity = "0.3";
+    // botond.style.opacity = "1";
     if(true) {
-    noti[0].style.display = "none";
-    noti[1].style.display = "none";
-    noti[2].style.display = "none";
-    noti[3].style.display = "block";
-    clearInterval(time);
+        sildeDisplay(noti[3], noti[0], noti[2], noti[1]);
+        // noti[0].style.display = "none";
+        // noti[1].style.display = "none";
+        // noti[2].style.display = "none";
+        // noti[3].style.display = "block";
+        clearInterval(time);
     } 
 });
 // counter = parseInt('0');
