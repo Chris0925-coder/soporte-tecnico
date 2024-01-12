@@ -395,24 +395,12 @@ youTube.innerHTML = videoC;
 
 // youTube.appendChild(videoC);
 function youT() {
-    // window.addEventListener("mouseup", () => {
-        
         yy.style.opacity = "1";
         yy.style.transition = "all 5s ease-in-out";
         close.style.display = 'flex';
         close.style.color = '#ffffff90';
-        // close.style.transition = "all 5s ease-in-out";
-        
         close.style.opacity = '1';
-        // youTube.classList.toggle("yy");
-    // });
         close.style.transition = "all 5s ease-in-out";
-        
-        // yy.style.display = "none";
-    // yy.style.display = "flex";
-    // yy.style.opacity = "1";
-    // yy.style.transition = "all .9s ease-in-out";
-    
 }
 
 youT();

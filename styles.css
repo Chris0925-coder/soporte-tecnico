@@ -1078,7 +1078,6 @@ a button:hover {
 	position: fixed;
 	color: #ffffff00;
 	bottom: 8.5em;
-/*	text-align: right;*/
 	justify-content: flex-end;
 	right: 0;
 	width: 50px;
@@ -1086,12 +1085,66 @@ a button:hover {
 	font-size: 2em;
 	z-index: 6000;
 	opacity: 0;
-/*	transition:all 5s ease-in-out;*/
 }
 
 .closeq:hover {
 	cursor: pointer;
 	filter: drop-shadow(1px 1px 10px white);
+}
+
+.infoweb__container {
+	color: #fff;
+	margin: 5em auto;
+}
+
+.infoweb {
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	justify-content: center;
+	gap: 1em;
+}
+
+.infoweb__container h2 {
+	font-size: clamp(16px, 5vw, 30px);
+	color: #fff;
+	padding: 0 2em;
+/*	gap: 2em;*/
+}
+
+.infoweb__container p {
+	margin-top:.4em;
+	font-size: clamp(10px, 5vw, 20px);
+}
+
+.infoweb__articles {
+	width: 400px;
+}
+
+.infoweb__articles h3{
+	font-size: clamp(12px, 5vw, 25px);
+}
+
+.infoweb__articles a {
+	text-decoration: none;
+	color: #fff;
+	cursor: pointer;
+}
+
+.infoweb__articles a:hover {
+	filter: drop-shadow(1px 1px 10px black);
+}
+
+.infoweb__lists {
+	text-align: center;
+	list-style: none;
+	padding-left: 0;
+/*	gap: 2em;*/
+/*	text-align: center;*/
+}
+
+.infoweb__lists li {
+	margin: .4em;
 }
 
 /*#instA {
