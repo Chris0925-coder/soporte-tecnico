@@ -378,3 +378,46 @@ botond.addEventListener('click',() => {
 const date = document.querySelector('.date');
 
 date.append(new Date ().getFullYear ());
+
+// const body = document.querySelector('body');
+const youTube = document.querySelector('.YouTube');
+const yy = document.querySelector('.yy');
+const close = document.querySelector('.closeq');
+// console.log(youTube);
+
+const videoC = 
+    `
+    <iframe max-width="560" height="315" src="https://www.youtube.com/embed/PoLFeWd7yP0?si=TYd9PiECo-PJSDtq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    `;
+
+
+youTube.innerHTML = videoC;
+
+// youTube.appendChild(videoC);
+function youT() {
+    // window.addEventListener("mouseup", () => {
+        
+        yy.style.opacity = "1";
+        yy.style.transition = "all 5s ease-in-out";
+        close.style.display = 'flex';
+        close.style.color = '#ffffff90';
+        // close.style.transition = "all 5s ease-in-out";
+        
+        close.style.opacity = '1';
+        // youTube.classList.toggle("yy");
+    // });
+        close.style.transition = "all 5s ease-in-out";
+        
+        // yy.style.display = "none";
+    // yy.style.display = "flex";
+    // yy.style.opacity = "1";
+    // yy.style.transition = "all .9s ease-in-out";
+    
+}
+
+youT();
+// setTimeout(youT, 9000);
+close.addEventListener('click', () => {
+        yy.style.display = "none";
+        close.style.display = 'none';
+    })

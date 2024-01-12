@@ -1038,6 +1038,62 @@ a button:hover {
 	text-decoration: none;
 }
 
+
+
+
+.YouTube {
+	display: none;
+	position: fixed;
+	right: 0;
+/*	left: -50%;*/
+	bottom: 0;
+	width: auto; 
+	height: auto;
+	z-index: 5000;
+/*	opacity: 0;*/
+/*	opacity: 0;*/
+	transition: all 4s ease-in-out;
+		
+}
+
+.yy {
+	display: flex;
+/*	right: 0;*/
+/*	right: -100%;*/
+	opacity: 0;
+	transition: all .6s ease-in-out;
+	animation: move-der-izq 5s 1;
+}
+@keyframes move-der-izq {
+	from {
+		transform: translateX(100%);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+
+.closeq {
+	display: none;
+	position: fixed;
+	color: #ffffff00;
+	bottom: 8.5em;
+/*	text-align: right;*/
+	justify-content: flex-end;
+	right: 0;
+	width: 50px;
+	height: 50px;
+	font-size: 2em;
+	z-index: 6000;
+	opacity: 0;
+/*	transition:all 5s ease-in-out;*/
+}
+
+.closeq:hover {
+	cursor: pointer;
+	filter: drop-shadow(1px 1px 10px white);
+}
+
 /*#instA {
 	display: block;
 	position: relative;
