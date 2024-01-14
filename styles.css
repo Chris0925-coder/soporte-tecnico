@@ -1198,6 +1198,10 @@ a button:hover {
 	filter: drop-shadow(1px 1px 10px #FFFFFF9c);
 }
 
+#foto-soporte {
+	object-fit: contain;
+}
+
 /*#instA {
 	display: block;
 	position: relative;
