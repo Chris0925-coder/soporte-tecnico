@@ -1089,7 +1089,7 @@ a button:hover {
 }
 
 .infoweb__container {
-	color: #001;
+	color: #000011;
 	margin: 5em auto;
 }
 
@@ -1103,7 +1103,7 @@ a button:hover {
 	place-content: center;
 /*	justify-content: center;*/
 	gap: 1em;
-	color: black;
+	color: #000011;
 /*	border: 1px solid yellow;*/
 	text-align: center;
 }
@@ -1117,8 +1117,8 @@ a button:hover {
 }
 
 .infoweb__container h2 {
-	font-size: clamp(19px, 5vw, 38px);
-	color: black;
+	font-size: clamp(25px, 5vw, 42px);
+	color: #000011;
 	font-weight: 600;
 	padding: 0 2em;
 	/*	gap: 2em;*/
@@ -1131,7 +1131,7 @@ a button:hover {
 }
 
 .infoweb__articles {
-	color: black;
+	color: #111;
 	width: 400px;
 }
 
@@ -1141,19 +1141,19 @@ a button:hover {
 
 .infoweb__articles a {
 	text-decoration: none;
-	color: black;
+	color: #303030;
 	cursor: pointer;
 }
 
 .infoweb__articles a:hover {
-	filter: drop-shadow(1px 1px 10px black);
+	filter: drop-shadow(1px 1px 10px #1c1c2b);
 }
 
 .infoweb__lists {
 	text-align: center;
 	list-style: none;
 	padding-left: 0;
-	color: black;
+	color: #111;
 	/*	gap: 2em;*/
 	/*	text-align: center;*/
 }
@@ -1161,7 +1161,7 @@ a button:hover {
 .infoweb__lists li {
 	margin: .4em;
 }
-
+/*
 .ok {
 	text-align: center;
 	width: 100%;
@@ -1176,9 +1176,9 @@ a button:hover {
 	padding: 12px;
 	background-color: #a22;
 	color: #fff;
-}
+}*/
 
-.comm_container {
+/*.comm_container {
 	display: flex;
 	flex-wrap: wrap;
 	position: relative;
@@ -1194,9 +1194,9 @@ a button:hover {
 	flex-wrap: wrap;
 	text-align: justify;
 	margin: 0.6em;
-/*	font-size: 0.7rem;*/
+	font-size: 0.7rem;
 	filter: drop-shadow(1px 1px 10px #FFFFFF9c);
-}
+}*/
 
 #foto-soporte {
 	object-fit: contain;
