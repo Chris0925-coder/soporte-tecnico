@@ -1131,12 +1131,16 @@ a button:hover {
 }
 
 .infoweb__articles {
-	color: #111;
+	color: #1b1b1b;
 	width: 400px;
 }
 
 .infoweb__articles h3{
+	width: 300px;
+	color: #111;
 	font-size: clamp(12px, 5vw, 25px);
+/*	border: 1px solid yellow;*/
+	margin: 0 auto;
 }
 
 .infoweb__articles a {
