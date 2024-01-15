@@ -1546,7 +1546,7 @@ a button:hover {
 /*SECTION LAPTOPS*/
 .title__laptop {
 	font-size: clamp(22px, 5vw, 33px);
-	color: #000011;
+	color: #111111;
 	font-weight: 700;
 	background: linear-gradient(190deg,#aaffff80,#fff3);
 	border-radius: 1%;
@@ -1604,7 +1604,7 @@ a button:hover {
 	padding-inline: 10px;
 	transform: translateY(-10px);
 	cursor: pointer;
-	color: #000011;
+	color: #111111;
 }
 
 /*.item__cont {*/
@@ -1634,6 +1634,21 @@ a button:hover {
 
 .item__role li h6 {
 	text-align: left;
+}
+
+.amazon {
+	text-align: center;
+}
+
+.amazon a {
+	text-decoration: none;
+	color: #111111;
+	font-weight: 900;
+	font-size: 1.1rem;
+}
+
+.amazon:hover {
+	border-bottom: solid 2px #303030;
 }
 /*SECTION LAPTOPS*/
 
