@@ -890,7 +890,7 @@ a button:hover {
 	font-size: clamp(25px, 5vw, 33px);
 	font-weight: 700;
 	color: #fff;
-	padding: 40px;
+	padding: 20px 40px 30px;
 	filter: drop-shadow(1px 1px 3px #303030);
 }
 
