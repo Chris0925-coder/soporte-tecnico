@@ -911,8 +911,8 @@ a button:hover {
 
 .gallery-wrapper {
 	cursor: pointer;
-	max-width: 400px;
- 	height: auto;
+	max-width: 300px;
+	height: 400px;
 }
 
 .gallery-item {
@@ -920,8 +920,8 @@ a button:hover {
 	isolation: isolate;
 	display: flex;
 	flex: 1;
-	max-width:400px;
-	height: 500px;
+	max-width: 300px;
+	height: 400px;
 	opacity: 1;
 	overflow: hidden;
 	transition: flex 0.5, opacity 0.25s;
@@ -1553,7 +1553,7 @@ a button:hover {
 	position: relative;
 	isolation: isolation;
 	flex: 1;
-	height: 500px;	
+	height: 358px;
 	overflow: hidden;
 }
 
