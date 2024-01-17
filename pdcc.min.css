@@ -35,6 +35,10 @@ sup.pdcc-info-badge{
 	text-align:center
 }
 
+.pdcc-open-modal {
+	font-size: .6rem;
+}
+
 div#pdcc-message-container {
 	z-index:999998;
 	position:fixed;

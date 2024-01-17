@@ -51,6 +51,14 @@ h1,h2,h3,h4,h5,h6 {
 	color: #30303090;
 }
 
+.cook {
+	width: 90%;
+	text-align: center;
+	margin: 0 auto;
+	justify-content: center;
+	object-position: center;
+}
+
 /*BODY-MAIN*/
 .navbar {
 	position: relative;
