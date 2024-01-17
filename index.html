@@ -1,6 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <link rel="stylesheet" href="pdcc.min.css">
+  <script charset="utf-8" src="pdcc.min.js"></script>
+  <script type="text/javascript">
+    PDCookieConsent.config({
+      "defaultLang" : "es",
+      "brand": {
+      "dev" : false,
+      "name": "Christian",
+      "url" : "https://www.desarrollohelpdesk.site",
+      "websiteOwner" : "ChrisWebDeveloper"
+      },
+      "cookiePolicyLink": "https://www.desarrollohelpdesk.site/cookies.html",
+      "hideModalIn": ["https://www.desarrollohelpdesk.site/cookies.html"],
+      "styles": {
+      "primaryButton": {
+      "bgColor" : "#A1FFA1",
+      "txtColor": "#036900"
+      },
+      "secondaryButton": {
+      "bgColor" : "#EEEEEE",
+      "txtColor": "#333333"
+      }
+    }
+  });
+  </script>
   <!-- Google tag (gtag.js) --> 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZDGVYM429H"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-ZDGVYM429H'); </script>
 
@@ -58,8 +83,8 @@
       {
         "@context" : "https://schema.org",
         "@type" : "WebSite",
-        "name" : "CHRISTIAN Web Developer",
-        "alternateName" : "CHRIS Web Dev",
+        "name" : "CHRISTIANWebDeveloper",
+        "alternateName" : "CHRISWebDev",
         "url" : "https://desarrollohelpdesk.site/",
         "thumbnailUrl": [
           "https://www.desarrollohelpdesk.site/img/logochris1.png",
@@ -68,7 +93,7 @@
         ],
         "publisher": {
       "@type": "Organization",
-      "name": "Christian Web Developer",
+      "name": "ChristianWebDeveloper",
       "logo": {
         "@type": "ImageObject",
         "url": "https://www.desarrollohelpdesk.site/favicon.ico"
@@ -76,7 +101,7 @@
       },
       "author": {
         "@type": "Person",
-        "name": "Christian Guardia"
+        "name": "ChristianGuardia"
       },
         "potentialAction": {
           "@type": "SearchAction",
@@ -277,9 +302,9 @@
     </div>
 
     <section class="container infoweb__container">
-      <h2>¿Cómo crear tu propia página web estática?
+      <h2>¿Cómo desarrollar tu propia página web estática?
         <!-- <br> -->
-        <p>Te dejo una lista de herramientas para construirla con código</p>
+        <p>Algunas herramientas para construirla con código</p>
       </h2>
       <div class="infoweb">
         <span class="infoweb__section">
@@ -457,7 +482,7 @@
   </section>
 
   <div class="cajacookies"><p>Hacemos uso de cookies propias y de terceros para proporcionar una mejor experiencia de usuario. Al seguir navegando entendemos que acepta nuestra <a href="cookies.html">Política de Cookies</a>.</p><div class="botonRGPD">Aceptar</div></div>
-
+  
   <footer>
     <div class="container-pro">
       <section class="ff">
@@ -534,8 +559,10 @@
         </div>
       </section>   
     </div>
+    <br>
+    <!-- ><a href="cookies.html" target="_blank">Política de Cookies</a> -->
     <div class="poli">
-      <span><a href="cookies.html" target="_blank">Política de Cookies</a></span>
+      <span><a href="#" class="pdcc-open-modal">Panel Cookies</a></span>
       <span> copyright © <span class="date"></span> </span>
       <span><a href="terminosycondiciones.html" target="_blank">Términos y Condiciones</a></span>
     </div>
