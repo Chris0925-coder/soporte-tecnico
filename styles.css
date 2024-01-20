@@ -252,7 +252,9 @@ h1,h2,h3,h4,h5,h6 {
 	height: auto;
 	bottom: 0;
 	text-align: center;
-	place-content: end;
+	padding: .3em;
+	backdrop-filter: blur(10px);
+	/* place-content: end; */
 }
 /*.not-1 article {
 	justify-content: center;
