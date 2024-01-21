@@ -7,10 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="title" content="Página de Contacto | CHRISTIAN WebDeveloper">
-    <meta property="twitter:@ChrisWebDev30" content="Desarrollo Web en Panamá">
+    <!-- <meta property="twitter:@ChrisWebDev30" content="Desarrollo Web en Panamá"> -->
     <meta name="description" content="Página de Contacto, Christian WEB Developer, WhatsApp: 6899-4976.">
     <meta name="keywords" content="Contacto, Contactame, Christian WEB Developer">
-    <meta property="og:image" content="https://www.desarrollohelpdesk.site/favicons/logo-fb.png">
+    <!-- <meta property="og:image" content="https://www.desarrollohelpdesk.site/favicons/logo-fb.png"> -->
 
 	<title>Contacto | CHRISTIAN WEB DEVELOPER</title>
 
@@ -18,9 +18,9 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 
-	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" type="text/css" href="public/css/styles.css">
 
-    <script defer type="text/javascript" src="contacto.js"></script>
+    <script defer type="text/javascript" src="public/javascript/contacto.js"></script>
 
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
@@ -30,7 +30,7 @@
         <div class="flex-container">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
               <div class="container-fluid">
-                <a class="navbar-brand" href="index.html"><h1>Desarrollo Web en Panamá</h1></a>
+                <a class="navbar-brand" href="index.html"><h1>Desarrollo Web<br> en Panamá</h1></a>
                 <button title="openNav" class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
@@ -48,12 +48,15 @@
                         <a class="nav-link" href="descargas.html"><i class="bi bi-file-earmark-arrow-down"></i> Descargas</a>
                       </li>
                       <li class="nav-item">
+                        <a class="nav-link" href="buildpc.html"><i class="bi bi-building-fill-gear"></i> Construye tu PC</a>
+                      </li>
+                      <li class="nav-item">
                         <a class="nav-link active" href="contacto.html"><i class="bi bi-receipt"></i> Contacto</a>
                       </li>
                     </ul>
                     <div class="logo-cont2">
                         <article class="gitlogo">
-                            <a href="https://github.com/Chris0925-coder?tab=repositories" target="_blank"><img src="img/github_PNG40.png" alt="GitHubAccount"><p>GitHub Account</p></a>
+                            <a href="https://github.com/Chris0925-coder?tab=repositories" target="_blank"><img src="public/img/github_PNG40.png" alt="GitHubAccount"><p>GitHub Account</p></a>
                         </article>
                         <article>
                             <div class="logo2"></div>
@@ -91,17 +94,17 @@
         								Enviar
         							</button>
         						</div>
-                                <input type="hidden" name="_next" value="https://chris0925-coder.github.io/soporte-tecnico/">
-                                <input type="hidden" name="_captcha" value="false">
+                      <input type="hidden" name="_next" value="https://chris0925-coder.github.io/soporte-tecnico/">
+                      <input type="hidden" name="_captcha" value="false">
         					</form>
-                            <br>
-                            <form action="https://www.google.com/recaptcha/api/siteverify" method="post">
-                                <div class="form-group">
-                                    <div class="g-recaptcha form-control" data-sitekey="6Le1UBwpAAAAAHzagcQvjzbPGK2g7TvoJiLyNSO5" data-callback="verifyCaptcha">   
-                                    </div>
-                                    <div id="g-recaptcha-error"></div>
-                                </div>
-                            </form>
+                  <br>
+                  <form action="https://www.google.com/recaptcha/api/siteverify" method="post">
+                      <div class="form-group">
+                          <div class="g-recaptcha form-control" data-sitekey="6Le1UBwpAAAAAHzagcQvjzbPGK2g7TvoJiLyNSO5" data-callback="verifyCaptcha">   
+                          </div>
+                          <div id="g-recaptcha-error"></div>
+                      </div>
+                  </form>
         				</div>
         			</div>
         		</div>
@@ -145,7 +148,7 @@
 
                 <li class="logo-cont3">
                   <!-- <article class="gitlogo3"> -->
-                    <a class="gitlogo3" href="https://github.com/Chris0925-coder?tab=repositories"><img src="img/github_PNG40.png" alt="GitHubAccount"><p>GitHub Account</p></a>
+                    <a class="gitlogo3" href="https://github.com/Chris0925-coder?tab=repositories"><img src="public/img/github_PNG40.png" alt="GitHubAccount"><p>GitHub Account</p></a>
                   <!-- </article> -->
                 </li>
 
@@ -159,7 +162,7 @@
             <div class="contact1">
               <ul>
                 <li><a href="https://api.whatsapp.com/send?phone=50768994976" target="_blank">
-                +507 6899-4976 <img src="img/whatsapp.png" alt="logoWhatsapp" width="20" height="20"></a></li>
+                +507 6899-4976 <img src="public/img/whatsapp.png" alt="logoWhatsapp" width="20" height="20"></a></li>
                 <li><a href="mailto:admin@desarrollohelpdesk.site" target="_blank"> admin@desarrollohelpdesk.site <i class="bi bi-envelope"></i></a></li>
               </ul>
             </div>

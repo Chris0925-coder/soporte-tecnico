@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <link rel="stylesheet" href="pdcc.min.css">
-  <script charset="utf-8" src="pdcc.min.js"></script>
+  <link rel="stylesheet" href="public/css/pdcc.min.css">
+  <script charset="utf-8" src="public/javascript/pdcc.min.js"></script>
   <script type="text/javascript">
     PDCookieConsent.config({
       "defaultLang" : "es",
@@ -70,8 +70,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16px.png" />
   <link rel="shortcut icon" sizes="48x48" type="image/x-icon" href="./favicon.ico" />
-  <link rel="manifest" href="./manifest.json" />
-  <link rel="manifest" href="./site.webmanifest" />
+  <link rel="manifest" href="./favicons/manifest.json" />
+  <link rel="manifest" href="./favicons/site.webmanifest" />
   <link rel="mask-icon" href="./favicons/safari-pinned-tab.svg" color="#5bbad5" />
   <meta name="msapplication-TileColor" content="#ffffff" />
   <meta name="msapplication-TileImage" content="./favicons/ms-icon-144x144.png" />
@@ -87,9 +87,9 @@
         "alternateName" : "CHRISWebDev",
         "url" : "https://desarrollohelpdesk.site/",
         "thumbnailUrl": [
-          "https://www.desarrollohelpdesk.site/img/logochris1.png",
-          "https://www.desarrollohelpdesk.site/img/b1a.png",
-          "https://www.desarrollohelpdesk.site/img/b2a.png"
+          "https://www.desarrollohelpdesk.site/public/img/logochris1.png",
+          "https://www.desarrollohelpdesk.site/public/img/b1a.png",
+          "https://www.desarrollohelpdesk.site/public/img/b2a.png"
         ],
         "publisher": {
       "@type": "Organization",
@@ -118,12 +118,12 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="public/css/styles.css">
 
-  <script type="text/javascript" src="main.js" defer></script>
+  <script type="text/javascript" src="public/javascript/main.js" defer></script>
   <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 
-  <script async type="text/javascript" src="count.js"></script>
+  <!-- <script async type="text/javascript" src="count.js"></script> -->
 
   <script async src="//www.instagram.com/embed.js"></script>
 
@@ -134,7 +134,7 @@
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="https://github.com/Chris0925-coder?tab=repositories"><span>Desarrollo Web en Panamá</span></a>
+        <a class="navbar-brand" href="https://github.com/Chris0925-coder?tab=repositories"><span>Desarrollo Web <br> en Panamá</span></a>
         <button title="openNav" class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
@@ -152,12 +152,15 @@
                 <a class="nav-link" href="descargas.html"><i class="bi bi-file-earmark-arrow-down"></i> Descargas </a>
               </li>
               <li class="nav-item">
+                <a class="nav-link" href="buildpc.html"><i class="bi bi-building-fill-gear"></i> Construye tu PC</a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link" href="contacto.html"><i class="bi bi-receipt"></i> Contacto </a>
               </li>
             </ul>
             <div class="logo-cont2">
                 <article class="gitlogo">
-                    <a href="https://github.com/Chris0925-coder?tab=repositories" target="_blank"><img src="img/github_PNG40.png" alt="GitHubAccount"><p>GitHub Account</p></a>
+                    <a href="https://github.com/Chris0925-coder?tab=repositories" target="_blank"><img src="public/img/github_PNG40.png" alt="GitHubAccount"><p>GitHub Account</p></a>
                 </article>
                 <article>
                     <div class="logo2"></div>
@@ -183,28 +186,28 @@
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="10000">
-              <img src="img/laptops.png" class="d-block " alt="CambiodePastaTermica">
+              <img src="public/img/laptops.png" class="d-block " alt="CambiodePastaTermica">
               <div class="carousel-caption">
                 <h2>Desarrollo Web</h2>
                 <p>Páginas web semántica, responsiva, estática o dinámica. HTML, CSS, JavaScript.</p>
               </div>
             </div>
             <div class="carousel-item" data-bs-interval="2000">
-              <img src="img/oipA.png" class="d-block" alt="BasedeDatos">
+              <img src="public/img/oipA.png" class="d-block" alt="BasedeDatos">
               <div class="carousel-caption">
                 <h2>Plataforma Node.js</h2>
                 <p>Base de datos, relacionales y norelacionales, SQLite3, MongoDB. API REST.</p>
               </div>
             </div>
             <div class="carousel-item">
-              <img src="img/soporte.png" class="d-block" alt="mantenimientoyreparaciondePCs" id="foto-soporte">
+              <img src="public/img/soporte.png" class="d-block" alt="mantenimientoyreparaciondePCs" id="foto-soporte">
               <div class="carousel-caption">
                 <h2>Mantenimiento y Reparaciones</h2>
                 <p>Consolas de videojuegos, laptops, PCs.</p>
               </div>
             </div>
             <div class="carousel-item">
-              <img src="img/Windows.png" class="d-block" alt="PS4pro">
+              <img src="public/img/Windows.png" class="d-block" alt="PS4pro">
               <div class="carousel-caption">
                 <h2>Software y Sistemas Operativos</h2>
                 <p>Instalacion de SO, programas, configuracion de servidores.</p>
@@ -250,7 +253,7 @@
             <!-- <span> -->
               <a href="https://amzn.to/48YaYwV" target="_blank">
               <h4 class="cap">¿SSD para tu PlayStation 5?</h4>
-              <img src="img/ssd.png"></a>
+              <img src="public/img/ssd.png"></a>
               <p>Corsair MP600 PRO LPX 1TB M.2 NVMe PCIe x4 Gen4 SSD - Optimizado para PS5</p>
             <!-- </span> -->
           </article>
@@ -259,7 +262,7 @@
               <h4 class="cap"> AMD 3D V-Cache™</h4>
               <p>Cuando tu PC usa el procesador de escritorio más avanzado del mundo que existe para jugadores, te puedes concentrar en lo que verdaderamente importa: ganar en el campo de batalla digital. No importa si quieres jugar los últimos lanzamientos o revivir un clásico: los procesadores AMD Ryzen™ de la serie 7000 te dan una potencia de juego arrasadora con los núcleos “Zen 4” de alto rendimiento. Con hasta 16 núcleos, 32 subprocesos, velocidades turbo máximas de 5,7 GHz2 y memoria en el chip de hasta 144 MB, los procesadores AMD Ryzen serie 7000 ofrecen un rendimiento que lo cambia todo. Procesador AMD Ryzen™ 9 7950X3D con tecnología AMD 3D V-Cache</p>
               <span class="not-img">
-                <a href="https://www.amd.com/es/processors/ryzen" target="_blank"><img src="img/ryzen.webp" alt="Ryzen"></a>
+                <a href="https://www.amd.com/es/processors/ryzen" target="_blank"><img src="public/img/ryzen.webp" alt="Ryzen"></a>
               </span>
             </span>
           </article>
@@ -269,7 +272,7 @@
               <p>Al elegir una laptop con una insignia Intel Evo, se asegura de que su diseño se hasometido a rigurosas pruebas para obtener este "sello de aprobación".
               Estos diseños de vanguardia han superado más de 75 estándares de primera calidad, como el de alto desempeño, carga rápida, batería de larga duración, activación instantánea, conectividad de primera clase, y tamaño y peso ideales, para ofrecerle todo lo que necesitas sin limitaciones.</p>
               <span class="not-img">
-                <a href="https://www.intel.la/content/www/xl/es/now/laptops-evolved.html" target="_blank"><img src="img/evo.png" alt="IntelEvo"></a>
+                <a href="https://www.intel.la/content/www/xl/es/now/laptops-evolved.html" target="_blank"><img src="public/img/evo.png" alt="IntelEvo"></a>
               </span>
             </span>
           </article>
@@ -279,7 +282,7 @@
               <p>Consigue una experiencia de juego sin fragmentaciones y fluida, con tasas de actualización, con HDR y mucho más. Esta es la pantalla de gaming definitiva y el equipo de confianza para jugadores entusiastas.              
               Convierte tus capturas de pantalla en obras de arte con este potente modo de foto en juego que captura imágenes de 360 grados, HDR y con superresolución.</p>
               <span class="not-img">
-                <a href="https://www.nvidia.com/es-es/geforce/laptops/compare/" target="_blank"><img src="img/nvidiaseries40.png" alt="NVIDIA"></a>
+                <a href="https://www.nvidia.com/es-es/geforce/laptops/compare/" target="_blank"><img src="public/img/nvidiaseries40.png" alt="NVIDIA"></a>
               </span>
             </span>
           </article>
@@ -295,10 +298,10 @@
       </div>
       <div class="banner-demo">
         <article>
-          <img src="img/b1a.png" alt="bannerPublicitario">
+          <img src="public/img/b1a.png" alt="bannerPublicitario">
         </article>
         <article>
-          <img src="img/b2a.png" alt="bannerPublicitario">
+          <img src="public/img/b2a.png" alt="bannerPublicitario">
         </article>      
       </div>
     </div>
@@ -348,7 +351,7 @@
         <div class="gallery__wrapper">
           <figure class="gallery__item">
             <span class="img__item">
-              <img src="img/xps.png" alt="DellXPSPlus">
+              <img src="public/img/xps.png" alt="DellXPSPlus">
             </span>
             <figcaption class="item__description">
               <a href="https://www.amazon.com/Dell-Touch-Screen-12-core-i7-1260P-2xThunderbolt/dp/B0BZB6Y4M3?crid=3NYFSE6YA6QSD&keywords=XPS%2B13%2BPlus%2BLaptop&qid=1699597694&sprefix=xps%2B13%2Bplus%2Blaptop%2Caps%2C440&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll1&tag=chriswebdev-20&linkId=fc58d44e7ae126d23c87e246c12c5353&language=es_US&ref_=as_li_ss_tl"> <h6 class="item__name"><span>DELL</span> <span>Enlace XPS 13 Plus</span></h6></a>
@@ -411,7 +414,7 @@
         <article class="influP__content"> 
           <div class="gallery-wrapper">
             <figure class="gallery-item">
-              <img src="img/influencers/wo.png" class="item-image" alt="Licenciada">
+              <img src="public/img/influencers/wo.png" class="item-image" alt="Licenciada">
               <figcaption class="item-description">
                 <h5 class="name">
                   <a href="https://www.instagram.com/wyznick/" target="_blank">Wyznick</a>
@@ -435,7 +438,7 @@
         <article class="influP__content"> 
           <div class="gallery-wrapper">
             <figure class="gallery-item">
-              <img src="img/influencers/diana.png" class="item-image" alt="Diana Monster">
+              <img src="public/img/influencers/diana.png" class="item-image" alt="Diana Monster">
               <figcaption class="item-description">
                 <h5 class="name"><a href="https://www.instagram.com/dianamonsters/" target="_blank">Diana Monster</a>
                   <p>Creador digital
@@ -456,7 +459,7 @@
         <article class="influP__content"> 
           <div class="gallery-wrapper">
             <figure class="gallery-item">
-              <img src="img/influencers/mayerm.png" class="item-image" alt="MayerM">
+              <img src="public/img/influencers/mayerm.png" class="item-image" alt="MayerM">
               <figcaption class="item-description">
                 <h5 class="name"><a href="https://www.instagram.com/mayermm/" target="_blank">Mayer Mizrachi</a>
                   <p>EMPRENDEDOR</p>
@@ -474,17 +477,18 @@
         </article>
       </span>
     </section>
-  </main>
 
-  <section>
-    <div class="yy YouTube">
 
+
+    <section>
+      <div class="yy YouTube"></div>
+       <article class="closeq">X</article>
+    </section>
+
+    <div class="cajacookies">
+      <p>Hacemos uso de cookies propias y de terceros para proporcionar una mejor experiencia de usuario. Al seguir navegando entendemos que acepta nuestra <a href="cookies.html">Política de Cookies</a>.</p><div class="botonRGPD">Aceptar</div>
     </div>
-     <article class="closeq">X</article>
-  </section>
-
-  <div class="cajacookies"><p>Hacemos uso de cookies propias y de terceros para proporcionar una mejor experiencia de usuario. Al seguir navegando entendemos que acepta nuestra <a href="cookies.html">Política de Cookies</a>.</p><div class="botonRGPD">Aceptar</div></div>
-  
+  </main>
   <footer>
     <div class="container-pro">
       <section class="ff">
@@ -497,7 +501,7 @@
 
             <li class="logo-cont3">
               <!-- <article class="gitlogo3"> -->
-                <a class="gitlogo3" href="https://github.com/Chris0925-coder?tab=repositories"><img src="img/github_PNG40.png" alt="GitHubAccount"><p>GitHub Account</p></a>
+                <a class="gitlogo3" href="https://github.com/Chris0925-coder?tab=repositories"><img src="public/img/github_PNG40.png" alt="GitHubAccount"><p>GitHub Account</p></a>
               <!-- </article> -->
             </li>
 
@@ -511,7 +515,7 @@
         <div class="contact1">
           <ul>
             <li><a href="https://api.whatsapp.com/send?phone=50768994976" target="_blank">
-            +507 6899-4976 <img src="img/whatsapp.png" alt="logoWhatsapp" width="20" height="20"></a></li>
+            +507 6899-4976 <img src="public/img/whatsapp.png" alt="logoWhatsapp" width="20" height="20"></a></li>
             <li><a href="mailto:admin@desarrollohelpdesk.site" target="_blank"> admin@desarrollohelpdesk.site <i class="bi bi-envelope"></i></a></li>
           </ul>
         </div>
@@ -570,6 +574,5 @@
       <span><a href="terminosycondiciones.html" target="_blank">Términos y Condiciones</a></span>
     </div>
   </footer>
-  <!-- <div id="contador"></div> -->
 </body>
 </html>

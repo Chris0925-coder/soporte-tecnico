@@ -6,12 +6,12 @@ Disallow: /img/influencers/
 
 User-agent: Bingbot
 Allow: /
-Disallow: /img/influencers/
+Disallow: /public/img/influencers/
 
 User-agent: *
 Disallow: /cgi-bin/
 Disallow: /tmp/
 Disallow: /scripts/
-Disallow: /img/influencers/
+Disallow: /public/img/influencers/
 
 Sitemap: https://www.desarrollohelpdesk.site/sitemap.xml
