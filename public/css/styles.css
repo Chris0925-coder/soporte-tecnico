@@ -291,7 +291,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .logo {
-	background-image: url("img/logochris1.png");
+	background-image: url("../img/logochris1.png");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -1528,7 +1528,7 @@ a button:hover {
 	.logo2 {
 		display: flex;
 		position: relative;
-		background-image: url("img/logochris1.png");
+		background-image: url("../img/logochris1.png");
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center;
