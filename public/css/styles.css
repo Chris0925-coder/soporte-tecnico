@@ -1706,6 +1706,7 @@ a button:hover {
 	background-color: #222222;
 	justify-content: center;
 	gap: 10px;
+	font-size: .6rem;
 }
 
 .poli span {
