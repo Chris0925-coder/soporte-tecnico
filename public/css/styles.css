@@ -422,7 +422,7 @@ h1,h2,h3,h4,h5,h6 {
 	display: flex;
 	position: relative;
 	flex-direction: row;
-	/* justify-content: center; */
+	justify-content: center;
 	align-items: flex-end;
 	gap: 1em;
 	padding-left: 0;
@@ -1467,12 +1467,13 @@ a button:hover {
 
 	.banner-demo {
 		 display: flex;
-		position: relative;
-		flex-direction: column;
-		justify-content: stretch;
-		margin: 0 auto;
-		width: 100%;
-		gap: 2em;		
+		 position: relative;
+		 flex-direction: column;
+		 /* justify-content: center; */
+		 margin: 0 auto;
+		 object-position: center;
+		 width: 100%;
+		 gap: 1em;
 	}
 
 	.banner-demo article {
@@ -1482,6 +1483,7 @@ a button:hover {
 		align-items: center;
 		width:100%;
 		height: 600px;
+		margin: 0 auto;
 	}
 
 	.banner-demo img {
@@ -1604,21 +1606,33 @@ a button:hover {
 	display: block;
 	position: relative;
 	/* flex-direction: column; */
-	text-align: center;
+	/* text-align: center; */
 	/* align-items: end; */
-	 justify-content: center; 
+/*	justify-content: center;*/
 	width: 100px;
-	 align-content: center; 
 	height: 100px;
-	padding: 0.3em;
-/*	right: -50%;*/
-	/* margin: 0 auto; */
-	/* object-position: bottom; */
-/*	 border: 1px solid white; */
+/*	padding: 0.3em;*/
 }
 
 .logo-cont3:hover {
 	background-color: #ffffff40;
+}
+
+.logo--github {
+	display: block;
+	position: relative;
+	background-image: url("../img/github_PNG40.png");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	text-align: center;
+	object-fit: cover;
+	padding: 0.2em;
+	margin: 0 auto;
+	object-position: center;
+/*	place-content: bottom;*/
+	width: 100%;
+	height: 100%;
 }
 
 /*.logo-cont3 {*/
@@ -1646,15 +1660,19 @@ a button:hover {
 	justify-content: center;
 	align-items: center;
 	align-content: center;*/
-	display: block;
-	 position: absolute; 
+	display: flex;
+	position: absolute;
 	/* margin: 0 auto; */
 	width: 100%;
 	height: 100%;
+	/* place-items: center; */
+	place-content: center;
 	object-fit: cover;
-	margin: 0 auto;
-/*	background-color: #fff;*/
-/*	background-position: cover;*/
+	/* margin: 0 auto; */
+	/* background-position: center; */
+	/* left: 50%; */
+	/*	background-color: #fff;*/
+	/*	background-position: cover;*/
 	/* text-align: end; */
 	/* justify-content: center; */
 	/* object-position: center; */
@@ -1663,23 +1681,28 @@ a button:hover {
 }
 
 .logo-cont3 p {
-	display: block;
+	/* display: block; */
 	/*display: flex;
 	position: relative;
 	flex-direction: column;
 */
-	position: absolute;
+	/*	position: absolute;*/
 	/* flex-direction: column; */
 	color: #fff;
 	font-size: .7rem;
-	width: 100%;
+	/* justify-content: center; */
+	/* width: 100%; */
 	/* height: 100%; */
 	/* align-self: flex-end; */
 	/* justify-self: flex-end; */
 	/* align-items: flex-end; */
-	bottom: 0;
+	/* bottom: 0; */
 	/* margin-bottom: 0; */
 	/* border: 1px solid white; */
+	/*	 margin: 0 auto; */
+	/* right: -50%; */
+	/* left: 50%; */
+	text-align: center;
 }
 
 
