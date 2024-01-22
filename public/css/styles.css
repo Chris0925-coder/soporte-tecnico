@@ -1842,7 +1842,6 @@ a button:hover {
 .item__role {
 	display: block;
 	position: relative;
-/*	border: 1px solid yellow;*/
 	bottom: 0;
 	font-size: 0.8rem;
 	background: linear-gradient(180deg,#aaffff80,#0003);
@@ -1852,14 +1851,19 @@ a button:hover {
 	list-style: none;
 	height: auto;
 	width: 100%;
-/*	overflow: auto;*/
+	margin: 0 auto;
+	text-align: center;
 }
 
-.item__role li h6 {
-	text-align: left;
-}
+/*.item__role li h6 {*/
+/*	text-align: left;*/
+/*}*/
 
 .amazon {
+	/*width: auto;
+	height: auto;
+	margin: 0 auto;*/
+	padding: 0 .3em;
 	text-align: center;
 }
 
@@ -1868,10 +1872,13 @@ a button:hover {
 	color: #111111;
 	font-weight: 900;
 	font-size: 1.1rem;
+/*	margin: 0 .3em;*/
 }
 
-.amazon:hover {
-	border-bottom: solid 2px #303030;
+.amazon a:hover {
+	/*width: auto;
+	height: auto;
+*/	border-bottom: solid 1px #3030308c;
 }
 /*SECTION LAPTOPS*/
 
