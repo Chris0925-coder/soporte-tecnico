@@ -82,30 +82,30 @@ function detectCookie(cname) {
 };
 
 
-// $(document).ready(function() {
-    // init();
-// });
+$(document).ready(function() {
+    init();
+});
 
-// function init(){
-    // bloqueRGPD = document.querySelector('.cajacookies');
-    // if (localStorage.acceptedCookies != 'true') {
-    // bloqueRGPD.style.display = 'block';    
-    // }
+function init(){
+    bloqueRGPD = document.querySelector('.cajacookies');
+    if (localStorage.acceptedCookies != 'true') {
+    bloqueRGPD.style.display = 'block';    
+    }
 
-//     if(detectCookie("rgpdOK")){
-//         if (getCookie("rgpdOK")==1){eliminarBloqueRGPD();}
-//     }else{
-//         document.querySelector(".botonRGPD").addEventListener("click", () => {
-//         eliminarBloqueRGPD();
-//         setCookie("rgpdOK",1,365);
-//         })        
-//     }
-// };
+    if(detectCookie("rgpdOK")){
+        if (getCookie("rgpdOK")==1){eliminarBloqueRGPD();}
+    }else{
+        document.querySelector(".botonRGPD").addEventListener("click", () => {
+        eliminarBloqueRGPD();
+        setCookie("rgpdOK",1,365);
+        })        
+    }
+};
 
-// function eliminarBloqueRGPD(){
-//     bloqueRGPD.parentNode.removeChild(bloqueRGPD);
-//     localStorage.acceptedCookies = 'true';
-// };
+function eliminarBloqueRGPD(){
+    bloqueRGPD.parentNode.removeChild(bloqueRGPD);
+    localStorage.acceptedCookies = 'true';
+};
 
 
 
