@@ -1125,17 +1125,18 @@ a button:hover {
 
 
 
-.YouTube {
+
+
+
+/*.YouTube {
 	display: none;
 	position: fixed;
 	right: 0;
-/*	left: -50%;*/
 	bottom: 0;
 	width: auto; 
 	height: auto;
 	z-index: 5000;
 	transition: all 4s ease-in-out;
-		
 }
 
 .yy {
@@ -1144,6 +1145,7 @@ a button:hover {
 	transition: all .6s ease-in-out;
 	animation: move-der-izq 5s 1;
 }
+
 
 @keyframes move-der-izq {
 	from {
@@ -1155,7 +1157,6 @@ a button:hover {
 }
 
 .closeq {
-/*	display: none;*/
 	position: fixed;
 	color: #ffffff00;
 	bottom: 8.5em;
@@ -1171,7 +1172,13 @@ a button:hover {
 .closeq:hover {
 	cursor: pointer;
 	filter: drop-shadow(1px 1px 10px white);
-}
+}*/
+
+
+
+
+
+
 
 .infoweb__container {
 	color: #000011;
