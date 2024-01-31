@@ -2,13 +2,15 @@ User-agent: Googlebot
 allow: /
 
 User-agent: Googlebot-Image
-Disallow: /img/influencers/
+Allow: /public/img/
+Disallow: /public/img/influencers/
 
 User-agent: Bingbot
 Allow: /
 Disallow: /public/img/influencers/
 
 User-agent: *
+Allow: /public/img/
 Disallow: /cgi-bin/
 Disallow: /tmp/
 Disallow: /scripts/
