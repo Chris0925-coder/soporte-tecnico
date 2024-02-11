@@ -315,8 +315,8 @@ function notic(a) {
 
 // notice(slideA, n);
 // let time = notice(noti);
-let time = setInterval(notic, 5000, noti);
-let timeA = setInterval(notice, 10000, slideA);
+let time = setInterval(notic, 7000, noti);
+let timeA = setInterval(notice, 9000, slideA);
 
 function fadeB(a) {
     a.addEventListener('click',() => {  
