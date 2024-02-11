@@ -1,6 +1,12 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
+:root {
+	--padding-container: 100px 0;
+	--color-title: #001A49;
+/*	--show: block;*/
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -17,6 +23,14 @@ h1,h2,h3,h4,h5,h6 {
 	margin: 0;
 	padding: 10px;
 	text-align: center;
+}
+
+.container {
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: var(--padding-container);
 }
 
 .cajacookies {
@@ -65,16 +79,61 @@ h1,h2,h3,h4,h5,h6 {
 	display: block;
 	margin: 0;
 	padding: 0;
+	background-color: #1b1b1b;
+	color: white;
 }
 
-.demoPage-main {
-/*	background: radial-gradient(ellipse at bottom, #05021e, transparent),
-/*            radial-gradient(ellipse at top, #ffffff, transparent);*/
-	margin: 0;
-	padding: 10px 0;
-	align-items: center;
-	justify-items: center;
+.navbar-brand {
+	color: #fff;
+	text-decoration: none;
 }
+
+.navbar-toggler {
+	display: none;
+}
+
+.nav {
+  	display: flex;
+/*  	--padding-container: 0;*/
+	padding: 0.7em 0;
+	width: 90%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	position: relative;
+	justify-content: space-between;
+	color: white;
+}
+
+.navbar-nav {
+	display: grid;
+	margin-left: auto;
+	padding: 0;
+	grid-auto-flow: column;
+	grid-auto-columns: max-content;
+	gap: 2em;
+	color: white;
+}
+
+.off-header {
+	display: none;
+}
+
+/*.logo-cont2, .gitlogo, .logo2 {
+	display: none;
+}*/
+
+.nav-item {
+	list-style: none;
+}
+
+.nav-link {
+	color: #eee;
+	text-decoration: none;
+}
+
+.demoPage-main {/*	background: radial-gradient(ellipse at bottom, #05021e, transparent),
+/*            radial-gradient(ellipse at top, #ffffff, transparent);*/margin: 0;padding: 10px 0;/* align-items: center; */justify-items: center;}
 
 .main-1 {
 	display: grid;
@@ -102,6 +161,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .carousel {
+	position: relative;
 	width: 100%;
 	margin: auto;
 	align-items: center;
@@ -109,31 +169,34 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .carousel-inner {
+	position: relative;
 	margin: 0 auto;
 	/*	padding: 10px;*/
 	width: 100%;
-	height: auto;
+	height: 600px;
 	/* border-radius: 1em; */
-	/*	border: 1px solid brown;*/
+/*	border: 1px solid black;*/
 }
 
 .carousel-item {
-	position: relative;
+/*	display: none;*/
+	position: absolute;
 	/* justify-content: center; */
 	/* border-radius: .4em; */
 	width: 100%;
-	height: 600px;
+	height: 100%;
 	/* border-radius: 50%; */
-	/*	border: 1px solid brown;*/
+/*	border: 1px solid yellowgreen;*/
+	text-align: center;
 	/*	background: linear-gradient(150deg,rgba(200, 200, 200, 0.2) 20%, #ffffff8c 100%);*/
 } 
 
 .carousel-item img {
 	display: block;
-	position: relative;
-	background-size: cover;
+	position: absolute;
+	background-size: 100% 100%;
 	object-position: center;
-	object-fit: cover;
+	object-fit: fill;
 	margin: 0;
 	/*	align-items: center;	*/
 	width: 100%;
@@ -141,16 +204,23 @@ h1,h2,h3,h4,h5,h6 {
 	border-radius: .5em;
 	padding: 10px 20px;
 	filter: drop-shadow(10px 18px 3px #0000336c);
-/*	border: 1px solid black;*/
+	/*	border: 1px solid black;*/
 }
 
 .carousel-caption {
-	font-size: 2.9rem;
+	position: absolute;
+	font-size: 1.2rem;
 	color: #000111;
 	background-color: #ffffff0c;
+	width: 100%;
 	height: fit-content;
-	/*	border: 1px solid brown;*/
+/*	border: 1px solid brown;*/
 	backdrop-filter: blur(10px);
+	bottom: 0;
+	filter: drop-shadow(2px 2px #000111);
+	/*margin: 0 auto;
+	justify-self: center;
+	text-align: center;*/
 }
 
 .carousel-caption h2 {
@@ -161,8 +231,26 @@ h1,h2,h3,h4,h5,h6 {
 	font-size: 1.1rem;
 	padding: 0 .8em;
 	font-weight: 800;
+	width: 80%;
+	text-align: center;
+	margin: 0 auto;
 	color: #ffffff;
-	filter: box-shadow(2px 2px #000111);
+/*	filter: drop-shadow(2px 2px #000111);*/
+}
+
+.carousel-indicators {
+	display: flex;
+	position: absolute;
+	width: 100%;
+/*	border: 1px solid black;*/
+	justify-content: center;
+	gap: .4em;
+}
+.carousel-indicators button {
+	cursor: pointer;
+	border: 1px solid black;
+	min-width: 70px;
+	z-index: 4000;
 }
 
 .others {
@@ -696,7 +784,7 @@ h1,h2,h3,h4,h5,h6 {
 	margin: 0 auto;
 }
 
-a button:hover {
+button:hover {
 	background-color: darkgoldenrod;
 	scale: 1.1;
 	transition: 0.3s;
@@ -704,8 +792,9 @@ a button:hover {
 	padding: 3px;
 }
 
-#previous,
-#next {
+#previous {
+	position: absolute;
+/*	content: "";*/
 	width: auto;
 	height: fit-content;
 	background-color: rgba(250, 250, 250, .7);
@@ -713,6 +802,21 @@ a button:hover {
 	border-radius: 5%;
 	padding: 0 20px;
 	margin: 10px;
+	border: none;
+}
+
+#next {
+	position: absolute;
+/*	content: "";*/
+	width: auto;
+	height: fit-content;
+	background-color: rgba(250, 250, 250, .7);
+	top: 50%;
+	right: 0;
+	border-radius: 5%;
+	padding: 0 20px;
+	margin: 10px;
+	border: none;
 }
 
 .canals {
@@ -1194,7 +1298,7 @@ a button:hover {
 
 .infoweb__container {
 	color: #000011;
-	margin: 5em auto;
+	margin: .1em auto;
 }
 
 .infoweb {
@@ -1366,254 +1470,6 @@ a button:hover {
 	border-radius: 10px;
 }
 /*BUILD PAGE*/
-
-
- /*media*/
-@media screen and (max-width: 768px) {
-	
-	.cuerpo {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		position: relative;
-		width: 100%;
-		height: auto;
-		margin: 0;
-	}
-
-	.uno {
-		grid-area: 1 / 4;
-	}
-
-	.dos {
-		grid-area: 2 / 4;
-	}
-
-	.tres {
-		grid-area: 3 / 4;
-	}
-
-	.cuerpo .sidebar1 {
-		display: flex;
-		position: relative;
-		width: auto;
-		height: auto;
-		margin: 0 auto;
-		box-sizing: border-box;
-		overflow-x: hidden;
-	}
-
-	.cuerpo .sidebar2 {
-		display: flex;
-		position: relative;
-		width: auto;
-		height: auto;
-		margin: 0 auto;
-		box-sizing: border-box;
-		overflow-x: hidden;
-	}
-
-	.main-1 {
-		display: flex;
-		position: relative;
-		flex-direction: column;
-		margin: 0 auto;
-		width: 100%;
-		height: auto;
-		justify-content: stretch;
-	}
-
-	.carousel-caption {
-		display: block;
-		position: absolute;
-		font-size: .7rem;
-		/* color: black; */
-		width: 60%;
-		height: auto;
-		margin: 0 auto;
-		padding: 5px;
-		background-color: #ffffff0c;
-		backdrop-filter: blur(10px);
-	}
-
-	.carousel-caption h2{
-		font-size: 0.9rem;
-	}
-
-	.carousel-caption p {
-		font-size: .6rem;
-	}
-
-	.carousel {
-		width: 100%;
-	}
-
-	.carousel-item img {
-/*		width: 100%;*/
-		object-fit: fill;
-	}
-
-	.others {
-		display: flex;
-		position: relative;
-		justify-content: center;
-		max-width: 100%;
-		height: auto;
-		margin-top: 10px;
-		text-align: center;
-	}
-
-	.otros p:hover {
-		display: flex;
-		position: relative;
-		justify-content: center;
-		text-align: center;
-		width: 100%;
-		font-size: .9rem;
-		font-weight: 400;
-	}
-
-	.logo {
-		width: 200px;
-		height: 100px;
-		border-radius: 1%;
-		margin: 3px;
-	}
-
-	.navbar-nav {
-		text-align: right;
-	}
-
-	.banner-demo {
-		 display: flex;
-		 position: relative;
-		 flex-direction: column;
-		 /* justify-content: center; */
-		 margin: 0 auto;
-		 object-position: center;
-		 width: 100%;
-		 gap: 1em;
-	}
-
-	.banner-demo article {
-		display: flex;
-		position: relative;
-		justify-content: center;
-		align-items: center;
-		width:100%;
-		height: 600px;
-		margin: 0 auto;
-	}
-
-	.banner-demo img {
-		width:100%;
-		height: 100%;
-		margin: 0 auto;
-	}
-
-	.gitlogo {
-		display: flex;
-		position: relative;
-	}
-
-	.gitlogo a {
-		display: flex;
-		position: relative;
-		flex-direction: column;
-		text-decoration: none;
-		color: white;
-		margin: 0 auto;
-		height: fit-content;
-	}
-
-	.gitlogo a:hover {
-		color: #111111;
-		background-color: rgba(250, 250, 250, 0.8);
-		padding: 5px;
-		transition: .2s;
-	}
-
-	.gitlogo img {
-		margin: 0 auto;
-		object-position: center;
-		width: 60px;
-		height: 60px;
-	}
-
-	.logo-cont2 {
-		display: flex;
-		position: relative;
-		justify-content: space-between;
-		width: 100%;
-		height: 100%;
-	}
-
-	.logo-cont2 article {
-		display: flex;
-		position: relative;
-		flex-direction: column-reverse;
-	}
-
-	.canals {
-		padding: 10px;
-	}
-
-	.logo2 {
-		display: flex;
-		position: relative;
-		background-image: url("../img/logochris1.png");
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position: center;
-		object-fit: fill;
-		width: 150px;
-		height: 100px;
-		border-radius: 1%;
-		z-index: 3000;
-		opacity: 0.5;
-		margin: 0 auto;
-	}
-
-	.gitlogo3 img {
-		margin: 0;
-		object-position: center;
-		width: auto;
-		height: auto;
-	}
-
-	.canals ul {
-		width: 90%;
-	}
-
-
-	.pro-row {
-		display: flex;
-		flex-wrap: wrap;
-	}
-
-	.name,
-	.role {
-		opacity: 1;
-		transform: translateY(0);
-	}
-
-
-	.carousel-inner {
-		padding: 0;
-	}
-
-	.carousel-item img {
-		width: 100%;
-		margin: 0;
-		padding: 0;
-		border-radius: 0;
-	}
-
-	.main-2 { 
-		width: 100%;
-	}
-
-}
 
 
 .ff {
@@ -1799,7 +1655,7 @@ a button:hover {
 }
 
 .laptops {
-	margin-top: 40px;
+	margin-top: 10px;
 }
 
 .gallery__wrapper {
@@ -1811,10 +1667,10 @@ a button:hover {
 .gallery__item {
 	display: flex;
 	position: relative;
-	isolation: isolation;
 	flex: 1;
 	height: 358px;
 	overflow: hidden;
+	/* scrollbar-width: none; */
 }
 
 .img__item img {
@@ -1838,6 +1694,7 @@ a button:hover {
 	place-content: flex-end;
 	justify-content: space-between;
 	bottom: 0;
+	scrollbar-width: none;
 }
 
 .item__description a {
@@ -1917,3 +1774,319 @@ a button:hover {
 	justify-content: center;
 	text-align: center;
 }
+
+
+ /*media*/
+@media screen and (max-width: 768px) {
+
+	.cuerpo {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		position: relative;
+		width: 100%;
+		height: auto;
+		margin: 0;
+	}
+
+	.uno {
+		grid-area: 1 / 4;
+	}
+
+	.dos {
+		grid-area: 2 / 4;
+	}
+
+	.tres {
+		grid-area: 3 / 4;
+	}
+
+	.cuerpo .sidebar1 {
+		display: flex;
+		position: relative;
+		width: auto;
+		height: auto;
+		margin: 0 auto;
+		box-sizing: border-box;
+		overflow-x: hidden;
+	}
+
+	.cuerpo .sidebar2 {
+		display: flex;
+		position: relative;
+		width: auto;
+		height: auto;
+		margin: 0 auto;
+		box-sizing: border-box;
+		overflow-x: hidden;
+	}
+
+	.main-1 {
+		display: flex;
+		position: relative;
+		flex-direction: column;
+		margin: 0 auto;
+		width: 100%;
+		height: auto;
+		justify-content: stretch;
+	}
+
+	.carousel-caption {
+		display: block;
+		position: absolute;
+		font-size: .7rem;
+		/* color: black; */
+		width: 100%;
+		height: auto;
+		margin: 0 auto;
+		padding: 5px;
+		background-color: #ffffff0c;
+		backdrop-filter: blur(10px);
+	}
+
+	.carousel-caption h2{
+		font-size: 0.9rem;
+	}
+
+	.carousel-caption p {
+		font-size: .6rem;
+	}
+
+	.carousel {
+		width: 100%;
+	}
+
+	.carousel-item img {
+/*		width: 100%;*/
+		object-fit: fill;
+	}
+
+	.others {
+		display: flex;
+		position: relative;
+		justify-content: center;
+		max-width: 100%;
+		height: auto;
+		margin-top: 10px;
+		text-align: center;
+	}
+
+	.otros p:hover {
+		display: flex;
+		position: relative;
+		justify-content: center;
+		text-align: center;
+		width: 100%;
+		font-size: .9rem;
+		font-weight: 400;
+	}
+
+	.logo {
+		width: 200px;
+		height: 100px;
+		border-radius: 1%;
+		margin: 3px;
+	}
+
+	.navbar-nav {
+		text-align: right;
+	}
+
+	.banner-demo {
+		 display: flex;
+		 position: relative;
+		 flex-direction: column;
+		 /* justify-content: center; */
+		 margin: 0 auto;
+		 object-position: center;
+		 width: 100%;
+		 gap: 1em;
+	}
+
+	.banner-demo article {
+		display: flex;
+		position: relative;
+		justify-content: center;
+		align-items: center;
+		width:100%;
+		height: 600px;
+		margin: 0 auto;
+	}
+
+	.banner-demo img {
+		width:100%;
+		height: 100%;
+		margin: 0 auto;
+	}
+
+	.gitlogo {
+		display: flex;
+		position: relative;
+	}
+
+	.gitlogo a {
+		display: flex;
+		position: relative;
+		flex-direction: column;
+		text-decoration: none;
+		color: white;
+		margin: 0 auto;
+		height: fit-content;
+	}
+
+	.gitlogo a:hover {
+		color: #111111;
+		background-color: rgba(250, 250, 250, 0.8);
+		padding: 5px;
+		transition: .2s;
+	}
+
+	.gitlogo img {
+		margin: 0 auto;
+		object-position: center;
+		width: 60px;
+		height: 60px;
+	}
+
+	.logo-cont2 {
+		display: flex;
+		position: relative;
+		justify-content: space-between;
+		width: 100%;
+		height: 100%;
+	}
+
+	.logo-cont2 article {
+		display: flex;
+		position: relative;
+		flex-direction: column-reverse;
+	}
+
+	.canals {
+		padding: 10px;
+	}
+
+	.logo2 {
+		display: flex;
+		position: relative;
+		background-image: url("../img/logochris1.png");
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		object-fit: fill;
+		width: 150px;
+		height: 100px;
+		border-radius: 1%;
+		z-index: 3000;
+		opacity: 0.5;
+		margin: 0 auto;
+	}
+
+	.gitlogo3 img {
+		margin: 0;
+		object-position: center;
+		width: auto;
+		height: auto;
+	}
+
+	.canals ul {
+		width: 90%;
+	}
+
+
+	.pro-row {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.name,
+	.role {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+
+	.carousel-inner {
+		padding: 0;
+	}
+
+	.carousel-item img {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		border-radius: 0;
+	}
+
+	.main-2 { 
+		width: 100%;
+	}
+
+
+	/*.offcanvas {
+		display: none;
+	}*/
+
+	.navbar-toggler {
+		display: block;
+	}
+
+	.bi-list {
+		position: relative;
+		width: auto;
+		height: auto;
+/*		color: green;*/
+		background-color: #303030;
+		border: none;
+	}
+
+	.off {
+		display: flex;
+		flex-direction: column;
+		position: fixed;
+		height: 100vh;
+		width: 80%;
+		z-index: 6000;
+		padding: .8em;
+		right: 0;
+		top: 0;
+		background-color: #2b2b2b;
+	}
+
+	.off-header button{
+		float: right;
+		border: none;
+/*		position: absolute;*/
+/*		right: 0;*/
+	}
+
+	.navbar-nav {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		/* z-index: 6000; */
+		width: 100%;
+		/* bottom: 0; */
+		height: 100%;
+		padding: .8em;
+		/* z-index: 6000; */
+	}
+
+	.bi-x-circle {
+/*		float: right;*/
+		background-color: #2b2b2b;
+		border:none;
+	}
+
+	.off-body {
+		margin: .8em;
+	}
+
+	.off-header {
+		display: block;
+	}
+
+	.hidden-nav {
+		display: none;
+	}
+}
+

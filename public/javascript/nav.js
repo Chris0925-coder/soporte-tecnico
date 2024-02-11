@@ -11,8 +11,3 @@ navBoton.addEventListener('click', () => {
 close.addEventListener('click', () => {
     navLink.classList.toggle("hidden-nav");
 });
-
-
-let date = document.querySelector('.date');
-
-date.append(new Date ().getFullYear ());

@@ -30,7 +30,18 @@
 // localStorage.cookieAccepted === true;
 // localStorage.cookieAccepted === true;
 
+const navBoton = document.querySelector(".navbar-toggler");
+const navLink = document.querySelector(".off");
+const close = document.querySelector(".btn-close");
 
+
+navBoton.addEventListener('click', () => {
+    navLink.classList.toggle("hidden-nav");
+});
+
+close.addEventListener('click', () => {
+    navLink.classList.toggle("hidden-nav");
+});
 
 
 
@@ -224,16 +235,24 @@ function eliminarBloqueRGPD(){
 // });
 
 let n = 0;
+let o = 0;
+
 
 const noti = document.querySelectorAll(".not-1");
+const slideA = document.querySelectorAll(".carousel-item");
 const botona = document.querySelector(".not-a");
 const botonb = document.querySelector(".not-b");
 const botonc = document.querySelector(".not-c");
 const botond = document.querySelector(".not-d");
-// console.log(noti);
+const sliderButtoms = document.getElementsByClassName("carousel-indicators");
+console.log(sliderButtoms);
+// console.log(slideA.length);
 noti[1].style.display = "none";
 noti[2].style.display = "none";
 noti[3].style.display = "none";
+slideA[1].style.display = "none";
+slideA[2].style.display = "none";
+slideA[3].style.display = "none";
 
 // const carousel = new bootstrap.Carousel('#myCarousel');
 
@@ -251,121 +270,163 @@ function sildeDisplay(a, b, c, d) {
         d.style.display = "none";
 }
 
-function notice() {
-    for (i=0;i<noti.length;i++) {
-        noti[i].style.display = "none";
-        // noti[i].style.opacity = "0";
+
+function notice(a) {
+    // n = 0;
+    for (i=0;i<a.length;i++) {
+        a[i].style.display = "none";
     }
+    o++;
+    if(o>a.length){o=1};
+    a[o-1].style.display = "block";
 
-    n++;
-    if(n>noti.length){n=1};
-    noti[n-1].style.display = "block";
-    // noti.style.opacity = "1";
-    // noti.style.transition = "all .6s ease-in-out";
-    if(noti[n-1]==noti[0]) {
-        sildeButtoms(botona, botonb, botonc, botond)
-        // botonx = botonc, botonb, botond;
-        // botona.style.opacity = "1";
-        // botonb.style.opacity = "0.3";
-        // botonc.style.opacity = "0.3";
-        // botond.style.opacity = "0.3";
-        } else if (noti[n-1]==noti[1]) {
-            sildeButtoms(botonb, botona, botonc, botond)
-            // botonz = botonc, botona, botond;
-            // botonb.style.opacity = "1";
-            // botona.style.opacity = "0.3";
-            // botonc.style.opacity = "0.3";
-            // botond.style.opacity = "0.3";
-
-            // noti[n-1].style.transition = "all .6s ease-in-out";
-        } else if (noti[n-1]==noti[2]) {
-            sildeButtoms(botonc, botonb, botona, botond)
-            // botonw = botona, botonb, botond;
-            // botonc.style.opacity = "1";
-            // botona.style.opacity = "0.3";
-            // botond.style.opacity = "0.3";
-            // botonb.style.opacity = "0.3";
-
-            // noti[n-1].style.transition = "all .6s ease-in-out";
+    if(a[o-1]==a[0]) {
+        sildeButtoms(sliderButtoms[0].children[0], sliderButtoms[0].children[1], sliderButtoms[0].children[2], sliderButtoms[0].children[3]);
+        } else if (a[o-1]==a[1]) {
+            sildeButtoms(sliderButtoms[0].children[1], sliderButtoms[0].children[0], sliderButtoms[0].children[2], sliderButtoms[0].children[3]);
+        } else if (a[o-1]==a[2]) {
+            sildeButtoms(sliderButtoms[0].children[2], sliderButtoms[0].children[1], sliderButtoms[0].children[0], sliderButtoms[0].children[3]);
         } else {
-            sildeButtoms(botond, botonb, botonc, botona)
-            // botonv = botonc, botonb, botona;
-            // botond.style.opacity = "1";
-            // botona.style.opacity = "0.3";
-            // botonb.style.opacity = "0.3";
-            // botonc.style.opacity = "0.3";
-
-            // noti[n-1].style.transition = "all .6s ease-in-out";
-        }
-    
+            sildeButtoms(sliderButtoms[0].children[3], sliderButtoms[0].children[1], sliderButtoms[0].children[2], sliderButtoms[0].children[0]);
+    }
 };
 
-let time = setInterval(notice,10000);
+// [0].children[0]
 
-botona.addEventListener('click',() => {
-    sildeButtoms(botona, botonb, botonc, botond);
-    // botona.style.opacity = "1";
-    // botonb.style.opacity = "0.3";
-    // botonc.style.opacity = "0.3";
-    // botond.style.opacity = "0.3";
-    if(true) {
-        sildeDisplay(noti[0], noti[1], noti[2], noti[3]);
-        // noti[0].style.display = "block";
-        // noti[1].style.display = "none";
-        // noti[2].style.display = "none";
-        // noti[3].style.display = "none";
-        clearInterval(time);
-    } 
-});
+function notic(a) {
+    // n = 0;
+    for (i=0;i<a.length;i++) {
+        a[i].style.display = "none";
+    }
+    n++;
+    if(n>a.length){n=1};
+    a[n-1].style.display = "block";
 
-botonb.addEventListener('click',() => {
-    sildeButtoms(botonb, botona, botonc, botond);
-    // botona.style.opacity = "0.3";
-    // botonc.style.opacity = "0.3";
-    // botonb.style.opacity = "1";
-    // botond.style.opacity = "0.3";
-    if(true) {
-        sildeDisplay(noti[1], noti[0], noti[2], noti[3]);
-        // noti[0].style.display = "none";
-        // noti[1].style.display = "block";
-        // noti[2].style.display = "none";
-        // noti[3].style.display = "none";
-        clearInterval(time);
-    } 
-});
+    if(a[n-1]==a[0]) {
+        sildeButtoms(botona, botonb, botonc, botond)
+        } else if (a[n-1]==a[1]) {
+            sildeButtoms(botonb, botona, botonc, botond)
+        } else if (a[n-1]==a[2]) {
+            sildeButtoms(botonc, botonb, botona, botond)
+        } else {
+            sildeButtoms(botond, botonb, botonc, botona)
+    }
+};
 
-botonc.addEventListener('click',() => {
-    sildeButtoms(botonc, botona, botonb, botond)
-    // botonc.style.opacity = "1";
-    // botona.style.opacity = "0.3";
-    // botonb.style.opacity = "0.3";
-    // botond.style.opacity = "0.3";
-    if(true) {
-        sildeDisplay(noti[2], noti[1], noti[0], noti[3]);
-        // noti[0].style.display = "none";
-        // noti[1].style.display = "none";
-        // noti[2].style.display = "block";
-        // noti[3].style.display = "none";
-        clearInterval(time);
-    } 
-});
+// notice(slideA, n);
+// let time = notice(noti);
+let time = setInterval(notic, 5000, noti);
+let timeA = setInterval(notice, 10000, slideA);
+
+function fadeB(a) {
+    a.addEventListener('click',() => {  
+        if(a == botona) {
+            sildeButtoms(botona, botonb, botonc, botond);
+            sildeDisplay(noti[0], noti[1], noti[2], noti[3]);
+            clearInterval(time);
+        } else if (a == botonb){
+            sildeButtoms(botonb, botona, botonc, botond);
+            sildeDisplay(noti[1], noti[0], noti[2], noti[3]);
+            clearInterval(time);
+        } else if (a == botonc){
+            sildeButtoms(botonc, botonb, botona, botond);
+            sildeDisplay(noti[2], noti[1], noti[0], noti[3]);
+            clearInterval(time);
+        } else if (a==botond){
+            sildeButtoms(botond, botonb, botonc, botona);
+            sildeDisplay(noti[3], noti[1], noti[2], noti[0]);
+            clearInterval(time);
+        }
+        else if (a == sliderButtoms[0].children[0]) {
+            sildeButtoms(sliderButtoms[0].children[0], sliderButtoms[0].children[1], sliderButtoms[0].children[2], sliderButtoms[0].children[3]);
+            sildeDisplay(slideA[0], slideA[1], slideA[2], slideA[3]);
+            clearInterval(timeA);
+        } else if (a == sliderButtoms[0].children[1]){
+            sildeButtoms(sliderButtoms[0].children[1], sliderButtoms[0].children[0], sliderButtoms[0].children[2], sliderButtoms[0].children[3]);
+            sildeDisplay(slideA[1], slideA[0], slideA[2], slideA[3]);
+            clearInterval(timeA);
+        } else if (a == sliderButtoms[0].children[2]){
+            sildeButtoms(sliderButtoms[0].children[2], sliderButtoms[0].children[1], sliderButtoms[0].children[0], sliderButtoms[0].children[3]);
+            sildeDisplay(slideA[2], slideA[1], slideA[0], slideA[3]);
+            clearInterval(timeA);
+        } else {
+            sildeButtoms(sliderButtoms[0].children[3], sliderButtoms[0].children[1], sliderButtoms[0].children[2], sliderButtoms[0].children[0]);
+            sildeDisplay(slideA[3], slideA[1], slideA[2], slideA[0]);
+            clearInterval(timeA);
+        }
+    });
+};
+
+fadeB(botona);
+fadeB(botonb);
+fadeB(botonc);
+fadeB(botond);
+
+fadeB(sliderButtoms[0].children[0]);
+fadeB(sliderButtoms[0].children[1]);
+fadeB(sliderButtoms[0].children[2]);
+fadeB(sliderButtoms[0].children[3]);
 
 
-botond.addEventListener('click',() => {
-    sildeButtoms(botond, botona, botonc, botonb)
-    // botonc.style.opacity = "0.3";
-    // botona.style.opacity = "0.3";
-    // botonb.style.opacity = "0.3";
-    // botond.style.opacity = "1";
-    if(true) {
-        sildeDisplay(noti[3], noti[0], noti[2], noti[1]);
-        // noti[0].style.display = "none";
-        // noti[1].style.display = "none";
-        // noti[2].style.display = "none";
-        // noti[3].style.display = "block";
-        clearInterval(time);
-    } 
-});
+const prev = document.querySelector('#previous');
+const next = document.querySelector('#next');
+
+let slideIndex = 0;
+    // let slideIndexB = 2;
+    prev.addEventListener('click', () => {
+            for (i = 0; i < slideA.length; i++) {
+                slideA[i].style.display = "none";
+                sliderButtoms[0].children[i].style.opacity = "0.3";
+            }
+            slideIndex--;
+            if (slideIndex <= 0) {slideIndex = 4};
+            sliderButtoms[0].children[slideIndex-1].style.opacity = "1";
+            slideA[slideIndex-1].style.display = "block";
+            clearInterval(timeA);       
+        });
+
+    next.addEventListener('click', () => {
+        
+        for (i = 0; i < slideA.length; i++) {
+            slideA[i].style.display = "none";
+            sliderButtoms[0].children[i].style.opacity = "0.3";
+        }
+        slideIndex++;
+        if(slideIndex > slideA.length) {
+            slideIndex = 1;
+        }
+        sliderButtoms[0].children[slideIndex-1].style.opacity = "1";
+        slideA[slideIndex-1].style.display = "block";
+        clearInterval(timeA);
+    });
+// botonb.addEventListener('click',() => {
+//     sildeButtoms(botonb, botona, botonc, botond);
+//     if(true) {
+//         sildeDisplay(noti[1], noti[0], noti[2], noti[3]);
+//         clearInterval(time);
+//     } 
+// });
+
+// botonc.addEventListener('click',() => {
+//     sildeButtoms(botonc, botona, botonb, botond);
+//     if(true) {
+//         sildeDisplay(noti[2], noti[1], noti[0], noti[3]);
+//         clearInterval(time);
+//     } 
+// });
+
+
+// botond.addEventListener('click',() => {
+//     sildeButtoms(botond, botona, botonc, botonb)
+//     if(true) {
+//         sildeDisplay(noti[3], noti[0], noti[2], noti[1]);
+//         clearInterval(time);
+//     } 
+// });
+
+
+
+
 // counter = parseInt('0');
 
 

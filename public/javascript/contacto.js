@@ -1,11 +1,23 @@
-const navToggle = document.querySelector(".navbar-toggler")
-const navLink = document.querySelector(".navbar-nav")
+// const navToggle = document.querySelector(".navbar-toggler")
+// const navLink = document.querySelector(".navbar-nav")
 
-navToggle.addEventListener("click", () => {
-    navLink.classList.toggle("navbar-nav_visible")
+// navToggle.addEventListener("click", () => {
+//     navLink.classList.toggle("navbar-nav_visible")
+// });
+
+
+const navBoton = document.querySelector(".navbar-toggler");
+const navLink = document.querySelector(".off");
+const close = document.querySelector(".btn-close");
+
+
+navBoton.addEventListener('click', () => {
+    navLink.classList.toggle("hidden-nav");
 });
 
-
+close.addEventListener('click', () => {
+    navLink.classList.toggle("hidden-nav");
+});
 
 
 
