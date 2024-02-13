@@ -95,15 +95,15 @@ h1,h2,h3,h4,h5,h6 {
 
 .nav {
   	display: flex;
-/*  	--padding-container: 0;*/
-	padding: 0.7em 0;
-	width: 90%;
-	height: 100%;
-	display: flex;
-	align-items: center;
-	position: relative;
-	justify-content: space-between;
-	color: white;
+  	/*  	--padding-container: 0;*/
+  	padding: 0.7em 0;
+  	width: 90%;
+  	height: 100%;
+  	display: flex;
+  	align-items: center;
+  	position: relative;
+  	justify-content: space-between;
+  	color: white;
 }
 
 .navbar-nav {
@@ -114,6 +114,7 @@ h1,h2,h3,h4,h5,h6 {
 	grid-auto-columns: max-content;
 	gap: 2em;
 	color: white;
+	/* align-items: center; */
 }
 
 .off-header {
@@ -125,8 +126,9 @@ h1,h2,h3,h4,h5,h6 {
 }*/
 
 .nav-item {
+	/* align-items: end; */
 	list-style: none;
-	margin-bottom: 1.5em;
+	/* margin-bottom: 1.5em; */
 }
 
 .nav-link {
@@ -1803,6 +1805,10 @@ button:hover {
 		width: 100%;
 		height: auto;
 		margin: 0;
+	}
+
+	.nav-item {
+		margin-bottom: 1.5em; 
 	}
 
 	.uno {
