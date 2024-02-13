@@ -140,6 +140,15 @@ h1,h2,h3,h4,h5,h6 {
 	text-decoration: none;
 }
 
+.nav-link:hover:not(.active) {
+	border-bottom: solid 1px #ffffff30;
+}
+
+.nav-link.active {
+	box-shadow: 2px 2px 4px #ffffff60;
+	padding: .1em .4em;
+}
+
 .demoPage-main {/*	background: radial-gradient(ellipse at bottom, #05021e, transparent),
 /*            radial-gradient(ellipse at top, #ffffff, transparent);*/margin: 0;padding: 10px 0;/* align-items: center; */justify-items: center;}
 
