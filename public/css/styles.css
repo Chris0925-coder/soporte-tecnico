@@ -25,6 +25,7 @@ h1,h2,h3,h4,h5,h6 {
 	text-align: center;
 }
 
+
 .container {
 	width: 90%;
 	max-width: 1200px;
@@ -105,6 +106,9 @@ h1,h2,h3,h4,h5,h6 {
   	justify-content: space-between;
   	color: white;
 }
+
+
+
 
 .navbar-nav {
 	display: grid;
@@ -254,7 +258,7 @@ h1,h2,h3,h4,h5,h6 {
 /*	bottom: 0;*/
 }
 .carousel-indicators button {
-/*	olor: yellow;*/
+/*	color: yellow;*/
 	cursor: pointer;
 	border: 2px solid #303030;
 	min-width: 70px;
@@ -1448,11 +1452,11 @@ button:hover {
 	position: relative;
 	margin: 0 auto;
 	gap: 2em;
-/*	border:1px solid black;*/
+	/*	border:1px solid black;*/
 	justify-content: center;
-/*	place-content: center;*/
-/*	flex-wrap: wrap;*/
-	margin: 4em 0;
+	/*	place-content: center;*/
+	/*	flex-wrap: wrap;*/
+	margin: 4em auto;
 }
 
 .contenido__buildpage {
@@ -2059,16 +2063,7 @@ button:hover {
 		color: black;
 	}*/
 
-	.bi-list {
-/*		border: none;*/
-		/* position: relative; */
-		/* width: auto; */
-		/* height: auto; */
-		/* color: green;*/
-		background-color: #303030;
-		border: none;
-/*		border-radius: 2em; */
-	}
+	.bi-list {font-size: 1rem;/* scale: 2; *//*		border: none;*//* position: relative; *//* width: auto; *//* height: auto; *//* color: green; *//* background-color: #303030; */border: none;padding: .2em;/* border-radius: 2em; */}
 
 /*	.bi-list::before {*/
 /*		content: "\F62A";*/
@@ -2113,11 +2108,14 @@ button:hover {
 		/* z-index: 6000; */
 	}
 
-	.bi-x-circle {
-/*		float: right;*/
-		background-color: #2b2b2b;
-		border:none;
+	.nav button {
+		padding: 0.3em .8em;
+		background-color: black;
+		border: none;
+		border-radius: .3em;
 	}
+
+	.bi-x-circle {/*		float: right;*//* background-color: #2b2b2b; */border:none;}
 
 	.off-body {
 		display: flex;
