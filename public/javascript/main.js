@@ -245,7 +245,7 @@ const botonb = document.querySelector(".not-b");
 const botonc = document.querySelector(".not-c");
 const botond = document.querySelector(".not-d");
 const sliderButtoms = document.getElementsByClassName("carousel-indicators");
-console.log(sliderButtoms);
+// console.log(sliderButtoms);
 // console.log(slideA.length);
 noti[1].style.display = "none";
 noti[2].style.display = "none";
