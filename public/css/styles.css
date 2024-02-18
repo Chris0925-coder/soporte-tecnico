@@ -1517,6 +1517,19 @@ button:hover {
 /*	border: 1px solid green;*/
 	width: 100%;
 }
+.anuncio--buildpage {
+	display: grid; 
+/*	flex-direction: column; */
+/*	position: relative; */
+	margin: 1em auto; 
+	width: 100%; 
+/*	border: 1px solid black; */
+	justify-content: center;
+}
+
+.anuncio--buildpage article{
+	margin: 0 auto;
+}
 /*BUILD PAGE*/
 
 
