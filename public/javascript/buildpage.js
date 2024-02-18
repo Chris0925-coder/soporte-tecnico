@@ -17,6 +17,8 @@ const towers = document.getElementById('boxA');
 const power = document.getElementById('boxB');
 const board = document.getElementById('boxC');
 const pro = document.getElementById('boxD');
+const ddr = document.getElementById('boxE');
+const ssd = document.getElementById('boxF');
 // console.log(towers.children);
 const slideA = [
     towers.children[0],
@@ -42,6 +44,18 @@ const slideD = [
     pro.children[2]
 ];
 
+const slideE = [
+    ddr.children[0],
+    ddr.children[1],
+    ddr.children[2]
+];
+
+const slideF = [
+    ssd.children[0],
+    ssd.children[1],
+    ssd.children[2]
+];
+
 let index = 0;
 
 function sildeDisplay(a,b) {
@@ -60,6 +74,8 @@ sildeDisplay(slideA,index);
 sildeDisplay(slideB,index);
 sildeDisplay(slideC,index);
 sildeDisplay(slideD,index);
+sildeDisplay(slideE,index);
+sildeDisplay(slideF,index);
 // console.log(towers[1]);
 
 
@@ -112,3 +128,7 @@ previus(2,slideC);
 other(2,slideC);
 previus(3,slideD);
 other(3,slideD);
+previus(4,slideE);
+other(4,slideE);
+previus(5,slideF);
+other(5,slideF);
