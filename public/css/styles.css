@@ -1267,12 +1267,6 @@ button:hover {
 	text-decoration: none;
 }
 
-
-
-
-
-
-
 /*.YouTube {
 	display: none;
 	position: fixed;
@@ -1468,26 +1462,30 @@ button:hover {
 
 .contenido__buildpage {
 	position: relative;
-	border-bottom:1px solid #2b2b2b;
-	width: 300px;
-	height: fit-content;
+	border-bottom: 1px solid #2b2b2b;
+	width: 400px;
+	min-height: 500px;
 /*	border:1px solid black;*/
 	padding: .5em;
-	
 }
 
 .gallery-wrapper--buildpage {
+	display: flex;
+/*	position: absolute;*/
+	flex-direction: row;
 	width: auto;
 	height: auto;
 	margin: 0 auto;
+/*	border: 1px solid black;*/
 }
 
 .gal-built {
 	display: flex;
-	position: relative;
+	position: absolute;
 	flex-direction: column;
-	justify-content: center;
-	text-align: center;
+	justify-content: space-between;
+	gap: 1em;
+	place-items: center;
 /*	border: 1px solid green;*/
 }
 
@@ -1497,6 +1495,27 @@ button:hover {
 	background-size: contain;
 	object-fit: contain;
 	border-radius: 10px;
+}
+
+.carousel-control-prev {
+	display: block;
+	position: absolute;
+	top: 50%;
+}
+
+.carousel-control-next {
+	display: block;
+	position: absolute;
+	top: 50%;
+	right: 0;
+}
+
+.title__buildpage {
+	position: absolute;
+	margin: 0 auto;
+	bottom: 0;
+/*	border: 1px solid green;*/
+	width: 100%;
 }
 /*BUILD PAGE*/
 
