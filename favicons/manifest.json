@@ -1,7 +1,7 @@
 {
  "lang": "es",
  "dir": "ltr",
- "name": "CHRISTIAN WebDeveloper",
+ "name": "CHRISTIAN Web Developer",
  "short_name": "ChrisWEBDEV",
  "icons": [
     {
@@ -23,7 +23,7 @@
    "density": "0.75"
   },
   {
-   "src": "\/favicons/android-icon-48x48.png",
+   "src": "\/favicon.png",
    "sizes": "48x48",
    "type": "image\/png",
    "density": "1.0"
@@ -49,6 +49,7 @@
   {
    "src": "\/favicons/android-icon-192x192.png",
    "sizes": "192x192",
+   "form_factor": "wide",
    "type": "image\/png",
    "density": "4.0"
   }
