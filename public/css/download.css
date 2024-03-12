@@ -1,0 +1,506 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+	--padding-container: 100px 0;
+	--color-title: #001A49;
+/*	--show: block;*/
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box; 
+}
+body {
+	width: 100%;
+	min-height: 100lvh;
+	overflow-x: hidden;
+	font-family: "Poppins", sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	margin: 0;
+	padding: 10px;
+	text-align: center;
+}
+
+.container {
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+	overflow: hidden;
+	/* scrollbar-width: none; */
+	padding: var(--padding-container); 
+}
+
+.navbar {
+	position: relative;
+	display: block;
+	margin: 0;
+	padding: 0;
+	background-color: #1b1b1b;
+	color: white;
+}
+
+.navbar-brand {
+	color: #fff;
+	text-decoration: none;
+}
+
+.navbar-toggler {
+	display: none;
+}
+
+.nav {
+  	display: flex;
+  	/*  	--padding-container: 0;*/
+  	padding: 0.7em 0;
+  	width: 90%;
+  	height: 100%;
+  	display: flex;
+  	align-items: center;
+  	position: relative;
+  	justify-content: space-between;
+  	color: white;
+}
+
+
+
+
+.navbar-nav {
+	display: grid;
+	margin-left: auto;
+	padding: 0;
+	grid-auto-flow: column;
+	grid-auto-columns: max-content;
+	gap: 2em;
+	color: white;
+	/* align-items: center; */
+}
+
+.off-header {
+	display: none;
+}
+
+/*.logo-cont2, .gitlogo, .logo2 {
+	display: none;
+}*/
+
+.nav-item {
+	/* align-items: end; */
+	list-style: none;
+	/* margin-bottom: 1.5em; */
+}
+
+.nav-link {
+	color: #eee;
+	text-decoration: none;
+	border-bottom: solid 0 #ffffff00;
+}
+
+.nav-link:hover:not(.active) {
+	border-bottom: solid 1px #ffffff80;
+	transition: all 3s;
+}
+
+.nav-link.active {
+	box-shadow: 2px 2px 4px #ffffff60;
+	padding: .1em .4em;
+}
+
+.logo-cont2 {
+	display: none;
+}
+
+.pokemon {
+	display: flex;
+/*	flex-direction: column;*/
+/*	position: relative;*/
+	justify-content: center;
+/*	margin: 0 auto;*/
+/*	border: 1px solid black;*/
+}
+
+.pokemon img {
+	width: 90px;
+	height: 180px;
+}
+
+.megalogo {
+	display: flex;
+	flex-direction: column;
+	height: auto;
+	/*object-position: center;
+	align-content: center;
+	place-content: center;
+	padding: 0 auto;*/
+/*	justify-content: center;*/
+/*	border: 1px solid black;*/
+}
+
+.megalogo a {
+	margin: 0 auto;
+}
+
+.ads {
+	display: grid;
+	place-content: center;
+}
+
+.contenedor {
+	display: grid;
+	position: relative;
+	margin: 0 auto;
+}
+
+.descargas {
+	display: flex;
+	position: relative;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin: 0;
+	justify-content: space-evenly;
+	align-content: space-between;
+	width: 100%;
+	height: auto;
+}
+
+.descarga {
+	display: block;
+	position: relative;
+	margin: 10px;
+	text-align: center;
+	text-decoration: none; 
+ 	position: relative;
+}
+
+.descarga p {
+	font-size: .7rem;
+}
+
+.descarga img {
+	margin: 10px auto;
+	width: 90px;
+	height: 90px;
+}
+
+.descarga button {
+	font-size: 0.6rem;
+	font-weight: 700;
+	padding: 1px;
+	border: outset #000a998c;
+}
+
+button:hover {
+/*	background-color: #000a998c;*/
+/*	border: none;*/
+/*	background-color: white;*/
+	scale: 1.1;
+	transition: 0.3s;
+	cursor: pointer;
+	padding: 0.1em;
+	filter: drop-shadow(2px 2px 4px #0000ff8c);
+/*border: black;*/
+}
+
+.container-pro {
+	background-color: #1c1d2d;
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
+
+.ff {
+	display: flex;
+	flex-direction: column;
+}
+
+.socialnav {
+    display: block;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    padding: 10px 1em 10px 1em;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    padding: 1em;
+    /* justify-content: space-around; */
+}
+
+.socialnav ul {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: flex-end;
+    gap: 1em;
+    padding-left: 0;
+    width: auto;
+    /* top: 0; */
+    /* right: 0; */
+}
+
+.socialnav ul li {
+    list-style: none;
+    margin: 0 auto;
+    object-position: center;
+    place-content: center;
+    place-items: center;
+    place-self: center;
+}
+
+.logo-cont3 {
+	width: auto;
+	height: auto;
+}
+
+.logo-cont3 a {
+	display: flex;
+	position: relative;
+	object-position: center;
+	/* align-content: center; */
+	width: 100px;
+	height: 100px;
+	/* padding: 1em; */
+}
+
+.logo-cont3 p {
+	color: #fff;
+	font-size: .7rem;
+	text-align: center;
+}
+
+.logo-cont3:hover {
+	background-color: #ffffff40;
+}
+
+.logo--github {
+	background-image: url("../img/github_PNG40.png");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+}
+
+.contact1 {
+	display: flex;
+	position: relative;
+	flex-direction: row;
+	width: 100%;
+	height: auto;
+	padding: 1em;
+	gap: 2em;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.contact1 {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	width: auto;
+	height: auto;
+}
+
+.contact1 ul {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	list-style: none;
+	list-style-type: none;
+	color: #ffff;
+	margin-bottom: 0;
+	font-size: 0.7rem;
+	font-weight: 400;
+	width: auto;
+	height: 100%;
+	gap: .6em;
+	padding-left: 0;
+}
+
+.contact1 ul li {
+	color: white;
+}
+
+.contact1 ul li:hover{
+	padding: 0.3em;
+	color: #1b1b1b;
+	box-shadow: 2px 2px 4px #ffffff1c;
+	transition: box-shadow .5s;
+	font-weight:600;
+	border-radius: 2%;
+}
+
+.contact1 a {
+    list-style: none;
+    text-decoration-line: none;
+    text-decoration: none;
+    text-decoration-style: none;
+    color: #ffff;
+}
+
+.contact1 a:hover {
+	color: #bbbb;
+	transition: .5s;
+}
+
+.bi {
+	color: #FFF;
+	/* border: none; */
+	/* border-block-width: thin; */
+}
+
+.bi-twitter-x:hover {
+	color: #2b2b2b;
+	background-color: #ffffff8c;
+	padding: .2em;
+	border-radius: .3em;
+	transition: all .4s ease-in-out;
+}
+
+.bi-instagram {
+	background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.bi-instagram:hover { 
+ 	padding: .3em;
+ 	transition: all .4s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+	.navbar-nav {
+		display: block;
+		flex-direction: column;
+		/* justify-content: flex-start; */
+		/* justify-content: end; */
+		/* align-content: flex-start; */
+		/* position: relative; */
+		/* z-index: 6000; */
+		width: 100%;
+		/* bottom: 0; */
+		/* place-content: flex-start; */
+		/* place-items: flex-start; */
+		height: auto;
+		padding: .8em;
+		text-align: right;
+	}
+
+	.nav button {
+		padding: 0.3em .8em;
+		background-color: #0004;
+/*		border: none;*/
+		color: #fff;
+		border-radius: .3em;
+	}
+
+	.navbar-toggler {
+		display: block;
+	}
+
+	.gitlogo a {
+		display: flex;
+		position: relative;
+		flex-direction: column;
+		text-decoration: none;
+		color: white;
+		margin: 0 auto;
+		height: fit-content;
+	}
+
+	.gitlogo a:hover {
+		color: #111111;
+		background-color: rgba(250, 250, 250, 0.8);
+		padding: 5px;
+		transition: .2s;
+	}
+
+	.gitlogo img {
+		margin: 0 auto;
+		object-position: center;
+		width: 60px;
+		height: 60px;
+	}
+
+	.nav-item {
+		margin-bottom: 1.5em; 
+	}
+
+	.logo-cont2 {
+		display: block;
+		position: relative;
+		justify-content: space-between;
+		/* width: 100%; */
+		height: auto;
+	}
+
+	.logo-cont2 article {
+		display: flex;
+		position: relative;
+		flex-direction: column-reverse;
+	}
+
+	.logo2 {
+		display: flex;
+		position: relative;
+		background-image: url("../img/logochris1.png");
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		object-fit: fill;
+		width: 150px;
+		height: 100px;
+		border-radius: 1%;
+		z-index: 3000;
+		opacity: 0.5;
+		margin: 0 auto;
+	}
+
+	.off {
+		display: flex;
+		flex-direction: column;
+		position: fixed;
+		height: 100vh;
+		width: 80%;
+		z-index: 6000;
+		padding: .8em;
+		right: 0;
+		top: 0;
+		background-color: #2b2b2b;
+	}
+
+	.off-header button{
+		float: right;
+		border: none;
+/*		position: absolute;*/
+/*		right: 0;*/
+	}
+
+	.bi-x-circle {
+		border:none;
+	}
+
+	.off-body {
+		display: flex;
+		flex-direction: column;
+		margin: .8em;
+		height: 100%;
+		justify-content: space-between;
+	}
+
+	.off-header {
+		display: block;
+	}
+
+	.hidden-nav {
+		display: none;
+	}
+}
