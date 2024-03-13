@@ -954,14 +954,6 @@ h1,h2,h3,h4,h5,h6 {
 	text-align: center;
 }
 
-.contact1 {
-	display: flex;
-	position: relative;
-	flex-direction: column;
-	width: auto;
-	height: auto;
-}
-
 .contact1 ul {
 	display: flex;
 	position: relative;
