@@ -368,11 +368,24 @@ h1,h2,h3,h4,h5,h6 {
 
 @media screen and (max-width: 768px) {
 	.navbar-nav {
+		display: block;
+		flex-direction: column;
+		width: 100%;
+		height: auto;
+		padding: .8em;
 		text-align: right;
 	}
 
 	.navbar-toggler {
 		display: block;
+	}
+
+	.nav button {
+		padding: 0.3em .8em;
+		background-color: #0004;
+/*		border: none;*/
+		color: #fff;
+		border-radius: .3em;
 	}
 
 	.nav-item {
