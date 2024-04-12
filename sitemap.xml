@@ -10,31 +10,52 @@
       <!--ERROR - Object reference not set to an instance of an object.-->
       <url>
         <loc>https://www.desarrollohelpdesk.site/descargas.html</loc>
-        <lastmod>2024-04-05</lastmod>
+        <lastmod>2023-08-27</lastmod>
         <changefreq>yearly</changefreq>
-        <priority>0.80</priority>
+        <priority>0.60</priority>
         <image:image>
           <image:loc>https://www.desarrollohelpdesk.site/favicon.png</image:loc>
           <!--ERROR - Object reference not set to an instance of an object.-->
           <url>
-            <loc>https://www.desarrollohelpdesk.site/buidpc.html</loc>
-            <lastmod>2024-04-05</lastmod>
+            <loc>https://www.desarrollohelpdesk.site/contacto.html</loc>
+            <lastmod>2023-08-27</lastmod>
             <changefreq>yearly</changefreq>
-            <priority>0.70</priority>
+            <priority>0.80</priority>
             <image:image>
               <image:loc>https://www.desarrollohelpdesk.site/favicon.png</image:loc>
               <!--ERROR - Object reference not set to an instance of an object.-->
+              <url>
+                <loc>https://www.desarrollohelpdesk.site/buildpc.html</loc>
+                <lastmod>2023-08-27</lastmod>
+                <changefreq>yearly</changefreq>
+                <priority>0.80</priority>
+                <image:image>
+                  <image:loc>https://www.desarrollohelpdesk.site/favicon.png</image:loc>
+                  <!--ERROR - Object reference not set to an instance of an object.-->
+                  <url>
+                    <loc>https://www.desarrollohelpdesk.site</loc>
+                    <lastmod>2023-08-27</lastmod>
+                    <changefreq>yearly</changefreq>
+                    <priority>1.0</priority>
+                    <image:image>
+                      <image:loc>https://www.desarrollohelpdesk.site/favicon.png</image:loc>
+                      <!--ERROR - Object reference not set to an instance of an object.-->
+                      <url>
+                        <loc>https://www.desarrollohelpdesk.site/index.html</loc>
+                        <lastmod>2023-08-27</lastmod>
+                        <changefreq>yearly</changefreq>
+                        <priority>1.0</priority>
+                        <image:image>
+                          <image:loc>https://www.desarrollohelpdesk.site/favicon.png</image:loc>
+                          <!--ERROR - Object reference not set to an instance of an object.-->
+                        </image:image>
+                        <!--Created using XmlSitemapGenerator.org - Free HTML, RSS and XML sitemap generator-->
+                      </url>
+                    </image:image>
+                  </url>
+                </image:image>
+              </url>
             </image:image>
-            <url>
-              <loc>https://www.desarrollohelpdesk.site/contacto.html</loc>
-              <lastmod>2024-04-05</lastmod>
-              <changefreq>yearly</changefreq>
-              <priority>0.60</priority>
-              <image:image>
-                <image:loc>https://www.desarrollohelpdesk.site/favicon.png</image:loc>
-                <!--ERROR - Object reference not set to an instance of an object.-->
-              </image:image>
-            </url>
           </url>
         </image:image>
       </url>
