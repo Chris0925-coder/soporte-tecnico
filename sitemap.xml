@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.desarrollohelpdesk.site/</loc>
-    <lastmod>2023-08-27</lastmod>
+    <lastmod>2024-04-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -10,7 +10,7 @@
       <!--ERROR - Object reference not set to an instance of an object.-->
       <url>
         <loc>https://www.desarrollohelpdesk.site/descargas.html</loc>
-        <lastmod>2023-08-27</lastmod>
+        <lastmod>2024-04-12</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.60</priority>
         <image:image>
@@ -18,7 +18,7 @@
           <!--ERROR - Object reference not set to an instance of an object.-->
           <url>
             <loc>https://www.desarrollohelpdesk.site/contacto.html</loc>
-            <lastmod>2023-08-27</lastmod>
+            <lastmod>2024-04-12</lastmod>
             <changefreq>yearly</changefreq>
             <priority>0.80</priority>
             <image:image>
@@ -26,7 +26,7 @@
               <!--ERROR - Object reference not set to an instance of an object.-->
               <url>
                 <loc>https://www.desarrollohelpdesk.site/buildpc.html</loc>
-                <lastmod>2023-08-27</lastmod>
+                <lastmod>2024-04-12</lastmod>
                 <changefreq>yearly</changefreq>
                 <priority>0.80</priority>
                 <image:image>
@@ -34,7 +34,7 @@
                   <!--ERROR - Object reference not set to an instance of an object.-->
                   <url>
                     <loc>https://www.desarrollohelpdesk.site</loc>
-                    <lastmod>2023-08-27</lastmod>
+                    <lastmod>2024-04-12</lastmod>
                     <changefreq>yearly</changefreq>
                     <priority>1.0</priority>
                     <image:image>
@@ -42,7 +42,7 @@
                       <!--ERROR - Object reference not set to an instance of an object.-->
                       <url>
                         <loc>https://www.desarrollohelpdesk.site/index.html</loc>
-                        <lastmod>2023-08-27</lastmod>
+                        <lastmod>2024-04-12</lastmod>
                         <changefreq>yearly</changefreq>
                         <priority>1.0</priority>
                         <image:image>
