@@ -54,8 +54,8 @@
    "density": "4.0"
   }
  ],
- // "scope": "/",
- // "id": "ChrisWEBDEV",
+ "scope": "/",
+ "id": "ChrisWEBDEV",
  "start_url": "/index.html",
  "display_override": ["fullscreen", "minimal-ui"],
  "display": "standalone",
