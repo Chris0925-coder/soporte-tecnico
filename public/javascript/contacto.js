@@ -21,13 +21,18 @@ close.addEventListener('click', () => {
 
 
 
-
 // const form = document.getElementById("formula");
 // let email = document.querySelector("[name=email]").value;
 // let control = document.querySelector("[name=control]").value;
 // const btn = document.querySelector(".btn");
 
+// let grecaptcha = getCookie('_grecaptcha');
 
+// console.log(reCaptcha);
+
+// if (!reCaptcha) {
+//     btn.style.display = 
+// }
 
 
 
@@ -127,15 +132,18 @@ close.addEventListener('click', () => {
 
 
 
-// function submitUserForm() {
-//     var response = grecaptcha.getResponse();
-//     if (response.length == 0) {
-//         document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:darkred;">This field is required.</span>';
-//         return false;
-//     };
-//     return true;
-// };
+function submitUserForm() {
+    var response = grecaptcha.getResponse();
+    if (response.length == 0) {
+        document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:darkred;">This field is required.</span>';
+        return false;
+    };
+    return true;
+};
 
 // function verifyCaptcha() {
-//     document.getElementById('g-recaptcha-error').innerHTML = '';
+//     document.getElementById('g-recaptcha-error').innerHTML = 'Error';
 // };
+
+submitUserForm();
+
