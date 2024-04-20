@@ -20,7 +20,7 @@ atOptions = {
   'params' : {}
 };
 let d = document.createElement('div');
-let doc = '<scr' + 'ipt type="text/javascript" src="//www.profitablecreativeformat.com/5115a1b458f6b8de84588523b50d8c38/invoke.js"></scr' + 'ipt>';
+let doc = 'src="//www.profitablecreativeformat.com/5115a1b458f6b8de84588523b50d8c38/invoke.js"';
 
 d.innerHTML = doc;
 ad.append(d, cc);
