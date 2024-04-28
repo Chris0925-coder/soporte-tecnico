@@ -95,7 +95,7 @@
         						</div>
     							<br>
         						<div class="form-group">
-        							<button title="Enviar" type="submit" class="btn btn-primary btn-block" id="demo-form">
+        							<button title="Enviar" type="submit" class="btn btn-primary btn-block" id="demo-form" name="register">
         								Enviar
         							</button>
         						</div>
@@ -103,6 +103,10 @@
                       <input type="hidden" name="_captcha" value="false">
         					</form>
                   <br>
+                  <br>
+                  <?php
+                    include("public/php/registro.php")
+                  ?>
                   <form action="https://www.google.com/recaptcha/api/siteverify" method="post">
                       <div class="form-group">
                           <div class="g-recaptcha form-control" data-sitekey="6Le1UBwpAAAAAHzagcQvjzbPGK2g7TvoJiLyNSO5" data-callback="verifyCaptcha">   
