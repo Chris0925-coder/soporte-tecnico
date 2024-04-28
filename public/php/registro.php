@@ -8,7 +8,7 @@ if (isset($_POST['register'])){
 		$control = trim($_POST['control']);
 		$fechareg = date("d/m/y");
 		$consulta = "INSERT INTO contacto(email, control, fech_reg) VALUES ('$email', '$control', '$fechareg')";
-		$resultado = selectDatabase($client, $consulta);
+		$resultado = Client($client, $consulta);
 		if ($resultado) {
 			?>
 			<h3 class="ok">¡Se ha enviado con exito!</h3>
