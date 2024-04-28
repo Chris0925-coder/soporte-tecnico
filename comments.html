@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>COMENTARIOS</title>
+	<link rel="stylesheet" type="text/css" href="public/css/styles.css">
+	<script type="text/javascript" src="public/javascript/comments.js"></script>
+</head>
+<body>
+	<h1>Comentarios</h1>
+
+	
+	<?php
+		include("public/php/comdb.php")
+	?>
+
+	<!-- <form action="/comments.html" method="get"> -->
+	<div class="container comm_container">
+		<?php foreach ($client->query('SELECT * FROM contacto LIMIT 5') as $row) { ?>
+		<article class="commentarios">
+			
+			<td><?php echo $row['id'] ?></td>
+		    <td><?php echo $row['control'] ?></td>
+		    <td><?php echo $row['fech_reg'] ?></td> 
+		
+		    <!-- <button class="delete" onclick="clickMe()">DELETE</button> -->
+		    <!-- <span class="del"></span> -->
+
+	    </article>
+	    
+	    <?php
+	    }
+		?>
+	</div>
+	<!-- <button class="delete" onclick="clickMe()">DELETE</button> -->
+	<?php
+		include("public/php/comments.php")
+	?>
+
+	<!-- </form> -->
+
+</body>
+</html>
