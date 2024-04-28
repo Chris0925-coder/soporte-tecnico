@@ -128,7 +128,7 @@ close.addEventListener('click', () => {
 
 
 
-
+const form = document.querySelector('#formula');
 
 
 
@@ -141,9 +141,10 @@ function submitUserForm() {
     return true;
 };
 
+form.addEventListener('onsubmit', submitUserForm);
 // function verifyCaptcha() {
 //     document.getElementById('g-recaptcha-error').innerHTML = 'Error';
 // };
 
-submitUserForm();
+// submitUserForm();
 
