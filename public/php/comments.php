@@ -4,7 +4,7 @@
 	if (isset($client)) {
 		// function php_func() {
 			$consulta = "SELECT id, email, control, fech_reg FROM contacto";
-			$resultado = selectDatabase($uri, $consulta);
+			$resultado = selectDatabase($client, $consulta);
 			if ($resultado->num_rows > 0) {
 				while ($row =  $resultado->fetch_assoc()) {
 					echo 
