@@ -1,7 +1,7 @@
 <?php
 use MongoDB\Driver\ServerApi;
 
-$uri = 'mongodb+srv://chris30:1987DarkSouls30!?@cluster0.jkdgz4b.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+$uri = 'mongodb+srv://chris30:1987DarkSouls30!?@cluster0.jkdgz4b.mongodb.net/';
 
 // Set the version of the Stable API on the client
 $apiVersion = new ServerApi(ServerApi::V1);
