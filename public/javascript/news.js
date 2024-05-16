@@ -3,6 +3,8 @@ const cat = "&category=technology";
 const url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${key}`;
 // https://newsapi.org/v2/everything?q=Apple&from=2024-05-15&sortBy=popularity&apiKey=
  // https://newsapi.org/v2/top-headlines?country=us&apiKey=
+
+
 const showNews = document.getElementById('news-api');
 
 fetch(url).then((resp) => resp.json()).then(dato => {
