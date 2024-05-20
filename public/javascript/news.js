@@ -21,3 +21,28 @@
 // 	showNews.appendChild(div);
 // 	}) 
 // });
+
+
+
+
+// const key = "1790921589409632256ChrisWebDev";
+// const cat = "&category=technology";
+// const url = `https://publish.twitter.com/oembed?url=https%3A%2F%2Ftwitter.com%2FInterior%2Fstatus%2F507185938620219395&apiKey=${key}`;
+
+
+// const showNews = document.getElementById('news-api');
+
+// fetch(url).then((resp) => resp.json()).then(dato => {
+// 	console.log(dato);
+// 	let news = (dato.articles);
+// 	news.map(function(num){
+// 		let div = document.createElement('news');
+// 		div.innerHTML = `<br>
+// 						<img style="max-witdh:600px" src=${num.urlToImage}><br>
+// 						<h1>${num.title}</h1>
+// 						<h2>${num.description}</h2>
+// 						<h3>${num.url}</h3>`;
+
+// 	showNews.appendChild(div);
+// 	}) 
+// });
