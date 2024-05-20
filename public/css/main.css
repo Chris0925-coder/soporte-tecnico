@@ -1130,7 +1130,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .YouTube {
-	display: none;
+	display: flex;
 	position: fixed;
 	right: 0;
 	bottom: 0;
@@ -1138,14 +1138,19 @@ h1,h2,h3,h4,h5,h6 {
 	height: auto;
 	z-index: 5000;
 	transition: all 4s ease-in-out;
-}
 
-.yy {
-	display: flex;
+
 	opacity: 0;
 	transition: all .6s ease-in-out;
 	animation: move-der-izq 5s 1;
 }
+
+/*.yy {
+	display: flex;
+	opacity: 0;
+	transition: all .6s ease-in-out;
+	animation: move-der-izq 5s 1;
+}*/
 
 @keyframes move-der-izq {
 	from {

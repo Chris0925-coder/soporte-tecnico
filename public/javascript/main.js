@@ -453,20 +453,20 @@ date.append(new Date ().getFullYear ());
 
 
 const youTube = document.querySelector('.YouTube');
-const yy = document.querySelector('.yy');
+const yy = youTube.querySelector('.item:nth-child(2)');
 const closeY = document.querySelector('.closeq');
+let newDiv = document.createElement('div');
 
-const videoC = 
-    `
-    <iframe width="420" height="315" src="https://www.youtube.com/embed/8dQn741XzLA?si=VBITf0z9-o5m0NVM?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    `;
+newDiv.innerHTML =`
+    <iframe width="420" height="315" src="https://www.youtube.com/embed/8dQn741XzLA?si=VBITf0z9-o5m0NVM?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
 
 
-youTube.innerHTML = videoC;
-
+// youTube.innerHTML = videoC;
+    // youTube.appendChild(newDiv, yy);
+youTube.insertBefore(newDiv, yy);
 function youT() {
-        yy.style.opacity = "1";
-        yy.style.transition = "all 5s ease-in-out";
+        youTube.style.opacity = "1";
+        youTube.style.transition = "all 5s ease-in-out";
         closeY.style.display = 'flex';
         closeY.style.color = '#ffffff90';
         closeY.style.opacity = '1';
@@ -476,6 +476,6 @@ function youT() {
 youT();
 
 closeY.addEventListener('click', () => {
-    yy.style.display = "none";
+    youTube.style.display = "none";
     closeY.style.display = 'none';
 })
