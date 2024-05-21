@@ -154,10 +154,11 @@ h1,h2,h3,h4,h5,h6 {
 
 .main-1 {
 	display: grid;
-	margin-top: 15px;
+	margin: 15px 0 80px 0;
 	width: 100%;
-	grid-template-columns: 1fr auto;
+	grid-template-columns: 1fr auto auto;
 	gap: 0.3em;
+	grid-template-rows: auto auto auto;
 	justify-content: space-around;
 /*	border: 1px solid brown; */
 }
@@ -328,7 +329,7 @@ h1,h2,h3,h4,h5,h6 {
 	grid-area: 1 / 2 / span 3;
 	gap: 1em;
 	margin: 0 auto;
-	overflow-y: hidden;
+	overflow: hidden;
 	scrollbar-width: none;
 /*	border: 1px solid darkred; */
 }
@@ -498,7 +499,7 @@ h1,h2,h3,h4,h5,h6 {
 	gap: 0.3em;
 	padding: 1em;
 	margin-top: 40px;
-	grid-area: 2 / 1 / span 3;
+	grid-area: 2 / 1 / span 2;
 }
 
 .banner-demo article {
