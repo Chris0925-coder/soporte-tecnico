@@ -479,3 +479,41 @@ closeY.addEventListener('click', () => {
     youTube.style.display = "none";
     closeY.style.display = 'none';
 })
+
+
+
+
+
+const url = "https://graph.facebook.com/v19.0/me?fields=id,email,name,picture{url,is_silhouette},posts{permalink_url}&access_token=EAAEXhNvjEHcBO7pegKOGqDZA2YONup4ZBNZAQVvQe79DyVvCUNyruMzH3pXf7WMLC2TI1ZBbtzVcqQ4XL4aMZBRxyr478SYZCeTyxrN1xWFfMG0tKWsFpCWqTNHtcowdeIUjizmCkkfVWXj0JDxpv7ZBMDO2C2kEuFUpEH1lfExnzYPX6HFnm7B7vCYWwj1CL0BXgw7fS8HeHOuoyH2MPdnztZAresd3iZCUtpY2kCRKZAWwG8pYMxEVcnF7QpN0pM";
+const showNews = document.getElementById('news-api');
+const showPost = document.getElementById('posts-api');
+fetch(url).then((resp) => resp.json()).then(dato => {
+    console.log(dato);
+    const img = dato.picture.data.url;
+    const name = dato.name;
+    const email = dato.email;
+    const post = dato.posts.data[3].permalink_url;
+    let news = (dato.posts.data);
+    news.map(function(num){
+        console.log(num);
+        // console.log(num);
+        showPost.innerHTML = `
+                            <div></div><iframe src="${num}" width="500" height="604" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>`;
+    });
+    console.log(post);
+    showNews.innerHTML = `<div><img src="${img}"></div><br>
+                            <h2>${name}</h2><br>
+                            <h3>${email}</h3><br>
+                            <div><iframe src="${post}" width="500" height="604" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe></div>`;
+    // let news = (dato.articles);permalink_url
+    // news.map(function(num){
+    //  let div = document.createElement('news');
+    //  div.innerHTML = `<br>
+    //                  <img style="max-witdh:600px" src=${num.urlToImage}><br>
+    //                  <h1>${num.title}</h1>
+    //                  <h2>${num.description}</h2>
+    //                  <h3>${num.url}</h3>`;
+
+    // showNews.appendChild(div);
+    // }) 
+});
