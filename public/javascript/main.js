@@ -119,121 +119,6 @@ function eliminarBloqueRGPD(){
 };
 
 
-
-
-
-
-
-// function compruebaAceptaCookies() {
-//     if (localStorage.cookieAccepted === true) {
-//     } else {
-//         window.history.go(-1);
-//         window.close();
-//         window.open("https://www.google.com/", "_self");
-//     }
-// };
-
-// function aceptarCookies() {
-//     localStorage.cookieAccepted === true;
-
-// };
-
-// $(document).ready(function() {
-//     compruebaAceptaCookies();
-// });
-
-
-// const carusel = [
-//     'img/newd.jpeg',
-//     'img/OIP.jfif',
-//     'img/ps4Pro.jpg',
-//     'img/ps4Pro2.jpg'
-// ];
-
-// function thumnail() {
-    
-//     for (i = 0; i < carusel.length; i++) {
-//         caruselItem.style.backgroundImage = `url(${carusel[i]})`;
-        
-//     };
-
-//     slideThumnail++;
-//     slideThumnail2++;
-
-//     if(slideThumnail > carusel.length) {slideThumnail = 1};
-//     if(slideThumnail > carusel.length) {
-//         slideThumnail2 = 1;
-         
-        
-//     };
-//     caruselItem.style.backgroundImage = `url(${carusel[slideThumnail-1]})`;
-//   if (carusel[slideThumnail-1] == "img/OIP.jfif") {
-//             let info = "<p class='jsSlider'>Node.js, JavaScript, SQLite. Base de datos a un click.</p>";
-//             let p = document.createElement("figcaption");
-//             p = info;
-       
-//             caruselItem.innerHTML=p;
-
-//         } else if (carusel[slideThumnail-1] == "img/newd.jpeg") {
-//             let p = document.createElement("figcaption");
-//             let info1 = "<p class='jsSlider'>Reparación, mantenimiento, limpieza...</p>";
-            
-//             p = info1;
-//              caruselItem.innerHTML=p;
-//         } else if (carusel[slideThumnail-1] == "img/ps4Pro.jpg") {
-//             let p = document.createElement("figcaption");
-//             let info2 = "<p class='jsSlider'>Renueva pasta térmica, PS4Pro.</p>";
-            
-//             p = info2;
-//              caruselItem.innerHTML=p;
-//         }
-//         else {
-//             caruselItem.innerHTML="<p class='jsSlider'>Limpieza, consola de Video Juegos.</p>";
-//         }
-//     setTimeout(thumnail, 8000);
-
-
-// };
-// thumnail();
-
-
-
-
-// caruselItem.addEventListener('touchstart', () => {
-//     clearTimeout(thumnail);
-//     for (i = 0; i < carusel.length; i++) {
-//     caruselItem.style.backgroundImage = `url(${carusel[i]})`;
-//     };
-
-    
-// });
-
-
-// const galeria2 = document.querySelector('.galeria2');
-// const photos = document.getElementsByClassName('photo');
-// const carousel = [
-//     'img/newg.jpeg',
-//     'img/lap02.jpeg',
-//     'img/lap03.jpeg',
-//     'img/lap04.jpeg',
-//     'img/xbox04.jpeg',
-//     'img/xbox05.jpeg'
-// ];
-
-// let slideIndex = 0;
-
-// galeria2.addEventListener('click', () => {
-//   for (i = 0; i < carousel.length; i++) {
-//         photos[i].style.display = "none";
-//         galeria2.style.backgroundImage = `url(${carousel[i]})`;
-//     };
-
-//     slideIndex++;
- 
-//     if(slideIndex > carousel.length) {slideIndex = 1};
-//     galeria2.style.backgroundImage = `url(${carousel[slideIndex-1]})`;
-// });
-
 let n = 0;
 let o = 0;
 
@@ -252,8 +137,6 @@ noti[3].style.display = "none";
 slideA[1].style.display = "none";
 slideA[2].style.display = "none";
 slideA[3].style.display = "none";
-
-// const carousel = new bootstrap.Carousel('#myCarousel');
 
 function sildeButtoms(a, b, c, d) {
         a.style.opacity = "1";
@@ -290,7 +173,6 @@ function notice(a) {
     }
 };
 
-// [0].children[0]
 
 function notic(a) {
     // n = 0;
@@ -312,8 +194,6 @@ function notic(a) {
     }
 };
 
-// notice(slideA, n);
-// let time = notice(noti);
 let time = setInterval(notic, 7000, noti);
 let timeA = setInterval(notice, 9000, slideA);
 
@@ -371,7 +251,7 @@ const prev = document.querySelector('#previous');
 const next = document.querySelector('#next');
 
 let slideIndex = 0;
-    // let slideIndexB = 2;
+    
     prev.addEventListener('click', () => {
             for (i = 0; i < slideA.length; i++) {
                 slideA[i].style.display = "none";
@@ -398,49 +278,6 @@ let slideIndex = 0;
         slideA[slideIndex-1].style.display = "block";
         clearInterval(timeA);
     });
-// botonb.addEventListener('click',() => {
-//     sildeButtoms(botonb, botona, botonc, botond);
-//     if(true) {
-//         sildeDisplay(noti[1], noti[0], noti[2], noti[3]);
-//         clearInterval(time);
-//     } 
-// });
-
-// botonc.addEventListener('click',() => {
-//     sildeButtoms(botonc, botona, botonb, botond);
-//     if(true) {
-//         sildeDisplay(noti[2], noti[1], noti[0], noti[3]);
-//         clearInterval(time);
-//     } 
-// });
-
-
-// botond.addEventListener('click',() => {
-//     sildeButtoms(botond, botona, botonc, botonb)
-//     if(true) {
-//         sildeDisplay(noti[3], noti[0], noti[2], noti[1]);
-//         clearInterval(time);
-//     } 
-// });
-
-
-
-
-// counter = parseInt('0');
-
-
-// const app = Vue.createApp({
-//   data() {
-//     return {
-//       counter: localStorage.getItem('count') ? parseInt(localStorage.getItem('count')) : 0,
-//     };
-//   },
-//   watch: {
-//     counter(newQuestion, oldQuestion){
-//       localStorage.setItem('count', newQuestion)
-//     }
-//   },
-// }).mount('#app');
 
 
 const date = document.querySelector('.date');
@@ -460,8 +297,6 @@ newDiv.innerHTML =`
     <iframe width="420" height="315" src="https://www.youtube.com/embed/8dQn741XzLA?si=VBITf0z9-o5m0NVM?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
 
 
-// youTube.innerHTML = videoC;
-    // youTube.appendChild(newDiv, yy);
 youTube.insertBefore(newDiv, yy);
 function youT() {
         youTube.style.opacity = "1";
@@ -483,7 +318,7 @@ closeY.addEventListener('click', () => {
 
 
 
-// const url = "https://graph.facebook.com/v19.0/me?fields=id,email,name,picture{url,is_silhouette},posts{permalink_url}&access_token=EAAEXhNvjEHcBO7pegKOGqDZA2YONup4ZBNZAQVvQe79DyVvCUNyruMzH3pXf7WMLC2TI1ZBbtzVcqQ4XL4aMZBRxyr478SYZCeTyxrN1xWFfMG0tKWsFpCWqTNHtcowdeIUjizmCkkfVWXj0JDxpv7ZBMDO2C2kEuFUpEH1lfExnzYPX6HFnm7B7vCYWwj1CL0BXgw7fS8HeHOuoyH2MPdnztZAresd3iZCUtpY2kCRKZAWwG8pYMxEVcnF7QpN0pM";
+// const url = "https://graph.facebook.com/v19.0/me?fields=id,email,name,picture{url,is_silhouette},posts{permalink_url}&access_token=";
 // const showNews = document.getElementById('news-api');
 // const showPost = document.getElementById('posts-api');
 // fetch(url).then((resp) => resp.json()).then(dato => {

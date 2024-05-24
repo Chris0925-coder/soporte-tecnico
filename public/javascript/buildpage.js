@@ -86,7 +86,7 @@ sildeDisplay(slideF,index);
 // const nextB = document.querySelector('#siguienteB');
 const prev = document.getElementsByClassName('carousel-control-prev');
 const next = document.getElementsByClassName('carousel-control-next');
-// console.log(next);
+
 let slideIndex = 0;
     // let slideIndexB = 2;
 
