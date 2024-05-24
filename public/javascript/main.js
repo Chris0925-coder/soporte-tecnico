@@ -297,7 +297,6 @@ newDiv.innerHTML =`
     <iframe width="420" height="315" src="https://www.youtube.com/embed/8dQn741XzLA?si=VBITf0z9-o5m0NVM?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
 
 
-youTube.insertBefore(newDiv, yy);
 function youT() {
         youTube.style.opacity = "1";
         youTube.style.transition = "all 5s ease-in-out";
@@ -312,9 +311,12 @@ youT();
 closeY.addEventListener('click', () => {
     youTube.style.display = "none";
     closeY.style.display = 'none';
+    newDiv.innerHTML = '';
+    // youTube.insertBefore("", "");
 })
 
 
+youTube.insertBefore(newDiv, yy);
 
 
 
