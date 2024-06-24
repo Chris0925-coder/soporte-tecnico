@@ -6,9 +6,10 @@ atOptions = {
   'format' : 'iframe',
   'height' : 60,
   'width' : 468,
-  'params' : {}
+  'params' : {},
+  'src' : "//www.profitablecreativeformat.com/5115a1b458f6b8de84588523b50d8c38/invoke.js"
 };
-let doc = atOptions + '<scr' + 'ipt type="text/javascript" src="//www.profitablecreativeformat.com/5115a1b458f6b8de84588523b50d8c38/invoke.js"></scr' + 'ipt>';
+// let doc = atOptions;
 // let a = document.createTextNode(atOptions);
 
 // ads.append(doc);
@@ -29,8 +30,8 @@ let d = document.createElement('div');
 //               'params' : {}
 //                 // src="//www.profitablecreativeformat.com/5115a1b458f6b8de84588523b50d8c38/invoke.js"></iframe>`;
 
-d.innerHTML = doc;
-ads.appendChild(d, cc);
+// ads.innerHTML = doc;
+ads.append(atOptions);
 
 // ads = document.write(d,cc);
 
