@@ -29,7 +29,7 @@ let d = document.createElement('div');
 //               'params' : {}
 //                 // src="//www.profitablecreativeformat.com/5115a1b458f6b8de84588523b50d8c38/invoke.js"></iframe>`;
 
-d.innerHTML = `${atOptions}` + `${doc}`;
+d.innerHTML = doc;
 ads.appendChild(d, cc);
 
 // ads = document.write(d,cc);
