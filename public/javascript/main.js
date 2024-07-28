@@ -353,3 +353,13 @@ date.append(new Date ().getFullYear ());
     // showNews.appendChild(div);
     // }) 
 // });
+
+
+
+// function sumar (a,b) {
+//     return a + b;
+// }
+
+// const result = sumar();
+
+// console.log(result === NaN);
