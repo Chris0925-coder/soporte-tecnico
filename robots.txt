@@ -16,4 +16,4 @@ Disallow: /tmp/
 Disallow: /scripts/
 Disallow: /public/img/influencers/
 
-Sitemap: https://www.desarrollohelpdesk.site/sitemap.xml
+Sitemap: https://www.webdev.fun/sitemap.xml
