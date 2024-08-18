@@ -20,6 +20,7 @@ body {
 }
 
 h1,h2,h3,h4,h5,h6 {
+	color: #626262;
 	margin: 0;
 	padding: 10px;
 	text-align: center;
@@ -82,20 +83,45 @@ a:hover {
 	/* padding: var(--padding-container); */
 }
 
+.hero {
+	width: 100%;
+/*	min-height: 500px;*/
+	max-height: 70lvh;
+	position: relative;
+	display: grid;
+/*	grid-template-rows: 100px 1fr;*/
+	align-items: center;
+}
+
+.hero:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 60lvh;
+/*	background-image: linear-gradient(180deg, #ffffffa1 0%, #ffffffa1 100%), url('../img/logochris1.png');*/
+	background-size: 100% 100%;
+/*	background-size: contain;*/
+	background-position: center;
+	background-repeat: no-repeat;
+	object-fit: cover;
+/*	clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 77%, 0 80%);*/
+	z-index: -1;
+}
+
+
 .navbar {
 	position: relative;
 	display: block;
-	margin: 0;
-	padding: 0;
-	background-color: #1b1b1b;
+	background-color: #00002b;
 	color: white;
 }
 
 .nav {
   	display: flex;
-  	/*  	--padding-container: 0;*/
-  	padding: 0.7em 0;
-  	width: 90%;
+  	padding: 0.7em 40px;
+  	width: 100%;
   	height: 100%;
   	display: flex;
   	align-items: center;
@@ -174,17 +200,24 @@ a:hover {
 .main-2 {
 	display: block;
 	width: 100%;
-/*	margin: auto;*/
-/*	border: 1px solid black;*/
-/*	align-items: center;*/
+	background:linear-gradient(180deg, #00002bc8 0%, #f3f3f361 100%), url('../img/logochris1.png');
+/*	background-image: linear-gradient(180deg, #ffffff00 0%, #ffffff00 100%), url('../img/logochris1.png');*/
+	background-size: cover;
+	background-position: center;	
+	background-repeat: no-repeat;
+	border-radius: 10px;
+	padding: 5%;
+/*	mix-blend-mode: saturation;*/
 }
 
 .main-2 h1, .hdownload {
-	color: #1b1b1b;
+	color: #626262;
+	/*	color: #1b1b1b;*/
+/*	background: linear-gradient(180deg, #5555558c 0%, #ffffff8c 100%);*/
 	margin-bottom: 5px;
-	font-size: 1.3rem;
+	font-size: 1.7rem;
 	font-weight: 900;
-	/*	filter: drop-shadow(1px 1px 2px #cccc);*/
+/*	filter: drop-shadow(1px 2px #fff);*/
 }
 
 .carousel {
@@ -261,13 +294,9 @@ a:hover {
 	background-color: #ffffff0c;
 	width: 100%;
 	height: fit-content;
-/*	border: 1px solid brown;*/
 	backdrop-filter: blur(10px);
 	bottom: 0;
 	filter: drop-shadow(2px 2px #000111);
-	/*margin: 0 auto;
-	justify-self: center;
-	text-align: center;*/
 }
 
 .carousel-caption h2 {
@@ -290,10 +319,10 @@ a:hover {
 /*	content: "";*/
 	width: auto;
 	height: fit-content;
-	background-color: rgba(250, 250, 250, .7);
+	background-color: rgba(250, 250, 250, .2);
 	top: 50%;
 	border-radius: 5%;
-	padding: 0 10px;
+	padding: 3px 10px;
 	margin: 10px;
 	border: none;
 	
@@ -304,11 +333,11 @@ a:hover {
 /*	content: "";*/
 	width: auto;
 	height: fit-content;
-	background-color: rgba(250, 250, 250, .7);
+	background-color: rgba(250, 250, 250, .2);
 	top: 50%;
 	right: 0;
 	border-radius: 5%;
-	padding: 0 10px;
+	padding: 3px 10px;
 	margin: 10px;
 	border: none;
 	
@@ -316,7 +345,7 @@ a:hover {
 
 .carousel-control-prev i,
 .carousel-control-next i{
-	color: #909090;
+	color: #ffffff8c;
 }
 
 .carousel-control-prev:hover i, 
@@ -333,7 +362,7 @@ a:hover {
 	justify-content: space-between;
 	/*	place-content: rigth;*/
 	max-width: 350px;
-	max-height: 873px;
+	height: 873px;
 	grid-area: 1 / 2 / span 3;
 	gap: 1em;
 	margin: 0 auto;
@@ -360,7 +389,8 @@ a:hover {
 	width: 200px;
 	height: 100px;
 	border-radius: .3em;
-	opacity: .6;
+/*	mix-blend-mode: luminosity;*/
+/*	opacity: .6;*/
 }
 
 .notice {
@@ -443,6 +473,7 @@ a:hover {
 }
 
 .not-1 h4 {
+	color: #626262;
 	font-size: clamp(10px, 5vw, 30px);
 	font-weight: 900;
 }
@@ -513,10 +544,10 @@ a:hover {
 .banner-demo article {
 	display: block;
 	position: relative;
-	width: auto;
-	height: auto;
-	max-width: 500px;
-	height: 400px;
+	/*width: auto;
+	height: auto;*/
+	max-width: 270px;
+	max-height: 300px;
 }
 
 .banner-demo img {
@@ -529,11 +560,12 @@ a:hover {
 .infoweb__container {
 	color: #000011;
 	margin: .1em auto;
+/*	text-align: left;*/
 }
 
 .infoweb__container h4 {
 	font-size: clamp(25px, 5vw, 42px);
-	color: #1b1b1b;
+	color: #525252;
 	font-weight: 600;
 	padding: 0 .5em;
 /*	border: 1px solid black;*/
@@ -544,11 +576,6 @@ a:hover {
 	display: block;
 	position: relative;
 	object-position: center;
-	margin: 0 auto;
-	place-content: center;
-	/*	justify-content: center;*/
-	gap: 1em;
-	/*	border: 1px solid yellow;*/
 	text-align: center;
 }
 
@@ -560,13 +587,13 @@ a:hover {
 }
 
 .infoweb__articles {
-	color: #1b1b1b;
-	width: 400px;
+	color: #525252;
+/*	width: 400px;*/
 }
 
 .infoweb__articles h5{
 	width: 300px;
-	color: #111;
+	color: #525252;
 	font-size: clamp(12px, 5vw, 25px);
 	font-weight: 600;
 /*	border: 1px solid yellow;*/
@@ -575,7 +602,7 @@ a:hover {
 
 .infoweb__articles a {
 	text-decoration: none;
-	color: #303030;
+	color: #525252;
 	cursor: pointer;
 }
 
@@ -584,16 +611,21 @@ a:hover {
 }
 
 .infoweb__lists {
-	text-align: center;
 	list-style: none;
 	padding-left: 0;
-	color: #111;
-	/*	gap: 2em;*/
-	/*	text-align: center;*/
+	justify-content: center;
+	color: #525252;
+	width:100%;
 }
 
 .infoweb__lists li {
-	margin: .4em;
+	text-align:left;
+	margin:0 5%;
+/*	margin: .4em auto;*/
+}
+.soy {
+	list-style: none;
+	padding-left: 0;
 }
 /*SECTION LAPTOPS*/
 .laptops {
@@ -602,7 +634,7 @@ a:hover {
 
 .title__laptop {
 	font-size: clamp(22px, 5vw, 33px);
-	color: #111111;
+	color: #525252;
 	font-weight: 700;
 	background: linear-gradient(190deg,#aaffff80,#fff3);
 	border-radius: 1%;
@@ -618,7 +650,7 @@ a:hover {
 	display: flex;
 	position: relative;
 	flex: 1;
-	height: 358px;
+	height: 258px;
 	overflow: hidden;
 	/* scrollbar-width: none; */
 }
@@ -657,7 +689,7 @@ a:hover {
 	padding-inline: 10px;
 	transform: translateY(-10px);
 	cursor: pointer;
-	color: #111111;
+	color: #525252;
 }
 
 /*.item__cont {*/
@@ -765,7 +797,7 @@ a:hover {
 .influencers h6 {
 	font-size: clamp(25px, 5vw, 33px);
 	font-weight: 700;
-	color: #1b1b1b;
+	color: #525252;
 	padding: 20px 40px 30px;
 /*	filter: drop-shadow(1px 1px 2px #fff);*/
 	background-color: #ffffff20;
@@ -1442,4 +1474,10 @@ a:hover {
 		display: none;
 	}
 
+}
+
+@media (width >= 2028px) {
+	.demoPage-main {
+		margin: 0 30%;
+	}
 }
