@@ -584,11 +584,13 @@ a:hover {
 	flex-wrap: wrap;
 	position: relative;
 	justify-content: center;
+	align-items: center;
 }
 
 .infoweb__articles {
 	color: #525252;
 /*	width: 400px;*/
+	text-align: left;
 }
 
 .infoweb__articles h5{
@@ -601,31 +603,42 @@ a:hover {
 }
 
 .infoweb__articles a {
+	display: flex;
+	position: relative;
 	text-decoration: none;
 	color: #525252;
 	cursor: pointer;
+/*	text-align:left;*/
+	justify-content: center;
+/*	padding: 0 auto;*/
 }
 
 .infoweb__articles a:hover {
 	filter: drop-shadow(1px 1px 10px #1c1c2b);
 }
 
-.infoweb__lists {
+/*.infoweb__lists {
 	list-style: none;
 	padding-left: 0;
 	justify-content: center;
 	color: #525252;
 	width:100%;
 }
-
-.infoweb__lists li {
-	text-align:left;
-	margin:0 5%;
+*/
+/*.infoweb__lists li {*/
+/*	text-align:left;*/
+/*	margin:0 5%;*/
 /*	margin: .4em auto;*/
-}
-.soy {
+/*}*/
+.soy,
+.infoweb__lists {
 	list-style: none;
+	object-position: bottom;
+	justify-items: flex-end;
+	place-items:end;
+	place-content: end;
 	padding-left: 0;
+	height: 70px;
 }
 /*SECTION LAPTOPS*/
 .laptops {
@@ -871,6 +884,7 @@ a:hover {
 .item-description {
 	align-self: flex-end;
 	color: #fff;
+
 /*	border-radius:1em;*/
 }
 
@@ -885,14 +899,18 @@ a:hover {
 
 .name {
 	font-size: 27px;
-	background: linear-gradient(90deg,#303030,#0003);
+	background: linear-gradient(90deg,#303030c8 0%,#ffffff48 100%);
 	padding-inline: 10px;
+/*	filter: drop-shadow(1px 1px 5px);*/
+/*backdrop-filter: drop-shadow(3px 4px 10px);*/
 	transform: translateY(-10px);
+	backdrop-filter: blur(5px);
 }
 
 .name p {
 	font-size: 1.0rem;
 	padding: .4em;
+	color: white;
 }
 
 .name a, .role a {
@@ -908,10 +926,11 @@ a:hover {
 .role {
 	display: block;
 	font-size: 0.7rem;
-	background: linear-gradient(90deg,#303030,#0003);
+	background: linear-gradient(180deg,#303030c8 0%,#ffffff88 100%);
 	padding: 5px;
 	box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
 	transform: translateY(10px);
+	backdrop-filter: blur(12px);
 }
 
 .name,
@@ -939,25 +958,17 @@ a:hover {
 	margin: 0 auto;
 }
 
-/*.ff {
+.ff {
 	display: flex;
 	flex-direction: column;
-}*/
+}
 
 .socialnav {
     display: flex;
     position: relative;
     align-items: center;
-/*    flex-direction: column;*/
-    /* flex-wrap: wrap; */
-/*    padding: 10px 1em;*/
-    width: auto;
-    height: auto;
-/*    margin: 0 auto;*/
-    padding-left: 0.5em;
-/*    border: 1px solid white;*/
-    text-align: left;
-    /* justify-content: space-around; */
+    margin: .4em auto;
+    justify-content: center; 
 }
 
 .socialnav ul {
