@@ -904,7 +904,7 @@ a:hover {
 /*	filter: drop-shadow(1px 1px 5px);*/
 /*backdrop-filter: drop-shadow(3px 4px 10px);*/
 	transform: translateY(-10px);
-	backdrop-filter: blur(5px);
+	
 }
 
 .name p {
@@ -930,7 +930,6 @@ a:hover {
 	padding: 5px;
 	box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
 	transform: translateY(10px);
-	backdrop-filter: blur(12px);
 }
 
 .name,
@@ -944,6 +943,7 @@ a:hover {
 .gallery-item:hover .role {
 	opacity: 1;
 	transform: translateY(0);
+	
 }
 
 .gallery-item:not(:hover) .name,
