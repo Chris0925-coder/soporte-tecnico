@@ -80,7 +80,7 @@ function detectCookie(cname) {
     let name = cname + "=";
     let decodedCookie = decodeURIComponent(document.cookie);
     let ca = decodedCookie.split(';');
-    for(let i = 0; i <ca.length; i++) {
+    for(let i = 0; i < ca.length; i++) {
         let c = ca[i];
         while (c.charAt(0) == ' ') {
             c = c.substring(1);
@@ -106,10 +106,22 @@ function init(){
     if(detectCookie("rgpdOK")){
         if (getCookie("rgpdOK")==1){eliminarBloqueRGPD();}
     }else{
+
+        document.querySelector(".botonRGPD__cancel").addEventListener("click", () => {
+            removeCookie();
+            bloqueRGPD.parentNode.removeChild(bloqueRGPD);
+            localStorage.acceptedCookies = 'false';
+        });
+
         document.querySelector(".botonRGPD").addEventListener("click", () => {
-        eliminarBloqueRGPD();
-        setCookie("rgpdOK",1,365);
-        })        
+            eliminarBloqueRGPD();
+            setCookie("rgpdOK",1,365);
+        });
+
+        document.querySelector(".botonRGPD__settings").addEventListener("click", () => {
+            // eliminarBloqueRGPD();
+            getCookie();
+        });
     }
 };
 
