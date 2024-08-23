@@ -3,17 +3,26 @@ const tag = document.createElement('script');
 const closeY = document.querySelector('.closeqA');
 
 
+tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = youTube.getElementsByTagName('script')[0];
+    youTube.parentNode.insertBefore(tag, firstScriptTag);
 
-
-
-
-
-// function playerVideo() {
-//     player.playVideo();
-//     done = true;
-// };
-// console.log(playerVideo())
-// playerVideo();
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+      height: '300',
+      width: '640',
+      videoId: 'w3jrzlAijKA',
+      playerVars: {
+      'autoplay': 1,
+      'loop': 1,
+      'mute': 0
+      },
+      events: {
+        'onReady': onPlayerReady,
+        'onStateChange': onPlayerStateChange
+      }
+    });
+};
 
 function onPlayerReady(event) {
     event.target.playVideo();
@@ -21,11 +30,12 @@ function onPlayerReady(event) {
 
 var done = false;
 function onPlayerStateChange(event) {
-    if (event.data == YT.PlayerState.PAUSED && !done) {
-        setTimeout(stopVideo, 24000);
+    if (event.data == YT.PlayerState.PLAYING && !done) {
+        setTimeout(stopVideo, 14000);
         done = true;
     }
 }
+
 function stopVideo() {
     player.stopVideo();
     done = true;
@@ -53,7 +63,6 @@ function youT() {
         // onYouTubeIframeAPIReady();
         // onPlayerReady;
         // player.playVideo();
-
     }
 
 youT();
@@ -69,27 +78,9 @@ closeY.addEventListener('click', () => {
 
 // ADSYOUTUBE
 
-tag.src = "https://www.youtube.com/iframe_api";
-        var firstScriptTag = youTube.getElementsByTagName('script')[0];
-        youTube.parentNode.insertBefore(tag, firstScriptTag);
 
-function onYouTubeIframeAPIReady() {
-    player = new YT.Player('player', {
-      height: '300',
-      width: '640',
-      videoId: 'w3jrzlAijKA',
-      playerVars: {
-      'autoplay': 0,
-      'loop': 1,
-      'mute': 0
-      },
-      events: {
-        'onReady': onPlayerReady,
-        'onStateChange': onPlayerStateChange
-      }
-    });
-    // console.log(player.playVideo())
-};
+
+// console.log(player.playVideo());
 
 // const url = "https://graph.facebook.com/v19.0/me?fields=id,email,name,picture{url,is_silhouette},posts{permalink_url}&access_token=";
 // const showNews = document.getElementById('news-api');
