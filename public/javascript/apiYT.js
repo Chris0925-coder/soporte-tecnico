@@ -20,7 +20,7 @@ function onYouTubeIframeAPIReady() {
         'onStateChange': onPlayerStateChange
       }
     });
-  }
+}
 
 function onPlayerReady(event) {
     event.target.playVideo();
@@ -31,7 +31,9 @@ function onPlayerStateChange(event) {
     if (event.data == YT.PlayerState.PLAYING && !done) {
         setTimeout(stopVideo, 24000);
         done = true;
-    }
+    } else if (!done) {
+      player.playVideo();
+      done = true;
 }
 function stopVideo() {
     player.stopVideo();
