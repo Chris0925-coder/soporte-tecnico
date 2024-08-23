@@ -28,13 +28,11 @@ function onPlayerReady(event) {
 
 var done = false;
 function onPlayerStateChange(event) {
-    if (event.data == YT.PlayerState.PLAYING && !done) {
+    if (event.data == YT.PlayerState.PAUSED && !done) {
+        player.playVideo();
         setTimeout(stopVideo, 24000);
         done = true;
-    } else if (!done) {
-      player.playVideo();
-      done = true;
-  }
+    }
 }
 function stopVideo() {
     player.stopVideo();
