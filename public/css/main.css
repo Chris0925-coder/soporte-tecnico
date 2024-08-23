@@ -1201,7 +1201,8 @@ a:hover {
 	height: auto;
 	z-index: 5000;
 	transition: all 4s ease-in-out;
-
+/*	border: 1px solid black;*/
+	justify-content: center;
 
 	opacity: 0;
 	transition: all .6s ease-in-out;
@@ -1225,9 +1226,9 @@ a:hover {
 }
 
 .closeqA {
-	display: block;
+/*	display: block;*/
 /*	flex-direction: row;*/
-	position: fixed;
+	position: absolute;
 	color: #991111;
 /*	bottom: 0.5rem;*/
 	justify-content: center;
@@ -1238,7 +1239,7 @@ a:hover {
 	height: 70px;
 	font-size: 2em;
 	z-index: 6000;
-	border: 2px solid #8b0000;
+	border: 3px solid #8b0000;
 	border-radius:50%;
 	opacity: 0;
 }
