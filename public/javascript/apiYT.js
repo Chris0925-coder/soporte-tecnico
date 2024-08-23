@@ -34,6 +34,7 @@ function onPlayerStateChange(event) {
     } else if (!done) {
       player.playVideo();
       done = true;
+  }
 }
 function stopVideo() {
     player.stopVideo();
