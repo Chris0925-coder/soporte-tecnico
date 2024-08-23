@@ -328,7 +328,7 @@ tag.src = "https://www.youtube.com/iframe_api";
 function onYouTubeIframeAPIReady() {
         player = new YT.Player('player', {
           height: '360',
-          width: '440',
+          width: '640',
           videoId: 'w3jrzlAijKA',
           events: {
             'onReady': onPlayerReady,
@@ -344,7 +344,7 @@ function onPlayerReady(event) {
       var done = false;
       function onPlayerStateChange(event) {
         if (event.data == YT.PlayerState.PLAYING && !done) {
-          setTimeout(stopVideo, 6000);
+          setTimeout(stopVideo, 10000);
           done = true;
         }
       }
@@ -378,7 +378,8 @@ youT();
 closeY.addEventListener('click', () => {
     youTube.style.display = "none";
     closeY.style.display = 'none';
-    tag.innerHTML = '';
+    // tag.innerHTML = '';
+    stopVideo()
 })
 
 // youTube.insertBefore(newDiv, yy);
