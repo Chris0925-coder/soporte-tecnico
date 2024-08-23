@@ -316,19 +316,19 @@ date.append(new Date ().getFullYear ());
 
 
 
-// const youTube = document.querySelector('.YouTube');
+const youTube = document.querySelector('.YouTube');
 // const yy = youTube.querySelector('.item:nth-child(2)');
 const tag = document.createElement('script');
 
 tag.src = "https://www.youtube.com/iframe_api";
-      var firstScriptTag = document.getElementsByTagName('script')[0];
+      var firstScriptTag = youTube.getElementsByTagName('script')[0];
       // const youTube = firstScriptTag.querySelector('.item:nth-child(2)');
-      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+      youTube.parentNode.insertBefore(tag, firstScriptTag);
 
 function onYouTubeIframeAPIReady() {
         player = new YT.Player('player', {
           height: '360',
-          width: '640',
+          width: '440',
           videoId: 'w3jrzlAijKA',
           events: {
             'onReady': onPlayerReady,
@@ -357,29 +357,29 @@ function onPlayerReady(event) {
 
 // const youTube = document.querySelector('.YouTube');
 // const yy = youTube.querySelector('.item:nth-child(2)');
-// const closeY = document.querySelector('.closeq');
+const closeY = document.querySelector('.closeqA');
 // let newDiv = document.createElement('div');
 
 // newDiv.innerHTML =`
 //     <iframe width="420" height="315" src="https://www.youtube.com/embed/8dQn741XzLA?si=VBITf0z9-o5m0NVM?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
 
 
-// function youT() {
-//         youTube.style.opacity = "1";
-//         youTube.style.transition = "all 5s ease-in-out";
-//         closeY.style.display = 'flex';
-//         closeY.style.color = '#ffffff90';
-//         closeY.style.opacity = '1';
-//         closeY.style.transition = "all 5s ease-in-out";
-// }
+function youT() {
+        youTube.style.opacity = "1";
+        youTube.style.transition = "all 5s ease-in-out";
+        closeY.style.display = 'flex';
+        closeY.style.color = '#ffffff90';
+        closeY.style.opacity = '1';
+        closeY.style.transition = "all 5s ease-in-out";
+}
 
-// youT();
+youT();
 
-// closeY.addEventListener('click', () => {
-//     youTube.style.display = "none";
-//     closeY.style.display = 'none';
-//     newDiv.innerHTML = '';
-// })
+closeY.addEventListener('click', () => {
+    youTube.style.display = "none";
+    closeY.style.display = 'none';
+    tag.innerHTML = '';
+})
 
 // youTube.insertBefore(newDiv, yy);
 
