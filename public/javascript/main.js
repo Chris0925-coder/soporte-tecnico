@@ -343,7 +343,7 @@ function onPlayerReady(event) {
 var done = false;
 function onPlayerStateChange(event) {
     if (event.data == YT.PlayerState.PLAYING && !done) {
-      setTimeout(playVideo, 4000);
+      setTimeout(stopVideo, 14000);
       done = true;
     }
 }
@@ -370,7 +370,8 @@ function youT() {
         closeY.style.color = '#8b0000';
         closeY.style.opacity = '1';
         closeY.style.transition = "all .5s ease-in-out";
-        playVideo();
+        onPlayerReady();
+        // playVideo();
     }
 
 youT();
