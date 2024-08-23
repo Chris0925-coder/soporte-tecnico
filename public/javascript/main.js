@@ -315,7 +315,6 @@ const date = document.querySelector('.date');
 date.append(new Date ().getFullYear ());
 
 
-
 const youTube = document.querySelector('.YouTube');
 // const yy = youTube.querySelector('.item:nth-child(2)');
 const tag = document.createElement('script');
@@ -366,11 +365,11 @@ const closeY = document.querySelector('.closeqA');
 
 function youT() {
         youTube.style.opacity = "1";
-        youTube.style.transition = "all 5s ease-in-out";
+        youTube.style.transition = "all 3s ease-in-out";
         closeY.style.display = 'flex';
-        closeY.style.color = '#ffffff90';
+        closeY.style.color = '#8b0000';
         closeY.style.opacity = '1';
-        closeY.style.transition = "all 5s ease-in-out";
+        closeY.style.transition = "all .5s ease-in-out";
 }
 
 youT();
