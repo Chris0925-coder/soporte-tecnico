@@ -348,7 +348,7 @@ if (event.data == YT.PlayerState.PLAYING && !done) {
 }
 }
 function stopVideo() {
-player.stopVideo();
+    player.stopVideo();
 }
 
 
@@ -370,7 +370,7 @@ function youT() {
         closeY.style.color = '#8b0000';
         closeY.style.opacity = '1';
         closeY.style.transition = "all .5s ease-in-out";
-        onPlayerReady(event);
+        onPlayerReady;
     }
 
 youT();
@@ -379,7 +379,7 @@ closeY.addEventListener('click', () => {
     youTube.style.display = "none";
     closeY.style.display = 'none';
     // tag.innerHTML = '';
-    stopVideo()
+    stopVideo();
 })
 
 // youTube.insertBefore(newDiv, yy);
