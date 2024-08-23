@@ -13,7 +13,7 @@ function onYouTubeIframeAPIReady() {
       playerVars: {
       'autoplay': 1,
       'loop': 1,
-      'mute': 1
+      'mute': 0
       },
       events: {
         'onReady': onPlayerReady,
@@ -35,6 +35,7 @@ function onPlayerStateChange(event) {
 }
 function stopVideo() {
     player.stopVideo();
+    done = true;
 }
 
 // ADSYOUTUBE
