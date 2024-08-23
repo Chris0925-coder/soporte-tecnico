@@ -1,6 +1,31 @@
 const youTube = document.querySelector('.YouTube');
 const tag = document.createElement('script');
 
+
+
+function youT() {
+        youTube.style.opacity = "1";
+        youTube.style.transition = "all 3s ease-in-out";
+        closeY.style.display = 'flex';
+        closeY.style.color = '#8b0000';
+        closeY.style.opacity = '1';
+        closeY.style.transition = "all .5s ease-in-out";
+        // onYouTubeIframeAPIReady();
+        // onPlayerReady;
+        // player.playVideo();
+    }
+
+youT();
+
+closeY.addEventListener('click', () => {
+    youTube.style.display = "none";
+    closeY.style.display = 'none';
+    // tag.innerHTML = '';
+    stopVideo();
+})
+
+
+
 tag.src = "https://www.youtube.com/iframe_api";
       var firstScriptTag = youTube.getElementsByTagName('script')[0];
       youTube.parentNode.insertBefore(tag, firstScriptTag);
@@ -21,15 +46,15 @@ function onYouTubeIframeAPIReady() {
       }
     });
 }
-
+player.playVideo();
 function onPlayerReady(event) {
     event.target.playVideo();
+
 }
 
 var done = false;
 function onPlayerStateChange(event) {
     if (event.data == YT.PlayerState.PAUSED && !done) {
-        player.playVideo();
         setTimeout(stopVideo, 24000);
         done = true;
     }
@@ -50,26 +75,6 @@ const closeY = document.querySelector('.closeqA');
 //     <iframe width="420" height="315" src="https://www.youtube.com/embed/8dQn741XzLA?si=VBITf0z9-o5m0NVM?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
 
 
-function youT() {
-        youTube.style.opacity = "1";
-        youTube.style.transition = "all 3s ease-in-out";
-        closeY.style.display = 'flex';
-        closeY.style.color = '#8b0000';
-        closeY.style.opacity = '1';
-        closeY.style.transition = "all .5s ease-in-out";
-        // onYouTubeIframeAPIReady();
-        // onPlayerReady;
-        // playVideo();
-    }
-
-youT();
-
-closeY.addEventListener('click', () => {
-    youTube.style.display = "none";
-    closeY.style.display = 'none';
-    // tag.innerHTML = '';
-    stopVideo();
-})
 
 // youTube.insertBefore(newDiv, yy);
 
