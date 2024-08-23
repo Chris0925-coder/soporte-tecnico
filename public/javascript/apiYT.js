@@ -7,9 +7,14 @@ tag.src = "https://www.youtube.com/iframe_api";
 
 function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
-      height: '360',
+      height: '300',
       width: '640',
       videoId: 'w3jrzlAijKA',
+      playerVars: {
+      'autoplay': 1,
+      'loop': 1,
+      'mute': 1
+      },
       events: {
         'onReady': onPlayerReady,
         'onStateChange': onPlayerStateChange
