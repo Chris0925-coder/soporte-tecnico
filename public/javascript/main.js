@@ -370,7 +370,7 @@ function youT() {
         closeY.style.color = '#8b0000';
         closeY.style.opacity = '1';
         closeY.style.transition = "all .5s ease-in-out";
-        onPlayerReady();
+        onPlayerReady;
         // playVideo();
     }
 
