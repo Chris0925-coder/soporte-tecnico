@@ -80,18 +80,27 @@ function onPlayerStateChange(event) {
 function stopVideo() {
     player.stopVideo();
     done = true;
+    localStorage.setItem('video', done);
+
 }
+// let cc = setCookie('video', done, 365);
+// document.cookie = 'video' + "=" + done + ";" + 365;
 
 // youT();
 
 closeY.addEventListener('click', () => {
+
+    stopVideo();
+
     youTube.style.display = "none";
     closeY.style.display = 'none';
     tag.innerHTML = '';
-    stopVideo();
+    
 });
 
+if (localStorage.getItem('video')) {youTube.style.display = "none";}
 
+// console.log()
 // youTube.insertBefore(newDiv, yy);
 
 // ADSYOUTUBE
