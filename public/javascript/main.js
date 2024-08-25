@@ -44,6 +44,32 @@ close.addEventListener('click', () => {
 });
 
 
+
+gtag("consent", "default", {
+  ad_storage: "denied",
+  analytics_storage: "denied",
+  functionality_storage: "denied",
+  personalization_storage: "denied",
+  security_storage: "denied",
+  ad_user_data: "denied",
+  ad_personalization: "denied",
+  wait_for_update: "500"
+});
+
+
+function consentGrantedAdStorage() {
+  gtag('consent', 'update', {
+    'ad_storage': 'granted',
+    'analytics_storage': "granted",
+    'functionality_storage': "granted",
+    'personalization_storage': "granted",
+    'security_storage': "granted",
+    'ad_user_data': "granted",
+    'ad_personalization': "granted"
+    });
+  }
+
+
 function setCookie(cname, cvalue, exdays) {
     let d = new Date();
 
@@ -113,6 +139,7 @@ function init(){
 
         document.querySelector(".botonRGPD").addEventListener("click", () => {
             eliminarBloqueRGPD();
+            consentGrantedAdStorage();
             setCookie("rgpdOK",1,365);
         });
 
@@ -313,3 +340,150 @@ let slideIndex = 0;
 const date = document.querySelector('.date');
 
 date.append(new Date ().getFullYear ());
+
+
+
+
+
+
+
+
+
+
+// const data = dataLayer.push({event: "gtm.init_consent", gtm.uniqueEventId: -1});
+
+// {
+//   event: "scroll",
+//     gtm: {
+//     uniqueEventId: 11,
+//     allowlist: undefined,
+//     blocklist: undefined,
+//     whitelist: undefined,
+//     blacklist: undefined,
+//     priorityId: 3,
+//     start: 1724540289814,
+//     scrollThreshold: 90,
+//     scrollUnits: "percent",
+//     scrollDirection: "vertical",
+//     triggers: "8"
+//   },
+//   tagTypeBlacklist: undefined,
+//   ads_data_redaction: true,
+//   eventModel: {percent_scrolled: 90}
+// }
+
+// console.log(dataLayer[0]);
+
+
+
+
+// const mockData = {
+//   command: 'default',
+//   defaultSettings: [
+//     {
+//       'region':'',
+//       'adStorage':'granted',
+//       'analyticsStorage':'granted',
+//       'functionalityStorage':'granted',
+//       'personalizationStorage':'granted',
+//       'securityStorage':'granted',
+//       'adUserData':'granted',
+//       'adPersonalization':'granted',
+//     }
+//   ],  
+// };
+
+// Call runCode to run the template's code.
+// runCode(mockData);
+
+// Verify that the tag finished successfully.
+// assertApi('gtmOnSuccess').wasCalled();
+// assertApi('setDefaultConsentState').wasCalledWith({
+//   ad_storage: 'granted',
+//   analytics_storage: 'granted',
+//   functionality_storage: 'granted',
+//   personalization_storage: 'granted',
+//   security_storage: 'granted',
+//   ad_user_data: 'granted',
+//   ad_personalization: 'granted',
+// });
+
+
+// gtag("set", {ads_data_redaction: true});
+// dataLayer.push({event: "gtm.init", gtm.uniqueEventId: 0});
+// dataLayer.push({gtm.start: 1724541140150, event: "gtm.js", gtm.uniqueEventId: 1});
+// dataLayer.push({event: "gtm.js", gtm.start: 1724541140152, gtm.uniqueEventId: 7, gtm.priorityId: undefined});
+// dataLayer.push({event: "gtm.dom", gtm.uniqueEventId: 9});
+// dataLayer.push({event: "gtm.load", gtm.uniqueEventId: 10});
+// dataLayer.push({
+//   event: "gtm.video",
+//   gtm.element: "HTMLIFrameElement: html > body > main.demoPage-main > div.YouTube > iframe#player",
+//   gtm.elementClasses: "",
+//   gtm.elementId: "player",
+//   gtm.elementTarget: "",
+//   gtm.triggers: "6",
+//   gtm.elementUrl: "https://www.youtube.com/embed/w3jrzlAijKA?autoplay=1&loop=1&mute=0&enablejsapi" +
+//                   "=1&origin=https%3A%2F%2Fwww.webdev.fun&widgetid=1",
+//   gtm.videoProvider: "youtube",
+//   gtm.videoStatus: "start",
+//   gtm.videoUrl: "https://www.youtube.com/watch?v=w3jrzlAijKA",
+//   gtm.videoTitle: "@CATHERINE LO SOÑASTE",
+//   gtm.videoDuration: 168,
+//   gtm.videoCurrentTime: 0,
+//   gtm.videoElapsedTime: 0,
+//   gtm.videoPercent: 0,
+//   gtm.videoVisible: true,
+//   gtm.uniqueEventId: 11
+// });
+// dataLayer.push({
+//   event: "video_start",
+//   eventModel: {
+//     video_current_time: 0,
+//     video_duration: 168,
+//     video_percent: 0,
+//     video_provider: "youtube",
+//     video_title: "@CATHERINE LO SOÑASTE",
+//     video_url: "https://www.youtube.com/watch?v=w3jrzlAijKA",
+//     visible: true
+//   },
+//   gtm.uniqueEventId: 11,
+//   gtm.priorityId: 3
+// });
+// dataLayer.push({
+//   event: "gtm.video",
+//   gtm.element: "HTMLIFrameElement: html > body > main.demoPage-main > div.YouTube > iframe#player",
+//   gtm.elementClasses: "",
+//   gtm.elementId: "player",
+//   gtm.elementTarget: "",
+//   gtm.triggers: "6",
+//   gtm.elementUrl: "https://www.youtube.com/embed/w3jrzlAijKA?autoplay=1&loop=1&mute=0&enablejsapi" +
+//                   "=1&origin=https%3A%2F%2Fwww.webdev.fun&widgetid=1",
+//   gtm.videoProvider: "youtube",
+//   gtm.videoStatus: "progress",
+//   gtm.videoUrl: "",
+//   gtm.videoTitle: "",
+//   gtm.videoDuration: 0,
+//   gtm.videoCurrentTime: 0,
+//   gtm.videoElapsedTime: 0,
+//   gtm.videoPercent: 10,
+//   gtm.videoVisible: false,
+//   gtm.uniqueEventId: 12
+// });
+// dataLayer.push({
+//   event: "video_progress",
+//   eventModel: {
+//     video_current_time: 0,
+//     video_duration: 0,
+//     video_percent: 10,
+//     video_provider: "youtube",
+//     video_title: "",
+//     video_url: "",
+//     visible: false
+//   },
+//   gtm.uniqueEventId: 12,
+//   gtm.priorityId: 4
+// });
+
+
+
+
