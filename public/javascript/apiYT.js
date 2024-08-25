@@ -7,41 +7,49 @@ tag.src = "https://www.youtube.com/iframe_api";
     var firstScriptTag = youTube.getElementsByTagName('script')[0];
     youTube.parentNode.insertBefore(tag, firstScriptTag);
 
+
+
+
 function onYouTubeIframeAPIReady() {
+
     player = new YT.Player('player', {
       height: '300',
       width: '640',
       videoId: 'w3jrzlAijKA',
       playerVars: {
       'autoplay': 1,
-      'loop': 1,
-      'mute': 0
+      'loop': 0,
+      'mute': 1
       },
       events: {
         'onReady': onPlayerReady,
         'onStateChange': onPlayerStateChange
       }
     });
+    
+    youTube.style.opacity = "1";
+    youTube.style.transition = "all 3s ease-in-out";
+    closeY.style.display = 'flex';
+    closeY.style.color = '#8b0000';
+    closeY.style.opacity = '1';
+    closeY.style.transition = "all .5s ease-in-out";
+};
 
-
-
-
-    function onPlayerReady(event) {
-    event.target.playVideo();
-    }
-
-    var done = false;
-    function onPlayerStateChange(event) {
-        if (event.data == YT.PlayerState.PLAYING && !done) {
-            setTimeout(stopVideo, 14000);
-            done = true;
-        }
-    }
-
-    function stopVideo() {
-        player.stopVideo();
-        done = true;
-    }
+// function onYouTubeIframeAPIReady() {
+    // player = new YT.Player('player', {
+    //   height: '300',
+    //   width: '640',
+    //   videoId: 'w3jrzlAijKA',
+    //   playerVars: {
+    //   'autoplay': 1,
+    //   'loop': 1,
+    //   'mute': 0
+    //   },
+    //   events: {
+    //     'onReady': onPlayerReady,
+    //     'onStateChange': onPlayerStateChange
+    //   }
+    // });
 
     // ADSYOUTUBE
 
@@ -53,30 +61,35 @@ function onYouTubeIframeAPIReady() {
 
     // newDiv.innerHTML =`
     //     <iframe width="420" height="315" src="https://www.youtube.com/embed/8dQn741XzLA?si=VBITf0z9-o5m0NVM?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
+// };
 
 
-    function youT() {
-            youTube.style.opacity = "1";
-            youTube.style.transition = "all 3s ease-in-out";
-            closeY.style.display = 'flex';
-            closeY.style.color = '#8b0000';
-            closeY.style.opacity = '1';
-            closeY.style.transition = "all .5s ease-in-out";
-            // onYouTubeIframeAPIReady();
-            // onPlayerReady;
-            // player.playVideo();
-        }
+function onPlayerReady(event) {
+    event.target.playVideo();
+}
 
-    youT();
+var done = false;
 
-    closeY.addEventListener('click', () => {
-        youTube.style.display = "none";
-        closeY.style.display = 'none';
-        // tag.innerHTML = '';
-        stopVideo();
-    });
-};
+function onPlayerStateChange(event) {
+    if (event.data == YT.PlayerState.PLAYING && !done) {
+        setTimeout(stopVideo, 14000);
+        done = true;
+    }
+}
 
+function stopVideo() {
+    player.stopVideo();
+    done = true;
+}
+
+// youT();
+
+closeY.addEventListener('click', () => {
+    youTube.style.display = "none";
+    closeY.style.display = 'none';
+    tag.innerHTML = '';
+    stopVideo();
+});
 
 
 // youTube.insertBefore(newDiv, yy);

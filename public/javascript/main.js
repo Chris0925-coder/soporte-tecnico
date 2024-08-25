@@ -166,6 +166,14 @@ function init(){
         document.querySelector(".botonRGPD").addEventListener("click", () => {
             eliminarBloqueRGPD();
             consentGrantedAdStorage();
+            consentGrantedAnalyticStorage();
+            consentGrantedFunStorage();
+            consentGrantedPersonaStorage();
+            consentGrantedSecStorage();
+            consentGrantedData();
+            consentGrantedAdPerson();
+            gtag("set", {ads_data_redaction: true});
+
             setCookie("rgpdOK",1,365);
         });
 
