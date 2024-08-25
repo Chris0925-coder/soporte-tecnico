@@ -46,30 +46,67 @@ close.addEventListener('click', () => {
 
 
 gtag("consent", "default", {
-  ad_storage: "denied",
-  analytics_storage: "denied",
-  functionality_storage: "denied",
-  personalization_storage: "denied",
-  security_storage: "denied",
-  ad_user_data: "denied",
-  ad_personalization: "denied",
-  wait_for_update: "500"
+  'ad_storage': "denied",
+  'analytics_storage': "denied",
+  'functionality_storage': "denied",
+  'personalization_storage': "denied",
+  'security_storage': "denied",
+  'ad_user_data': "denied",
+  'ad_personalization': "denied",
+  'wait_for_update': "500"
 });
 
 
 function consentGrantedAdStorage() {
   gtag('consent', 'update', {
-    ad_storage: 'granted',
-    analytics_storage: "granted",
-    functionality_storage: "granted",
-    personalization_storage: "granted",
-    security_storage: "granted",
-    ad_user_data: "granted",
-    ad_personalization: "granted"
+    'ad_storage': 'granted',
+    // 'analytics_storage': "granted",
+    // 'functionality_storage': "granted",
+    // 'personalization_storage': "granted",
+    // 'security_storage': "granted",
+    // 'ad_user_data': "granted",
+    // 'ad_personalization': "granted"
     });
+}
 
-  gtag("set", {ads_data_redaction: true});
-  }
+function consentGrantedAnalyticStorage() {
+  gtag('consent', 'update', {
+    'analytics_storage': "granted",
+    });
+}
+
+function consentGrantedFunStorage() {
+  gtag('consent', 'update', {
+    'functionality_storage': "granted",
+    });
+}
+
+function consentGrantedPersonaStorage() {
+  gtag('consent', 'update', {
+    'personalization_storage': "granted",
+    });
+}
+
+function consentGrantedSecStorage() {
+  gtag('consent', 'update', {
+    'security_storage': "granted",
+    });
+}
+
+function consentGrantedData() {
+  gtag('consent', 'update', {
+    'ad_user_data': "granted",
+    });
+}
+
+function consentGrantedAdPerson() {
+  gtag('consent', 'update', {
+    'ad_personalization': "granted"
+    });
+}
+
+gtag("set", {ads_data_redaction: true});
+ 
 
 
 function setCookie(cname, cvalue, exdays) {
