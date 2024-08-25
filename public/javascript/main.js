@@ -59,14 +59,16 @@ gtag("consent", "default", {
 
 function consentGrantedAdStorage() {
   gtag('consent', 'update', {
-    'ad_storage': 'granted',
-    'analytics_storage': "granted",
-    'functionality_storage': "granted",
-    'personalization_storage': "granted",
-    'security_storage': "granted",
-    'ad_user_data': "granted",
-    'ad_personalization': "granted"
+    ad_storage: 'granted',
+    analytics_storage: "granted",
+    functionality_storage: "granted",
+    personalization_storage: "granted",
+    security_storage: "granted",
+    ad_user_data: "granted",
+    ad_personalization: "granted"
     });
+
+  gtag("set", {ads_data_redaction: true});
   }
 
 
