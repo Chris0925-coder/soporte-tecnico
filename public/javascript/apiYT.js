@@ -11,7 +11,6 @@ tag.src = "https://www.youtube.com/iframe_api";
 
 
 function onYouTubeIframeAPIReady() {
-    var player;
     player = new YT.Player('player', {
       height: '300',
       width: '640',
@@ -75,18 +74,8 @@ function onPlayerStateChange(event) {
         setTimeout(stopVideo, 20000);
         done = true;
     }
-}
+};
 
-function stopVideo() {
-    player.stopVideo();
-    done = true;
-    localStorage.setItem('video', done);
-
-}
-// let cc = setCookie('video', done, 365);
-// document.cookie = 'video' + "=" + done + ";" + 365;
-
-// youT();
 
 closeY.addEventListener('click', () => {
 
@@ -94,9 +83,20 @@ closeY.addEventListener('click', () => {
 
     youTube.style.display = "none";
     closeY.style.display = 'none';
-    tag.innerHTML = '';
+    // tag.innerHTML = '';
     
 });
+
+
+function stopVideo() {
+    player.stopVideo();
+    done = true;
+    localStorage.setItem('video', done);
+}
+// let cc = setCookie('video', done, 365);
+// document.cookie = 'video' + "=" + done + ";" + 365;
+
+// youT();
 
 if (localStorage.getItem('video')) {youTube.style.display = "none";}
 
