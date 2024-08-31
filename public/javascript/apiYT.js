@@ -65,6 +65,7 @@ function onYouTubeIframeAPIReady() {
 
 
 function onPlayerReady(event) {
+    event.target.setVolume(100);
     event.target.playVideo();
 }
 
@@ -72,7 +73,7 @@ var done = false;
 
 function onPlayerStateChange(event) {
     if (event.data == YT.PlayerState.PLAYING && !done) {
-        setTimeout(stopVideo, 14000);
+        // setTimeout(stopVideo, 14000);
         done = true;
     }
 }
