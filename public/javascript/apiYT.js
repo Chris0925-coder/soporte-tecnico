@@ -18,13 +18,11 @@ function onYouTubeIframeAPIReady() {
       videoId: 'w3jrzlAijKA',
       playerVars: {
       'autoplay': 1,
-      'loop': 0,
-      'mute': 0
+      'loop': 0
       },
       events: {
         'onReady': onPlayerReady,
-        'onStateChange': onPlayerStateChange,
-        'onError': onPlayerError
+        'onStateChange': onPlayerStateChange
       }
     });
     
@@ -74,7 +72,7 @@ var done = false;
 
 function onPlayerStateChange(event) {
     if (event.data == YT.PlayerState.PLAYING && !done) {
-        // setTimeout(stopVideo, 14000);
+        setTimeout(stopVideo, 20000);
         done = true;
     }
 }
