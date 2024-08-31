@@ -11,7 +11,7 @@ tag.src = "https://www.youtube.com/iframe_api";
 
 
 function onYouTubeIframeAPIReady() {
-
+    var player;
     player = new YT.Player('player', {
       height: '300',
       width: '640',
@@ -19,11 +19,12 @@ function onYouTubeIframeAPIReady() {
       playerVars: {
       'autoplay': 1,
       'loop': 0,
-      'mute': 1
+      'mute': 0
       },
       events: {
         'onReady': onPlayerReady,
-        'onStateChange': onPlayerStateChange
+        'onStateChange': onPlayerStateChange,
+        'onError': onPlayerError
       }
     });
     
