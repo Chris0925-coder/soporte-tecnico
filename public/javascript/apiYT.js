@@ -17,7 +17,8 @@ function onYouTubeIframeAPIReady() {
       videoId: 'w3jrzlAijKA',
       playerVars: {
       'autoplay': 1,
-      'loop': 0
+      'loop': 0,
+      'mute': 1
       },
       events: {
         'onReady': onPlayerReady,
@@ -63,7 +64,7 @@ function onYouTubeIframeAPIReady() {
 
 
 function onPlayerReady(event) {
-    event.target.setVolume(100);
+    // event.target.setVolume(100);
     event.target.playVideo();
 }
 
