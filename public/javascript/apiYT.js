@@ -83,7 +83,7 @@ closeY.addEventListener('click', () => {
 
     youTube.style.display = "none";
     closeY.style.display = 'none';
-    // tag.innerHTML = '';
+    tag.innerHTML = '';
     
 });
 
