@@ -158,14 +158,18 @@ function init(){
 
         document.querySelector(".botonRGPD").addEventListener("click", () => {
             eliminarBloqueRGPD();
-            // consentGrantedAdStorage();
-            // consentGrantedAnalyticStorage();
-            // consentGrantedFunStorage();
-            // consentGrantedPersonaStorage();
-            // consentGrantedSecStorage();
-            // consentGrantedData();
-            // consentGrantedAdPerson();
-            // gtag("set", {ads_data_redaction: true});
+
+            gtag("consent", "update", {
+              'ad_storage': "granted",
+              'analytics_storage': "granted",
+              'functionality_storage': "granted",
+              'personalization_storage': "granted",
+              'security_storage': "granted",
+              'ad_user_data': "granted",
+              'ad_personalization': "granted",
+              'wait_for_update': "500"
+            });
+            gtag("set", {ads_data_redaction: true});
 
             setCookie("rgpdOK",1,365);
         });
@@ -180,7 +184,6 @@ function eliminarBloqueRGPD(){
     bloqueRGPD.parentNode.removeChild(bloqueRGPD);
     localStorage.acceptedCookies = 'true';
 };
-
 
 let n = 0;
 let o = 0;
@@ -506,7 +509,3 @@ date.append(new Date ().getFullYear ());
 //   gtm.uniqueEventId: 12,
 //   gtm.priorityId: 4
 // });
-
-
-
-
