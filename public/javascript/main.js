@@ -99,7 +99,7 @@ close.addEventListener('click', () => {
 //     });
 // }
 
-// gtag("set", {ads_data_redaction: true});
+gtag("set", {ads_data_redaction: true});
  
 
 
@@ -171,7 +171,7 @@ function init(){
 
         document.querySelector(".botonRGPD").addEventListener("click", () => {
             eliminarBloqueRGPD();
-
+            
             gtag("consent", "update", {
               'ad_storage': "granted",
               'analytics_storage': "granted",
@@ -182,8 +182,6 @@ function init(){
               'ad_personalization': "granted",
               'wait_for_update': "500"
             });
-            gtag("set", {ads_data_redaction: true});
-
             setCookie("rgpdOK",1,365);
         });
 
