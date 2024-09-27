@@ -1,3 +1,16 @@
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments)}
+
+gtag("consent", "default", {
+      'ad_storage': "denied",
+      'analytics_storage': "denied",
+      'functionality_storage': "denied",
+      'personalization_storage': "denied",
+      'security_storage': "denied",
+      'ad_user_data': "denied",
+      'ad_personalization': "denied",
+      'wait_for_update': "500"
+});
 // $('body').animate({'opacity': '1'}, 2000);
 // document.addEventListener('DOMContentLoaded', () => {
 //     const elementosCarousel = document.querySelectorAll('.carousel');
