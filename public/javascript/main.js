@@ -11,6 +11,8 @@ gtag("consent", "default", {
       'ad_personalization': "denied",
       'wait_for_update': "500"
 });
+
+console.log(gtag.analytics_storage);
 // $('body').animate({'opacity': '1'}, 2000);
 // document.addEventListener('DOMContentLoaded', () => {
 //     const elementosCarousel = document.querySelectorAll('.carousel');
@@ -171,7 +173,7 @@ function init(){
 
         document.querySelector(".botonRGPD").addEventListener("click", () => {
             eliminarBloqueRGPD();
-            
+
             gtag("consent", "update", {
               'ad_storage': "granted",
               'analytics_storage': "granted",
