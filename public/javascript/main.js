@@ -2,6 +2,8 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments)};
 gtag('config', 'GTM-T6ZPPJSN');
 gtag('js', new Date());
+
+console.log(dataLayer);
 // gtag("consent", "default", {
 //               'ad_storage': "granted",
 //               'analytics_storage': "granted",
@@ -23,7 +25,7 @@ gtag("consent", "default", {
       'wait_for_update': "500"
 });
 
-// gtag("set", {ads_data_redaction: true});
+gtag("set", {ads_data_redaction: true});
 // $('body').animate({'opacity': '1'}, 2000);
 // document.addEventListener('DOMContentLoaded', () => {
 //     const elementosCarousel = document.querySelectorAll('.carousel');
@@ -196,7 +198,7 @@ function init(){
                   'ad_personalization': "granted",
                   'wait_for_update': "500"
                 });
-             // gtag("set", {ads_data_redaction: true});
+             gtag("set", {ads_data_redaction: true});
 
                         
         });
@@ -403,9 +405,9 @@ date.append(new Date ().getFullYear ());
 
 
 
-// const data = dataLayer.push({event: "gtm.init_consent", gtm.uniqueEventId: -1});
+// dataLayer.push({event, "gtm.init_consent", gtm.uniqueEventId: -1
 
-// {
+
 //   event: "scroll",
 //     gtm: {
 //     uniqueEventId: 11,
@@ -423,8 +425,8 @@ date.append(new Date ().getFullYear ());
 //   tagTypeBlacklist: undefined,
 //   ads_data_redaction: true,
 //   eventModel: {percent_scrolled: 90}
-// }
 
+// });
 // console.log(dataLayer[0]);
 
 
@@ -446,7 +448,7 @@ date.append(new Date ().getFullYear ());
 //   ],  
 // };
 
-// Call runCode to run the template's code.
+// // Call runCode to run the template's code.
 // runCode(mockData);
 
 // Verify that the tag finished successfully.
