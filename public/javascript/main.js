@@ -1,6 +1,16 @@
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments)}
-
+// window.dataLayer = window.dataLayer || [];
+// function gtag(){dataLayer.push(arguments)};
+// gtag('config', 'analytics_storage')
+// gtag("consent", "default", {
+//               'ad_storage': "granted",
+//               'analytics_storage': "granted",
+//               'functionality_storage': "granted",
+//               'personalization_storage': "granted",
+//               'security_storage': "granted",
+//               'ad_user_data': "granted",
+//               'ad_personalization': "granted",
+//               'wait_for_update': "500"
+//             });
 // gtag("consent", "default", {
 //       'ad_storage': "denied",
 //       'analytics_storage': "denied",
@@ -11,6 +21,8 @@ function gtag(){dataLayer.push(arguments)}
 //       'ad_personalization': "denied",
 //       'wait_for_update': "500"
 // });
+
+// gtag("set", {ads_data_redaction: true});
 // $('body').animate({'opacity': '1'}, 2000);
 // document.addEventListener('DOMContentLoaded', () => {
 //     const elementosCarousel = document.querySelectorAll('.carousel');
@@ -147,17 +159,7 @@ function detectCookie(cname) {
 
 $(document).ready(function() {
     init();
-    gtag("consent", "update", {
-          'ad_storage': "granted",
-          'analytics_storage': "granted",
-          'functionality_storage': "granted",
-          'personalization_storage': "granted",
-          'security_storage': "granted",
-          'ad_user_data': "granted",
-          'ad_personalization': "granted",
-          'wait_for_update': "500"
-        });
-    gtag("set", {ads_data_redaction: true});
+    console.log(dataLayer);
 });
 
 function init(){
@@ -174,11 +176,29 @@ function init(){
             removeCookie();
             bloqueRGPD.parentNode.removeChild(bloqueRGPD);
             localStorage.acceptedCookies = 'false';
+            history.back();
         });
 
         document.querySelector(".botonRGPD").addEventListener("click", () => {
+
             eliminarBloqueRGPD();
+
             setCookie("rgpdOK",1,365);
+
+            
+            gtag("consent", "update", {
+                  'ad_storage': "granted",
+                  'analytics_storage': "granted",
+                  'functionality_storage': "granted",
+                  'personalization_storage': "granted",
+                  'security_storage': "granted",
+                  'ad_user_data': "granted",
+                  'ad_personalization': "granted",
+                  'wait_for_update': "500"
+                });
+             gtag("set", {ads_data_redaction: true});
+
+                        
         });
 
         // document.querySelector(".botonRGPD__settings").addEventListener("click", () => {
