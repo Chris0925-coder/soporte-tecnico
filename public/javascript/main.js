@@ -1,17 +1,17 @@
 window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments)}
+function gtag(){dataLayer.push(arguments)
+console.log(dataLayer)}
 
-gtag("consent", "default", {
-      'ad_storage': "denied",
-      'analytics_storage': "denied",
-      'functionality_storage': "denied",
-      'personalization_storage': "denied",
-      'security_storage': "denied",
-      'ad_user_data': "denied",
-      'ad_personalization': "denied",
-      'wait_for_update': "500"
-});
-
+// gtag("consent", "default", {
+//       'ad_storage': "denied",
+//       'analytics_storage': "denied",
+//       'functionality_storage': "denied",
+//       'personalization_storage': "denied",
+//       'security_storage': "denied",
+//       'ad_user_data': "denied",
+//       'ad_personalization': "denied",
+//       'wait_for_update': "500"
+// });
 // $('body').animate({'opacity': '1'}, 2000);
 // document.addEventListener('DOMContentLoaded', () => {
 //     const elementosCarousel = document.querySelectorAll('.carousel');
@@ -151,6 +151,17 @@ function detectCookie(cname) {
 
 $(document).ready(function() {
     init();
+    gtag("consent", "update", {
+              'ad_storage': "granted",
+              'analytics_storage': "granted",
+              'functionality_storage': "granted",
+              'personalization_storage': "granted",
+              'security_storage': "granted",
+              'ad_user_data': "granted",
+              'ad_personalization': "granted",
+              'wait_for_update': "500"
+            });
+    gtag("set", {ads_data_redaction: true});
 });
 
 function init(){
@@ -171,19 +182,6 @@ function init(){
 
         document.querySelector(".botonRGPD").addEventListener("click", () => {
             eliminarBloqueRGPD();
-
-            gtag("consent", "update", {
-              'ad_storage': "granted",
-              'analytics_storage': "granted",
-              'functionality_storage': "granted",
-              'personalization_storage': "granted",
-              'security_storage': "granted",
-              'ad_user_data': "granted",
-              'ad_personalization': "granted",
-              'wait_for_update': "500"
-            });
-
-            gtag("set", {ads_data_redaction: true});
             setCookie("rgpdOK",1,365);
         });
 

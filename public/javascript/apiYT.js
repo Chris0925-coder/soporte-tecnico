@@ -3,7 +3,7 @@ const youTube = document.querySelector('.YouTube');
 const tag = document.createElement('script');
 const closeY = document.querySelector('.closeqA');
 const cancel=document.querySelector(".botonRGPD__cancel");
-
+    
 cancel.addEventListener('click', () => {
     gtag("consent", "default", {
       'ad_storage': "denied",
@@ -18,18 +18,7 @@ cancel.addEventListener('click', () => {
     window.history.back();
 });
 document.querySelector(".botonRGPD").addEventListener("click", () => {
-    gtag("consent", "update", {
-              'ad_storage': "granted",
-              'analytics_storage': "granted",
-              'functionality_storage': "granted",
-              'personalization_storage': "granted",
-              'security_storage': "granted",
-              'ad_user_data': "granted",
-              'ad_personalization': "granted",
-              'wait_for_update': "500"
-            });
 
-    gtag("set", {ads_data_redaction: true});
     tag.src = "https://www.youtube.com/iframe_api";
     let firstScriptTag = youTube.getElementsByTagName('script')[0];
     youTube.parentNode.insertBefore(tag, firstScriptTag);
