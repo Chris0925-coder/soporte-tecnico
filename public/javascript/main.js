@@ -12,7 +12,6 @@ gtag("consent", "default", {
       'wait_for_update': "500"
 });
 
-console.log(gtag.analytics_storage);
 // $('body').animate({'opacity': '1'}, 2000);
 // document.addEventListener('DOMContentLoaded', () => {
 //     const elementosCarousel = document.querySelectorAll('.carousel');
@@ -101,7 +100,6 @@ close.addEventListener('click', () => {
 //     });
 // }
 
-gtag("set", {ads_data_redaction: true});
  
 
 
@@ -184,6 +182,8 @@ function init(){
               'ad_personalization': "granted",
               'wait_for_update': "500"
             });
+
+            gtag("set", {ads_data_redaction: true});
             setCookie("rgpdOK",1,365);
         });
 
