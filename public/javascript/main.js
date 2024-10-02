@@ -1,6 +1,7 @@
-// window.dataLayer = window.dataLayer || [];
-// function gtag(){dataLayer.push(arguments)};
-// gtag('config', 'analytics_storage')
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments)};
+gtag('config', 'GTM-T6ZPPJSN');
+gtag('js', new Date());
 // gtag("consent", "default", {
 //               'ad_storage': "granted",
 //               'analytics_storage': "granted",
@@ -159,7 +160,6 @@ function detectCookie(cname) {
 
 $(document).ready(function() {
     init();
-    console.log(dataLayer);
 });
 
 function init(){
@@ -185,8 +185,8 @@ function init(){
 
             setCookie("rgpdOK",1,365);
 
-            
-            gtag("consent", "update", {
+
+            gtag("consent", "default", {
                   'ad_storage': "granted",
                   'analytics_storage': "granted",
                   'functionality_storage': "granted",
@@ -202,7 +202,7 @@ function init(){
         });
 
         // document.querySelector(".botonRGPD__settings").addEventListener("click", () => {
-        //     getCookie();
+        //     gtag('config', 'GTM-T6ZPPJSN');      
         // });
     }
 };
