@@ -12,16 +12,16 @@ gtag('js', new Date());
 //               'ad_personalization': "granted",
 //               'wait_for_update': "500"
 //             });
-// gtag("consent", "default", {
-//       'ad_storage': "denied",
-//       'analytics_storage': "denied",
-//       'functionality_storage': "denied",
-//       'personalization_storage': "denied",
-//       'security_storage': "denied",
-//       'ad_user_data': "denied",
-//       'ad_personalization': "denied",
-//       'wait_for_update': "500"
-// });
+gtag("consent", "default", {
+      'ad_storage': "denied",
+      'analytics_storage': "denied",
+      'functionality_storage': "denied",
+      'personalization_storage': "denied",
+      'security_storage': "denied",
+      'ad_user_data': "denied",
+      'ad_personalization': "denied",
+      'wait_for_update': "500"
+});
 
 // gtag("set", {ads_data_redaction: true});
 // $('body').animate({'opacity': '1'}, 2000);
@@ -186,7 +186,7 @@ function init(){
             setCookie("rgpdOK",1,365);
 
 
-            gtag("consent", "default", {
+            gtag("consent", "update", {
                   'ad_storage': "granted",
                   'analytics_storage': "granted",
                   'functionality_storage': "granted",
@@ -196,7 +196,7 @@ function init(){
                   'ad_personalization': "granted",
                   'wait_for_update': "500"
                 });
-             gtag("set", {ads_data_redaction: true});
+             // gtag("set", {ads_data_redaction: true});
 
                         
         });
