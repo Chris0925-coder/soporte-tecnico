@@ -1,6 +1,5 @@
 window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments)
-console.log(dataLayer)}
+function gtag(){dataLayer.push(arguments)}
 
 // gtag("consent", "default", {
 //       'ad_storage': "denied",
@@ -100,9 +99,6 @@ close.addEventListener('click', () => {
 //     });
 // }
 
- 
-
-
 function setCookie(cname, cvalue, exdays) {
     let d = new Date();
 
@@ -152,15 +148,15 @@ function detectCookie(cname) {
 $(document).ready(function() {
     init();
     gtag("consent", "update", {
-              'ad_storage': "granted",
-              'analytics_storage': "granted",
-              'functionality_storage': "granted",
-              'personalization_storage': "granted",
-              'security_storage': "granted",
-              'ad_user_data': "granted",
-              'ad_personalization': "granted",
-              'wait_for_update': "500"
-            });
+          'ad_storage': "granted",
+          'analytics_storage': "granted",
+          'functionality_storage': "granted",
+          'personalization_storage': "granted",
+          'security_storage': "granted",
+          'ad_user_data': "granted",
+          'ad_personalization': "granted",
+          'wait_for_update': "500"
+        });
     gtag("set", {ads_data_redaction: true});
 });
 
