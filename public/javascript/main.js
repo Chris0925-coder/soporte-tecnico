@@ -1,9 +1,8 @@
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments)};
-gtag('config', 'GTM-T6ZPPJSN');
-gtag('js', new Date());
+// window.dataLayer = window.dataLayer || [];
+// function gtag(){dataLayer.push(arguments)};
+// gtag('config', 'GTM-T6ZPPJSN');
+// gtag('js', new Date());
 
-console.log(dataLayer);
 // gtag("consent", "default", {
 //               'ad_storage': "granted",
 //               'analytics_storage': "granted",
@@ -14,18 +13,18 @@ console.log(dataLayer);
 //               'ad_personalization': "granted",
 //               'wait_for_update': "500"
 //             });
-gtag("consent", "default", {
-      'ad_storage': "denied",
-      'analytics_storage': "denied",
-      'functionality_storage': "denied",
-      'personalization_storage': "denied",
-      'security_storage': "denied",
-      'ad_user_data': "denied",
-      'ad_personalization': "denied",
-      'wait_for_update': "500"
-});
+// gtag("consent", "default", {
+//       'ad_storage': "denied",
+//       'analytics_storage': "denied",
+//       'functionality_storage': "denied",
+//       'personalization_storage': "denied",
+//       'security_storage': "denied",
+//       'ad_user_data': "denied",
+//       'ad_personalization': "denied",
+//       'wait_for_update': "500"
+// });
 
-gtag("set", {ads_data_redaction: true});
+// gtag("set", {ads_data_redaction: true});
 // $('body').animate({'opacity': '1'}, 2000);
 // document.addEventListener('DOMContentLoaded', () => {
 //     const elementosCarousel = document.querySelectorAll('.carousel');
