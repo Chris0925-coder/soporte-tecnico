@@ -10,7 +10,6 @@ const navBoton = document.querySelector(".navbar-toggler");
 const navLink = document.querySelector(".off");
 const close = document.querySelector(".btn-close");
 
-
 navBoton.addEventListener('click', () => {
     navLink.classList.toggle("hidden-nav");
 });
@@ -18,8 +17,6 @@ navBoton.addEventListener('click', () => {
 close.addEventListener('click', () => {
     navLink.classList.toggle("hidden-nav");
 });
-
-
 
 // const form = document.getElementById("formula");
 // let email = document.querySelector("[name=email]").value;
@@ -33,12 +30,6 @@ close.addEventListener('click', () => {
 // if (!reCaptcha) {
 //     btn.style.display = 
 // }
-
-
-
-
-
-
 
 // console.log(form);
 // console.log(email.length);
@@ -60,11 +51,6 @@ close.addEventListener('click', () => {
 //     let y = x.includes("@");
 //     let m = m.includes(v);
 
-
-
-
-
-
 // btn.addEventListener("click", () => {
 //     setTimeout(
 //     window.location.href = "https://christech507.000webhostapp.com", 5000);
@@ -81,10 +67,6 @@ close.addEventListener('click', () => {
     //     return alert("¡Gracias por su comentario!");
     // }
 // });
-
-
-
-
 
 // let ma = "cguardia@gmail.com";
 // array = ma.split("");
@@ -115,8 +97,6 @@ close.addEventListener('click', () => {
 //           'sitekey' : '6Le1UBwpAAAAAHzagcQvjzbPGK2g7TvoJiLyNSO5'
 //         });
 
-
-
 // function enabledSubmit(a) {
 //     if (email.focus != "") {
 //         a.style.display = "flex";
@@ -125,12 +105,7 @@ close.addEventListener('click', () => {
 
 // enabledSubmit(btn);
 
-
-
-
 // const form = document.querySelector('#formula');
-
-
 
 function submitUserForm() {
     var response = grecaptcha.getResponse();
