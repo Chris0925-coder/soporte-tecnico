@@ -170,7 +170,20 @@ function init(){
     }
 
     if(detectCookie("rgpdOK")){
-        if (getCookie("rgpdOK")==1){eliminarBloqueRGPD();}
+        if (getCookie("rgpdOK")==1){
+            eliminarBloqueRGPD();
+            gtag("consent", "update", {
+                  'ad_storage': "granted",
+                  'analytics_storage': "granted",
+                  'functionality_storage': "granted",
+                  'personalization_storage': "granted",
+                  'security_storage': "granted",
+                  'ad_user_data': "granted",
+                  'ad_personalization': "granted",
+                  'wait_for_update': "500"
+                });
+             gtag("set", {ads_data_redaction: true});
+        }
     }else{
 
         document.querySelector(".botonRGPD__cancel").addEventListener("click", () => {
