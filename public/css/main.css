@@ -565,6 +565,7 @@ a:hover {
 	margin: .1em auto;
 	width: auto;
 	height: auto;
+	justify-content:space-around;
 /*	text-align: left;*/
 }
 
