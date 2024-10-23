@@ -673,9 +673,9 @@ a:hover {
 .infoweb__lists {
 	list-style: none;
 	object-position: bottom;
-	justify-items: flex-end;
-	place-items:end;
-	place-content: end;
+/*	justify-items: flex-end;*/
+/*	place-items:end;*/
+/*	place-content: end;*/
 	text-align: center;
 	padding-left: 0;
 	height: 70px;
