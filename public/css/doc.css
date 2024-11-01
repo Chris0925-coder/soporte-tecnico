@@ -1,4 +1,6 @@
 div {
+	display: grid;
+	place-content: center;
 	padding: .2em;
 	width: auto;
 	height: 100lvh;
