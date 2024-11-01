@@ -2,14 +2,14 @@ div {
 	display: grid;
 	place-content: center;
 	padding: .2em;
-	width: auto;
+	width: 100%;
 	height: 100lvh;
 }
 
 div iframe {
 	display: flex; 
 	justify-content: center; 
-	margin: auto;
+	margin: 0;
 	width: 100%;
 	min-height: 600px;
 }
