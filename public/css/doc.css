@@ -7,7 +7,8 @@
 div {
 	padding: .2em;
 	width: auto;
-	height: 100%;
+	height: auto;
+	overflow: auto;
 }
 
 div iframe {
@@ -16,5 +17,5 @@ div iframe {
     align-self: center; 
 	margin: 40px auto;
 	width: 100%;
-    min-height: 450px;
+	height: 85dvh;
 }
