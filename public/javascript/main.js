@@ -70,7 +70,6 @@ close.addEventListener('click', () => {
     navLink.classList.toggle("hidden-nav");
 });
 
-const instTK = 'IGQWRQOXo2VWRaTzA4ak5PRXZALaHpLVTh3elJQemh3VTFlSzV4OW5ndGRYQlZAobWVaVUpIeEgyQXVzNUpjSjltUzA3OGRWM3p3N1A2V3c3bWl3ajd0UExoRFBNcHpwaGpROXE3dEZAZARHRmelZA6VFphRGp4V09UUlUZD';
 // function consentGrantedAdStorage() {
 //   gtag('consent', 'update', {
 //     'ad_storage': 'granted',    
@@ -427,26 +426,26 @@ const date = document.querySelector('.date');
 
 date.append(new Date ().getFullYear ());
 
-const inst = document.querySelector('#insta');
-const du = inst.querySelector('.item:nth-child(2)');
-const nd = document.createElement('div');
+// const inst = document.querySelector('#insta');
+// const du = inst.querySelector('.item:nth-child(2)');
+// const nd = document.createElement('div');
 
-let url=`https://graph.instagram.com/v21.0/me/media?fields=username,media_url&access_token=${instTK}`;
+// let url=`https://graph.instagram.com/v21.0/me/media?fields=username,media_url&access_token=${process.env.TOKEN}`;
 // console.log(url);
 
-fetch(url)
-    .then(response => response.json())
-    .then(data => {
+// fetch(url)
+//     .then(response => response.json())
+//     .then(data => {
         // console.log(data);
-        nd.innerHTML = `
-            <ul>
-                <li>${data.data.username}</li>
-                <li><img src='${data.data.media_url}' width="200" height="300"></li>
-            </ul>`
+//         nd.innerHTML = `
+//             <ul>
+//                 <li>${data.data.username}</li>
+//                 <li><img src='${data.data.media_url}' width="200" height="300"></li>
+//             </ul>`
 
-    inst.insertBefore(nd, du);
+//     inst.insertBefore(nd, du);
 
-});
+// });
 
 
 
