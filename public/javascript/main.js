@@ -427,12 +427,24 @@ const date = document.querySelector('.date');
 
 date.append(new Date ().getFullYear ());
 
+const inst = document.querySelector('#insta');
+const du = inst.querySelector('.item:nth-child(2)');
+const nd = document.createElement('div');
 
+let url=`https://graph.instagram.com/v21.0/me/media?fields=username,media_url&access_token=${TOKEN}`;
+console.log(url);
 
+fetch(url)
+    .then(response => response.json())
+    .then(data => {
+        // console.log(data);
+        inst.innerHTML = `
+            <ul>
+                <li>${data.data.username}</li>
+                <li><img src='${data.data.media_url}' width="200" height="300"></li>
+            </ul>`
 
-
-
-
+});
 
 
 
