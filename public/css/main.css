@@ -1196,13 +1196,10 @@ a:hover {
 	background-color: #222222;
 	justify-content: center;
 	gap: 10px;
-	font-size: .6rem;
-}
-
-.poli span {
+	font-size: .5rem;
 	color: #ffff;
 	text-decoration: none;
-	font-size: 0.5rem;
+/*	font-size: 0.5rem;*/
 }
 
 #foto-soporte {
@@ -1245,20 +1242,52 @@ a:hover {
 }
 
 .YouTube {
-	display: flex;
+	display: block;
 	position: fixed;
+/*	position: relative;*/
 	right: 0;
 	bottom: 0;
-	width: 100%; 
-	height: auto;
+/*	width: 100%; */
+/*	height: auto;*/
 	z-index: 5000;
 	transition: all 4s ease-in-out;
 /*	border: 1px solid black;*/
 	justify-content: center;
+	align-items: center;
 
-	opacity: 0;
+/*	opacity: 0;*/
 	transition: all .6s ease-in-out;
 	animation: move-der-izq 5s 1;
+
+	width: 100%;
+	height: 300px;
+/*	border: 1px solid black;*/
+	overflow: hidden;
+	padding: 2% 0;
+	background: linear-gradient(to bottom, #0000ffc8 0%, #ffffffc8 50%, #ff0000c8 100%);
+/*	z-index: -1;*/
+}
+.YouTube h3{
+	text-align: center;
+	color: #FFFF;
+	margin: 0;
+	padding: 0;
+}
+.YouTube figure{
+	display: block;
+	position: relative;
+	width: auto;
+	height: 100%;
+	padding:1em;
+	/*	overflow: hidden;*/
+}
+
+.YouTube figure img{
+	display: block;
+
+	width: auto;
+	margin: 0 auto;
+	height: 100%;
 }
 
 /*.yy {*/
@@ -1278,27 +1307,34 @@ a:hover {
 }
 
 .closeqA {
-/*	display: block;*/
+	display: grid;
 /*	flex-direction: row;*/
 	position: absolute;
-	color: #991111;
+	place-content:center;
+/*	color: #991111;*/
 /*	bottom: 0.5rem;*/
-	justify-content: center;
-	align-items: center;
-	font-weight: 900;
+/*	justify-content: center;*/
+/*	align-items: center;*/
+	font-weight: 400;
 	right: 0;
-	width: 70px;
-	height: 70px;
-	font-size: 2em;
+	top: 0;
+	width: 50px;
+	height: 50px;
+	font-size: 1.5em;
 	z-index: 6000;
-	border: 3px solid #8b0000;
+	color: #fff;
+	border: 1px solid #fff;
 	border-radius:50%;
-	opacity: 0;
+	margin:.7rem;
+/*	opacity: 0;*/
 }
 
 .closeqA:hover {
 	cursor: pointer;
-	filter: drop-shadow(1px 1px 10px white);
+	color: #1b1b1b;
+	border: 1px solid #1b1b1b;
+	filter: drop-shadow(1px 5px 7px red);
+	transition: all .3s ease-in;
 }
 
 
