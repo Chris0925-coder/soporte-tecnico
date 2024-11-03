@@ -431,7 +431,7 @@ const inst = document.querySelector('#insta');
 const du = inst.querySelector('.item:nth-child(2)');
 const nd = document.createElement('div');
 
-let url=`https://graph.instagram.com/v21.0/me/media?fields=username,media_url&access_token=${TOKEN}`;
+let url=`https://graph.instagram.com/v21.0/me/media?fields=username,media_url&access_token=${process.env.TOKEN}`;
 console.log(url);
 
 fetch(url)
