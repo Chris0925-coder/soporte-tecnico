@@ -34,7 +34,7 @@ console.log(femmes)
         //   }
         // });
         if (!femmes) {
-        youTube.innerHTML = `<h3>Feliz Noviembre Panamá</h3><div class="closeqA">X</div><figure><img src='public/img/influencers/femmesC.jpg'><img src='public/img/influencers/femmesB.jpg'></figure>`;
+        youTube.innerHTML = `<h3>Feliz Noviembre Panamá</h3><div class="closeqA">X</div><figure><img src='public/img/influencers/femmesC.jpg'><img src='public/img/influencers/femmesE.jpg'></figure>`;
         } else {
             youTube.style.display = "none";
         }
