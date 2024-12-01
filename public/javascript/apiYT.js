@@ -49,7 +49,7 @@ console.log(femmes)
     };
 
             
-        onYouTubeIframeAPIReady();
+        // onYouTubeIframeAPIReady();
 
 const closeY = document.querySelector('.closeqA');
     // function onPlayerReady(event) {
