@@ -10,18 +10,30 @@
 * {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box; 
+  box-sizing: border-box;
 }
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 body {
 	width: 100%;
-	min-height: 100lvh;
-	overflow-x: hidden;
-	font-family: "Poppins", sans-serif;
+	font-family: "Source Sans Pro", sans-serif;
+	  font-size: 1rem;
+	  font-weight: 400;
+	  line-height: 1.5;
+	  color: #212529;
+	  text-align: left;
+	  background-color: #fff;
 }
 
 h1,h2,h3,h4,h5,h6 {
 	color: #626262;
-	margin: 0;
+	margin: 0 0 0.5rem 0;
 	padding: 10px;
 	text-align: center;
 }
@@ -85,32 +97,32 @@ a:hover {
 	/* padding: var(--padding-container); */
 }
 
-.hero {
-	width: 100%;
+/*.hero {
+	width: 100%;*/
 /*	min-height: 500px;*/
-	max-height: 70lvh;
-	position: relative;
-	display: grid;
+/*	max-height: 70lvh;*/
+/*	position: relative;*/
+/*	display: grid;*/
 /*	grid-template-rows: 100px 1fr;*/
-	align-items: center;
-}
+/*	align-items: center;*/
+/*}*/
 
-.hero:before {
+/*.hero:before {
 	content: "";
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 60lvh;
+	height: 60lvh;*/
 /*	background-image: linear-gradient(180deg, #ffffffa1 0%, #ffffffa1 100%), url('../img/logochris1.png');*/
-	background-size: 100% 100%;
+/*	background-size: 100% 100%;*/
 /*	background-size: contain;*/
-	background-position: center;
+	/*background-position: center;
 	background-repeat: no-repeat;
 	object-fit: cover;
-/*	clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 77%, 0 80%);*/
-	z-index: -1;
-}
+*//*	clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 77%, 0 80%);*/
+	/*z-index: -1;
+}*/
 
 
 .navbar {
@@ -202,7 +214,7 @@ a:hover {
 .main-2 {
 	display: block;
 	width: 100%;
-	background:linear-gradient(180deg, #00002bc8 0%, #f3f3f361 100%), url('../img/logochris1.png');
+/*	background:linear-gradient(180deg, #00002bc8 0%, #f3f3f361 100%), url('../img/logochris1.png');*/
 /*	background-image: linear-gradient(180deg, #ffffff00 0%, #ffffff00 100%), url('../img/logochris1.png');*/
 	background-size: cover;
 	background-position: center;	
@@ -569,9 +581,9 @@ a:hover {
 /*	text-align: left;*/
 }
 
-.infoweb__container article {
+/*.infoweb__container article {
 	display: block;
-}
+}*/
 
 .infoweb__container h4 {
 	font-size: clamp(25px, 5vw, 42px);
@@ -1061,13 +1073,15 @@ a:hover {
 }
 
 .logo--github {
-	background-image: url("../img/github_PNG40.png");
+	display: flex;
+	justify-content: center;
+	/*background-image: url("../img/github_PNG40.png");
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
 	width: 20px;
 	height: 20px;
-	margin: 0 auto;
+	margin: 0 auto;*/
 }
 
 .contact1 {
@@ -1182,13 +1196,10 @@ a:hover {
 	background-color: #222222;
 	justify-content: center;
 	gap: 10px;
-	font-size: .6rem;
-}
-
-.poli span {
+	font-size: .5rem;
 	color: #ffff;
 	text-decoration: none;
-	font-size: 0.5rem;
+/*	font-size: 0.5rem;*/
 }
 
 #foto-soporte {
@@ -1202,10 +1213,10 @@ a:hover {
 	/* border-block-width: thin; */
 }
 
-/*.bi-facebook {
+.bi-facebook {
 	color: #3b5998;
 }
-*/
+
 .bi-twitter-x:hover {
 	color: #2b2b2b;
 	background-color: #ffffff8c;
@@ -1231,20 +1242,55 @@ a:hover {
 }
 
 .YouTube {
-	display: flex;
+/*	display: flex;*/
 	position: fixed;
+/*	position: relative;*/
 	right: 0;
 	bottom: 0;
-	width: 100%; 
-	height: auto;
+/*	width: 100%; */
+/*	height: auto;*/
 	z-index: 5000;
 	transition: all 4s ease-in-out;
 /*	border: 1px solid black;*/
-	justify-content: center;
+/*	place-content: center;*/
+/*	justify-content: space-evenly;*/
+	align-items: center;
 
-	opacity: 0;
+/*	opacity: 0;*/
 	transition: all .6s ease-in-out;
 	animation: move-der-izq 5s 1;
+
+	width: 100%;
+	height: 60%;
+/*	border: 1px solid black;*/
+	overflow: hidden;
+	padding: 2% 0;
+	background: linear-gradient(to bottom, #0000ffc8 0%, #ffffffc8 50%, #ff0000c8 100%);
+/*	z-index: -1;*/
+}
+.YouTube h3{
+	text-align: center;
+	color: #FFFF;
+	margin: 0;
+	padding: 0;
+}
+.YouTube figure{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	position: relative;
+	width: auto;
+	height: 300px;
+	padding:1em;
+/*	margin:auto;*/
+	/*	overflow: hidden;*/
+}
+
+.YouTube figure img{
+	display: block;
+	width: auto;
+	margin: 0 .3rem;
+	height: 100%;
 }
 
 /*.yy {*/
@@ -1264,28 +1310,163 @@ a:hover {
 }
 
 .closeqA {
-/*	display: block;*/
+	display: grid;
 /*	flex-direction: row;*/
 	position: absolute;
-	color: #991111;
+	place-content:center;
+/*	color: #991111;*/
 /*	bottom: 0.5rem;*/
-	justify-content: center;
-	align-items: center;
-	font-weight: 900;
+/*	justify-content: center;*/
+/*	align-items: center;*/
+	font-weight: 400;
 	right: 0;
-	width: 70px;
-	height: 70px;
-	font-size: 2em;
+	top: 0;
+	width: 50px;
+	height: 50px;
+	font-size: 1.5em;
 	z-index: 6000;
-	border: 3px solid #8b0000;
+	color: #fff;
+	border: 1px solid #fff;
 	border-radius:50%;
-	opacity: 0;
+	margin:.7rem;
+/*	opacity: 0;*/
 }
 
 .closeqA:hover {
 	cursor: pointer;
-	filter: drop-shadow(1px 1px 10px white);
+	color: #1b1b1b;
+	border: 1px solid #1b1b1b;
+	filter: drop-shadow(1px 5px 7px red);
+	transition: all .3s ease-in;
 }
+
+
+
+.social-icons {
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+	justify-content: space-between;
+  max-width: 180px;
+  color: #fff;  
+  margin: 5em;
+/*  border:1px solid black;*/
+  z-index:2000;
+/*  filter: drop-shadow(3px 5px #fff);*/
+}
+
+.social-icons .social-link {
+  font-size: 18px;
+}
+
+.social-icons .social-link:hover {
+  color: #F85C70;
+  cursor: pointer;
+}
+
+.header {
+  position: relative;
+  height: 60lvh;
+/*  min-height: 600px;*/
+/*  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/logosChrisWeb/IMG-20230918-WA0001.png);*/
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/portada.webp');
+  background-size: cover;
+/*  object-fit: fill;*/
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #fff;
+/*  z-index: -1;*/
+}
+
+.header .container {
+  position: relative;
+  height: 100%;
+}
+
+.header .header-content h1 {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 55%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #fff;
+  display: grid;
+  text-align: left;
+}
+
+.header .header-content .header-subtitle {
+  font-weight: 200;
+  font-size: calc(20px + (45 - 20) * ((100vw - 200px) / (2600 - 300)));
+}
+
+.header .header-content .header-title {
+  font-size: calc(40px + (120 - 40) * ((100vw - 200px) / (2600 - 300)));
+  font-weight: bold;
+  line-height: .7;
+  margin-bottom: 25px;
+  color: inherit;
+}
+
+.header .header-content .header-mono {
+  letter-spacing: 5px;
+  font-weight: 500;
+  font-size: calc(12px + (19 - 12) * ((100vw - 200px) / (2600 - 300)));
+  margin-bottom: 40px;
+}
+
+@media (max-width: 767.98px) {
+  .header {
+    height: 500px;
+    min-height: 500px;
+  }
+  .header .social-icons {
+    margin: 10px auto;
+  }
+  .header .header-content {
+    padding: 20px;
+  }
+  .header .header-content .header-mono {
+    letter-spacing: 2px;
+  }
+}
+
+.header-title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  opacity: .8;
+  color: #212529;
+}
+
+.header-mini {
+  min-height: 24rem;
+  height: 24rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  background: #fcbec6;
+}
+
+
+
 
 @media screen and (max-width: 768px) {
 
@@ -1539,6 +1720,14 @@ a:hover {
 	.content--x {
 		width: 100%;
 		height: 400px;
+	}
+
+	.social-icons {
+		margin-top: 3rem;
+	}
+
+	.YouTube {
+		height: 90%;
 	}
 }
 
