@@ -1,7 +1,7 @@
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments)};
-gtag('config', 'GTM-T6ZPPJSN');
-gtag('js', new Date());
+// window.dataLayer = window.dataLayer || [];
+// function gtag(){dataLayer.push(arguments)};
+// gtag('config', 'GTM-T6ZPPJSN');
+// gtag('js', new Date());
 
 // gtag("consent", "default", {
 //               'ad_storage': "granted",
