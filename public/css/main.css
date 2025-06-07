@@ -201,19 +201,21 @@ a:hover {
 }
 
 .main-1 {
-	display: grid;
-	margin: 15px 0 80px 0;
-	width: 100%;
-	grid-template-columns: 1fr auto auto;
-	gap: 0.3em;
-	grid-template-rows: auto auto auto;
-	justify-content: space-around;
-/*	border: 1px solid brown; */
+	   display: grid;
+    margin: 15px 0 80px 0;
+    width: 100%;
+    grid-template-columns: 1fr 300px;
+    gap: 0.3em;
+     grid-template-rows: 1fr; 
+    justify-content: space-around;
+    overflow: hidden;
+    /*border: 1px solid brown;*/
 }
 
 .main-2 {
-	display: block;
+	display: grid;
 	width: 100%;
+	grid-template-rows: auto;
 /*	background:linear-gradient(180deg, #00002bc8 0%, #f3f3f361 100%), url('../img/logochris1.png');*/
 /*	background-image: linear-gradient(180deg, #ffffff00 0%, #ffffff00 100%), url('../img/logochris1.png');*/
 	background-size: cover;
@@ -221,8 +223,14 @@ a:hover {
 	background-repeat: no-repeat;
 	border-radius: 10px;
 	padding: 5%;
+	place-self: center;
 /*	mix-blend-mode: saturation;*/
 }
+
+/*.main-2 {*/
+	/*display: grid;*/
+	/*place-content: center;*/
+/*}*/
 
 .main-2 h1, .hdownload {
 	color: #626262;
@@ -1428,6 +1436,59 @@ a:hover {
    linear-gradient(#25d366,#25d366) 14% 84%/16% 16% no-repeat,
    radial-gradient(#25d366 60%,transparent 0);
 /*    padding: .1em;*/
+}
+
+/*PROYECTS*/
+#proyects {
+	width: auto;
+	height: auto;
+	h3 {		
+		font-size: clamp(25px, 5vw, 42px);
+	}
+}
+
+#proyects div{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	width: 100%;
+	height: auto;
+	article {
+		margin: 40px 20px;
+	}
+}
+
+.proyects-figure {
+	display: flex; 
+	position: relative; 
+	width: 400px; 
+	height: 400px;
+	margin: 0 auto;
+}
+
+.proyectA-imgs, .proyectB-imgs {
+	display: block;
+	position: absolute; 
+	width:100%; 
+	height: 100%;
+	z-index: -1;
+	object-fit: contain;
+	object-position: top;
+}
+
+.proyects-figure figcaption{
+	color: #121212; 
+	position: absolute; 
+	bottom: 0; 
+	padding: 0.7em; 
+	margin-block: 1lh; 
+	backdrop-filter: blur(8px); 
+	background-color: rgba(255, 255, 255, 0.5);
+	height: fit-content;
+	width: 80%;
+	justify-self: anchor-center;
+	/*margin: 0 auto;*/
 }
 
 @media (max-width: 767.98px) {

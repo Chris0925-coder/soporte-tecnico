@@ -582,3 +582,43 @@ date.append(new Date ().getFullYear ());
 //   gtm.uniqueEventId: 12,
 //   gtm.priorityId: 4
 // });
+
+const pImgs = document.querySelectorAll('.proyectA-imgs');
+
+const pImgsB = document.querySelectorAll('.proyectB-imgs');
+
+cp = 0;
+
+cp2 = 0;
+
+// console.log(pImgs);
+
+function sliderP(a) {
+    for (let i=0;i<a.length;i++) {
+        a[i].style.display = "none";
+    }
+    cp++;
+    if(cp>a.length){cp=1};
+    a[cp-1].style.display = "block";
+}
+
+function sliderO(a) {
+    for (let i=0;i<a.length;i++) {
+        a[i].style.display = "none";
+    }
+    cp2++;
+    if(cp2>a.length){cp2=1};
+    a[cp2-1].style.display = "block";
+}
+
+
+// sliderP(pImgs);
+// sliderP(pImgsB, cp2);
+
+
+setInterval(sliderP, 15000, pImgs);
+
+setInterval(sliderO, 15000, pImgsB);
+// setInterval(BB, 5000);
+// setInterval(sliderP, 5000);
+// sliderP(pImgsB)
