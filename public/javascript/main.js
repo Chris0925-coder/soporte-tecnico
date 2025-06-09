@@ -1,61 +1,7 @@
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments)};
-gtag('config', 'GTM-T6ZPPJSN');
-gtag('js', new Date());
-
-// gtag("consent", "default", {
-//               'ad_storage': "granted",
-//               'analytics_storage': "granted",
-//               'functionality_storage': "granted",
-//               'personalization_storage': "granted",
-//               'security_storage': "granted",
-//               'ad_user_data': "granted",
-//               'ad_personalization': "granted",
-//               'wait_for_update': "500"
-//             });
-// gtag("consent", "default", {
-//       'ad_storage': "denied",
-//       'analytics_storage': "denied",
-//       'functionality_storage': "denied",
-//       'personalization_storage': "denied",
-//       'security_storage': "denied",
-//       'ad_user_data': "denied",
-//       'ad_personalization': "denied",
-//       'wait_for_update': "500"
-// });
-
-// gtag("set", {ads_data_redaction: true});
-// $('body').animate({'opacity': '1'}, 2000);
-// document.addEventListener('DOMContentLoaded', () => {
-//     const elementosCarousel = document.querySelectorAll('.carousel');
-//     MIDIAccess.Carousel.init(elementosCarousel, {
-//         duration: 150,
-//         dist: -80,
-//         shift: 5,
-//         padding: 5,
-//         numVisible: 3,
-// .        indicators: true,
-//         noWrap: true
-//     });
-// });
-
-// let slideThumnail = 0;
-// let slideThumnail2 = 0;
-
-// const navToggle = document.querySelector(".navbar-toggler")
-// const navLink = document.querySelector(".navbar-nav")
-
-// navToggle.addEventListener("click", () => {
-//     navLink.classList.toggle("navbar-nav_visible")
-// });
-
-// let caruselItem = document.querySelector('.carousel-item2');
-// let galeria = document.querySelector('.galeria');
-// const cajacookies = document.querySelector('.cajacookies');
-// const cookieAccepted = document.cookies;
-// console.log(aceptaCookies);
-// localStorage.cookieAccepted === true;
-// localStorage.cookieAccepted === true;
+const bloqueRGPD = document.querySelector('.cajacookies');
+const botonRGPD = document.querySelector(".botonRGPD");
+const url = `https://wvlhqwzk-5000.use2.devtunnels.ms/analytics`;
+const cancel = document.querySelector(".botonRGPD--cancel");
 
 const navBoton = document.querySelector(".navbar-toggler");
 const navLink = document.querySelector(".off");
@@ -70,56 +16,17 @@ close.addEventListener('click', () => {
     navLink.classList.toggle("hidden-nav");
 });
 
-// function consentGrantedAdStorage() {
-//   gtag('consent', 'update', {
-//     'ad_storage': 'granted',    
-//     });
-// }
-
-// function consentGrantedAnalyticStorage() {
-//   gtag('consent', 'update', {
-//     'analytics_storage': "granted",
-//     });
-// }
-
-// function consentGrantedFunStorage() {
-//   gtag('consent', 'update', {
-//     'functionality_storage': "granted",
-//     });
-// }
-
-// function consentGrantedPersonaStorage() {
-//   gtag('consent', 'update', {
-//     'personalization_storage': "granted",
-//     });
-// }
-
-// function consentGrantedSecStorage() {
-//   gtag('consent', 'update', {
-//     'security_storage': "granted",
-//     });
-// }
-
-// function consentGrantedData() {
-//   gtag('consent', 'update', {
-//     'ad_user_data': "granted",
-//     });
-// }
-
-// function consentGrantedAdPerson() {
-//   gtag('consent', 'update', {
-//     'ad_personalization': "granted"
-//     });
-// }
-
 function setCookie(cname, cvalue, exdays) {
     let d = new Date();
 
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
     let expires = "expires="+ d.toUTCString();
 
-    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/" + ";path=/";
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 };
+
+
+
 
 function removeCookie(cname){
     setCookie(cname,"",-1);
@@ -157,72 +64,70 @@ function detectCookie(cname) {
     return false;
 };
 
+// function ready() {
+init();
 
-$(document).ready(function() {
-    init();
-});
+    // alert('DOM is ready');
+
+    // la imagen aún no está cargada (a menos que se haya almacenado en caché), por lo que el tamaño es 0x0
+    // alert(`Image size: ${img.offsetWidth}x${img.offsetHeight}`);
+// }
+
+// document.addEventListener("DOMContentLoaded", ready);
+
+
+let d = localStorage.getItem("acceptedCookies");
+function count(a) {
+
+    if(a) {
+        let analyticsData = {
+            id: 1,
+            count: 1,
+        };
+
+        window.addEventListener("load", function() {
+          navigator.sendBeacon(url, JSON.stringify(analyticsData));
+        });
+
+        console.log(analyticsData);
+    }
+}
+count(d);
+
+// $(document).ready(function() {
+    // });
+    // window.addEventListener('load',(event) => {
+    //     console.log(event)
+    // });
 
 function init(){
-    bloqueRGPD = document.querySelector('.cajacookies');
-    if (localStorage.acceptedCookies != 'true') {
-    bloqueRGPD.style.display = 'block';    
+    if (localStorage.acceptedCookies != "true") {
+        console.log(localStorage.acceptedCookies != "true")
+        bloqueRGPD.style.display = 'block';    
     }
 
-    if(detectCookie("rgpdOK")){
-        if (getCookie("rgpdOK")==1){
-            eliminarBloqueRGPD();
-            gtag("consent", "update", {
-                  'ad_storage': "granted",
-                  'analytics_storage': "granted",
-                  'functionality_storage': "granted",
-                  'personalization_storage': "granted",
-                  'security_storage': "granted",
-                  'ad_user_data': "granted",
-                  'ad_personalization': "granted",
-                  'wait_for_update': "500"
-                });
-             gtag("set", {ads_data_redaction: true});
-        }
-    }else{
+    cancel.addEventListener("click", () => {
+        removeCookie();
+        bloqueRGPD.parentNode.removeChild(bloqueRGPD);
+        localStorage.acceptedCookies = 'false';
+        history.back();
+    });
 
-        document.querySelector(".botonRGPD__cancel").addEventListener("click", () => {
-            removeCookie();
-            bloqueRGPD.parentNode.removeChild(bloqueRGPD);
-            localStorage.acceptedCookies = 'false';
-            history.back();
-        });
-
-        document.querySelector(".botonRGPD").addEventListener("click", () => {
-
-            eliminarBloqueRGPD();
-
-            setCookie("rgpdOK",1,365);
-
-
-            gtag("consent", "update", {
-                  'ad_storage': "granted",
-                  'analytics_storage': "granted",
-                  'functionality_storage': "granted",
-                  'personalization_storage': "granted",
-                  'security_storage': "granted",
-                  'ad_user_data': "granted",
-                  'ad_personalization': "granted",
-                  'wait_for_update': "500"
-                });
-             gtag("set", {ads_data_redaction: true});
-
-                        
-        });
-
-        // document.querySelector(".botonRGPD__settings").addEventListener("click", () => {
-        //     gtag('config', 'GTM-T6ZPPJSN');      
-        // });
-    }
+    botonRGPD.addEventListener("click", () => {
+        console.log(botonRGPD);
+        navigator.sendBeacon(url, JSON.stringify({
+                id: 1,
+                count: 1,
+            }));
+        eliminarBloqueRGPD();
+    });
 };
 
 function eliminarBloqueRGPD(){
     bloqueRGPD.parentNode.removeChild(bloqueRGPD);
     localStorage.acceptedCookies = 'true';
+
+    setCookie("rgpdOK",1,365);
 };
 
 let n = 0;
@@ -616,9 +521,9 @@ function sliderO(a) {
 // sliderP(pImgsB, cp2);
 
 
-setInterval(sliderP, 15000, pImgs);
+setInterval(sliderP, 7000, pImgs);
 
-setInterval(sliderO, 15000, pImgsB);
+setInterval(sliderO, 10000, pImgsB);
 // setInterval(BB, 5000);
 // setInterval(sliderP, 5000);
 // sliderP(pImgsB)
