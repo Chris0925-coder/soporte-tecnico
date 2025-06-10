@@ -98,16 +98,16 @@ init();
     //     console.log(event)
     // });
 
-function init(){
-    if (localStorage.acceptedCookies != "true") {
-        bloqueRGPD.style.display = 'block';  
+// function init(){
+//     if (localStorage.acceptedCookies != "true") {
+//         bloqueRGPD.style.display = 'block';  
 
-        cancel.addEventListener("click", () => {
-            removeCookie();
-            bloqueRGPD.parentNode.removeChild(bloqueRGPD);
-            localStorage.acceptedCookies = 'false';
-            history.back();
-        });
+//         cancel.addEventListener("click", () => {
+//             removeCookie();
+//             bloqueRGPD.parentNode.removeChild(bloqueRGPD);
+//             localStorage.acceptedCookies = 'false';
+//             history.back();
+//         });
 
         // botonRGPD.addEventListener("click", () => {
         //     navigator.sendBeacon(url, JSON.stringify({
@@ -117,6 +117,36 @@ function init(){
         //         }));
         //     eliminarBloqueRGPD();
         // });
+//     }
+// };
+
+function init(){
+    bloqueRGPD = document.querySelector('.cookieBox');
+    if (localStorage.acceptedCookies != 'true') {
+        bloqueRGPD.style.display = 'inline-block';    
+    }
+
+    console.log(detectCookie("rgpdOK"));
+    if(detectCookie("rgpdOK")){
+        eliminarBloqueRGPD();
+    } else {
+        cancel.addEventListener("click", () => {
+            removeCookie();
+            bloqueRGPD.parentNode.removeChild(bloqueRGPD);
+            localStorage.acceptedCookies = 'false';
+            history.back();
+        });
+        document.querySelector(".botonRGPD").addEventListener("click", () => {
+            eliminarBloqueRGPD();
+
+            // navigator.sendBeacon(url, JSON.stringify({
+            //     id: 3,
+            //     count: 1,
+            //     domain: dominio,
+            // }))
+
+            setCookie("rgpdOK",1,365);
+        });
     }
 };
 
