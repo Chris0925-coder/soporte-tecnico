@@ -1,6 +1,7 @@
 const bloqueRGPD = document.querySelector('.cajacookies');
 const botonRGPD = document.querySelector(".botonRGPD");
-const url = `https://wvlhqwzk-5000.use2.devtunnels.ms/analytics`;
+// const url = `https://wvlhqwzk-5000.use2.devtunnels.ms/analytics`;
+const url = `libsql://webdev-chris301987.aws-us-west-2.turso.io`;
 const cancel = document.querySelector(".botonRGPD--cancel");
 
 const navBoton = document.querySelector(".navbar-toggler");
