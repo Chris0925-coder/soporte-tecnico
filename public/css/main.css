@@ -1495,6 +1495,16 @@ a:hover {
 	/*margin: 0 auto;*/
 }
 
+.ads {
+	display: grid;
+	position: relative;
+	width: 100%;
+	overflow: scroll;
+	/*place-content: center;*/
+	scrollbar-width: none;
+	margin: 0 auto;
+}
+
 @media (max-width: 767.98px) {
   .header {
     height: 500px;

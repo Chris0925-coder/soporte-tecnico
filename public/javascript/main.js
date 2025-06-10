@@ -110,7 +110,7 @@ function init(){
     });
 
     botonRGPD.addEventListener("click", () => {
-        console.log(botonRGPD);
+        // console.log(botonRGPD);
         navigator.sendBeacon(url, JSON.stringify({
                 id: 1,
                 count: 1,
