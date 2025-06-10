@@ -73,24 +73,24 @@ init();
 
 // document.addEventListener("DOMContentLoaded", ready);
 
-const dominio = window.location.origin;
-let d = localStorage.getItem("acceptedCookies");
-function count(a) {
+// const dominio = window.location.origin;
+// let d = localStorage.getItem("acceptedCookies");
+// function count(a) {
 
-    if(a) {
-        let analyticsData = {
-            id: 1,
-            count: 1,
-            domain: dominio,
-        };
+//     if(a) {
+//         let analyticsData = {
+//             id: 1,
+//             count: 1,
+//             domain: dominio,
+//         };
 
-        window.addEventListener("load", function() {
-          navigator.sendBeacon(url, JSON.stringify(analyticsData));
-        });
+//         window.addEventListener("load", function() {
+//           navigator.sendBeacon(url, JSON.stringify(analyticsData));
+//         });
 
-    }
-}
-count(d);
+//     }
+// }
+// count(d);
 
 // $(document).ready(function() {
     // });
@@ -100,25 +100,24 @@ count(d);
 
 function init(){
     if (localStorage.acceptedCookies != "true") {
-        bloqueRGPD.style.display = 'block';    
+        bloqueRGPD.style.display = 'block';  
+
+        cancel.addEventListener("click", () => {
+            removeCookie();
+            bloqueRGPD.parentNode.removeChild(bloqueRGPD);
+            localStorage.acceptedCookies = 'false';
+            history.back();
+        });
+
+        // botonRGPD.addEventListener("click", () => {
+        //     navigator.sendBeacon(url, JSON.stringify({
+        //             id: 1,
+        //             count: 1,
+        //             domain: dominio,
+        //         }));
+        //     eliminarBloqueRGPD();
+        // });
     }
-
-    cancel.addEventListener("click", () => {
-        removeCookie();
-        bloqueRGPD.parentNode.removeChild(bloqueRGPD);
-        localStorage.acceptedCookies = 'false';
-        history.back();
-    });
-
-    botonRGPD.addEventListener("click", () => {
-        // console.log(botonRGPD);
-        navigator.sendBeacon(url, JSON.stringify({
-                id: 1,
-                count: 1,
-                domain: dominio,
-            }));
-        eliminarBloqueRGPD();
-    });
 };
 
 function eliminarBloqueRGPD(){
