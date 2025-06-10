@@ -121,12 +121,10 @@ init();
 // };
 
 function init(){
-    bloqueRGPD = document.querySelector('.cookieBox');
     if (localStorage.acceptedCookies != 'true') {
         bloqueRGPD.style.display = 'inline-block';    
     }
 
-    console.log(detectCookie("rgpdOK"));
     if(detectCookie("rgpdOK")){
         eliminarBloqueRGPD();
     } else {
@@ -136,7 +134,7 @@ function init(){
             localStorage.acceptedCookies = 'false';
             history.back();
         });
-        document.querySelector(".botonRGPD").addEventListener("click", () => {
+        botonRGPD.addEventListener("click", () => {
             eliminarBloqueRGPD();
 
             // navigator.sendBeacon(url, JSON.stringify({
