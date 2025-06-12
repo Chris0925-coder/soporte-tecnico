@@ -73,24 +73,25 @@ init();
 
 // document.addEventListener("DOMContentLoaded", ready);
 
-// const dominio = window.location.origin;
-// let d = localStorage.getItem("acceptedCookies");
-// function count(a) {
+const dominio = window.location.origin;
+let d = localStorage.getItem("acceptedCookies");
+function count() {
 
-//     if(a) {
-//         let analyticsData = {
-//             id: 1,
-//             count: 1,
-//             domain: dominio,
-//         };
+    if(d) {
+        let analyticsData = {
+            id: 1,
+            count: 1,
+            domain: dominio,
+        };
 
-//         window.addEventListener("load", function() {
-//           navigator.sendBeacon(url, JSON.stringify(analyticsData));
-//         });
+        window.addEventListener("load", function() {
+          navigator.sendBeacon(url, JSON.stringify(analyticsData));
+        });
 
-//     }
-// }
-// count(d);
+    }
+}
+
+if(d) count();
 
 // $(document).ready(function() {
     // });
@@ -137,11 +138,11 @@ function init(){
         botonRGPD.addEventListener("click", () => {
             eliminarBloqueRGPD();
 
-            // navigator.sendBeacon(url, JSON.stringify({
-            //     id: 3,
-            //     count: 1,
-            //     domain: dominio,
-            // }))
+            navigator.sendBeacon(url, JSON.stringify({
+                id: 1,
+                count: 1,
+                domain: dominio,
+            }))
 
             setCookie("rgpdOK",1,365);
         });
