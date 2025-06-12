@@ -1,7 +1,7 @@
 const bloqueRGPD = document.querySelector('.cajacookies');
 const botonRGPD = document.querySelector(".botonRGPD");
-// const url = `https://wvlhqwzk-5000.use2.devtunnels.ms/analytics`;
-const url = `libsql://webdev-chris301987.aws-us-west-2.turso.io`;
+const url = `https://wvlhqwzk-5000.use2.devtunnels.ms/analytics`;
+// const url = `libsql://webdev-chris301987.aws-us-west-2.turso.io`;
 const cancel = document.querySelector(".botonRGPD--cancel");
 
 const navBoton = document.querySelector(".navbar-toggler");
@@ -75,21 +75,41 @@ init();
 
 const dominio = window.location.origin;
 let d = localStorage.getItem("acceptedCookies");
+
 function count() {
+    let analyticsData = {
+        id: 1,
+        count: 1,
+        domain: dominio,
+    };
 
-    if(d) {
-        let analyticsData = {
-            id: 1,
-            count: 1,
-            domain: dominio,
-        };
+    window.addEventListener("load", function() {
+      navigator.sendBeacon(url, JSON.stringify(analyticsData));
+    });
 
-        window.addEventListener("load", function() {
-          navigator.sendBeacon(url, JSON.stringify(analyticsData));
-        });
+};
 
-    }
-}
+// function count() {
+//     fetch(url,{
+//         method:'POST',
+//         headers: {
+//             'Content-Type': 'application/json'
+//         },
+//         body: JSON.stringify(analyticsData)
+//     })
+//     .then(response => {
+//     if (!response.ok) {
+//       throw new Error(`HTTP error! Status: ${response.status}`);
+//     }
+//     return response.json();
+//   })
+//   .then(result => {
+//     console.log('Success:', result);
+//   })
+//   .catch(error => {
+//     console.error('Error:', error);
+//   });
+// }
 
 if(d) count();
 
