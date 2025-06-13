@@ -1,6 +1,12 @@
 const bloqueRGPD = document.querySelector('.cajacookies');
 const botonRGPD = document.querySelector(".botonRGPD");
-const url = `https://wvlhqwzk-5000.use2.devtunnels.ms/analytics`;
+
+const url = `https://visits-christian-guardias-projects.vercel.app/`;
+// https://visits-christian-guardias-projects.vercel.app/
+// https://visits-woad.vercel.app/visit
+// https://visits-christian-guardias-projects.vercel.app/
+// visits-ovpuyn1le-christian-guardias-projects.vercel.app
+// const url = `https://wvlhqwzk-5000.use2.devtunnels.ms/analytics`;
 // const url = `libsql://webdev-chris301987.aws-us-west-2.turso.io`;
 const cancel = document.querySelector(".botonRGPD--cancel");
 
@@ -573,3 +579,27 @@ setInterval(sliderO, 10000, pImgsB);
 // setInterval(BB, 5000);
 // setInterval(sliderP, 5000);
 // sliderP(pImgsB)
+
+
+// *** TURSO ***
+// const url = "https://[databaseName]-[organizationSlug].turso.io/v2/pipeline";
+// const authToken = "some secret key";
+
+// fetch(url, {
+//   method: "POST",
+//   headers: {
+//     Authorization: `Bearer ${authToken}`,
+//     "Content-Type": "application/json",
+//   },
+//   body: JSON.stringify(analyticsData),
+// })
+//   .then((res) => res.json())
+//   .then((data) => console.log(data))
+//   .catch((err) => console.log(err));
+
+  // {
+  //   requests: [
+  //     { type: "execute", stmt: { sql: "SELECT * FROM users" } },
+  //     { type: "close" },
+  //   ],
+  // }
