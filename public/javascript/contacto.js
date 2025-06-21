@@ -109,13 +109,13 @@ const url = `https://visits-christian-guardias-projects.vercel.app/submit`;
 
 // const form = document.querySelector('#formula');
 
-async function submitUserForm() {
+function submitUserForm() {
     var response = grecaptcha.getResponse();
     if (response.length == 0) {
         document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:darkred;">This field is required.</span>';
         return false;
     } else {
-        document.getElementById('formula').addEventListener('submit', function(event) {
+        document.getElementById('formula').addEventListener('submit', async function(event) {
         event.preventDefault(); // Prevent default form submission
         const formData = new FormData(this);
         console.log('Message:', formData.get('email'),formData.get('control'));
