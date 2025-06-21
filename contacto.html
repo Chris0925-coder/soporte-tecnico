@@ -10,8 +10,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contacto | CHRISTIAN WEB Developer</title>
-
-  <script src="https://www.google.com/recaptcha/enterprise.js?render=6LfQX8kpAAAAACN3ZM0RDg9lpXnpbCAtpYI7YDvd"></script>
+   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <!-- <script src="https://www.google.com/recaptcha/enterprise.js?render=6LfQX8kpAAAAACN3ZM0RDg9lpXnpbCAtpYI7YDvd"></script> -->
 	
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -20,7 +20,7 @@
 	<link rel="stylesheet" type="text/css" href="public/css/styles.css">
 
 
-  <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
+ 
 
   <!-- <script src="https://www.google.com/recaptcha/enterprise.js?render=6LeC6CgqAAAAAHZEzHzsj-h34wgfXw8CANbT_CCl"></script> -->
   <!-- Your code -->
@@ -100,7 +100,7 @@
         					<h5 style="color: darkgray;">CONTACTO</h5>
         				</div>
         				<div class="card-body">
-        					<form id="formula">
+        					<form onsubmit="return submitUserForm()" id="formula">
         						<div class="form-group">
         							<input type="email" name="email" class="form-control" placeholder="Email">
         						</div>

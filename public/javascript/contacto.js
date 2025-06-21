@@ -114,7 +114,12 @@ function submitUserForm() {
     if (response.length == 0) {
         document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:darkred;">This field is required.</span>';
         return false;
-    } else {
+    } 
+    return true;
+};
+
+function form() {
+
         document.getElementById('formula').addEventListener('submit', async function(event) {
         event.preventDefault(); // Prevent default form submission
         const formData = new FormData(this);
@@ -137,10 +142,10 @@ function submitUserForm() {
 
         alert('Form submitted successfully!');
       });
-    }
-    return true;
-};
-submitUserForm();
+    
+}
+
+form();
  
 // form.addEventListener('onsubmit', submitUserForm);
 // function verifyCaptcha() {
