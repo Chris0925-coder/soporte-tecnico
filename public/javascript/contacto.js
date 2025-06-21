@@ -109,37 +109,39 @@ const url = `https://visits-christian-guardias-projects.vercel.app/submit`;
 
 // const form = document.querySelector('#formula');
 
-function submitUserForm() {
+async function submitUserForm() {
     var response = grecaptcha.getResponse();
     if (response.length == 0) {
         document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:darkred;">This field is required.</span>';
         return false;
-    };
-    return true;
+    } else {
+        document.getElementById('formula').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent default form submission
+        const formData = new FormData(this);
+        console.log('Message:', formData.get('email'),formData.get('control'));
+
+        try {
+          const response = await fetch(url, {
+            method: 'POST',
+            body: formData,
+          });
+          if (response.ok) {
+            alert('Form submitted successfully!');
+          } else {
+            alert('Error submitting form.');
+          }
+        } catch (error) {
+          console.error('Submission failed:', error);
+        }
+
+
+        alert('Form submitted successfully!');
+      });
+    }
+    // return true;
 };
 
- document.getElementById('formula').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent default form submission
-    const formData = new FormData(this);
-    console.log('Message:', formData.get('email'),formData.get('control'));
-
-    try {
-      const response = await fetch(url, {
-        method: 'POST',
-        body: formData,
-      });
-      if (response.ok) {
-        alert('Form submitted successfully!');
-      } else {
-        alert('Error submitting form.');
-      }
-    } catch (error) {
-      console.error('Submission failed:', error);
-    }
-
-
-    alert('Form submitted successfully!');
-  });
+ 
 // form.addEventListener('onsubmit', submitUserForm);
 // function verifyCaptcha() {
 //     document.getElementById('g-recaptcha-error').innerHTML = 'Error';
