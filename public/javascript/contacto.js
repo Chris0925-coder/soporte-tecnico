@@ -104,7 +104,7 @@ close.addEventListener('click', () => {
 // };
 
 // enabledSubmit(btn);
-// const url = 'localhost:3000/submit';
+// const url = 'http://localhost:3000/submit';
 const url = `https://visits-christian-guardias-projects.vercel.app/submit`;
 
 // const form = document.querySelector('#formula');
@@ -118,26 +118,29 @@ function submitUserForm() {
     return true;
 };
 
+const form1 = document.getElementById('formula');
+
 function form() {
+    // console.log(form1)
 
-        document.getElementById('formula').addEventListener('submit', async function(event) {
+        form1.addEventListener('submit', async function(event) {
         event.preventDefault(); // Prevent default form submission
-        const formData = new FormData(this);
-        console.log('Message:', formData.get('email'),formData.get('control'));
+        const formData = new FormData(form1);
 
-        try {
-          const response = await fetch(url, {
+        console.log('Message:', formData.get('email'),formData.get('control'));
+          await fetch(url, {
             method: 'POST',
-            body: formData,
-          });
-          if (response.ok) {
-            alert('Form submitted successfully!');
-          } else {
-            alert('Error submitting form.');
-          }
-        } catch (error) {
-          console.error('Submission failed:', error);
-        }
+            body: JSON.stringify({
+
+                email: formData.get('email'), 
+                control: formData.get('control')
+
+                }),
+          })
+          .then((response) => response.text())
+          .then((data) => console.log(data))
+          .catch((error) => console.error('Error:', error));
+        
 
 
         alert('Form submitted successfully!');
