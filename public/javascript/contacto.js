@@ -104,8 +104,8 @@ close.addEventListener('click', () => {
 // };
 
 // enabledSubmit(btn);
-const url = 'localhost:3000/submit';
-// const url = `https://visits-christian-guardias-projects.vercel.app/`;
+// const url = 'localhost:3000/submit';
+const url = `https://visits-christian-guardias-projects.vercel.app/submit`;
 
 // const form = document.querySelector('#formula');
 
