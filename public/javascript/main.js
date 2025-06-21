@@ -80,6 +80,7 @@ init();
 // document.addEventListener("DOMContentLoaded", ready);
 
 const dominio = window.location.origin;
+
 // let d = localStorage.getItem("acceptedCookies");
 
 function count() {

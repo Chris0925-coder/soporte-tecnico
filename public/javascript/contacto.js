@@ -104,6 +104,8 @@ close.addEventListener('click', () => {
 // };
 
 // enabledSubmit(btn);
+const url = 'localhost:3000/submit';
+// const url = `https://visits-christian-guardias-projects.vercel.app/`;
 
 // const form = document.querySelector('#formula');
 
@@ -116,6 +118,28 @@ function submitUserForm() {
     return true;
 };
 
+ document.getElementById('formula').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent default form submission
+    const formData = new FormData(this);
+    console.log('Message:', formData.get('email'),formData.get('control'));
+
+    try {
+      const response = await fetch(url, {
+        method: 'POST',
+        body: formData,
+      });
+      if (response.ok) {
+        alert('Form submitted successfully!');
+      } else {
+        alert('Error submitting form.');
+      }
+    } catch (error) {
+      console.error('Submission failed:', error);
+    }
+
+
+    alert('Form submitted successfully!');
+  });
 // form.addEventListener('onsubmit', submitUserForm);
 // function verifyCaptcha() {
 //     document.getElementById('g-recaptcha-error').innerHTML = 'Error';
