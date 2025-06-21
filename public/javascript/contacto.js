@@ -138,9 +138,9 @@ function submitUserForm() {
         alert('Form submitted successfully!');
       });
     }
-    // return true;
+    return true;
 };
-
+submitUserForm();
  
 // form.addEventListener('onsubmit', submitUserForm);
 // function verifyCaptcha() {
