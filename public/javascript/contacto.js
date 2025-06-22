@@ -143,7 +143,9 @@ function form() {
         
 
 
-        alert('Form submitted successfully!');
+        let r = alert('Form submitted successfully!');
+
+        if(r) window.location.href = "https://chris0925-coder.github.io/soporte-tecnico";
       });
     
 }
