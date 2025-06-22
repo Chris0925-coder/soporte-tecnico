@@ -1,7 +1,7 @@
 const bloqueRGPD = document.querySelector('.cajacookies');
 const botonRGPD = document.querySelector(".botonRGPD");
 
-const url = `https://visits-christian-guardias-projects.vercel.app/`;
+const url = `https://visits-christian-guardias-projects.vercel.app/count`;
 // https://visits-christian-guardias-projects.vercel.app/
 // https://visits-woad.vercel.app/visit
 // https://visits-christian-guardias-projects.vercel.app/
