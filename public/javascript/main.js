@@ -82,20 +82,21 @@ document.addEventListener('DOMContentLoaded',init);
 
 const dominio = window.location.origin;
 
-// let d = localStorage.getItem("acceptedCookies");
+const d = localStorage.getItem("acceptedCookies");
 
-// function count() {
-//     let analyticsData = {
-//         id: 1,
-//         count: 1,
-//         domain: dominio,
-//     };
+function count() {
+    let analyticsData = {
+        id: 1,
+        count: 1,
+        domain: dominio,
+    };
+    navigator.sendBeacon(url, JSON.stringify(analyticsData));
+};
 
-//     window.addEventListener("load", function() {
-//       navigator.sendBeacon(url, JSON.stringify(analyticsData));
-//     });
+window.addEventListener("load", function() {
+    if(d) count();
+});
 
-// };
 
 // function count() {
 //     fetch(url,{
