@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded',init);
 
 const dominio = window.location.origin;
 
-const d = localStorage.getItem("acceptedCookies");
+// const d = localStorage.getItem("acceptedCookies");
 
 function count() {
     let analyticsData = {
@@ -94,7 +94,7 @@ function count() {
 };
 
 window.addEventListener("load", function() {
-    if(d) count();
+    count();
 });
 
 
@@ -166,11 +166,11 @@ function init(){
         botonRGPD.addEventListener("click", () => {
             eliminarBloqueRGPD();
 
-            navigator.sendBeacon(url, JSON.stringify({
-                id: 1,
-                count: 1,
-                domain: dominio,
-            }))
+            // navigator.sendBeacon(url, JSON.stringify({
+            //     id: 1,
+            //     count: 1,
+            //     domain: dominio,
+            // }))
 
             setCookie("rgpdOK",1,365);
         });
