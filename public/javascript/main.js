@@ -540,13 +540,13 @@ date.append(new Date ().getFullYear ());
 //   gtm.priorityId: 4
 // });
 
-const pImgs = document.querySelectorAll('.proyectA-imgs');
+const pImgs = document.querySelectorAll('.proyect-imgs');
 
 const pImgsB = document.querySelectorAll('.proyectB-imgs');
 
 cp = 0;
 
-cp2 = 0;
+// cp2 = 0;
 
 // console.log(pImgs);
 
@@ -559,23 +559,23 @@ function sliderP(a) {
     a[cp-1].style.display = "block";
 }
 
-function sliderO(a) {
-    for (let i=0;i<a.length;i++) {
-        a[i].style.display = "none";
-    }
-    cp2++;
-    if(cp2>a.length){cp2=1};
-    a[cp2-1].style.display = "block";
-}
+// function sliderO(a) {
+//     for (let i=0;i<a.length;i++) {
+//         a[i].style.display = "none";
+//     }
+//     cp2++;
+//     if(cp2>a.length){cp2=1};
+//     a[cp2-1].style.display = "block";
+// }
 
 
 // sliderP(pImgs);
-// sliderP(pImgsB, cp2);
+// sliderP(pImgsB);
 
 
-// setInterval(sliderP, 7000, pImgs);
+setInterval(sliderP, 4000, pImgs);
 
-// setInterval(sliderO, 10000, pImgsB);
+setInterval(sliderP, 7000, pImgsB);
 // setInterval(BB, 5000);
 // setInterval(sliderP, 5000);
 // sliderP(pImgsB)

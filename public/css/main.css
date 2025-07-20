@@ -1431,7 +1431,7 @@ h1,h2,h3 {
 	margin: 0 auto;
 }
 
-.proyectA-imgs, .proyectB-imgs {
+.proyect-imgs, .proyectB-imgs {
 	display: block;
 	position: absolute; 
 	width:100%; 
