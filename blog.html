@@ -7,20 +7,68 @@
 
 	<link rel="stylesheet" type="text/css" href="public/css/blog.css">
 
+	<script type="text/javascript" src="public/javascript/nav.js" defer></script>
+
 	<script src="public/javascript/blog.js" defer></script>
 </head>
 <body>
 
 	<header>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+	      <div class="container nav">
+	        <a class="navbar-brand" href="https://github.com/Chris0925-coder?tab=repositories"><span>Desarrollo Web</span></a>
+	        <button title="openNav" class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+	        <i class="bi bi-list"></i>
+	        </button>
+	        <div class="off hidden-nav">
+	          <div class="off-header">
+	            <button title="cerrar" type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-x-circle"></i></button>
+	          </div>
+	          <div class="off-body">
+	            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+	              <li class="nav-item">
+	                <a class="nav-link active" aria-current="page" href="index.html"><i class="bi bi-house-door"></i> Inicio </a>
+	              </li>
+	              <li class="nav-item">
+	                <a class="nav-link" href="descargas.html"><i class="bi bi-file-earmark-arrow-down"></i> Descargas </a>
+	              </li>
+	              <li class="nav-item">
+	                <a class="nav-link" href="buildpc.html"><i class="bi bi-building-fill-gear"></i> Construye tu PC</a>
+	              </li>
+	              <li class="nav-item">
+	                <a class="nav-link" href="blog.html"><i class="bi bi-receipt"></i> Blog </a>
+	              </li>
+	              <li class="nav-item">
+	                <a class="nav-link" href="contacto.html"><i class="bi bi-receipt"></i> Contacto </a>
+	              </li>
+	            </ul>
+	            <!-- <div class="logo-cont2"> -->
+	              <!-- <article class="gitlogo">
+	                  <a href="https://github.com/Chris0925-coder?tab=repositories" target="_blank"><img src="public/img/github_PNG40.png" alt="GitHubAccount"><p>GitHub Account</p></a>
+	              </article> -->
+	              <!-- <article>
+	                  <div class="logo2"></div>
+	              </article> -->
+	            <!-- </div> -->
+	          </div>
+	        </div>
+	      </div>
+	    </nav>
 		<h1>Blog</h1>
 	</header>
 
-	<div id="blog"></div>
+	<main>
+		<div id="blog"></div>	
+	</main>
 
 	<footer>
-		<p>Prueba con api rest desde vercel. Crear articulo, actulizar. Blog personal</p>
+		<div>
+			<div>
+				<p>Prueba, api rest desde vercel. Crear articulo, actualizar, eliminar.</p> <p>Blog personal</p>
+			</div>
 
-		<p><a href="//visits-woad.vercel.app/articles" target="_blank" title="vercel">Link</a></p>
+			<div><p><a href="//visits-woad.vercel.app/articles" target="_blank" title="vercel">Link</a></p></div>
+		</div>
 	</footer>
 </body>
 </html>

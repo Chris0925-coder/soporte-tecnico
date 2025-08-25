@@ -1572,7 +1572,6 @@ h1,h2,h3 {
   .header .header-content .header-mono {
     letter-spacing: 2px;
   }
-}
 
 .header-title {
   font-size: 2.4rem;
@@ -1611,7 +1610,7 @@ h1,h2,h3 {
 	display: none;
 }
 
-@media screen and (max-width: 768px) {
+/*@media screen and (max-width: 768px) {*/
 
 	.layouts figure{
 		width: 350px;
@@ -1889,11 +1888,5 @@ h1,h2,h3 {
 
 	.YouTube {
 		height: 90%;
-	}
-}
-
-@media (width >= 2028px) {
-	.demoPage-main {
-		margin: 0 30%;
 	}
 }
