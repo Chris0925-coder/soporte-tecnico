@@ -10,7 +10,7 @@ function content(title, filename, paragraph,link) {
 		<article>
 			<h2>${title}</h2>
 			<figure>
-				<img src='//visits-woad.vercel.app/img/${filename}' alt='#' width='200' height='250'>
+				<img src='https://qjsvnfogbaqnjbqi.public.blob.vercel-storage.com/${filename}' alt='#' width='200' height='250'>
 				
 				<figcaption>
 					<a href="${link}" title="${title}" target="_blank"><span>${paragraph}</span></a>
