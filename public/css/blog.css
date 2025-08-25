@@ -1,0 +1,50 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Roboto, sans-serif;
+}
+
+h1,h2,h3 {
+	text-align: center;
+	margin-bottom: 1em;
+}
+
+h1 {
+	font-size: clamp(28px, 4vw, 43px);
+}
+
+article {
+	margin: 40px auto;
+	max-width: 800px;
+
+}
+
+figure {
+	border: 2px solid black;
+	border-radius: 10px;
+	padding: 20px;
+		
+	img {
+		display: block;
+		margin: auto;
+		border-radius: 15px;
+		/*filter: drop-shadow(2px 2px 5px);*/
+	}
+}
+
+figure figcaption {
+	/*text-align: center;*/
+	margin: 10px auto;
+	/*border: 1px solid;*/
+
+	span {
+		display: block;
+		margin: 0 0 0 20px;
+		width: auto;
+		/*border: 1px solid red;*/
+	}
+}

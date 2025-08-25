@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>RX</title>
+</head>
+<body>
+	<canvas class="cornerstone-canvas" width="262" height="501" style="position: absolute; width: 262px; height: 501px; image-rendering: pixelated;"></canvas>
+	<picture style="width: 300px; height: 500px;">
+		<img src="public/img/svg/rx.svg" style="display:block; z-index: 3000;">
+	</picture>
+
+	<div style="background: url('blob:https://pacs.evacenter.com/8a56372b-64a8-4366-8302-9360bc0a1266')"></div>
+
+	<script>
+		function blobToJPG(blob) {
+		  return new Promise((resolve, reject) => {
+		    // Crear un objeto URL para el Blob
+		    const url = URL.createObjectURL(blob);
+
+		    // Crear una imagen
+		    const img = new Image();
+		    img.onload = () => {
+		      // Crear un canvas
+		      const canvas = document.createElement('canvas');
+		      const ctx = canvas.getContext('2d');
+
+		      // Ajustar el tamaño del canvas al de la imagen
+		      canvas.width = img.width;
+		      canvas.height = img.height;
+
+		      // Dibujar la imagen en el canvas
+		      ctx.drawImage(img, 0, 0);
+
+		      // Convertir el contenido del canvas a un archivo JPG
+		      canvas.toBlob(
+		        (jpgBlob) => {
+		          resolve(jpgBlob); // Devolver el nuevo Blob en formato JPG
+		        },
+		        'image/jpeg', // Especificar el formato
+		        0.9 // Calidad de compresión (0.0 a 1.0)
+		      );
+
+		      // Liberar el objeto URL
+		      URL.revokeObjectURL(url);
+		    };
+
+		    img.onerror = (error) => {
+		      reject(error); // Manejar errores
+		    };
+
+		    // Asignar el Blob como fuente de la imagen
+		    img.src = url;
+		  });
+		}
+
+		// Ejemplo de uso
+		const blob = new Blob(['blob:https://pacs.evacenter.com/8a56372b-64a8-4366-8302-9360bc0a1266'], { type: 'image/png' });
+		blobToJPG(blob).then((jpgBlob) => {
+		  console.log('Blob convertido a JPG:', jpgBlob);
+		});
+
+	</script>
+
+	
+
+</body>
+</html>

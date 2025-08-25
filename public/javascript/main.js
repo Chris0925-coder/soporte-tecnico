@@ -573,9 +573,9 @@ function sliderP(a) {
 // sliderP(pImgsB);
 
 
-setInterval(sliderP, 4000, pImgs);
+setInterval(sliderP, 6000, pImgs);
 
-setInterval(sliderP, 7000, pImgsB);
+setInterval(sliderP, 9000, pImgsB);
 // setInterval(BB, 5000);
 // setInterval(sliderP, 5000);
 // sliderP(pImgsB)
