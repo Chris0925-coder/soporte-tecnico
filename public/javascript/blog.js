@@ -1,5 +1,5 @@
 // const dominio = window.location.origin;
-
+const url = `https://visits-christian-guardias-projects.vercel.app/count`;
 const d = localStorage.getItem("acceptedCookies");
 
 function count() {
