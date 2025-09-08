@@ -1,3 +1,21 @@
+// const dominio = window.location.origin;
+
+const d = localStorage.getItem("acceptedCookies");
+
+function count() {
+    let analyticsData = {
+        id: 5,
+        count: 1,
+        domain: 'blog',
+    };
+    navigator.sendBeacon(url, JSON.stringify(analyticsData));
+};
+
+window.addEventListener("load", function() {
+    if(d) count();
+});
+
+
 const blog = document.getElementById('blog');
 const cblog = blog.querySelector('.item:first-child');
 const newDiv = document.createElement('div');
