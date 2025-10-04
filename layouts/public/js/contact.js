@@ -2,9 +2,6 @@ const img = document.getElementsByClassName('container-a');
 
 const formA = document.getElementsByClassName('form-a');
 
-console.log(img);
-
-
 let timer = function() {
 	img[0].style.opacity = "0.2";
 	img[0].style.transition = "opacity 2.0s";
