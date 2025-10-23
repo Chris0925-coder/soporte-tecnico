@@ -84,27 +84,6 @@ close.addEventListener('click', () => {
 //     .catch(error => console.log('error', error));
 // });
 
-//   function onClick(e) {
-//     e.preventDefault();
-//     grecaptcha.enterprise.ready(async () => {
-//       const token = await grecaptcha.enterprise.execute('6LfMzhspAAAAAPPDgx5sn3yYKbAMmmDYc2KNZcvY', {action: 'LOGIN'});
-//     });
-//   }
-// onClick(btn);
-// console.log(grecaptcha);
-// let onloadCallback = function() {
-//         grecaptcha.render(html, {
-//           'sitekey' : '6Le1UBwpAAAAAHzagcQvjzbPGK2g7TvoJiLyNSO5'
-//         });
-
-// function enabledSubmit(a) {
-//     if (email.focus != "") {
-//         a.style.display = "flex";
-//     };
-// };
-
-// enabledSubmit(btn);
-// const url = 'http://localhost:3000/submit';
 const url = `https://visits-christian-guardias-projects.vercel.app/submit`;
 
 // const form = document.querySelector('#formula');

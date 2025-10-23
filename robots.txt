@@ -8,7 +8,9 @@ Disallow: /public/img/influencers/
 User-agent: *
 Disallow: /cgi-bin/
 Disallow: /tmp/
+Disallow: /layouts/
 Disallow: /scripts/
+Disallow: /public/javascript/
 Disallow: /public/img/influencers/
 
-Sitemap: https://www.webdev.fun/sitemap.xml
+Sitemap: https://soporte-tecnico.pages.dev/sitemap.xml
