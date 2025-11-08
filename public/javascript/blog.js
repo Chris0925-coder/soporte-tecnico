@@ -2,11 +2,13 @@
 const url = `https://visits-christian-guardias-projects.vercel.app/count`;
 const d = localStorage.getItem("acceptedCookies");
 
+const dominio = window.location.origin;
+
 function count() {
     let analyticsData = {
         id: 5,
         count: 1,
-        domain: 'blog',
+        domain: dominio,
     };
     navigator.sendBeacon(url, JSON.stringify(analyticsData));
 };
