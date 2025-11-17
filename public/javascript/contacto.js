@@ -96,10 +96,14 @@ function form() {
         event.preventDefault(); 
         // Prevent default form submission
         const formData = new FormData(form1);
-        if (!formData.get('email')) {
+
+        console.log(formData.get('email') == " " || form.get('control') == " ");
+
+        if (formData.get('email') == " " || form.get('control') == " ") {
             document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:darkred;">This field is required.</span>';
             return false;
         } 
+
           await fetch(url, {
             method: 'POST',
             body: JSON.stringify({
@@ -115,9 +119,9 @@ function form() {
         
 
 
-        alert('Form submitted successfully!');
+        let al = alert('Form submitted successfully!');
 
-        window.location.href = "https://soporte-tecnico.pages.dev/";
+        if (al) return window.location.href = "https://soporte-tecnico.pages.dev/";
       });
 }
 
