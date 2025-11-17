@@ -93,7 +93,7 @@ function form() {
     // console.log(form1)
 
         form1.addEventListener('submit', async function(event) {
-        event.preventDefault(); 
+        // event.preventDefault(); 
         // Prevent default form submission
         const formData = new FormData(form1);
           await fetch(url, {
@@ -113,7 +113,7 @@ function form() {
 
         alert('Form submitted successfully!');
 
-        return window.location.href = "https://soporte-tecnico.pages.dev/";
+        window.location.href = "https://soporte-tecnico.pages.dev/";
       });
 }
 
@@ -123,15 +123,9 @@ function submitUserForm() {
         document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:darkred;">This field is required.</span>';
         return false;
     } 
-    return true;
+    // return true;
+    form();
 };
-
-console.log(submitUserForm());
-
-if(submitUserForm()) form();
-
-
-
 
 // form();
  
