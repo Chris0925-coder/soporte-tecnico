@@ -93,7 +93,7 @@ function form() {
     // console.log(form1)
 
         form1.addEventListener('submit', async function(event) {
-        // event.preventDefault(); 
+        event.preventDefault(); 
         // Prevent default form submission
         const formData = new FormData(form1);
           await fetch(url, {
