@@ -97,10 +97,8 @@ function form() {
         // Prevent default form submission
         const formData = new FormData(form1);
 
-        console.log(formData.get('email') == " " || form.get('control') == " ");
-
-        if (formData.get('email') == " " || form.get('control') == " ") {
-            document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:darkred;">This field is required.</span>';
+        if (formData.get('email').length == 0 || formData.get('control').length == 0) {
+            document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:darkred;">Field is required.</span>';
             return false;
         } 
 
@@ -119,23 +117,24 @@ function form() {
         
 
 
-        let al = alert('Form submitted successfully!');
+        alert('Form submitted successfully!');
 
-        if (al) return window.location.href = "https://soporte-tecnico.pages.dev/";
+
+        window.location.href = "https://soporte-tecnico.pages.dev/";
       });
 }
 
-function submitUserForm() {
+// function submitUserForm() {
     // var response = grecaptcha.getResponse();
     // if (response.length == 0) {
     //     document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:darkred;">This field is required.</span>';
     //     return false;
     // } 
     // return true;
-    form();
-};
+    // form();
+// };
 
-// form();
+form();
  
 // form.addEventListener('onsubmit', submitUserForm);
 // function verifyCaptcha() {
