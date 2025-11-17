@@ -96,6 +96,10 @@ function form() {
         event.preventDefault(); 
         // Prevent default form submission
         const formData = new FormData(form1);
+        if (!formData.get('email')) {
+            document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:darkred;">This field is required.</span>';
+            return false;
+        } 
           await fetch(url, {
             method: 'POST',
             body: JSON.stringify({
@@ -118,11 +122,11 @@ function form() {
 }
 
 function submitUserForm() {
-    var response = grecaptcha.getResponse();
-    if (response.length == 0) {
-        document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:darkred;">This field is required.</span>';
-        return false;
-    } 
+    // var response = grecaptcha.getResponse();
+    // if (response.length == 0) {
+    //     document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:darkred;">This field is required.</span>';
+    //     return false;
+    // } 
     // return true;
     form();
 };
