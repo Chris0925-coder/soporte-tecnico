@@ -123,7 +123,6 @@ function submitUserForm() {
         document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:darkred;">This field is required.</span>';
         return false;
     } 
-    form();
     return true;
 };
 
