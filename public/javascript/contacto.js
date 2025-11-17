@@ -89,16 +89,6 @@ const url = `https://visits-christian-guardias-projects.vercel.app/submit`;
 // const form = document.querySelector('#formula');
 const form1 = document.getElementById('formula');
 
-function submitUserForm() {
-    var response = grecaptcha.getResponse();
-    if (response.length == 0) {
-        document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:darkred;">This field is required.</span>';
-        return false;
-    } 
-    form();
-    return true;
-};
-
 function form() {
     // console.log(form1)
 
@@ -126,6 +116,19 @@ function form() {
         return window.location.href = "https://soporte-tecnico.pages.dev/";
       });
 }
+
+function submitUserForm() {
+    var response = grecaptcha.getResponse();
+    if (response.length == 0) {
+        document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:darkred;">This field is required.</span>';
+        return false;
+    } 
+    form();
+    return true;
+};
+
+// console.log(submitUserForm);
+
 
 // form();
  
