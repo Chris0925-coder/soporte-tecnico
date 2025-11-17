@@ -127,7 +127,11 @@ function submitUserForm() {
     return true;
 };
 
-// console.log(submitUserForm);
+console.log(submitUserForm());
+
+if(submitUserForm()) form();
+
+
 
 
 // form();
