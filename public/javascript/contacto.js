@@ -87,6 +87,7 @@ close.addEventListener('click', () => {
 const url = `https://visits-christian-guardias-projects.vercel.app/submit`;
 
 // const form = document.querySelector('#formula');
+const form1 = document.getElementById('formula');
 
 function submitUserForm() {
     var response = grecaptcha.getResponse();
@@ -94,19 +95,17 @@ function submitUserForm() {
         document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:darkred;">This field is required.</span>';
         return false;
     } 
+    form();
     return true;
 };
-
-const form1 = document.getElementById('formula');
 
 function form() {
     // console.log(form1)
 
         form1.addEventListener('submit', async function(event) {
-        event.preventDefault(); // Prevent default form submission
+        event.preventDefault(); 
+        // Prevent default form submission
         const formData = new FormData(form1);
-
-        console.log('Message:', formData.get('email'),formData.get('control'));
           await fetch(url, {
             method: 'POST',
             body: JSON.stringify({
@@ -126,10 +125,9 @@ function form() {
 
         return window.location.href = "https://soporte-tecnico.pages.dev/";
       });
-    
 }
 
-form();
+// form();
  
 // form.addEventListener('onsubmit', submitUserForm);
 // function verifyCaptcha() {
