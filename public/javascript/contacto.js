@@ -23,7 +23,7 @@ close.addEventListener('click', () => {
 // let control = document.querySelector("[name=control]").value;
 // const btn = document.querySelector(".btn");
 
-let grecaptcha = getCookie('_grecaptcha');
+// let grecaptcha = getCookie('_grecaptcha');
 
 // console.log(reCaptcha);
 
@@ -130,17 +130,17 @@ function submitUserForm() {
         document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:darkred;">This field is required.</span>';
         return false;
     }
-    console.log(response); 
+    // console.log(response); 
     // return true;
-    form();
+    // form();
 };
 
-// form();
+form();
  
 // form.addEventListener('onsubmit', submitUserForm);
 // function verifyCaptcha() {
 //     document.getElementById('g-recaptcha-error').innerHTML = 'Error';
 // };
 
-submitUserForm();
+// submitUserForm();
 
