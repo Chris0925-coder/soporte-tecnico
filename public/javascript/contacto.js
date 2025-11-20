@@ -124,22 +124,23 @@ function form() {
       });
 }
 
-// function submitUserForm() {
-    // var response = grecaptcha.getResponse();
-    // if (response.length == 0) {
-    //     document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:darkred;">This field is required.</span>';
-    //     return false;
-    // } 
+function submitUserForm() {
+    var response = grecaptcha.getResponse();
+    if (response.length == 0) {
+        document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:darkred;">This field is required.</span>';
+        return false;
+    }
+    console.log(response); 
     // return true;
-    // form();
-// };
+    form();
+};
 
-form();
+// form();
  
 // form.addEventListener('onsubmit', submitUserForm);
 // function verifyCaptcha() {
 //     document.getElementById('g-recaptcha-error').innerHTML = 'Error';
 // };
 
-// submitUserForm();
+submitUserForm();
 
