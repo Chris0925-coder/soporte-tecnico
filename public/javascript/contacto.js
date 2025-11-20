@@ -23,7 +23,7 @@ close.addEventListener('click', () => {
 // let control = document.querySelector("[name=control]").value;
 // const btn = document.querySelector(".btn");
 
-// let grecaptcha = getCookie('_grecaptcha');
+let grecaptcha = getCookie('_grecaptcha');
 
 // console.log(reCaptcha);
 
