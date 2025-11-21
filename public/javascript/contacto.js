@@ -92,7 +92,7 @@ const url = 'https://cz5wbbl2-3000.use2.devtunnels.ms/submit';
 const form1 = document.getElementById('formula');
 
 
-function handleClick(event) {
+function handleClick() {
         event.preventDefault();
         grecaptcha.enterprise.ready(async () => {
           const token = await grecaptcha.enterprise.execute("{{6LfYVykqAAAAAJjjqnWXEWHoYS59zqjiLZB4V0ss}}", {
@@ -139,7 +139,7 @@ function form() {
         window.location.href = "https://soporte-tecnico.pages.dev/";
       });
 }
-
+// form();
 
 function submitUserForm() {
     var response = grecaptcha.getResponse();
@@ -177,7 +177,7 @@ function submitUserForm() {
     // </script>
 
 // form();
- 
+ handleClick();
 // form.addEventListener('onsubmit', submitUserForm);
 // function verifyCaptcha() {
 //     document.getElementById('g-recaptcha-error').innerHTML = 'Error';
