@@ -84,8 +84,8 @@ close.addEventListener('click', () => {
 //     .catch(error => console.log('error', error));
 // });
 
-// const url = `https://visits-christian-guardias-projects.vercel.app/submit`;
-const url = 'https://cz5wbbl2-3000.use2.devtunnels.ms/submit';
+const url = `https://visits-christian-guardias-projects.vercel.app/submit`;
+// const url = 'https://cz5wbbl2-3000.use2.devtunnels.ms/submit';
 // https://cz5wbbl2-3000.use2.devtunnels.ms/
 
 // const form = document.querySelector('#formula');
@@ -94,24 +94,18 @@ const form1 = document.getElementById('formula');
 
 function handleClick(e) {
         // e.preventDefault();
-        grecaptcha.enterprise.ready(async () => {
-          const token = await grecaptcha.enterprise.execute("{{6LfYVykqAAAAAJjjqnWXEWHoYS59zqjiLZB4V0ss}}", {
-            action: "send_comment",
-          });
-          await sendComment({ token });
-          // await form();
-        });
-        // form();
-        
-      }
+    grecaptcha.enterprise.ready(async () => {
+      const token = await grecaptcha.enterprise.execute("{{6LfYVykqAAAAAJjjqnWXEWHoYS59zqjiLZB4V0ss}}", {
+        action: "send_comment",
+      });
+      await sendComment({ token });
+    });
+}
 
 function form() {
-    // console.log(form1)
-
-        form1.addEventListener('submit', async function(event) {
+    form1.addEventListener('submit', async function(event) {
         event.preventDefault(); 
-         handleClick();
-        // Prevent default form submission
+             
         const formData = new FormData(form1);
 
         if (formData.get('email').length == 0 || formData.get('control').length == 0) {
@@ -122,11 +116,9 @@ function form() {
           await fetch(url, {
             method: 'POST',
             body: JSON.stringify({
-
                 email: formData.get('email'), 
                 control: formData.get('control'),
-                }),
-            token: '6LfYVykqAAAAAJjjqnWXEWHoYS59zqjiLZB4V0ss',
+            }),
           })
           .then((response) => response.text())
           .then((data) => console.log(data))
@@ -138,43 +130,44 @@ function form() {
 
 
         window.location.href = "https://soporte-tecnico.pages.dev/";
-      });
+    });
 }
+
 // form();
 
-function submitUserForm() {
-    var response = grecaptcha.getResponse();
-    if (response.length == 0) {
-        document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:darkred;">This field is required.</span>';
-        return false;
-    }
+// function submitUserForm() {
+//     var response = grecaptcha.getResponse();
+//     if (response.length == 0) {
+//         document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:darkred;">This field is required.</span>';
+//         return false;
+//     }
     // console.log(response); 
     // return true;
-    form();
-};
+//     form();
+// };
 
 
 // <script type="text/javascript">
-      async function sendComment({ comment = "", token }) {
+      // async function sendComment({ comment = "", token }) {
         // Include the token for server-side assessment.
         // Include the user input values from your form to pass to the backend.
-        const body = {
-          comment,
-          token,
-        };
+        // const body = {
+        //   comment,
+        //   token,
+        // };
         // Code for fetching the assessment from server-side goes here.
         // Refer to demo app backend code for more information.
         // If you already use a library or framework for event handlers, you 
         // can handle events your usual way.
-        const score = await fetchServerResponse({
-          body,
-          url: "on_comment_submit",
-        });
+        // const score = await fetchServerResponse({
+        //   body,
+        //   url: "on_comment_submit",
+        // });
         // In this demo, the assessment score is displayed in the client.
         // But, you should AVOID using the assessment response in the
         // client and handle it on the server-side.
-        useAssessmentInClient(score);
-      }
+      //   useAssessmentInClient(score);
+      // }
     // </script>
 
 form();
