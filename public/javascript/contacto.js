@@ -92,7 +92,7 @@ const url = 'https://cz5wbbl2-3000.use2.devtunnels.ms/submit';
 const form1 = document.getElementById('formula');
 
 
-function handleClick() {
+function handleClick(event) {
         event.preventDefault();
         grecaptcha.enterprise.ready(async () => {
           const token = await grecaptcha.enterprise.execute("{{6LfYVykqAAAAAJjjqnWXEWHoYS59zqjiLZB4V0ss}}", {
