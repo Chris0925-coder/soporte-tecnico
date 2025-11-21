@@ -98,9 +98,10 @@ function handleClick(event) {
           const token = await grecaptcha.enterprise.execute("{{6LfYVykqAAAAAJjjqnWXEWHoYS59zqjiLZB4V0ss}}", {
             action: "send_comment",
           });
-          // await sendComment({ token });
-          await form();
+          await sendComment({ token });
+          // await form();
         });
+        form();
         
       }
 
