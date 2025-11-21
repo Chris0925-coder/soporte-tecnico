@@ -110,7 +110,7 @@ function form() {
                 email: formData.get('email'), 
                 control: formData.get('control')
 
-                }), token: token,
+                })
           })
           .then((response) => response.text())
           .then((data) => console.log(data))
@@ -129,12 +129,13 @@ function form() {
 function handleClick(event) {
         event.preventDefault();
         grecaptcha.enterprise.ready(async () => {
-          const token = await grecaptcha.enterprise.execute("6LfYVykqAAAAAJjjqnWXEWHoYS59zqjiLZB4V0ss", {
+          const token = await grecaptcha.enterprise.execute("{{6LfYVykqAAAAAJjjqnWXEWHoYS59zqjiLZB4V0ss}}", {
             action: "send_comment",
           });
-          // await sendComment({ token });
-          await form();
+          await sendComment({ token });
+          
         });
+        form();
       }
 
 function submitUserForm() {
