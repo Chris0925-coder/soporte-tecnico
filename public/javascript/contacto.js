@@ -101,7 +101,7 @@ function handleClick(e) {
           await sendComment({ token });
           // await form();
         });
-        form();
+        // form();
         
       }
 
@@ -110,6 +110,7 @@ function form() {
 
         form1.addEventListener('submit', async function(event) {
         event.preventDefault(); 
+         handleClick();
         // Prevent default form submission
         const formData = new FormData(form1);
 
@@ -124,13 +125,13 @@ function form() {
 
                 email: formData.get('email'), 
                 control: formData.get('control'),
-                token: token,
+                token: '6LfYVykqAAAAAJjjqnWXEWHoYS59zqjiLZB4V0ss',
                 }),
           })
           .then((response) => response.text())
           .then((data) => console.log(data))
           .catch((error) => console.error('Error:', error));
-        
+       
 
 
         alert('Form submitted successfully!');
@@ -176,8 +177,8 @@ function submitUserForm() {
       }
     // </script>
 
-// form();
- handleClick();
+form();
+ // handleClick();
 // form.addEventListener('onsubmit', submitUserForm);
 // function verifyCaptcha() {
 //     document.getElementById('g-recaptcha-error').innerHTML = 'Error';
