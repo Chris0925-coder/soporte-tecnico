@@ -129,7 +129,7 @@ function form() {
 function handleClick(event) {
         event.preventDefault();
         grecaptcha.enterprise.ready(async () => {
-          const token = await grecaptcha.enterprise.execute("{{6LfYVykqAAAAAJjjqnWXEWHoYS59zqjiLZB4V0ss}}", {
+          const token = await grecaptcha.enterprise.execute("6LfYVykqAAAAAJjjqnWXEWHoYS59zqjiLZB4V0ss", {
             action: "send_comment",
           });
           // await sendComment({ token });
