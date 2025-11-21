@@ -124,7 +124,7 @@ function form() {
             body: JSON.stringify({
 
                 email: formData.get('email'), 
-                control: formData.get('control')
+                control: formData.get('control'),
                 }),
             token: '6LfYVykqAAAAAJjjqnWXEWHoYS59zqjiLZB4V0ss',
           })
