@@ -86,9 +86,23 @@ close.addEventListener('click', () => {
 
 // const url = `https://visits-christian-guardias-projects.vercel.app/submit`;
 const url = 'https://cz5wbbl2-3000.use2.devtunnels.ms/submit';
+// https://cz5wbbl2-3000.use2.devtunnels.ms/
 
 // const form = document.querySelector('#formula');
 const form1 = document.getElementById('formula');
+
+
+function handleClick(event) {
+        event.preventDefault();
+        grecaptcha.enterprise.ready(async () => {
+          const token = await grecaptcha.enterprise.execute("{{6LfYVykqAAAAAJjjqnWXEWHoYS59zqjiLZB4V0ss}}", {
+            action: "send_comment",
+          });
+          // await sendComment({ token });
+          await form();
+        });
+        
+      }
 
 function form() {
     // console.log(form1)
@@ -108,9 +122,9 @@ function form() {
             body: JSON.stringify({
 
                 email: formData.get('email'), 
-                control: formData.get('control')
-
-                })
+                control: formData.get('control'),
+                token: token,
+                }),
           })
           .then((response) => response.text())
           .then((data) => console.log(data))
@@ -125,18 +139,6 @@ function form() {
       });
 }
 
-
-function handleClick(event) {
-        event.preventDefault();
-        grecaptcha.enterprise.ready(async () => {
-          const token = await grecaptcha.enterprise.execute("{{6LfYVykqAAAAAJjjqnWXEWHoYS59zqjiLZB4V0ss}}", {
-            action: "send_comment",
-          });
-          await sendComment({ token });
-          
-        });
-        form();
-      }
 
 function submitUserForm() {
     var response = grecaptcha.getResponse();
