@@ -546,7 +546,7 @@ const pImgsB = document.querySelectorAll('.proyectB-imgs');
 
 cp = 0;
 
-// cp2 = 0;
+cp2 = 0;
 
 // console.log(pImgs);
 
@@ -557,6 +557,15 @@ function sliderP(a) {
     cp++;
     if(cp>a.length){cp=1};
     a[cp-1].style.display = "block";
+}
+
+function slider(a) {
+    for (let i=0;i<a.length;i++) {
+        a[i].style.display = "none";
+    }
+    cp2++;
+    if(cp2>a.length){cp2=1};
+    a[cp2-1].style.display = "block";
 }
 
 // function sliderO(a) {
@@ -573,9 +582,9 @@ function sliderP(a) {
 // sliderP(pImgsB);
 
 
-setInterval(sliderP, 6000, pImgs);
+setInterval(sliderP, 7500, pImgs);
 
-setInterval(sliderP, 9000, pImgsB);
+setInterval(slider, 7500, pImgsB);
 // setInterval(BB, 5000);
 // setInterval(sliderP, 5000);
 // sliderP(pImgsB)
