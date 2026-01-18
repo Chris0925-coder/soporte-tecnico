@@ -658,9 +658,11 @@ a:hover {
 	padding-left: 0;
 	height: 70px;
 }
+
 /*SECTION LAPTOPS*/
 .laptops {
 	margin-top: 40px;
+	border: 1px solid;
 }
 
 .title__laptop {
