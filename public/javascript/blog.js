@@ -1,6 +1,14 @@
 // const dominio = window.location.origin;
 const url = `https://visits-christian-guardias-projects.vercel.app/count`;
 const d = localStorage.getItem("acceptedCookies");
+let dd = new Date().toLocaleDateString("es-PA", {
+  weekday: "long",
+  day: "numeric",
+  month: "short",
+  hour: "numeric",
+  minute: "numeric",
+  hour12: true
+});
 
 const dominio = window.location.origin;
 
@@ -9,6 +17,7 @@ function count() {
         id: 5,
         count: 1,
         domain: dominio,
+        date: `desde: 06/2025 | última vista: ${dd}`,
     };
     navigator.sendBeacon(url, JSON.stringify(analyticsData));
 };
