@@ -1,4 +1,7 @@
 // const dominio = window.location.origin;
+const blog = document.getElementById('blog');
+const cblog = blog.querySelector('.item:first-child');
+const newDiv = document.createElement('div');
 const url = `https://visits-christian-guardias-projects.vercel.app/count`;
 const d = localStorage.getItem("acceptedCookies");
 let dd = new Date().toLocaleDateString("es-PA", {
@@ -12,26 +15,34 @@ let dd = new Date().toLocaleDateString("es-PA", {
 
 const dominio = window.location.origin;
 
-function count() {
+function cli(cb) {
+	blog.addEventListener('click', function (event) {
+		if(event.target.tagName === "A" || event.target.tagName === "SPAN") {
+			cb(1);
+		}	
+	})
+}
+
+function count(a) {
     let analyticsData = {
         id: 5,
         count: 1,
-        domain: dominio,
+        domain: dominio + "blog.html",
         date: `desde: 06/2025 | última vista: ${dd}`,
+        clicks: a,
     };
     navigator.sendBeacon(url, JSON.stringify(analyticsData));
 };
 
-window.addEventListener("load", function() {
-    if(d) count();
-});
 
 
-const blog = document.getElementById('blog');
-const cblog = blog.querySelector('.item:first-child');
-const newDiv = document.createElement('div');
-
-// console.log(blog);
+// window.addEventListener("load", function() {
+    // if(d) {
+    	cli(function (valor) {
+			count(valor);
+		});
+    // }
+// });
 
 function content(title, filename, paragraph,link) {
 		
@@ -61,8 +72,6 @@ async function fetchContent() {
         blog.innerText = error.message;
       });
 
-	// console.log(!result.error);
-
 	if(!result.error) {
 		result.forEach(res => {			
 			return content(res.title,res.images,res.paragraph,res.link);
@@ -74,3 +83,4 @@ async function fetchContent() {
 }
 
 fetchContent();
+
