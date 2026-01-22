@@ -23,7 +23,7 @@ function cli() {
 			let analyticsData = {
 		        id: 5,
 		        count: 0,
-		        domain: dominio + "blog.html",
+		        domain: dominio + "/blog.html",
 		        date: `desde: 06/2025 | última vista: ${dd}`,
 		        clicks: 1,
 		    };
@@ -38,7 +38,7 @@ function count() {
     let analyticsData = {
         id: 5,
         count: 1,
-        domain: dominio + "blog.html",
+        domain: dominio + "/blog.html",
         date: `desde: 06/2025 | última vista: ${dd}`,
         clicks: 0,
     };
