@@ -13,6 +13,7 @@ const cancel = document.querySelector(".botonRGPD--cancel");
 const navBoton = document.querySelector(".navbar-toggler");
 const navLink = document.querySelector(".off");
 const close = document.querySelector(".btn-close");
+const main = document.querySelector("body");
 
 
 navBoton.addEventListener('click', () => {
@@ -93,7 +94,7 @@ let dd = new Date().toLocaleDateString("es-PA", {
 });
 
 function cli() {
-    blog.addEventListener('click', function (event) {
+    main.addEventListener('click', function (event) {
         if(event.target.tagName === "A" || event.target.tagName === "ARTICLE") {
             // return cb(1);
 
