@@ -15,23 +15,32 @@ let dd = new Date().toLocaleDateString("es-PA", {
 
 const dominio = window.location.origin;
 
-function cli(cb) {
+function cli() {
 	blog.addEventListener('click', function (event) {
 		if(event.target.tagName === "A" || event.target.tagName === "SPAN") {
-			return cb(1);
-		}
+			// return cb(1);
 
-		cb(0);
+			let analyticsData = {
+		        id: 5,
+		        count: 0,
+		        domain: dominio + "blog.html",
+		        date: `desde: 06/2025 | última vista: ${dd}`,
+		        clicks: 1,
+		    };
+		    navigator.sendBeacon(url, JSON.stringify(analyticsData));
+		}
 	})
 }
 
-function count(a) {
+cli();
+
+function count() {
     let analyticsData = {
         id: 5,
         count: 1,
         domain: dominio + "blog.html",
         date: `desde: 06/2025 | última vista: ${dd}`,
-        clicks: a,
+        clicks: 0,
     };
     navigator.sendBeacon(url, JSON.stringify(analyticsData));
 };
@@ -40,13 +49,9 @@ function count(a) {
 
 // window.addEventListener("load", function() {
     // if(d) {
-// count(0);
+count();
 
 
-cli(function (valor) {
-	count(valor);
-	console.log(typeof valor);
-});
     // }
 // });
 
