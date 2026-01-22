@@ -92,19 +92,41 @@ let dd = new Date().toLocaleDateString("es-PA", {
   hour12: true
 });
 
+function cli() {
+    blog.addEventListener('click', function (event) {
+        if(event.target.tagName === "A" || event.target.tagName === "ARTICLE") {
+            // return cb(1);
+
+            let analyticsData = {
+                id: 1,
+                count: 0,
+                domain: dominio,
+                date: `desde: 06/2025 | última vista: ${dd}`,
+                clicks: 1,
+            };
+            navigator.sendBeacon(url, JSON.stringify(analyticsData));
+        }
+    })
+}
+
+cli();
+
 function count() {
     let analyticsData = {
         id: 1,
         count: 1,
         domain: dominio,
         date: `desde: 06/2025 | última vista: ${dd}`,
+        clicks: 0,
     };
     navigator.sendBeacon(url, JSON.stringify(analyticsData));
 };
 
-window.addEventListener("load", function() {
-    if(d) count();
-});
+// window.addEventListener("load", function() {
+//     if(d) count();
+// });
+
+count();
 
 
 // function count() {
@@ -175,7 +197,7 @@ function init(){
         botonRGPD.addEventListener("click", () => {
             eliminarBloqueRGPD();
 
-            count();
+            // count();
 
             setCookie("rgpdOK",1,365);
         });
