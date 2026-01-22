@@ -18,8 +18,10 @@ const dominio = window.location.origin;
 function cli(cb) {
 	blog.addEventListener('click', function (event) {
 		if(event.target.tagName === "A" || event.target.tagName === "SPAN") {
-			cb(1);
-		}	
+			return cb(1);
+		}
+
+		cb(0);
 	})
 }
 
@@ -38,10 +40,12 @@ function count(a) {
 
 // window.addEventListener("load", function() {
     // if(d) {
-count(0);
+// count(0);
+
 
 cli(function (valor) {
 	count(valor);
+	console.log(typeof valor);
 });
     // }
 // });
