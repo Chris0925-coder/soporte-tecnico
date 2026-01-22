@@ -38,9 +38,11 @@ function count(a) {
 
 // window.addEventListener("load", function() {
     // if(d) {
-    	cli(function (valor) {
-			count(valor);
-		});
+count(0);
+
+cli(function (valor) {
+	count(valor);
+});
     // }
 // });
 
