@@ -99,10 +99,17 @@ function handleClick(e) {
         action: "send_comment",
       });
       await sendComment({ token });
+      return true;
     });
+
+    return false;
 }
 
 function form() {
+    let cap = handleClick();
+    console.log(cap);
+    if (cap) {
+
     form1.addEventListener('submit', async function(event) {
         event.preventDefault(); 
              
@@ -131,6 +138,7 @@ function form() {
 
         window.location.href = "https://soporte-tecnico.pages.dev/";
     });
+    }
 }
 
 // form();
