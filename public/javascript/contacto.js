@@ -106,9 +106,6 @@ function handleClick(e) {
 }
 
 function form() {
-    let cap = handleClick();
-    console.log(cap);
-    if (cap) {
 
     form1.addEventListener('submit', async function(event) {
         event.preventDefault(); 
@@ -138,8 +135,8 @@ function form() {
 
         window.location.href = "https://soporte-tecnico.pages.dev/";
     });
-    }
 }
+
 
 // form();
 
