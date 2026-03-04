@@ -58,6 +58,11 @@ a:hover {
 	font-size:18px;
 	opacity:0.9;
 	z-index: 6000;
+
+	ul {
+		text-align: right;
+		list-style: none;
+	}
 }
 
 .botonRGPD,
