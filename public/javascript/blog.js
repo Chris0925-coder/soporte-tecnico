@@ -75,7 +75,7 @@ function content(title, filename, paragraph,link) {
 
 async function fetchContent() {
 
-	let result = await fetch(`https://visits-woad.vercel.app/articles/webdev`)
+	let result = await fetch(`https://visits-woad.vercel.app/upload/webdev`)
 	.then(response => response.json())
 	.catch((error) => {
         console.error("Error:", error.message);
@@ -90,7 +90,6 @@ async function fetchContent() {
 
 	}
 
-	
 }
 
 fetchContent();
