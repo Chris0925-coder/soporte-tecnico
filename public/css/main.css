@@ -1591,7 +1591,7 @@ h1,h2,h3 {
   .header {
     height: 500px;
     min-height: 500px;
-    z-index: 9000;
+    /*z-index: 9000;*/
   }
   .header .social-icons {
     margin: 10px auto;
