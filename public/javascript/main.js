@@ -89,14 +89,14 @@ document.addEventListener('DOMContentLoaded',init);
 const dominio = window.location.origin;
 
 const d = localStorage.getItem("acceptedCookies");
-let dd = new Date().toLocaleDateString("es-PA", {
-  weekday: "long",
-  day: "numeric",
-  month: "short",
-  hour: "numeric",
-  minute: "numeric",
-  hour12: true
-});
+ const opciones = {
+    timeZone: "America/Panama",
+    dateStyle: 'full',
+    timeStyle: 'long',
+    hour12: false, 
+  };
+
+  const formatoConZona = new Intl.DateTimeFormat("es-PA", opciones).format(ahora);
 
 function cli() {
     main.addEventListener('click', function (event) {
@@ -107,7 +107,7 @@ function cli() {
                 id: 1,
                 count: 0,
                 domain: dominio,
-                date: `desde: 06/2025 | última vista: ${dd}`,
+                date: `06/2025 | última vista: ${formatoConZona}`,
                 clicks: 1,
             };
             navigator.sendBeacon(url, JSON.stringify(analyticsData));
@@ -122,7 +122,7 @@ function count() {
         id: 1,
         count: 1,
         domain: dominio,
-        date: `desde: 06/2025 | última vista: ${dd}`,
+        date: `desde: 06/2025 | última vista: ${formatoConZona}`,
         clicks: 0,
     };
     navigator.sendBeacon(url, JSON.stringify(analyticsData));
