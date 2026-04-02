@@ -12,17 +12,22 @@ const cancel = document.querySelector(".botonRGPD--cancel");
 
 const navBoton = document.querySelector(".navbar-toggler");
 const navLink = document.querySelector(".off");
-const close = document.querySelector(".btn-close");
+const close = document.querySelectorAll(".btn-close");
 const main = document.querySelector("body");
-
+const anuncio = document.querySelector(".anuncio")
 
 navBoton.addEventListener('click', () => {
     navLink.classList.toggle("hidden-nav");
 });
 
-close.addEventListener('click', () => {
-    navLink.classList.toggle("hidden-nav");
-});
+function closeBTN(a, b, c) {
+    a.addEventListener('click', () => {
+        b.classList.toggle(c);
+    });
+}
+console.log(close)
+closeBTN(close[0], navLink, "hidden-nav");
+closeBTN(close[1], anuncio, "hide");
 
 function setCookie(cname, cvalue, exdays) {
     let d = new Date();
