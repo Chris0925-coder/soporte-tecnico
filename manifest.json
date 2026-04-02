@@ -5,49 +5,49 @@
  "short_name": "ChrisWEBDEV",
  "icons": [
     {
-   "src": "\/soporte-tecnico/favicons/favicon-16x16.png",
+   "src": "\/favicons/favicon-16x16.png",
    "sizes": "16x16",
    "type": "image\/png",
    "density": "0.75"
   },
   {
-   "src": "\/soporte-tecnico/favicons/favicon-32x32.png",
+   "src": "\/favicons/favicon-32x32.png",
    "sizes": "32x32",
    "type": "image\/png",
    "density": "0.75"
   },
   {
-   "src": "\/soporte-tecnico/favicons/android-icon-36x36.png",
+   "src": "\/favicons/android-icon-36x36.png",
    "sizes": "36x36",
    "type": "image\/png",
    "density": "0.75"
   },
   {
-   "src": "\/soporte-tecnico/favicons/favicon-48px.png",
+   "src": "\/favicons/favicon-48px.png",
    "sizes": "48x48",
    "type": "image\/png",
    "density": "1.0"
   },
   {
-   "src": "\/soporte-tecnico/favicons/android-icon-72x72.png",
+   "src": "\/favicons/android-icon-72x72.png",
    "sizes": "72x72",
    "type": "image\/png",
    "density": "1.5"
   },
   {
-   "src": "\/soporte-tecnico/favicons/android-icon-96x96.png",
+   "src": "\/favicons/android-icon-96x96.png",
    "sizes": "96x96",
    "type": "image\/png",
    "density": "2.0"
   },
   {
-   "src": "\/soporte-tecnico/favicons/android-icon-144x144.png",
+   "src": "\/favicons/android-icon-144x144.png",
    "sizes": "144x144",
    "type": "image\/png",
    "density": "3.0"
   },
   {
-   "src": "\/soporte-tecnico/favicons/android-icon-192x192.png",
+   "src": "\/favicons/android-icon-192x192.png",
    "sizes": "192x192",
    "form_factor": "wide",
    "type": "image\/png",
