@@ -1341,7 +1341,7 @@ a:hover {
   height: 60lvh;
 /*  min-height: 600px;*/
 /*  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/logosChrisWeb/IMG-20230918-WA0001.png);*/
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/portada.webp');
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/laptops.png');
   background-size: cover;
 /*  object-fit: fill;*/
   background-position: center;

@@ -1,5 +1,6 @@
 User-agent: Googlebot
 allow: /
+Disallow: /public/img/influencers/
 
 User-agent: Bingbot
 Allow: /
@@ -9,7 +10,7 @@ User-agent: *
 Disallow: /cgi-bin/
 Disallow: /tmp/
 Disallow: /layouts/
-Disallow: /js/
+Disallow: /scripts/
 Disallow: /public/javascript/
 Disallow: /public/img/influencers/
 

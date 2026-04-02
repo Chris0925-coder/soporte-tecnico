@@ -54,9 +54,9 @@
    "density": "4.0"
   }
  ],
- "scope": "/soporte-tecnico/",
+ "scope": "/",
  "id": "ChrisWEBDEV",
- "start_url": "/soporte-tecnico/",
+ "start_url": "/",
  "display_override": ["fullscreen", "minimal-ui"],
  "display": "standalone",
  "orientation": "portrait"
