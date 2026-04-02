@@ -76,6 +76,7 @@ function detectCookie(cname) {
 
 // function ready() {
 document.addEventListener('DOMContentLoaded',init);
+const ahora = new Date();
 // init();
 
     // alert('DOM is ready');

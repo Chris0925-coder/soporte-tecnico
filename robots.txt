@@ -14,4 +14,4 @@ Disallow: /scripts/
 Disallow: /public/javascript/
 Disallow: /public/img/influencers/
 
-Sitemap: https://soporte-tecnico.pages.dev/sitemap.xml
+Sitemap: https://www.desarrolladorweb.blog/sitemap.xml

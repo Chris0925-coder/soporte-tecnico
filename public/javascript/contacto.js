@@ -133,7 +133,7 @@ function form() {
         alert('Form submitted successfully!');
 
 
-        window.location.href = "https://soporte-tecnico.pages.dev/";
+        window.location.href = "https://www.desarrolladorweb.blog/";
     });
 }
 
