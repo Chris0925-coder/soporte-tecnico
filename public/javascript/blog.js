@@ -4,16 +4,26 @@ const cblog = blog.querySelector('.item:first-child');
 const newDiv = document.createElement('div');
 const url = `https://visits-christian-guardias-projects.vercel.app/count`;
 const d = localStorage.getItem("acceptedCookies");
-let dd = new Date().toLocaleDateString("es-PA", {
-  weekday: "long",
-  day: "numeric",
-  month: "short",
-  hour: "numeric",
-  minute: "numeric",
-  hour12: true
-});
+const ahora = new Date();
+// let dd = new Date().toLocaleDateString("es-PA", {
+//   weekday: "long",
+//   day: "numeric",
+//   month: "short",
+//   hour: "numeric",
+//   minute: "numeric",
+//   hour12: true
+// });
 
 const dominio = window.location.origin;
+
+const opciones = {
+    timeZone: "America/Panama",
+    dateStyle: 'full',
+    timeStyle: 'long',
+    hour12: false, 
+  };
+
+const formatoConZona = new Intl.DateTimeFormat("es-PA", opciones).format(ahora);
 
 function cli() {
 	blog.addEventListener('click', function (event) {
@@ -24,7 +34,7 @@ function cli() {
 		        id: 5,
 		        count: 0,
 		        domain: dominio + "/blog.html",
-		        date: `desde: 06/2025 | última vista: ${dd}`,
+		        date: `desde: 06/2025 | última vista: ${formatoConZona}`,
 		        clicks: 1,
 		    };
 		    navigator.sendBeacon(url, JSON.stringify(analyticsData));
@@ -39,7 +49,7 @@ function count() {
         id: 5,
         count: 1,
         domain: dominio + "/blog.html",
-        date: `desde: 06/2025 | última vista: ${dd}`,
+        date: `desde: 06/2025 | última vista: ${formatoConZona}`,
         clicks: 0,
     };
     navigator.sendBeacon(url, JSON.stringify(analyticsData));
@@ -58,16 +68,20 @@ count();
 function content(title, filename, paragraph,link) {
 		
 	newDiv.innerHTML += `
-		<article>
-			<h2>${title}</h2>
-			<figure>
-				<img src='https://qjsvnfogbaqnjbqi.public.blob.vercel-storage.com/${filename}' alt='#' width='200' height='250'>
-				
-				<figcaption>
-					<a href="${link}" title="${title}" target="_blank"><span>${paragraph}</span></a>
-				</figcaption>
-			</figure>
-		</article>
+		<div class="articles">
+			<a href="${link}" title="${title}" target="_blank">
+				<article>
+					<h2>${title}</h2>
+					<figure>
+						<img src='https://qjsvnfogbaqnjbqi.public.blob.vercel-storage.com/${filename}' alt='#' width='200' height='250'>
+						
+						<figcaption>
+							<span>${paragraph}</span>
+						</figcaption>
+					</figure>
+				</article>
+			</a>
+		</div>
 	`;
 
 	blog.insertBefore(newDiv, cblog);
