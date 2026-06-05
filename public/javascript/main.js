@@ -12,7 +12,7 @@ const cancel = document.querySelector(".botonRGPD--cancel");
 
 const navBoton = document.querySelector(".navbar-toggler");
 const navLink = document.querySelector(".off");
-const close = document.querySelectorAll(".btn-close");
+const close = document.querySelector(".btn-close");
 const main = document.querySelector("body");
 const anuncio = document.querySelector(".anuncio")
 
@@ -20,13 +20,13 @@ navBoton.addEventListener('click', () => {
     navLink.classList.toggle("hidden-nav");
 });
 
-// function closeBTN(a, b, c) {
-//     a.addEventListener('click', () => {
-//         b.classList.toggle(c);
-//     });
-// }
+function closeBTN(a, b, c) {
+    a.addEventListener('click', () => {
+        b.classList.toggle(c);
+    });
+}
 // console.log(close)
-closeBTN(close[0], navLink, "hidden-nav");
+closeBTN(close, navLink, "hidden-nav");
 // closeBTN(close[1], anuncio, "hide");
 
 function setCookie(cname, cvalue, exdays) {
@@ -616,9 +616,9 @@ function slider(a) {
 // sliderP(pImgsB);
 
 
-setInterval(sliderP, 7500, pImgs);
+// setInterval(sliderP, 7500, pImgs);
 
-setInterval(slider, 7500, pImgsB);
+// setInterval(slider, 7500, pImgsB);
 // setInterval(BB, 5000);
 // setInterval(sliderP, 5000);
 // sliderP(pImgsB)
