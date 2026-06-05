@@ -111,12 +111,9 @@ a:hover {
   	display: flex;
   	align-items: center;
   	position: relative;
-  	justify-content: space-between;
+  	justify-content: end;
   	color: white;
 }
-
-
-
 
 .navbar-nav {
 	display: grid;
@@ -159,8 +156,13 @@ a:hover {
 	padding: .1em .4em;
 }
 
-.demoPage-main {/*	background: radial-gradient(ellipse at bottom, #05021e, transparent),
-/*            radial-gradient(ellipse at top, #ffffff, transparent);*/margin: 0;padding: 10px 0;/* align-items: center; */justify-items: center;}
+.demoPage-main {
+	/*	background: radial-gradient(ellipse at bottom, #05021e, transparent),
+	/*radial-gradient(ellipse at top, #ffffff, transparent);*/
+	margin: 0;padding: 10px 0;
+	/* align-items: center; */
+	justify-items: center;
+}
 
 .main-1 {
 	display: grid;
