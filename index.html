@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Desarrollador web | CHRISTIAN</title>
 
-  <script type="application/ld+json">
+  <!-- <script type="application/ld+json">
     {
       "@context" : "https://schema.org",
       "@type" : "Organization",
@@ -34,7 +34,103 @@
         "email": "christianguardia@outlook.es"
       }
     }
-  </script>
+  </script> -->
+
+<script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.desarrolladorweb.blog/#organization",
+      "name": "Desarrollador Web | CHRISTIAN",
+      "description": "Creación de sitios web optimizados para SEO y rendimiento en Panamá",
+      "url": "https://www.desarrolladorweb.blog",
+      "logo": "https://www.desarrolladorweb.blog/public/img/logochris1.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+50768994976",
+        "contactType": "customer service",
+        "areaServed": "PA",
+        "availableLanguage": ["es", "en"]
+      },
+      "sameAs": [
+        "https://github.com/Chris0925-coder",
+        "https://www.linkedin.com/in/christian-guardia-151447270/"
+      ],
+      "knowsAbout": ["SEO", "Desarrollo Web", "JavaScript", "Node.js"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.desarrolladorweb.blog/#person",
+      "name": "Desarrollador Web Panamá | Christian",
+      "image": "https://www.desarrolladorweb.blog/public/img/logochris1.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ciudad de Panamá",
+        "addressRegion": "Panamá",
+        "addressCountry": "PA"
+      },
+      "jobTitle": "Desarrollador Web",
+      "worksFor": {
+        "@id": "https://www.desarrolladorweb.blog/#organization"
+      },
+      "email": "christianguardia@outlook.es",
+      "telephone": "+50768994976"
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://www.desarrolladorweb.blog/#localbusiness",
+      "name": "Desarrollador Web Panamá",
+      "image": "https://www.desarrolladorweb.blog/public/img/logochris1.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "PA"
+      },
+      "priceRange": "$$",
+      "telephone": "+50768994976",
+      "url": "https://www.desarrolladorweb.blog"   
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.desarrolladorweb.blog/#website",
+      "url": "https://www.desarrolladorweb.blog",
+      "name": "Desarrollador Web Blog",
+      "publisher": {
+        "@id": "https://www.desarrolladorweb.blog/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.desarrolladorweb.blog/#webpage",
+      "url": "https://www.desarrolladorweb.blog",
+      "name": "Inicio",
+      "isPartOf": {
+        "@id": "https://www.desarrolladorweb.blog/#website"
+      },
+      "about": {
+        "@id": "https://www.desarrolladorweb.blog/#person"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.desarrolladorweb.blog/#service",
+      "serviceType": "Diseño y Desarrollo Web",
+      "provider": {
+        "@id": "https://www.desarrolladorweb.blog/#organization"
+      },
+      "areaServed": "Panamá",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://www.desarrolladorweb.blog/contacto",
+        "priceCurrency": "USD",
+        "price": "250",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+  ]
+}
+</script>
 
   <link rel="stylesheet" type="text/css" href="public/css/main.css">
 
