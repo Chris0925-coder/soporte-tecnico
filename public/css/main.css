@@ -1771,6 +1771,7 @@ h1,h2,h3 {
 /*		border: none;*/
 		color: #fff;
 		border-radius: .3em;
+		cursor: pointer;
 	}
 
 	.navbar-toggler {
@@ -1959,7 +1960,7 @@ h1,h2,h3 {
 		width: 100%;
 	}
 */
-	/*.off {
+	.off {
 		display: flex;
 		flex-direction: column;
 		position: fixed;
@@ -1970,7 +1971,7 @@ h1,h2,h3 {
 		right: 0;
 		top: 0;
 		background-color: #2b2b2b;
-	}*/
+	}
 
 	.off-header button{
 		float: right;
