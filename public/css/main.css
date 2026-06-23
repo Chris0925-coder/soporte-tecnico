@@ -1554,9 +1554,10 @@ h1,h2,h3 {
 	overflow: hidden;
 	width: auto;
 	height: auto;
+	gap: 2em;
 }
 
-.layouts figure{
+.layouts picture{
 	/*scale: -1;*/
 	width: 400px;
 	height: auto;
@@ -1583,7 +1584,7 @@ h1,h2,h3 {
 		margin: 0 auto;
 	}
 
-	figcaption {
+	h3 {
 		padding: 10px 0;
 		color: #1b1b1b;
 		text-align: center;
