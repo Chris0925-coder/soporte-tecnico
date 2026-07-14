@@ -1565,9 +1565,11 @@ a:hover {
 		}		
 	}
 }
-
 .ads {
-	position: relative;
+  position: relative;
+  height: auto;
+  max-height: 350px;
+  overflow: hidden;
 }
 
 .dots {
