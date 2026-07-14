@@ -8,7 +8,7 @@ let itemImg = adsImg.querySelector(".item-img:nth-child(2)");
 // let newScriptOptions = document.createElement("script");
 // let ad = document.querySelector('.adA');
 let newImg = document.createElement("img");
-let close = document.querySelector(".close");
+let closeAds = document.querySelector(".close-ads");
 
 // atOptions = {
 // 	   'key' : '5115a1b458f6b8de84588523b50d8c38',
@@ -21,7 +21,7 @@ let close = document.querySelector(".close");
 // newScriptOptions.innerText = atOptions;
 
 //newScript.src = "https://www.highperformanceformat.com/fc389117d63f9f57a3d58b448932a87d/invoke.js";
-close.addEventListener('click', () => {
+closeAds.addEventListener('click', () => {
 	ads.style.display = "none";
 })
 
