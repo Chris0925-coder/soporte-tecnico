@@ -28,19 +28,19 @@ closeAds.addEventListener('click', () => {
 // let a = '//www.profitablecreativeformat.com/5115a1b458f6b8de84588523b50d8c38/invoke.js';
 
 let imgs = [
-	"se_vende_toyota_corolla_cross.jpg",
-	"se_vende_toyota_corolla_cross_2025.jpg",
-	"se_vende_toyota_corolla_cross_2025_17000.jpg",
-	"se_vende_toyota_corolla_cross_automatico.jpg",
-	"se_vende_toyota_corolla_cross_boton_de_encendido.jpg",
-	"se_vende_toyota_corolla_precio_17000.jpg"
+	"se_vende_toyota_yaris_cross.jpg",
+	"se_vende_toyota_yaris_cross_2025.jpg",
+	"se_vende_toyota_yaris_cross_2025_17000.jpg",
+	"se_vende_toyota_yaris_cross_automatico.jpg",
+	"se_vende_toyota_yaris_cross_boton_de_encendido.jpg",
+	"se_vende_toyota_yaris_precio_17000.jpg"
 ]
 
 // ads.append(doc);
 // ads.insertBefore(newScriptOptions,c);
 
-newImg.src = "public/toyota_corolla/se_vende_toyota_corolla_cross.jpg";
-newImg.alt = "Se vende Toyota Cross 2025";
+newImg.src = "public/toyota_yaris/se_vende_toyota_yaris_cross.jpg";
+newImg.alt = "Se vende Automovil marca Toyota Yaris Cross año 2025";
 
 adsImg.insertBefore(newImg, itemImg);
 
@@ -69,7 +69,7 @@ function updateSlider(a) {
     //slides.style.transform = `translateX(${-index * 100}%)`;
     dots.forEach(dot => dot.classList.remove('active'));
     dots[index].classList.add('active');
-	newImg.src = `public/toyota_corolla/${a}`;
+	newImg.src = `public/toyota_yaris/${a}`;
 
 }
 
