@@ -178,6 +178,207 @@ figure figcaption {
 }
 
 
+.container-pro {
+	background-color: #1c1d2d;
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
+
+.ff {
+	display: flex;
+	flex-direction: column;
+}
+
+
+.socialnav {
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin: .4em auto;
+    justify-content: center; 
+}
+
+.socialnav ul {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+/*    justify-content: center;*/
+/*    align-content: flex-start;*/
+    align-items: center;
+    gap: 1em;
+    padding-left: 0;
+    width: auto;
+    height: auto;
+    text-align: left;
+	color: #fff;
+	font-size: .7rem;
+/*	border: 1px solid white;*/
+	 list-style: none;
+    /* top: 0; */
+    /* right: 0; */
+}
+
+/*.socialnav ul li {
+    list-style: none;
+    margin: 0 auto;*/
+
+    /*object-position: center;
+    place-content: center;
+    place-items: center;
+    place-self: center;*/
+/*}*/
+
+.logo-cont3 {
+	width: auto;
+	height: auto;
+
+}
+
+
+.logo-cont3 p {
+	color: #fff;
+	font-size: .4rem;
+	text-align: left;
+/*	border: 1px solid white;*/
+	width: 100%;
+}
+
+.logo-cont3:hover {
+	background-color: #ffffff40;
+}
+
+.logo--github {
+	display: flex;
+	justify-content: center;
+	/*background-image: url("../img/github_PNG40.png");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 20px;
+	height: 20px;
+	margin: 0 auto;*/
+}
+
+.contact1 {
+	display: flex;
+	position: relative;
+	flex-direction: row;
+	width: 100%;
+	height: auto;
+	padding: 1em;
+	gap: 2em;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.contact1 ul {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	list-style: none;
+	list-style-type: none;
+	color: #ffff;
+	margin-bottom: 0;
+	font-size: 0.7rem;
+	font-weight: 400;
+	width: auto;
+	height: 100%;
+	gap: .6em;
+	padding-left: 0;
+}
+
+.contact1 ul li {
+	color: white;
+}
+
+.contact1 ul li:hover{
+	padding: 0.3em;
+	color: #1b1b1b;
+	box-shadow: 2px 2px 4px #ffffff1c;
+	transition: box-shadow .5s;
+	font-weight:600;
+	border-radius: 2%;
+}
+
+
+.contact1 a {
+    list-style: none;
+    text-decoration-line: none;
+    text-decoration: none;
+    text-decoration-style: none;
+    color: #ffff;
+}
+
+.contact1 a:hover {
+	color: #bbbb;
+	transition: .5s;
+}
+
+.pro-row {
+	display: flex;
+	position: relative;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+.pro {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	color: #ffff;
+	/* justify-content: space-between; */
+	padding: 20px;
+	/* text-align: center; */
+}
+
+.pro h6 {
+	font-weight: 700;
+}
+
+.pro-link {
+	color: #ffffff60;
+	text-decoration: none;
+	padding-left: 0;
+}
+
+.pro-list {
+	color: #ffffff60;
+	margin-top: 10px;
+	font-size: 0.7rem;
+	list-style: none;
+	cursor: default;
+	padding-left: 0;
+	/* text-align: left; */
+}
+
+.pro-item {
+	margin: 10px auto auto auto;
+	text-align: center;
+	/* padding-left: 0; */
+	/* justify-content: center; */
+}
+
+.pro-item:hover, 
+.pro-link:hover {
+	color: #ffffff20;
+}
+
+.poli {
+	display: flex;
+	flex-direction: row;
+	position: relative;
+	background-color: #222222;
+	justify-content: center;
+	gap: 10px;
+	font-size: .5rem;
+	color: #ffff;
+	text-decoration: none;
+/*	font-size: 0.5rem;*/
+}
+
+
 @media screen and (max-width: 768px) {
 
 	.layouts figure{
